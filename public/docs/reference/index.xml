@@ -1,0 +1,54 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trustgrid Docs – Reference</title>
+    <link>/docs/reference/</link>
+    <description>Recent content in Reference on Trustgrid Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/reference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: API</title>
+      <link>/docs/reference/api/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/reference/api/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;This is how you use the portal API.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Site Requirements</title>
+      <link>/docs/reference/site-requirements/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/reference/site-requirements/</guid>
+      <description>
+        
+        
+        &lt;p&gt;For on-prem deployments, the following IP CIDRs should be allow-listed if outbound access is restricted:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0.0.0.0/0&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
