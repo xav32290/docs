@@ -23821,10 +23821,16 @@ body:lang(ar) {
 
 /*
 
-Nothing defined here. The Hugo project that uses this theme can override Bootstrap by adding a file to:
-
-assets/scss/_styles_project.scss
+Add style overrides here
 
 */
+h1 {
+  font-size: 1.8rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+.td-navbar {
+  background: #466eb5; }
 
 /*# sourceMappingURL=main.css.map */
