@@ -1,6 +1,6 @@
 ---
 Title: "Cluster Failover Response"
-Date: 2022-12-29
+Date: 2023-1-3
 Tags: ["cluster", "help", "troubleshoot"]
 ---
 
@@ -38,7 +38,7 @@ After a failover or failback it is necessary to verify that traffic is flowing a
 
 3. On the `Configuration` → `Network` tab note the [cluster]({{< ref "docs/cluster" >}}) VIP
 
-(**add ss of cluster configuration, and highlight cluster virtual IP**)
+![img](/docs/overview/operations-runbook/cluster-virtual-ip.png)
 
 4.  Click on the indicated current master
 
@@ -48,11 +48,11 @@ After a failover or failback it is necessary to verify that traffic is flowing a
 
         ii. Launch the "View Virtual Route Table" tool
 
-(**add ss of virtual network tools dropdown** )
+      ![img](/docs/overview/operations-runbook/virtual-network-tools.png)
 
         iii. Verify that routes show as “available true”
 
-(**add ss of current VPN routing tables**)
+    ![img](/docs/overview/operations-runbook/routing-tables.png)
 
            1. If the cluster is a gateway cluster there may be many routes and not all be active, just confirm many show as available.
 
