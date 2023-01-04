@@ -1,6 +1,6 @@
 ---
 Title: "Limit Node Functionality to Current Public IP"
-Date: 2023-1-3
+Date: 2023-1-4
 ---
 
 {{% pageinfo %}}
@@ -10,16 +10,16 @@ This security feature allows restricting node functionality to the current publi
 ###### Process to Restrict
 - Click `Lock` Button next to Public IP  (Do not enable if using DHCP. Static addresses only)
 
-![img](/docs/concepts/node-management/unlocked.png)
+![img](unlocked.png)
 
 - Public IP should now show padlock icon as locked as shown below
 
-![img](/docs/concepts/node-management/locked.png)
+![img](locked.png)
 
 - Click `Unlock` to remove the restriction at any point.
 
 ###### Alerts:
 Once locked changing the Public IP of the node will result in an alert being generated as seen belo. At this point no data plane traffic will be allowed.
 
-![img](/docs/concepts/node-management/alert-node-public-ip.png)
+![img](alert-node-public-ip.png)
 

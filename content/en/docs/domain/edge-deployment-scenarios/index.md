@@ -1,7 +1,7 @@
 ---
 Title: "Edge Deployment Scenarios"
 Tags: ["edge nodes", "Networking", "deployment"]
-Date: 2022-12-28
+Date: 2023-1-4
 ---
 
 When deciding on an Edge deployment architecture, there are several key variables to consider:
@@ -22,7 +22,7 @@ In some scenarios, you may want to deploy your Trustgrid [node(s)]({{< ref "docs
 
 ##### Edge Network Topology:
 
-![img](/docs/domain/edge-topology.png)
+![img](edge-topology.png)
 
 ### Considerations in this Configuration:
 
@@ -49,7 +49,7 @@ The most typical configuration for edge nodes is to place the [nodes]({{< ref "d
 
 ##### Edge Network Topology:
 
-![img](/docs/domain/edge-topology2.png)
+![img](edge-topology2.png)
 
 #### Considerations in this Configuration:
 
@@ -75,7 +75,7 @@ Some organizations may choose to put the management interface behind a firewall 
 
 ##### Edge Network Topology:
 
-![img](/docs/domain/edge-topology3.png)
+![img](edge-topology3.png)
 
 #### Considerations in this Configuration:
 
@@ -102,7 +102,7 @@ Our best practice recommendation is to separate the management and data traffic 
 
 ##### Edge Network Topology:
 
-![img](/docs/domain/edge-topology4.png)
+![img](edge-topology4.png)
 
 #### Considerations in this Configuration:
 
@@ -126,7 +126,7 @@ A common deployment scenario involves the need to access a network that is routa
 
 ##### Edge Network Topology:
 
-![img](/docs/domain/edge-topology5.png)
+![img](edge-topology5.png)
 
 #### Considerations in this Configuration:
 
@@ -140,7 +140,7 @@ In some scenarios, it may not be desirable to have to add [routes]({{< ref "docs
 
 ##### Edge Network Topology:
 
-![img](/docs/domain/edge-topology6.png)
+![img](edge-topology6.png)
 
 #### Considerations in this Configuration:
 

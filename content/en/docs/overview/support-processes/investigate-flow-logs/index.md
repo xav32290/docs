@@ -8,7 +8,7 @@ To examine flow logs for a specific node, select the node from the list:
 
 Navigate to the `Nodes` page, find desired node and click on it, then scroll down to `Flow Logs` to find.
 
-![img](/docs/overview/support-processes/investigate-flow-logs/flow-logs-node.png)
+![img](flow-logs-node.png)
 
 This view on the `Node` page shows only source and destination nodes with bandwidth. A session will only log when it's completed so some long running sessions may not appear for some time. Traffic is flowing between the edge node and the gateway node in this example. Excess bandwidth may indicate other problems and potentially a security breach.
 

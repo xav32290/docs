@@ -1,6 +1,6 @@
 ---
 Title: "Cluster Failover Response"
-Date: 2023-1-3
+Date: 2023-1-4
 Tags: ["cluster", "help", "troubleshoot"]
 ---
 
@@ -38,9 +38,9 @@ After a failover or failback it is necessary to verify that traffic is flowing a
 
 3. On the `Configuration` → `Network` tab note the [cluster]({{< ref "docs/cluster" >}}) VIP
 
-![img](/docs/overview/operations-runbook/cluster-virtual-ip.png)
+![img](cluster-virtual-ip.png)
 
-4.  Click on the indicated current master
+1.  Click on the indicated current master
 
     a. Verify the VPN Route Table shows
 
@@ -48,11 +48,11 @@ After a failover or failback it is necessary to verify that traffic is flowing a
 
         ii. Launch the "View Virtual Route Table" tool
 
-      ![img](/docs/overview/operations-runbook/virtual-network-tools.png)
+      ![img](virtual-network-tools.png)
 
         iii. Verify that routes show as “available true”
 
-    ![img](/docs/overview/operations-runbook/routing-tables.png)
+    ![img](routing-tables.png)
 
            1. If the cluster is a gateway cluster there may be many routes and not all be active, just confirm many show as available.
 
@@ -64,25 +64,25 @@ After a failover or failback it is necessary to verify that traffic is flowing a
 
         ii. Confirm the interface associated with the Cluster VIP is selected
 
-           1. For single interface nodes: ETH0 / Network Adapter 1 - WAN Adapter
+           3. For single interface nodes: ETH0 / Network Adapter 1 - WAN Adapter
 
-           2. For dual interface nodes: ETH1 / Network Adapter 2 - LAN Adapter
+           4. For dual interface nodes: ETH1 / Network Adapter 2 - LAN Adapter
 
         iii. Open the `Sniff Interface Traffic` tool.
 
-            1. Set the filter to “host clusterVIP” without quotes and replacing clusterVIP with the appropriate Cluster virtual IP. Click `start session`.
+            5. Set the filter to “host clusterVIP” without quotes and replacing clusterVIP with the appropriate Cluster virtual IP. Click `start session`.
 
-            2. Confirm that you see traffic flowing through the interface. **Continue monitoring for several minutes to confirm the traffic is maintained.**
+            6. Confirm that you see traffic flowing through the interface. **Continue monitoring for several minutes to confirm the traffic is maintained.**
 
-            3. Leave the Sniff Interface Tool running while completing the next step
+            7. Leave the Sniff Interface Tool running while completing the next step
 
         iv. Repeat steps i-iii on the node that **is not** currently indicated as the master.
 
             1.You want to verify there is **no traffic for the cluster VIP running through the non-master node**.
 
-            2. You may see a periodic ARP from the cluster master, but that should be it.
+            8. You may see a periodic ARP from the cluster master, but that should be it.
 
-    5. Compare traffic volume before and after the failover
+    1. Compare traffic volume before and after the failover
 
         a. If the event was a failover and failback compare traffic from the current master
 

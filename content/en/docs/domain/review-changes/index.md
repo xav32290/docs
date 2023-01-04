@@ -2,7 +2,7 @@
 categories: ["concepts"]
 tags: ["domain", "concepts", "rewrite"]
 title: "Applying Changes"
-date: 2022-12-28
+date: 2023-1-4
 ---
 
 {{% pageinfo %}}
@@ -11,7 +11,7 @@ Because changes to a domain [virtual network]({{< ref "docs/domain/virtual-netwo
 
 After making changes to a [virtual network]({{< ref "docs/domain/virtual-networks" >}}), you can review outstanding changes. A list of changes will show who made each change, with a before/after table if appropriate.
 
-![img](/docs/domain/outstanding-changes.png)
+![img](outstanding-changes.png)
 
 Individual changes can be rejected by clicking the delete icon at the top.
 

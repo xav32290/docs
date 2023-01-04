@@ -1,6 +1,6 @@
 ---
 Title: "Site Failover"
-Date: 2022-12-29
+Date: 2023-1-4
 Tags: ["failover", "help", "troubleshoot"]
 ---
 
@@ -8,7 +8,7 @@ Tags: ["failover", "help", "troubleshoot"]
 The below processes should be used to move traffic between sites in event of a complete site down scenario. This is handled by the Virtual Network Route Table.
 {{% /pageinfo %}}
 
-{{<alert>}} In the examples below, xxxEdgeCluster is the primary site and xxx-edge3 is the secondary/disaster recovery site {{</alert>}}
+{{<alert>}} In the examples below, xxxEdgeCluster is the primary site and xxx-edge3 is the secondary/disaster recovery site. {{</alert>}}
 
 ### Manual Failover
 
@@ -24,21 +24,21 @@ When a customer has selected manual failover, a portal user will need to adjust 
 
 3. Filter the route table either using the node/cluster names or network to be failed over (shown below).
 
-![img](/docs/overview/operations-runbook/route-table.png)
+![img](route-table.png)
 
     a. If there is more than one network that needs to be routed to the secondary site using node/cluster names to filter is more efficient
 
-4. Clear the destination field and start typing the name of the secondary site node/cluster. Select the appropriate node/cluster from the list.
+1. Clear the destination field and start typing the name of the secondary site node/cluster. Select the appropriate node/cluster from the list.
 
-![img](/docs/overview/operations-runbook/destination-field.png)
+![img](destination-field.png)
 
-5. Click `Save`. Then select `Review Changes`.
+1. Click `Save`. Then select `Review Changes`.
 
-6. You should see a modified [route]({{< ref "docs/domain/routes" >}}) for each network you adjusted showing the previous and current destination. If everything looks correct click `Apply Changes`.
+2. You should see a modified [route]({{< ref "docs/domain/routes" >}}) for each network you adjusted showing the previous and current destination. If everything looks correct click `Apply Changes`.
 
-![img](/docs/overview/operations-runbook/apply-changes.png)
+![img](apply-changes.png)
 
-7. It may take 1-2 minutes for nodes to pull down the updated routing table. Once that has completed any new flow or connection will automatically be sent to the new destination node.
+1. It may take 1-2 minutes for nodes to pull down the updated routing table. Once that has completed any new flow or connection will automatically be sent to the new destination node.
 
 {{<alert>}} If the node/cluster is still online at the primary site, and there are existing flows/connections they will persist at that site. To clear them restart the active node at the primary site. See the last step in the Forcing Failover section below for instructions.{{</alert>}}
 
@@ -68,23 +68,23 @@ Also, if a failure of the primary site has occurred and you want to ensure traff
 
 3. Filter the route table either using the node/cluster names or network to be failed over (shown below)
 
-![img](/docs/overview/operations-runbook/route-table.png)
+![img](route-table.png)
 
     a. If there is more than one network that needs to be routed to the secondary site using node/cluster names to filter is more efficient
 
-4. Adjust the metric so that the primary site is a higher number than the secondary site. The maximum metric value is 200.
+1. Adjust the metric so that the primary site is a higher number than the secondary site. The maximum metric value is 200.
 
-![img](/docs/overview/operations-runbook/metric.png)
+![img](metric.png)
 
 Click `Save` and navigate to `Review Changes`
 
 You should see a change like below for each route adjusted. Click `Apply Changes` if all looks correct.
 
-![img](/docs/overview/operations-runbook/apply-changes-metric.png)
+![img](apply-changes-metric.png)
 
-7. It may take 1-2 minutes for nodes to pull down the updated route table. At that point, they will route new flows/connections to the new destination.
+1. It may take 1-2 minutes for nodes to pull down the updated route table. At that point, they will route new flows/connections to the new destination.
 
-8. Because the primary site is still online, you will need to restart the active node at that site to clear out any existing flows/connections.
+2. Because the primary site is still online, you will need to restart the active node at that site to clear out any existing flows/connections.
 
    a. If it's a cluster, navigate to the cluster and then select the currently active node from the overview page. If a single node site, navigate directly to that node.
 

@@ -2,7 +2,7 @@
 categories: ["concepts"]
 tags: ["domain", "concepts", "rewrite"]
 title: "Routes"
-date: 2022-12-28
+date: 2023-1-4
 ---
 
 {{% pageinfo %}}
@@ -15,7 +15,7 @@ Routes configured under [Domains]({{< ref "docs/domain" >}}) determine to whic
 2. Click the link to the desired domain under the "Name" column.
 3. Scroll down to the ["Virtual Networks"]({{< ref "docs/domain/virtual-networks" >}}) section and select the `Routes` tab.
 
-![img](/docs/domain/routes-list.png)
+![img](routes-list.png)
 
 A Route has Three Required Fields:
 
@@ -40,14 +40,14 @@ Route failover allows a subnet to be routed to an alternate [node]({{< ref "/doc
 In either configuration, the [virtual network]({{< ref "docs/domain/virtual-networks" >}}) settings under [VPN]({{< ref "docs/concepts/VPN" >}}) settings for the primary and backup destination [nodes]({{< ref "docs/node" >}})/[clusters]({{< ref "docs/cluster" >}}) must match. Including:
 
 - Network Virtual Route
-  ![img](/docs/domain/virtual-network-route1.png)
+  ![img](virtual-network-route1.png)
 
 - Network Group under Outside NAT Table
-  ![img](/docs/domain/outside-nat-table.png)
+  ![img](outside-nat-table.png)
 
 - Virtual CIDR under Inside NAT Table
 
-  ![img](/docs/domain/inside-nat-table.png)
+  ![img](inside-nat-table.png)
 
 ### Automatic Failover
 
@@ -55,7 +55,7 @@ To have the route failover without manual intervention you must define two route
 
 In the below example configuration we want traffic for the 10.20.0.0/24 network to the `edge` [cluster]({{< ref "docs/cluster" >}}) first, and failover to the `edge-dr` [cluster]({{< ref "docs/cluster" >}}).
 
-![img](/docs/domain/automatic-failover.png)
+![img](automatic-failover.png)
 
 ### Preventing Automated Failback or Forcing a Failover
 

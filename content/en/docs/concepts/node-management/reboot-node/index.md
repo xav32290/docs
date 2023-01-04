@@ -1,6 +1,6 @@
 ---
 Title: "Reboot a Node"
-Date: 2023-1-3
+Date: 2023-1-4
 ---
 
 1. Go to the `Node` detail page for the node in question

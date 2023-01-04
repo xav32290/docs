@@ -1,7 +1,7 @@
 ---
 Title: "Dynamic NAT (catch-all)"
 Tags: ["dynamic-NAT", "Networking", "Networks"]
-Date: 2022-12-28
+Date: 2023-1-4
 ---
 
 {{% pageinfo %}}
@@ -12,26 +12,26 @@ In some scenarios it may be desirable to configure a dynamic NAT rule that trans
 
 #### Edge Node Inside NATs
 
-![img](/docs/domain/edge-inside.png)
+![img](edge-inside.png)
 
 #### Gateway Node Inside NATs
 
-![img](/docs/domain/gateway-inside.png)
+![img](gateway-inside.png)
 
 #### Ping from host 192.168.14.35 to 10.100.50.15
 Local Capture:
 
-![img](/docs/domain/local-capture1.png)
+![img](local-capture1.png)
 
 Remote Capture:
 
-![img](/docs/domain/remote-capture1.png)
+![img](remote-capture1.png)
 
 #### Ping from host 172.33.16.45 to 10.100.50.15
 Local Capture:
 
-![img](/docs/domain/local-capture2.png)
+![img](local-capture2.png)
 
 Remote Capture:
 
-![img](/docs/domain/remote-capture2.png)
+![img](remote-capture2.png)

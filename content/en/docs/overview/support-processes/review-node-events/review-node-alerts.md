@@ -1,6 +1,6 @@
 ---
 Title: "Review Node Events"
-Date: 2023-1-3
+Date: 2023-1-4
 ---
 When troubleshooting a problem on edge or gateway nodes, reviewing node events can provide critical information about the nature of the problem. 
 
@@ -8,12 +8,12 @@ When troubleshooting a problem on edge or gateway nodes, reviewing node events c
 2. Scroll down to `Events`
 3. Look for any critical problems
 
-![img](/docs/overview/support-processes/node-alerts.png)
+![img](node-alerts.png)
 
 For more issues involving multiple nodes, review [Domain Node Events](need link for this).
 
 1. Choose the `Operations` tab
 2. View `Events` across the organization
 
-![img](/docs/overview/support-processes/alerts-page.png)
+![img](alerts-page.png)
 Types]]({{< ref "docs/alarms/event-types" >}})

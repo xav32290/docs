@@ -1,6 +1,6 @@
 ---
 Title: "Trustgrid Local Console Utility"
-Date: 2023-1-3
+Date: 2023-1-4
 ---
 
 {{% pageinfo %}}
@@ -36,9 +36,9 @@ As seen below the console dashboard displays information on the current version 
 
 The first screenshot shows a healthy node that is able to successfully resolve public DNS names and connect to Trustgrid’s control plane. The second screenshot shows a node that is able to resolve DNS but unable to connect to the Trustgrid Control Plane. 
 
-![img](/docs/concepts/node-management/node-console-1.png)
+![img](node-console-1.png)
 
-![img](/docs/concepts/node-management/node-console-2.png)
+![img](node-console-2.png)
 
 ### Changing a Trustgrid Node WAN IP via Trustgrid Console
 > After the IP address is changed locally it must connect to the Trustgrid Cloud Controller and the new IP address must be saved in the portal to make the change permanent. If the device is rebooted prior to that it will revert to the previous configuration.
@@ -47,24 +47,24 @@ To change the nodes WAN IP address select option 1.
 
 Configure new static IP or select DHCP and select ok to save the changes. The IP should be updated in the Trustgrid Portal when the IP is changed. There will be a prompt in the portal to import the new IP settings. 
 
-![img](/docs/concepts/node-management/node-console-3.png)
+![img](node-console-3.png)
 
-![img](/docs/concepts/node-management/node-console-4.png)
+![img](node-console-4.png)
 
-![img](/docs/concepts/node-management/node-setup.png)
+![img](node-setup.png)
 
-![img](/docs/concepts/node-management/network-update.png)
+![img](network-update.png)
 
 After the IP address has been changed and the device connects to the Trustgrid control plane the new IP configuration will need to be imported and saved.  If you do not have portal access please work with Trustgrid Support 
 
-![img](/docs/concepts/node-management/config-network.png)
+![img](config-network.png)
 
 ### Changing the Default Password
 The tgadmin user’s password can be changed by selecting option 3.
 
 You will then need to enter the current password (mac address of wan nic all lowercase with colons) followed by the new password. 
 
-![img](/docs/concepts/node-management/password-thing.png)
+![img](password-thing.png)
 
 > After this password is changed it can only be reset if the device successfully connects to the Trustgrid control plane. Please ensure the password is appropriately documented for future use.
 

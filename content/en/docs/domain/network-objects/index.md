@@ -2,7 +2,7 @@
 categories: ["concepts"]
 tags: ["domain", "concepts", "rewrite"]
 title: "Network Objects"
-date: 2022-12-28
+date: 2023-1-4
 ---
 
 {{% pageinfo %}}
@@ -19,7 +19,6 @@ The label to use when referencing this object.
 Specifically an IPv4 CIDR.
 {{< /field-def >}}
 
-![img](/docs/domain/network-objects.png)
-
+![img](network-objects.png)
 
 Multiple network objects may be clustered into a [network group]({{< ref "docs/domain/network-groups" >}}).
