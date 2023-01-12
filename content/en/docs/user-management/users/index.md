@@ -148,3 +148,4 @@ To view:
 3. The identity Providers will be listed in a table in the main panel. If no IdP is listed this indicates the user is using the Trustgrid native authentication system.
 
 ![img](identity.png)
+
