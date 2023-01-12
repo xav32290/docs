@@ -1,5 +1,5 @@
 ---
-Title: "Open ID Identitiy Provider Fields"
+Title: "OpenID"
 Date: 2023-1-12
 ---
 
