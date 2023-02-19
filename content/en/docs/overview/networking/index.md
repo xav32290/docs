@@ -17,7 +17,7 @@ Trustgrid establishes mutual TLS tunnels between [nodes]({{<ref "/docs/nodes" >}
 
 ### Layer 3 Overview
 
-The Trustgrid [VPN]({{<ref "docs/concepts/VPN" >}}) feature provides the capability to securely route IP packets between networks. In this configuration, Trustgrid [nodes]({{<ref "docs/nodes" >}}) can operate as a distributed mesh virtual private network ([VPN]({{<ref "docs/concepts/VPN" >}})) that can allow applications to access remote data and services at layer 3 (L3) of the network OSI model. This is done by defining a virtual L3 network (similar to an Amazon VPC) and then selecting how edge node networks are exposed and translated into the the virtual address space.
+The Trustgrid VPN feature provides the capability to securely route IP packets between networks. In this configuration, Trustgrid [nodes]({{<ref "docs/nodes" >}}) can operate as a distributed mesh virtual private network (VPN) that can allow applications to access remote data and services at layer 3 (L3) of the network OSI model. This is done by defining a virtual L3 network (similar to an Amazon VPC) and then selecting how edge node networks are exposed and translated into the the virtual address space.
 
 Layer 3 configuration is required for all Trustgrid networking deployments on the Gateway (data center / cloud) side. This allows the use of L3 or Layer 4 configurations for edge node deployments. Layer 3 connectivity enables easy support of many hosts at each side of the connection. This allows the replication of existing [routes]({{<ref "docs/domain/routes" >}}) and subnets to minimize reconfiguration of any remote or local networks.
 

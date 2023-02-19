@@ -6,7 +6,7 @@ date: 2022-12-28
 ---
 
 {{% pageinfo %}}
-An access policy is a list of rules that each allow, reject, or drop traffic at the [VPN]({{<ref "docs/concepts/VPN" >}}) level.
+An access policy is a list of rules that each allow, reject, or drop traffic at the VPN level.
 {{% /pageinfo %}}
 
 If no rules are defined, traffic will not pass through the [virtual network]({{<ref "docs/domain/virtual-networks" >}}).

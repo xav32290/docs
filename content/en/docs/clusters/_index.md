@@ -12,7 +12,7 @@ A cluster is a pair of [nodes]({{<ref "docs/nodes" >}}) that share configuration
 
 A cluster is a pair of [nodes]({{<ref "docs/nodes" >}}) at a single site that share some configurations and provide automatic failover. An additional IP address is assigned as a Cluster Virtual IP address that can move between the [nodes]({{<ref "docs/nodes" >}}) if failover occurs.
 
-Certain settings such as [network]({{<ref "docs/overview/networking">}}) services and [VPN]({{<ref "docs/concepts/VPN" >}}) settings can be configured for the cluster and these settings will override the individual [node's]({{<ref "docs/nodes" >}}) configuration.
+Certain settings such as network services and VPN settings can be configured for the cluster and these settings will override the individual [node's]({{<ref "docs/nodes" >}}) configuration.
 
 {{<alert>}}Formerly the active member was referred to as the “master.” We are in the process moving to the terms active and standby. This documentation will use those terms but elements in the UI may retain the _master_ term.{{</alert>}}
 

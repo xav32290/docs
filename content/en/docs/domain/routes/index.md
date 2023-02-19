@@ -39,7 +39,7 @@ Route failover allows a subnet to be routed to an alternate [node]({{<ref "/docs
 
 ### Prerequisites 
 
-In either configuration, the [virtual network]({{<ref "docs/domain/virtual-networks" >}}) settings under [VPN]({{<ref "docs/concepts/VPN" >}}) settings for the primary and backup destination [nodes]({{<ref "docs/nodes" >}})/[clusters]({{<ref "docs/clusters" >}}) must match. Including:
+In either configuration, the [virtual network]({{<ref "docs/domain/virtual-networks" >}}) settings under VPN settings for the primary and backup destination [nodes]({{<ref "docs/nodes" >}})/[clusters]({{<ref "docs/clusters" >}}) must match. Including:
 
 - Network Virtual Route
 
