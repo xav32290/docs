@@ -58,5 +58,3 @@ The [event]({{<ref "docs/alarms/events" >}}) data is delivered in JSON, as shown
 	]
 }
 {{</highlight>}}
-
-### Event Data Descriptions
