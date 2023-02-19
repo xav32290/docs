@@ -11,8 +11,6 @@ Trustgrid’s Alarms system notifies users of [events]({{<ref "event-types" >}})
 
 1. Changes in status (such as a [node]({{<ref "docs/nodes" >}}) disconnecting or reconnecting) create [events]({{<ref "event-types" >}}) within the Trustgrid portal.
 
-2. These [events]({{<ref "event-types" >}}) trigger **alerts** which are the method of notification within the Trustgrid portal.
+1. These [events]({{<ref "event-types" >}}) are evaluated against [alarm filters]({{<ref "alarm-filters">}}), which define criteria to match events, like the node name or event severity.
 
-3. Trustgrid customers can define [alarm filters]({{<ref "alarm-filters" >}}) with a set a conditions that are matched against alerts. Example of the criteria include the [node]({{<ref "docs/nodes" >}}) name, event type, event severity, [tags]({{<ref "/docs/nodes/tags" >}}), or even a basic text match.
-
-4. If an alert matches the criteria of an [alarm filter]({{<ref "alarm-filters" >}}) then notifications will be sent to configured [channels]({{<ref "docs/alarms/channels" >}}).
+1. If an event matches the criteria of an alarm filter, then an **alert** is generated and notifications are broadcast to the configured [channels]({{<ref "docs/alarms/channels" >}}).
