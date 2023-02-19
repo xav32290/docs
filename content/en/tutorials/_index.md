@@ -1,5 +1,5 @@
 ---
-title: Tutorials
+title: Guides
 menu:
   main:
     weight: 40
