@@ -34,12 +34,12 @@ See [Azure virtual network traffic routing](https://learn.microsoft.com/en-us/az
 
 For gateways:
 
-- Outbound internet access to the [Trustgrid control plane networks]({{<ref "docs/kb/site-requirements">}}) and ability to resolve public DNS names.
+- Outbound internet access to the [Trustgrid control plane networks]({{<ref "/help-center/kb/site-requirements">}}) and ability to resolve public DNS names.
 - Inbound access required is the TCP port defined for the Trustgrid gateway service to listen on. Edge nodes will connect to the gateways public IP and port defined. The default port used is 8443.
 
 For edge nodes:
 
-- Outbound internet access to the [Trustgrid control plane networks]({{<ref "docs/kb/site-requirements">}}), outbound access to the IP and ports of the Trustgrid gateways, and ability to resolve public DNS names.
+- Outbound internet access to the [Trustgrid control plane networks]({{<ref "/help-center/kb/site-requirements">}}), outbound access to the IP and ports of the Trustgrid gateways, and ability to resolve public DNS names.
 - No inbound access is required on the public interface.
 
 For all clustered nodes:
