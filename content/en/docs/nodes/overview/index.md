@@ -1,11 +1,11 @@
 ---
-Title: "Overview Section"
-linkTitle: "Overview Section"
+Title: "Overview"
+linkTitle: "Overview"
 ---
 
 ### Stats
 
-The [Node overview page](https://portal.dev.trustgrid.io/#/node/a9f1fedd-a474-455b-a123-37a035409229) shows performance and network traffic data.
+The Node overview page shows performance and network traffic data.
 
 Supported time windows are selectable at the top. VPN and network statistics can be targeted to specific virtual networks and interfaces.
 
