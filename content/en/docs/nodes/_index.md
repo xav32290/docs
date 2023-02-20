@@ -11,13 +11,24 @@ weight: 14
 A node is an instance of software used for building connections, managing compute resources, and deploying software.
 {{% /pageinfo %}}
 
+## Node Types
+
 A node can be installed on a hardware appliance, as a virtual appliance (Vsphere and Hyper-V), and deployed in a public cloud (Amazon AMI, Google, Microsoft). There are three main types of nodes - Edge, Gateway, and Management.
 
-Edge nodes create TLS tunnels to all gateway nodes provisioned in a domain. Edge nodes also create TLS tunnels to Management nodes operated by Trustgrid.
-
-Gateway nodes accept incoming tunnels from Edge nodes.
-
 All Trustgrid nodes run on a hardened Ubuntu operating system. Nodes are managed through the Trustgrid portal or via the API (requires authentication token). A local UI exists to support the reconfiguration of an ethernet interface and diagnostic/network tests prior to connection to the Portal.
+
+### Edge Nodes
+
+Edge Nodes build outgoing TLS tunnels to Gateway Nodes. Bidirectional traffic is supported through this tunnel, subject to ACLs and [security]({{<ref "getting-started/overview/security">}}) policy restrictions. Edge Nodes will only require a firewall rule change if outbound internet restrictions are in place. Edge nodes can be a target for software deployment. Edge Nodes can be deployed with a single or multiple ethernet connections to support deployments behind a firewall or adjacent to a firewall (public WAN / private LAN).
+
+### Gateway Nodes
+
+Gateway Nodes accept incoming TLS tunnels from Edge Nodes. Traffic on these tunnels is bidirectional, as permitted by ACLs or policy. Gateway Nodes usually require a firewall change to permit the incoming traffic. Gateway Nodes are identical to Edge Nodes but with a gateway configuration applied. Gateway nodes only connect to other gateways if one is of type `hub`. Read more about [gateway configuration]({{<ref "docs/nodes/gateway" >}}).
+
+### Management Nodes
+Management Nodes are not like other [nodes]({{<ref "docs/nodes" >}}) because they do not connect to the data plane, only the control plane. Management Nodes are deployed by Trustgrid for each customer and are multi-tenant like other control plane components. Customers may elect to deploy their own Management Nodes in place of multi-tenant Management Nodes. Management Nodes facilitate the monitoring, management, and support of Edge and Gateway Nodes.
+
+## Node List View
 
 ### Adding a Tag as a Column on the Nodes Table
 

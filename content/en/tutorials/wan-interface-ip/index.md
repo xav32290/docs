@@ -1,6 +1,6 @@
 ---
-Title: "WAN Interface IP Change"
-linkTitle: "WAN Interface IP Change"
+Title: "Changing the WAN Interface IP"
+linkTitle: "Changing the WAN Interface IP"
 ---
 
 {{% pageinfo %}}
