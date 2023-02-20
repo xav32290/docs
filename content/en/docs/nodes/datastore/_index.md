@@ -3,6 +3,7 @@ categories: ["node"]
 tags: ["data store", "containers", "s3", "virtual machines"]
 title: "Data Store"
 linkTitle: "Data Store"
+weight: 4
 ---
 
 {{% pageinfo %}}

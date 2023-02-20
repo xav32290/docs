@@ -1,5 +1,6 @@
 ---
 title: "Containers"
+weight: 3
 ---
 
 Trustgrid nodes support running Docker containers which allows for ease of deployment across an organization. Any Docker container is supported with the exception of containers that require root level access.

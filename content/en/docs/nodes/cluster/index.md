@@ -1,5 +1,6 @@
 ---
 title: "Cluster"
+weight: 3
 ---
 
 {{<alert>}}Cluster configuration is only available for nodes that are members of a [cluster]({{<ref "docs/clusters">}}).{{</alert>}}

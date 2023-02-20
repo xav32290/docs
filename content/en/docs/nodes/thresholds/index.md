@@ -2,6 +2,7 @@
 tags: ["node", "concepts"]
 title: "Thresholds"
 linkTitle: "Thresholds"
+weight: 19
 ---
 
 {{% pageinfo %}}

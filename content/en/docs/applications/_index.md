@@ -3,10 +3,8 @@ tags: ["applications", "ztna"]
 title: "Applications"
 linkTitle: "Applications"
 date: 2023-1-11
-weight: 26
+weight: 1
 ---
-
-ZTNA Applications
 
 ZTNA Applications are managed by clicking the `Applications` link on the left nav bar.
 

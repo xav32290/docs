@@ -3,6 +3,7 @@ categories: ["node"]
 tags: ["layer 4", "networking"]
 title: "Connectors"
 linkTitle: "Connectors"
+weight: 3
 ---
 
 {{% pageinfo %}}

@@ -1,6 +1,7 @@
 ---
 Title: "Flow Logs"
 linkTitle: "Flow Logs"
+weight: 6
 ---
 
 {{% pageinfo %}}

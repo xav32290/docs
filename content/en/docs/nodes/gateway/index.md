@@ -1,6 +1,7 @@
 ---
 Title: "Gateway"
 linkTitle: "Gateway"
+weight: 7
 ---
 
 {{% pageinfo %}}

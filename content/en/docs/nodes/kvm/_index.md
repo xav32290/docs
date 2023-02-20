@@ -2,6 +2,7 @@
 categories: ["virtual machines"]
 title: "Virtual Machines"
 linkTitle: "Virtual Machines"
+weight: 22
 ---
 
 Trustgrid nodes can deploy virtual machines (if supported) using the open source virtualization technology `Kernel-base Virtual Machine (KVM)`which allows the node to act as a hypervisor to run multiple, isolated virtual guests.

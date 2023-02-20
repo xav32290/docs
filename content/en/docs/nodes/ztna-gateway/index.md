@@ -1,6 +1,7 @@
 ---
 title: ZTNA Gateway
 description: Configure a node to allow end-user connectivity for ZTNA applications
+weight: 26
 ---
 
 Navigate to a node, then select `ZTNA Gateway` under the `Network` section.
