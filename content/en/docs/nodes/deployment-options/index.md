@@ -11,7 +11,7 @@ Trustgrid supports deploying [nodes]({{<ref "docs/nodes" >}}) as a virtual appli
 
 ### Hardware Appliance
 
-Trustgrid [nodes]({{<ref "docs/nodes" >}}) can be deployed on various hardware provided that the hardware is amd64-based. Hardware [nodes]({{<ref "docs/nodes" >}}) are typically deployed on small devices with 1 or 2 [network]({{<ref "docs/overview/networking" >}}) interfaces, an intel processor with at least 2 cores, at least 2 GB of RAM, and 32 GB of storage. Hardware [nodes]({{<ref "docs/nodes" >}}) are delivered pre-configured by Trustgrid for easy "plug-n-play" deployment.
+Trustgrid [nodes]({{<ref "docs/nodes" >}}) can be deployed on various hardware provided that the hardware is amd64-based. Hardware [nodes]({{<ref "docs/nodes" >}}) are typically deployed on small devices with 1 or 2 [network]({{<ref "getting-started/overview/networking" >}}) interfaces, an intel processor with at least 2 cores, at least 2 GB of RAM, and 32 GB of storage. Hardware [nodes]({{<ref "docs/nodes" >}}) are delivered pre-configured by Trustgrid for easy "plug-n-play" deployment.
 
 ### Amazon AMI
 

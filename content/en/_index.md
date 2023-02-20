@@ -9,7 +9,7 @@ linkTitle: "Documentation"
 <h2>Connect cloud applications to data in any environment</h2>
 <a
 	class="btn btn-lg btn-primary font-weight-bold my-4"
-	href="/docs/overview"
+	href="/getting-started/overview"
 >
 Start Here
 </a>

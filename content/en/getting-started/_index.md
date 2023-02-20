@@ -4,7 +4,8 @@ linkTitle: "Getting Started"
 menu:
   main:
     weight: 10
-type: docs
+cascade:
+  type: docs
 ---
 
 {{% pageinfo %}}

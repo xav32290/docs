@@ -6,7 +6,7 @@ date: 2023-1-9
 ---
 
 {{% pageinfo %}}
-Trustgrid networks are assigned to [domains]({{<ref "docs/domain" >}}). They define an overlay network and routes for layer 3 connectivity. Trustgrid [nodes]({{<ref "docs/nodes" >}}) are then assigned to [networks]({{<ref "docs/overview/networking" >}}). Virtual Network Overlays work similarly to Amazon's VPCs but can span between clouds, datacenters, and between the cloud and the edge.
+Trustgrid networks are assigned to [domains]({{<ref "docs/domain" >}}). They define an overlay network and routes for layer 3 connectivity. Trustgrid [nodes]({{<ref "docs/nodes" >}}) are then assigned to [networks]({{<ref "getting-started/overview/networking" >}}). Virtual Network Overlays work similarly to Amazon's VPCs but can span between clouds, datacenters, and between the cloud and the edge.
 {{% /pageinfo %}}
 
 ### Virtual Network Overlay
@@ -36,7 +36,7 @@ Trustgrid networks are assigned to [domains]({{<ref "docs/domain" >}}). They def
 
 ### Virtual IP Addresses
 
-Through the use of inside and outside NAT rules, local IP addresses to the Trustgrid [node]({{<ref "docs/nodes" >}}) may be exposed on the [network]({{<ref "docs/overview/networking" >}}) through a Virtual IP Address. For instance, a local device may have a local IP address of 192.168.1.100, but you may want it to appear to other devices or applications on the virtual network as IP address 10.0.20.100. Virtual IP Subnets are also supported where each IP in a subnet is mapped to the corresponding IP in a virtual subnet.
+Through the use of inside and outside NAT rules, local IP addresses to the Trustgrid [node]({{<ref "docs/nodes" >}}) may be exposed on the [network]({{<ref "getting-started/overview/networking" >}}) through a Virtual IP Address. For instance, a local device may have a local IP address of 192.168.1.100, but you may want it to appear to other devices or applications on the virtual network as IP address 10.0.20.100. Virtual IP Subnets are also supported where each IP in a subnet is mapped to the corresponding IP in a virtual subnet.
 
 ### Inside NAT
 

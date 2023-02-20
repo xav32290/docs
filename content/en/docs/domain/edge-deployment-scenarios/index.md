@@ -12,9 +12,9 @@ When deciding on an Edge deployment architecture, there are several key variable
 
 - Multi-interface or Single-interface
 
-- Layer 3 or Layer 4 Edge [networking]({{<ref "docs/overview/networking" >}})
+- Layer 3 or Layer 4 Edge [networking]({{<ref "getting-started/overview/networking" >}})
 
-Trustgrid supports unique configurations per site to minimize the changes required at the Edge network. The easiest scenario to deploy is a Layer 4, behind the firewall, single [node]({{<ref "docs/nodes" >}}) deployment. This is the standard recommendation. When deployed behind a firewall, the firewall must allow egress traffic to Trustgrid's Cloud environment (see Network Requirements) and the [network(s)]({{<ref "docs/overview/networking" >}}) where the gateway nodes are installed.
+Trustgrid supports unique configurations per site to minimize the changes required at the Edge network. The easiest scenario to deploy is a Layer 4, behind the firewall, single [node]({{<ref "docs/nodes" >}}) deployment. This is the standard recommendation. When deployed behind a firewall, the firewall must allow egress traffic to Trustgrid's Cloud environment (see Network Requirements) and the [network(s)]({{<ref "getting-started/overview/networking" >}}) where the gateway nodes are installed.
 
 ### Beside a Firewall
 
@@ -71,7 +71,7 @@ The most typical configuration for edge nodes is to place the [nodes]({{<ref "do
 
 ### Firewalled Nodes
 
-Some organizations may choose to put the management interface behind a firewall and also put a firewall between the data interface and the local [network]({{<ref "docs/overview/networking" >}}).
+Some organizations may choose to put the management interface behind a firewall and also put a firewall between the data interface and the local [network]({{<ref "getting-started/overview/networking" >}}).
 
 ##### Edge Network Topology:
 
@@ -122,7 +122,7 @@ Our best practice recommendation is to separate the management and data traffic 
 
 ### Hosted FI Core - Access to Remote Network via Edge
 
-A common deployment scenario involves the need to access a network that is routable from the edge location, but outside of the [network]({{<ref "docs/overview/networking" >}}) that the Trustgrid edge node is configured on. An example of this is a financial institution with a hosted core that may be available from the financial institution over a connection such as a VPN or MPLS.
+A common deployment scenario involves the need to access a network that is routable from the edge location, but outside of the [network]({{<ref "getting-started/overview/networking" >}}) that the Trustgrid edge node is configured on. An example of this is a financial institution with a hosted core that may be available from the financial institution over a connection such as a VPN or MPLS.
 
 ##### Edge Network Topology:
 
@@ -136,7 +136,7 @@ A common deployment scenario involves the need to access a network that is routa
 
 ### Outside NAT - Avoiding Routing at the Edge
 
-In some scenarios, it may not be desirable to have to add [routes]({{<ref "docs/domain/routes" >}}) on the edge network in order to [route]({{<ref "docs/domain/routes" >}}) traffic through the [Trustgrid network]({{<ref "docs/overview/networking" >}}). We recommend using L4 proxy in these scenarios when possible, however outside NAT can be utilized to allow traffic to and from the edge network without adding [routes]({{<ref "docs/domain/routes" >}}) on the edge network.
+In some scenarios, it may not be desirable to have to add [routes]({{<ref "docs/domain/routes" >}}) on the edge network in order to [route]({{<ref "docs/domain/routes" >}}) traffic through the [Trustgrid network]({{<ref "getting-started/overview/networking" >}}). We recommend using L4 proxy in these scenarios when possible, however outside NAT can be utilized to allow traffic to and from the edge network without adding [routes]({{<ref "docs/domain/routes" >}}) on the edge network.
 
 ##### Edge Network Topology:
 
