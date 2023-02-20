@@ -6,7 +6,7 @@ date: 2023-1-9
 ---
 
 {{% pageinfo %}}
-Trustgrid networks are assigned to [domains]({{<ref "docs/domain" >}}). They define an overlay network and routes for layer 3 connectivity. Trustgrid [nodes]({{<ref "docs/nodes" >}}) are then assigned to [networks]({{<ref "getting-started/overview/networking" >}}). Virtual Network Overlays work similarly to Amazon's VPCs but can span between clouds, datacenters, and between the cloud and the edge.
+Trustgrid networks are assigned to [domains]({{<ref "docs/domain" >}}). They define an overlay network and routes for layer 3 connectivity. Trustgrid [nodes]({{<ref "docs/nodes" >}}) are then assigned to [networks]({{<ref "getting-started/overview/networking" >}}). Virtual Network Overlays work similarly to Amazon's VPCs but can span between clouds, data centers, and between the cloud and the edge.
 {{% /pageinfo %}}
 
 ### Virtual Network Overlay

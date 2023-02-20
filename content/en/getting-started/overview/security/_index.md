@@ -24,7 +24,7 @@ All data on Trustgrid is encrypted from [node]({{<ref "/docs/nodes" >}}) to node
 
 ### Automated Management
 
-Trustgird offers tools for automating software updates at scale. A significant difficulty in securing traditional VPNs is the application of patches and updates to hardware appliances. Many vendors own and maintain hundreds or thousands of these devices and are simply unable to efficiently patch them. This leaves significant security vulnerabilities unaddressed in customer and vendor datacenters.
+Trustgird offers tools for automating software updates at scale. A significant difficulty in securing traditional VPNs is the application of patches and updates to hardware appliances. Many vendors own and maintain hundreds or thousands of these devices and are simply unable to efficiently patch them. This leaves significant security vulnerabilities unaddressed in customer and vendor data centers.
 
 ### Private Data Routing
 
