@@ -23,4 +23,4 @@ Specifically an IPv4 CIDR.
 
 ![img](network-objects.png)
 
-Multiple network objects may be clustered into a [network group]({{<ref "docs/domain/network-groups" >}}).
+Multiple network objects may be clustered into a [network group]({{<ref "docs/domain/virtual-networks/network-groups" >}}).

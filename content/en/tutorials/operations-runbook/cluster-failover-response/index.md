@@ -24,7 +24,7 @@ Below is a brief description events that occur during a failover process:
 
 - The [node]({{<ref "docs/nodes" >}}) assuming the master role will ARP to the network that it now owns the [Cluster]({{<ref "docs/clusters" >}}) Virtual IP (VIP)
 
-- The [Domain route]({{<ref "docs/domain/routes" >}}) table will update that the assuming [node]({{<ref "docs/nodes" >}}) should receive all traffic for the [cluster]({{<ref "docs/clusters" >}}) (_clustername-master_)
+- The [Domain route]({{<ref "docs/domain/virtual-networks/routes" >}}) table will update that the assuming [node]({{<ref "docs/nodes" >}}) should receive all traffic for the [cluster]({{<ref "docs/clusters" >}}) (_clustername-master_)
 
 - The assuming [node]({{<ref "docs/nodes" >}}) will load all NAT entries associated with the [cluster]({{<ref "docs/clusters" >}})
 

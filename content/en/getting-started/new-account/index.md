@@ -1,11 +1,10 @@
 ---
-categories: ["Examples"]
-tags: ["getting-started"]
-title: "Creating an account"
-linkTitle: "Creating an account"
+title: "Create an account"
+linkTitle: "1. Create an Account"
 date: 2022-12-07
 description: >
   Create a Trustgrid account
+weight: 1
 ---
 
 {{% pageinfo %}}

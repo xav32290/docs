@@ -23,11 +23,11 @@ You can choose ANY, UDP, ICMP, or TCP.
 {{</field >}}
 
 {{<field "Source" >}}
-The source of the traffic. You can select a [network object]({{<ref "docs/domain/network-objects" >}}), a [network group]({{<ref "docs/domain/network-groups" >}}), or provide a CIDR.
+The source of the traffic. You can select a [network object]({{<ref "docs/domain/virtual-networks/network-objects" >}}), a [network group]({{<ref "docs/domain/virtual-networks/network-groups" >}}), or provide a CIDR.
 {{</field >}}
 
 {{<field "Destination" >}}
-The destination of the traffic. You can select a [network object]({{<ref "docs/domain/network-objects" >}}), a [network group]({{<ref "docs/domain/network-groups" >}}), or provide a CIDR.
+The destination of the traffic. You can select a [network object]({{<ref "docs/domain/virtual-networks/network-objects" >}}), a [network group]({{<ref "docs/domain/virtual-networks/network-groups" >}}), or provide a CIDR.
 {{</field >}}
 
 {{<field "Line Number" >}}

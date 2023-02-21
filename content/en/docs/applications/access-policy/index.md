@@ -13,10 +13,13 @@ Each rule has three types of criteria:
 {{<fields>}}
 {{<field "Include" >}}
 criteria in this section are logically OR'd together. For a rule to apply to an access attempt, at least one of the include criteria must match.
+{{</field>}}
 {{<field "Exception" >}}
 criteria in this section are logically NOT'd. If any exception criterion matches, the rule will not apply to the access attempt.
+{{</field>}}
 {{<field "Require" >}}
 criteria in this section are logically AND'd. ALL of the require criteria must match for the rule to apply to the access attempt.
+{{</field>}}
 {{</fields>}}
 
 Rules also have an action:

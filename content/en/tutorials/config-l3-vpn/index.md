@@ -14,7 +14,7 @@ Under `Domains` -> `Domain` -> `Virtual Networks` create the `Virtual Network`. 
 
 ![img](create-vn.png)
 
-2. Create [Routes]({{<ref "docs/domain/routes" >}}) for the desired Virtual CIDR with the destination being either a single node or a cluster if an HA deployment. 
+2. Create [Routes]({{<ref "docs/domain/virtual-networks/routes" >}}) for the desired Virtual CIDR with the destination being either a single node or a cluster if an HA deployment. 
 
 ![img](create-vn2.png)
 

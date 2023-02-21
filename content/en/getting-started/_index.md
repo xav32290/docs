@@ -8,30 +8,41 @@ cascade:
   type: docs
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+## Concepts
 
-Information in this section helps your user try your project themselves.
+Trustgrid is a platform that provides secure, reliable and high-performance connectivity between distributed systems and applications. The platform is designed to simplify networking for distributed enterprises by providing a software-defined network (SDN) that operates as a virtual overlay on top of existing networks, enabling organizations to build and manage their own private networks.
 
-- What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.
+### Nodes
 
-- Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.
+The basic building block of a Trustgrid network is a [node]({{<ref "docs/nodes">}}). Nodes are deployed on-premises or in your cloud provider and are connected to each other with TLS tunnels. Nodes can be deployed in a variety of ways, including as virtual machines, containers, or bare metal servers.
 
-Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.
+Nodes are used to enable connectivity and access for different use cases, including:
 
-## Prerequisites
+* ZTNA applications, allowing fine-grained network control for access to business applications or servers
+* VPN-like functionality, allowing network address translation (NAT) and routing between nodes
+* Remote container execution, allowing an admin to deploy and manage containers in edge networks
+* FTP (remote or in a data center) and other layer 4 protocols
 
-Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
+### Clusters
 
-## Installation
+Nodes can be grouped into [clusters]({{<ref "docs/clusters">}}) to share configuration and provide high-availability.
 
-Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?
+### Virtual Networks
 
-## Setup
+Nodes can be attached to [virtual networks]({{<ref "docs/domain/virtual-networks">}}), which provide a way to share network configuration like [routes]({{<ref "docs/domain/virtual-networks/routes">}}), NATs, and [ACLs]({{<ref "docs/domain/virtual-networks/access-policy">}}) at scale. 
 
-Is there any initial setup users need to do after installation to try your project?
+### Applications
 
-## Try it out!
+[Applications]({{<ref "docs/applications">}}) can be exposed through nodes or clusters. Access to an application can be restricted via [access policies]({{<ref "docs/applications/access-policy">}}), for example to only allow users from a specific country.
 
-Can your users test their installation, for example by running a command or deploying a Hello World example?
+## Management
+
+All Trustgrid nodes are entirely managed through our control plane:
+
+* Software updates are provided through our apt repository that ensures nodes have security updates available and only run with tested software permutations
+* Network, node, user, and application configuration is managed through our web portal
+* Configuration changes are broadcast to nodes as needed, for example when adding routes or adding a gateway to your network
+
+## Next Steps
+
+The first step to try out Trustgrid is [create an account]({{<ref "getting-started/new-account">}}).
