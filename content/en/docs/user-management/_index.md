@@ -8,7 +8,7 @@ weight: 21
 User Management is used to securely control access to Trustgrid resources. Identities (users) are authenticated and granted permissions (via policies) to view or manage Trustgrid devices and applications.
 {{% /pageinfo %}}
 
-#### How It Works
+## How It Works
 
 1. Users' identities are authenticated via one of three mechanisms:
    a. Username, password and MFA via Trustgrid’s native authentication system

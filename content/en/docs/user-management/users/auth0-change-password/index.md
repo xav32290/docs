@@ -1,6 +1,5 @@
 ---
 Title: "Changing Password Process with Auth0"
-Date: 2023-1-12
 ---
 
 Currently changing password requires users to:
