@@ -1,0 +1,1974 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Documentation</title><link>/docs/</link><description>Recent content in Documentation on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting-Started: Customer Responsibilities</title><link>/getting-started/security/customer-responsibilities/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>/getting-started/security/customer-responsibilities/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Trustgrid and our customers share the responsibilities of securing the Trustgrid network. Trustgrid assumes and automates a significant part of the overall security challenges. These challenges range from the cloud to the firmware on hardware appliances. Our customers are responsible for securing physical environments, identity and access management, and all security aspects of the environments where Trustgrid is installed.&lt;/p>
+&lt;/div>
+&lt;h4 id="trustgrid-secures-the-cloud">Trustgrid Secures the Cloud&lt;/h4>
+&lt;p>All cloud management components are secured and monitored by Trustgrid. This includes the hardware, software, and network for all cloud components including the Portal/Management API and other management tools. Customers are responsible for issuing credentials to the Portal for each authorized user and maintaining the security of those accounts.&lt;/p>
+&lt;h4 id="network-security-is-a-shared-responsibility">Network Security is a Shared Responsibility&lt;/h4>
+&lt;p>Trustgrid is responsible for the security of all data plane traffic from the time it enters a Trustgrid &lt;a href="/docs/nodes/">node&lt;/a> until the time it exits a Trustgrid &lt;a href="/docs/nodes/">node&lt;/a>. Customers are responsible for the security of all network traffic eggressing from any Trustgrid &lt;a href="/docs/nodes/">node&lt;/a>.&lt;/p>
+&lt;h4 id="trustgrid-teams-with-customers-for-edge-security">Trustgrid Teams with Customers for Edge Security&lt;/h4>
+&lt;p>All virtual or hardware appliances are secured by Trustgrid. Trustgrid&amp;rsquo;s ability to secure hardware is restricted to supported hardware appliances with specific exceptions. Customers are responsible for the security of the physical and logical environments into which Trustgrid is integrated.&lt;/p>
+&lt;h4 id="secure-gateway-nodes">Secure Gateway Nodes&lt;/h4>
+&lt;p>Trustgrid customer&amp;rsquo;s should apply access controls to ingress traffic for gateway nodes. By restricting ingress access to edge nodes IP ranges the system security is improved and many common attacks easily avoided.&lt;/p>
+&lt;h4 id="encrypt-traffic-with-customer-certificates">Encrypt Traffic with Customer Certificates&lt;/h4>
+&lt;p>By default, Trustgrid encrypts all traffic on the data and control planes with privately issued certificates from our PKI. Customers may elect to provide their own certificates for data plane encryption ensuring Trustgrid maintains a zero-knowledge security posture of all data plane traffic.&lt;/p></description></item><item><title>Getting-Started: Create an account</title><link>/getting-started/new-account/</link><pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate><guid>/getting-started/new-account/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A Trustgrid account is necessary to use our services. Signing up is easy and free.&lt;/p>
+&lt;/div>
+&lt;p>Visit &lt;a href="https://id.dev.trustgrid.io/auth/demo/signup">Trustgrid&lt;/a> to create a new account. Once your email has been verified, you&amp;rsquo;ll be placed into
+the Trustgrid management portal, where you can see a newly provisioned ZTNA Gateway and try out some ZTNA demo applications, like a Jenkins
+instance.&lt;/p></description></item><item><title>Docs: Audits</title><link>/docs/nodes/audits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/audits/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Node audits provide records when services on a node are invoked, or when upgrades are applied. This can be helpful to see historical maintenance of a node.&lt;/p>
+&lt;/div>
+&lt;p>Node audits can be viewed for a specific node by navigating to &lt;code>Audits&lt;/code> under the &lt;code>History&lt;/code> section on the node view.&lt;/p>
+&lt;p>Users will need &lt;code>audits::read:node&lt;/code> permissions to view node audits.&lt;/p>
+&lt;p>&lt;img src="node-list.png" alt="img">&lt;/p>
+&lt;p>Node audits can also be found for the entire organization by navigating to &lt;code>Operations&lt;/code>-&amp;gt;&lt;code>Node Audits&lt;/code>.&lt;/p></description></item><item><title>Getting-Started: Trustgrid's Access to Nodes</title><link>/getting-started/security/trustgrid-node-access/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>/getting-started/security/trustgrid-node-access/</guid><description>
+&lt;p>By default, Trustgrid support has access to all &lt;a href="/docs/nodes/">nodes&lt;/a> via the Control Plane, subject to Trustgrid policies and procedures. Trustgrid customers may opt to disallow Trustgrid support access to their &lt;a href="/docs/nodes/">nodes&lt;/a>. Disabling support access does not interfere with automated management features such as patching, updating, logging, or authentication.&lt;/p>
+&lt;p>Changes to the support flag are audited.&lt;/p></description></item><item><title>Docs: Cluster</title><link>/docs/nodes/cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/cluster/</guid><description>
+&lt;div class="alert alert-primary" role="alert">
+Cluster configuration is only available for nodes that are members of a &lt;a href="/docs/clusters/">cluster&lt;/a>.
+&lt;/div>
+&lt;h2 id="heartbeat">Heartbeat&lt;/h2>
+&lt;p>The cluster heartbeat defines a persistent connection between cluster members. The heartbeat is used to determine the health of the cluster and to determine which member is the active member.&lt;/p>
+&lt;p>&lt;img src="heartbeat.png" alt="img">&lt;/p>
+&lt;tr>
+&lt;th>host&lt;/th>
+&lt;td>The IP (bound to an interface) on which heartbeat communication will occur&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>port&lt;/th>
+&lt;td>The port on which heartbeat communication will occur&lt;/td>
+&lt;/tr>
+&lt;div class="alert alert-primary" role="alert">
+The same interface should be selected for all cluster members
+&lt;/div></description></item><item><title>Docs: Connectors</title><link>/docs/nodes/connectors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/connectors/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Connectors are configured in conjunction with &lt;a href="/docs/nodes/services/">services&lt;/a> to define a local listening port for layer 4 (L4) connectivity.&lt;/p>
+&lt;/div>
+&lt;h4 id="configuration">Configuration&lt;/h4>
+&lt;p>Connectors are configured under the Networking &amp;gt; Connectors tab of the node or cluster configuration section in the Trustgrid Portal.&lt;/p>
+&lt;figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 410px">
+&lt;img class="card-img-top" src="/docs/nodes/connectors/connector_hudc115f7e28d8cbd5e71d65766f13265f_84798_400x450_resize_catmullrom_3.png" width="400" height="450">
+&lt;/figure>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Protocol&lt;/th>
+&lt;td>&lt;p>The protocol that the listener for the connector will use. Options are TCP, UDP, FTP, and TFTP.&lt;/p>
+&lt;blockquote>
+&lt;p>FTP must operate in passive mode when using L4 services and connectors.&lt;/p>
+&lt;/blockquote>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Listen Interface&lt;/th>
+&lt;td>The interface that you want the connector to listen on. If set to &amp;ldquo;All&amp;rdquo;, the connector will listen on 0.0.0.0.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Listen Port&lt;/th>
+&lt;td>The port that you want the connector to listen on.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Remote Node&lt;/th>
+&lt;td>The remote node or cluster that traffic will be proxied to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Remote Service&lt;/th>
+&lt;td>Either the friendly name of &lt;a href="/docs/nodes/services/">service&lt;/a> that is defined on the remote node, or the IP:Port of the remote service to connect to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Rate Limit (Mb/s)&lt;/th>
+&lt;td>The maximum amount of throughput that will be allowed to traverse the tunnel when connecting to the connector. This can be used to prevent saturating the connection at either the local or remote sites.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Data Plane</title><link>/docs/nodes/data-plane/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/data-plane/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Data plane statistics between a node and its peers can help troubleshoot connectivity or performance issues.&lt;/p>
+&lt;/div>
+&lt;p>To view latency data between two nodes, select either the edge or gateway node, and then from the peers table, select the node to view.&lt;/p>
+&lt;div class="alert alert-info" role="alert">
+Gateway nodes will list edge nodes in their peers table
+&lt;/div>
+&lt;p>&lt;img src="peer-list.png" alt="img">&lt;/p>
+&lt;p>Once a peer is selected, the monitoring section will populate with reelvant data.&lt;/p>
+&lt;p>&lt;img src="monitoring.png" alt="img">&lt;/p>
+&lt;p>Hop data is only available for nodes that have hop monitoring enabled. See &lt;a href="/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Monitoring Network Hops to Peers&lt;/a>.&lt;/p></description></item><item><title>Docs: Documents</title><link>/docs/support/documents/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/support/documents/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Trustgrid and customers can share documents securely in the Documents section.&lt;/p>
+&lt;/div>
+&lt;p>&lt;img src="documents.png" alt="img">&lt;/p>
+&lt;p>Adding or deleting documents requires &lt;code>documents::modify&lt;/code> permissions. Downloading and viewing documents requires &lt;code>documents::read&lt;/code> permissions.
+(show how to add and delete and download a document).&lt;/p></description></item><item><title>Docs: Flow Logs</title><link>/docs/nodes/flow-logs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/flow-logs/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Flow logs are a record of all traffic that passes through a node. They can be used to troubleshoot connectivity issues, or to monitor traffic patterns.&lt;/p>
+&lt;/div>
+&lt;p>Flow logs for an individual node can be found under the &lt;code>History&lt;/code> section of the node view. Click the &lt;code>Flow Logs&lt;/code> tab to view the logs. For the entire organization across all nodes, navigate to &lt;code>Operations&lt;/code>-&amp;gt;&lt;code>Flow Logs&lt;/code>.&lt;/p>
+&lt;p>By default, newest flows will be shown first.&lt;/p>
+&lt;p>&lt;img src="flow-logs-table.png" alt="img">&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Start Time&lt;/th>
+&lt;td>The time the flow started&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>End Time&lt;/th>
+&lt;td>The time the flow ended&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Protocol&lt;/th>
+&lt;td>The protocol used&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Source Node&lt;/th>
+&lt;td>The node that initiated the flow&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Source IP&lt;/th>
+&lt;td>The IP address through which the node initiated the flow&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Source Port&lt;/th>
+&lt;td>The port through which the node initiated the flow&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Dest Node&lt;/th>
+&lt;td>The node that received the flow&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Dest IP&lt;/th>
+&lt;td>The IP address to which traffic was sent&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Dest Port&lt;/th>
+&lt;td>The port to which traffic was sent&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Recv Bytes&lt;/th>
+&lt;td>Bytes received at the source node&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Sent Bytes&lt;/th>
+&lt;td>Bytes sent from the source node&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>TCP Flags&lt;/th>
+&lt;td>&lt;p>TCP Flags set during the flow:&lt;/p>
+&lt;ul>
+&lt;li>SYN - sync packet&lt;/li>
+&lt;li>PSH - push packet&lt;/li>
+&lt;li>ACK - ack packet&lt;/li>
+&lt;li>URG - urgent packet&lt;/li>
+&lt;li>FIN - finish packet&lt;/li>
+&lt;li>RST - reset packet&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="advanced-search">Advanced Search&lt;/h3>
+&lt;p>Flow logs can be filtered by any of the fields listed above. To filter by a field, click the &lt;code>Advanced Search&lt;/code> button at the top right of the flow logs table.&lt;/p>
+&lt;p>In addition, the ordering can be changed so that oldest flows (or flows closest to the time range specified) can be shown first. There is a limit of 10,000 flows returned per search.&lt;/p>
+&lt;p>&lt;img src="advanced-search.png" alt="img">&lt;/p>
+&lt;h3 id="exporting-flow-logs">Exporting Flow Logs&lt;/h3>
+&lt;p>Trustgrid can export flow logs to any S3 bucket. Set your bucket name and apply the policy provided, and then Trustgrid will configure replication for your flow logs into your bucket.&lt;/p>
+&lt;p>&lt;img src="s3-export.png" alt="img">&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>S3 Bucket&lt;/th>
+&lt;td>The bucket name. You must own the S3 bucket and apply the policy in AWS to allow Trustgrid to replicate files to the bucket.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="example-iam-policy-for-s3-export">Example IAM Policy for S3 Export&lt;/h4>
+&lt;p>Below is an example IAM policy with the required permissions to push flow logs to your S3 bucket. Be sure you replace &lt;code>example-flowlogs&lt;/code> in lines 19 &amp;amp; 20 with the name of your bucket.&lt;/p>
+&lt;pre class="line-numbers language-json" data-line="19-20">
+&lt;code>{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Sid": "allow-tg-writes",
+"Effect": "Allow",
+"Principal": {
+"AWS": "arn:aws:iam::079972220921:root"
+},
+"Action": [
+"s3:ReplicateObject",
+"s3:ReplicateDelete",
+"s3:ReplicateTags",
+"s3:List*",
+"s3:GetBucketVersioning",
+"s3:PutBucketVersioning"
+],
+"Resource": [
+"arn:aws:s3:::example-flowlogs",
+"arn:aws:s3:::example-flowlogs/*"
+]
+}
+]
+}
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Gateway</title><link>/docs/nodes/gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/gateway/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Gateway nodes accept TLS tunnel connections from other nodes in the domain. They are responsible for routing traffic between nodes.&lt;/p>
+&lt;/div>
+&lt;p>Gateways are only configurable at the node level. Configuring a gateway requires &lt;code>nodes::configure:gateway&lt;/code> permissions.&lt;/p>
+&lt;h2 id="gateway-types">Gateway Types&lt;/h2>
+&lt;p>A gateway can be one of three types:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>public&lt;/code> - allows all connections from edge nodes in the domain&lt;/li>
+&lt;li>&lt;code>private&lt;/code> - allows only allow-listed clients to connect&lt;/li>
+&lt;li>&lt;code>hub&lt;/code> - allows connections from edge nodes and other gateway nodes&lt;/li>
+&lt;/ul>
+&lt;p>A public gateway should be secured with a firewall to prevent unauthorized access.&lt;/p>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>Navigate to a node and select &lt;code>Gateway&lt;/code> under the &lt;code>System&lt;/code> section.&lt;/p>
+&lt;p>&lt;img src="public-config.png" alt="img">&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Status&lt;/th>
+&lt;td>Either &lt;code>Enabled&lt;/code> or &lt;code>Disabled&lt;/code> - when enabled, the node will listen and accept connections from other nodes.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>UDP Enabled&lt;/th>
+&lt;td>Whether to allow UDP tunnels to be established through this gateway.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Public IP or DNS&lt;/th>
+&lt;td>The public IP or DNS name of the gateway. This is the address that other nodes will use to connect to this gateway.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Port&lt;/th>
+&lt;td>The port that the gateway will listen on. This is the port that other nodes will use to connect to this gateway.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>UDP Port&lt;/th>
+&lt;td>The port that the gateway will listen on for UDP tunnels. This is the port that other nodes will use to connect to this gateway.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Max Ingress Mbps&lt;/th>
+&lt;td>The ingress bandwidth limit for the gateway. Connections will be throttled when this limit is reached.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Certificate&lt;/th>
+&lt;td>When using DNS for gateway connections, you may specify an uploaded [certificate]({{ ref &amp;ldquo;/docs/certificate&amp;rdquo; }}) to use for TLS connections.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Gateway Type&lt;/th>
+&lt;td>The type of gateway. See &lt;a href="#gateway-types">Gateway Types&lt;/a> for more information.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Monitor Network Hops to Peers&lt;/th>
+&lt;td>Whether to monitor latency to peers through this gateway. This can have a performance impact and is not recommended for high-traffic gateways.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="client-settings">Client Settings&lt;/h3>
+&lt;p>Private gateways only allow connectivity from listed and enabled clients. To add a client, use the typeahead textbox at the bottom of the clients table and select the desired node.&lt;/p>
+&lt;p>&lt;img src="clients.png" alt="img">&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Max Egress Mbps&lt;/th>
+&lt;td>The egress bandwidth limit for the gateway. Connections will be throttled when this limit is reached.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="mpls-traffic">MPLS Traffic&lt;/h4>
+&lt;p>Gateways of all types allow configuring paths for MPLS traffic.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>A name for the path.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Gateway Node&lt;/th>
+&lt;td>Gateway for which the path is applicable.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Host IP&lt;/th>
+&lt;td>Destination IP address for the path.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Host Port&lt;/th>
+&lt;td>Destination port for the path.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Local IP&lt;/th>
+&lt;td>Bind the connection to this IP address.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Use as Default&lt;/th>
+&lt;td>Make this the default path for the gateway.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="gateway-tools">Gateway Tools&lt;/h2>
+&lt;p>To see detailed messages about gateway traffic, select the &lt;code>Troubleshoot Gateway Traffic&lt;/code> option from the services menu under &lt;code>Gateway Tools&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="launch-troubleshoot-gateway-traffic.png" alt="img">&lt;/p>
+&lt;p>This will open a new window with live diagnostic messages about traffic&lt;/p>
+&lt;p>&lt;img src="troubleshoot-gateway-traffic.png" alt="img">&lt;/p></description></item><item><title>Docs: Interfaces</title><link>/docs/nodes/interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/interfaces/</guid><description>
+&lt;h2 id="network-interfaces">Network Interfaces&lt;/h2>
+&lt;p>Navigate to a node, then select &lt;code>Interfaces&lt;/code> under the &lt;code>Network&lt;/code> section.&lt;/p>
+&lt;p>&lt;img src="interfaces.png" alt="Interfaces Page">&lt;/p>
+&lt;p>The &lt;code>Interface&lt;/code> dropdown at the top allows you to select which interface to manage.&lt;/p>
+&lt;p>&lt;img src="select-interface.png" alt="Interface Dropdown">&lt;/p>
+&lt;h3 id="eth0---wan-interface">ETH0 - WAN Interface&lt;/h3>
+&lt;p>This interface is always used to build the outbound TLS tunnels for control and data plane connectivity. If the node is deployed in a single interface configuration, this interface will also be used for local network connectivity.&lt;/p>
+&lt;h3 id="eth1---lan-interface">ETH1 - LAN Interface&lt;/h3>
+&lt;p>Used in two-interface configurations for local network connectivity.&lt;/p>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Hardware Address&lt;/th>
+&lt;td>MAC address of the interface.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>IP Assignment (ETH0 only)&lt;/th>
+&lt;td>&lt;ul>
+&lt;li>DHCP - requires a DHCP server or relay in the same broadcast domain as the interface connection&lt;/li>
+&lt;li>Static - configured using the fields below&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>IPv4 Address CIDR&lt;/th>
+&lt;td>IP address using &lt;a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">classless inter-domain routing (CIDR) notation&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Gateway IP&lt;/th>
+&lt;td>&lt;ul>
+&lt;li>ETH0 - The IP address of the default gateway for this device. All traffic not in the same network as an interface IP or with a specified route will use this gateway.&lt;/li>
+&lt;li>ETH1 - This is only used in a 2-interface setup to access local resources outside the interface&amp;rsquo;s configured network. Routes must be defined.&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>DNS Server 1/2 IP (ETH0 only)&lt;/th>
+&lt;td>Used to resolve DNS names to connect to the Trustgrid control plane.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Cluster Virtual IP&lt;/th>
+&lt;td>Used in &lt;a href="/docs/clusters/">clusters&lt;/a>, this IP address is moved between member nodes based on the active cluster member. It can be used to route traffic between the virtual and local networks. This IP address can only be changed within the cluster interfaces page.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="interface-routes">Interface Routes&lt;/h2>
+&lt;blockquote>
+&lt;p>If the node is part of a cluster, these must be configured at the cluster level&lt;/p>
+&lt;/blockquote>
+&lt;p>These routes are used to access networks that are not in the same network as a configured interface &lt;strong>and that are not accessed using the default gateway IP configured for ETH0 - WAN Interface&lt;/strong>. It is rare to need to define these on the ETH0 interface.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Select the interface from the Network Interface dropdown.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click the &lt;code>+ Add Entry&lt;/code> button.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Enter the route information There are three fields:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Destination CIDR&lt;/th>
+&lt;td>This is the CIDR notation of the network or host that needs to be routed. For a single host, use /32 as the CIDR suffix.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Next Hop&lt;/th>
+&lt;td>The IP address to which traffic destined for the above defined network will be sent. No CIDR suffix is needed.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Description&lt;/th>
+&lt;td>Optional field to provide additional information about the route.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/li>
+&lt;li>
+&lt;p>Click the green check &lt;i class="fa-solid fa-circle-check" style="color: green;">&lt;/i> to confirm the route.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Repeat steps 2-4 with any additional routes.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click the &lt;code>Save&lt;/code> button.&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>Docs: Location</title><link>/docs/nodes/location/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/location/</guid><description>
+&lt;p>Trustgrid uses each node&amp;rsquo;s public IP address to derive location information. If it&amp;rsquo;s incorrect, the fields can be set manually. If set manually, IP changes will not update the node&amp;rsquo;s location when viewed from the nodes table or the network map.&lt;/p>
+&lt;p>&lt;img src="node-location.png" alt="img">&lt;/p>
+&lt;h6 id="to-change-the-node-location">To change the Node Location:&lt;/h6>
+&lt;p>Change the details to desired settings then click &lt;code>Save&lt;/code> when done.&lt;/p></description></item><item><title>Docs: Overview</title><link>/docs/nodes/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/overview/</guid><description>
+&lt;h3 id="stats">Stats&lt;/h3>
+&lt;p>The Node overview page shows performance and network traffic data.&lt;/p>
+&lt;p>Supported time windows are selectable at the top. VPN and network statistics can be targeted to specific virtual networks and interfaces.&lt;/p>
+&lt;p>&lt;img src="node-overview.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="node-overview2.png" alt="img">&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Node Performance&lt;/th>
+&lt;td>shows CPU, disk, and memory usage percentages&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>VPN Traffic Volume&lt;/th>
+&lt;td>shows data usage sent and received, across all VPNs and for the selected virtual network&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Traffic Volume&lt;/th>
+&lt;td>shows data sent and receives, across all interfaces and for the selected interface&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Connected Peers&lt;/th>
+&lt;td>shows the number of other nodes connected. This will change based on the node type - gateways connect to all edge nodes, while edge nodes only connect to gateways.(LINK HUB GATEWAY PAGE WHEN DOCUMENTED)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>VPN Flows&lt;/th>
+&lt;td>shows new and active flows, across all VPNs and for the selected virtual network&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>TCP Errors&lt;/th>
+&lt;td>shows TCP errors across all interfaces&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Repositories</title><link>/docs/repositories/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/repositories/</guid><description>
+&lt;h4 id="list-view">List View&lt;/h4>
+&lt;p>Trustgrid provides a fully managed private container registry. Uploaded container images may be viewed by navigating to Repositories in the portal:&lt;/p>
+&lt;p>&lt;img src="list-view.png" alt="img">&lt;/p>
+&lt;p>Users can push and pull containers from the repository.&lt;/p>
+&lt;h4 id="docker-login">Docker Login&lt;/h4>
+&lt;p>To authenticate with the registry, use the command provided at the bottom of the repositories view. Authentication lasts approximately 24 hours.&lt;/p>
+&lt;h4 id="container-namespace">Container Namespace&lt;/h4>
+&lt;p>Each customer is isolated to their own container namespace. To upload or download a container, it must be named with your namespace as a prefix.&lt;/p>
+&lt;p>&lt;img src="name-space.png" alt="img">&lt;/p>
+&lt;p>For example, to push a tomcat container to your registry:&lt;/p>
+&lt;p>&lt;code>docker tag tomcat:latest docker.trustgrid.io/namespace.trustgrid.io/tomcat:latest docker push docker.trustgrid.io/namespace.trustgrid.io/tomcat:latest&lt;/code>&lt;/p>
+&lt;h4 id="container-repo-view">Container Repo View&lt;/h4>
+&lt;p>Each repository can be managed. Clicking into a container will show its uploaded tags and digests, as well as the URI that can be used to pull the container.&lt;/p>
+&lt;h4 id="node-container-auth">Node Container Auth&lt;/h4>
+&lt;p>Trustgrid nodes authenticate automatically with the Trustgrid container registry and can pull any image uploaded to the registry.&lt;/p></description></item><item><title>Docs: Services</title><link>/docs/nodes/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/services/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Services are configured in conjunction with &lt;a href="/docs/nodes/connectors/">connectors&lt;/a> to define a remote host:port to connect to for layer 4 (L4) connectivity.&lt;/p>
+&lt;/div>
+&lt;h4 id="configuration">Configuration&lt;/h4>
+&lt;p>Services are configured under the Networking &amp;gt; Services tab of the node or cluster configuration section in the Trustgrid Portal.&lt;/p>
+&lt;p>&lt;img src="service.png" alt="Layer 4 - Add a service">&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Protocol&lt;/th>
+&lt;td>The protocol of the service to connect to. Options are TCP, UDP, FTP, and TFTP, along with pre-defined default ports for RDP, SSH, and VNC.&lt;/td>
+&lt;/tr>
+> FTP must operate in passive mode when using L4 services and connectors
+&lt;tr>
+&lt;th>Service Name&lt;/th>
+&lt;td>A friendly name for the service that will be used in the Remote Service field of a &lt;a href="/docs/nodes/connectors/">connector&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Host&lt;/th>
+&lt;td>The IP of the host to connect to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Port&lt;/th>
+&lt;td>The port to connect to on the host.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Health Check&lt;/th>
+&lt;td>A health check can be configured for TCP services. The health check will attempt a TCP connectivity check once per minute. After 5 consecutive failures, an Outbound L4 Service Health Check alert will be triggered and clustered nodes will be marked as unhealthy. Clustered nodes will return to a Healthy status after 5 consecitive connection attempts are successful.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Thresholds</title><link>/docs/nodes/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/thresholds/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the node level can override &lt;a href="/docs/domain/thresholds/">Domain Thresholds&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;p>To view and configure thresholds, a user will need &lt;code>nodes::configure::thresholds&lt;/code> permissions.&lt;/p>
+&lt;p>Navigate to a node, and click &lt;code>Thresholds&lt;/code> under the &lt;code>System&lt;/code> section.&lt;/p>
+&lt;p>&lt;img src="list.png" alt="img">&lt;/p>
+&lt;p>Note that overridden thresholds have a yellow square icon next to them.&lt;/p>
+&lt;h3 id="load-thresholds">Load Thresholds&lt;/h3>
+&lt;p>Load thresholds measure the health of the node itself.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Telemetry&lt;/th>
+&lt;td>The metric to monitor. Options are CPU usage (%), memory usage (%), disk usage (%), and embryonic flows (absolute count).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Threshold&lt;/th>
+&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Duration&lt;/th>
+&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="network-thresholds">Network Thresholds&lt;/h3>
+&lt;p>Network thresholds measure the health of the network from the node&amp;rsquo;s perspective.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Telemetry&lt;/th>
+&lt;td>The metric to monitor. Options are latency (ms), bandwidth in (Mbps), and bandwidth out (Mbps).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Threshold&lt;/th>
+&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Duration&lt;/th>
+&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Target&lt;/th>
+&lt;td>For latency, target node to measure the latency to. For bandwidth measurements, the interface to measure the bandwidth on.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: VRFs</title><link>/docs/nodes/vrfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/vrfs/</guid><description>
+&lt;h3 id="overview">Overview&lt;/h3>
+&lt;p>VRFs can be used route / nat and filter what traffic is allowed to pass and how it should appear on the network. VRFs can be associated to an interface whether it be a physical interface / virtual network interface or other tunnel interfaces such as ipsec or gre. VRFs are segmented on a layer 3 level from all other traffic traversing the Trustgrid node.&lt;/p>
+&lt;p>For standard use cases of source nat and/or destination nat creating a route and a NAT is sufficient. Traffic rules can be used for more advanced controls. An applicable ACL is required for any traffic to pass as a zero trust methodology is applied.&lt;/p>
+&lt;h3 id="address-translation">Address Translation&lt;/h3>
+&lt;p>This is where NATs are created in order to translate the traffic to appear as desired on the network.
+NATs support translating both source and destination CIDRs as well as masquerading as the egress interface address.&lt;/p>
+&lt;h6 id="snat--dnat-example">SNAT / DNAT Example&lt;/h6>
+&lt;p>Using the example NAT below if a source packet was initiated from 10.10.10.100 destined for 10.10.20.100 the source address would be translated to 192.168.10.100 and the destination address would be translated to 192.168.20.100.
+It is important to note that nat translations occur before routing decisions are made.&lt;/p>
+&lt;p>&lt;img src="nat1.png" alt="img">&lt;/p>
+&lt;h6 id="maquerade-example">Maquerade Example&lt;/h6>
+&lt;p>Using the example below if a source packet is initiated from within 10.10.10.0/24 destined for anything in 192.168.10.0/24 the source would be translated to the interface address the packet is egressing on. If it was a single interface Trustgrid node it would be sourced as the wan facing interface address.&lt;/p>
+&lt;p>&lt;img src="masquerade1.png" alt="img">&lt;/p>
+&lt;h3 id="routes">Routes&lt;/h3>
+&lt;p>Note that NAT translations happen before routing so routes should be created for the destination NAT CIDR if applicable.
+Routes require a destination CIDR, interface and metric.
+A next hop is optional and only applicable for non-tunnel interfaces such as physical interfaces or vlan subinterfaces.
+The gateway of the applicable interface will be used if no next hop is defined.&lt;/p>
+&lt;p>The example below would be used for example to offload all internet bound traffic directly out the WAN facing interface&lt;/p>
+&lt;p>&lt;img src="offload.png" alt="img">&lt;/p>
+&lt;h3 id="traffic-rules">Traffic Rules&lt;/h3>
+&lt;p>Traffic rules can be used for more advanced granular traffic manipulation beyond standard source and destination nat.
+There are many more parameters that can be applied to the traffic depending on the specific use case.
+When creating a traffic rule an ACL is required for traffic to pass. The available parameters are defined below.
+Rules are evaluated based on the line number. The first matching rule is the one that will be applied to the packet.
+More specific rules should always be implemented above less specific rules. Eg a rule for a /24 network should be above a /16 network the /24 is included in.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Number&lt;/th>
+&lt;td>The line number the rule is applied to. Rules are matched in numerical order.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Action&lt;/th>
+&lt;td>&lt;p>All traffic rules have an action that is applied to the associated packet.&lt;/p>
+&lt;ul>
+&lt;li>Accept - The packet is allowed to be processed locally.&lt;/li>
+&lt;li>Drop - The packet is dropped and not responded to&lt;/li>
+&lt;li>Reject - A TCP Reset is sent in response&lt;/li>
+&lt;li>Forward - The packet is forwarded to its defined destination such as an interface or another VRF&lt;/li>
+&lt;li>Mirror - Packets are not manipulated but can be mirrored for inspection purposes.
+For example passing through an IDS container such as Snort.&lt;/li>
+&lt;li>Log - The packet is not manipulated but is marked for logging&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Ingress Interface&lt;/th>
+&lt;td>The traffic rule is applied to packets that ingress on this interface&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Forward Interface&lt;/th>
+&lt;td>Packets are forwarded out this interface once the rule is applied&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Protcol&lt;/th>
+&lt;td>The protocol that the rule should apply to. All, ICMP, TCP or UDP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Forward VRF&lt;/th>
+&lt;td>Packets are forwarded into another VRF that is associated on the node. Only configureable when a forward action is selected.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Source CIDR&lt;/th>
+&lt;td>The source network the rule should apply to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Destination CIDR&lt;/th>
+&lt;td>The destination network the rule should apply to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Masquerade&lt;/th>
+&lt;td>Translate and source all packets from the nodes interface address when enabled&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>DNAT Destination&lt;/th>
+&lt;td>Forward all traffic to the DNAT destination IP/Port. For example in order to forward all http traffic through a proxy&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Destination Mac&lt;/th>
+&lt;td>The destination mac address defined overwrites the source mac address of the packet. Necessary only for some container deployments such as Snort inpsecting traffic.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Ports&lt;/th>
+&lt;td>Used to define a port range when creating a traffic rule&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h6 id="traffic-rule-example">Traffic Rule Example&lt;/h6>
+&lt;p>In the below example the first rule on line number 1 is forwarding all traffic destined to 10.0.20.0/24 to a virtual network tunnel interface. Any NATs configured under Address Translation will be applied before the packet is forwarded to its destination. The rule on line number 10 will forward all traffic that does not match the first rule out to the internet masquerading as the WAN interfaces address.
+If the line numbers were reversed the virtual network rule would never be matched as all traffic would match the internet offload rule which is configured for all source and destination traffic.&lt;/p>
+&lt;p>&lt;img src="trafficrule1.png" alt="img">&lt;/p></description></item><item><title>Docs: ZTNA Gateway</title><link>/docs/nodes/ztna-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/ztna-gateway/</guid><description>
+&lt;p>Navigate to a node, then select &lt;code>ZTNA Gateway&lt;/code> under the &lt;code>Network&lt;/code> section.&lt;/p>
+&lt;p>&lt;img src="ztna-gateway.png" alt="ztna-gateway">&lt;/p>
+&lt;h2 id="https-endpoint">HTTPS Endpoint&lt;/h2>
+&lt;p>The HTTPS endpoint is used to provide connectivity for non-WireGuard ZTNA &lt;a href="/docs/applications/">applications&lt;/a>.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Enabled&lt;/th>
+&lt;td>When enabled, this node will listen for ZTNA traffic.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Public FQDN&lt;/th>
+&lt;td>The IP or FQDN of the node or the load balancer in front of the node. If using a domain name without a load balancer, be sure to select the appropriate &lt;a href="/docs/certificates/">certificate&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Port&lt;/th>
+&lt;td>The port to listen on. Users will always connect on port 443, so only change this if the node is behind a load balancer.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Certificate&lt;/th>
+&lt;td>The certificate to use for TLS traffic. Only needed if the node is to be directly accessed by users (i.e., without a load balancer) and the FQDN is a domain name.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="wireguard-endpoint">WireGuard Endpoint&lt;/h2>
+&lt;p>The WireGuard endpoint is used to provide connectivity for WireGuard ZTNA &lt;a href="/docs/applications/">applications&lt;/a>.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Enabled&lt;/th>
+&lt;td>When enabled, this node will listen for WireGuard traffic.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Public FQDN&lt;/th>
+&lt;td>The IP or FQDN of the node or the load balancer in front of the node.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Port&lt;/th>
+&lt;td>The port to listen on.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Public Key&lt;/th>
+&lt;td>The node&amp;rsquo;s WireGuard public key. This can be generated or imported using the actions dropdown. Note that regenerated the key will disconnect existing clients and require users to reconfigure their WireGuard connection.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;em>“WireGuard” is a registered trademark of Jason A. Donenfeld.&lt;/em>&lt;/p></description></item><item><title>Docs: Access Policy</title><link>/docs/applications/access-policy/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/access-policy/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>An Access Policy is comprised of several rules that determine whether a user is permitted to access a ZTNA application. If no rule matches a user&amp;rsquo;s access attempt, the attempt will be denied.&lt;/p>
+&lt;/div>
+&lt;p>Each rule has three types of criteria:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Include&lt;/th>
+&lt;td>criteria in this section are logically OR&amp;rsquo;d together. For a rule to apply to an access attempt, at least one of the include criteria must match.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Exception&lt;/th>
+&lt;td>criteria in this section are logically NOT&amp;rsquo;d. If any exception criterion matches, the rule will not apply to the access attempt.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Require&lt;/th>
+&lt;td>criteria in this section are logically AND&amp;rsquo;d. ALL of the require criteria must match for the rule to apply to the access attempt.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Rules also have an action:&lt;/p>
+&lt;ul>
+&lt;li>Allow - if the rule matches, allow access&lt;/li>
+&lt;li>Block - if the rule matches, block access&lt;/li>
+&lt;/ul>
+&lt;p>Rules are evaluated in the order they are listed in the policy. Rules may be moved higher or lower in the list by clicking the up or down arrows next to the rule.&lt;/p>
+&lt;p>&lt;img src="rules.png" alt="img">&lt;/p>
+&lt;h3 id="criteria">Criteria&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Emails&lt;/th>
+&lt;td>a list of email addresses, comma separated. Eg, &amp;ldquo;&lt;a href="mailto:user1@company.com">user1@company.com&lt;/a>, &lt;a href="mailto:user2@company.com">user2@company.com&lt;/a>&amp;rdquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Country&lt;/th>
+&lt;td>the user&amp;rsquo;s country, determined by their IP address&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Emails ending in&lt;/th>
+&lt;td>a required email suffix, like &amp;ldquo;@company.com&amp;rdquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Everyone&lt;/th>
+&lt;td>this rule always matches&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>IDP Groups&lt;/th>
+&lt;td>a list of &lt;a href="/docs/user-management/groups/">groups&lt;/a> that the user must be a member of&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>IP Ranges&lt;/th>
+&lt;td>a list of IP ranges either in CIDR notation or a single IP address, comma separated. Eg, &amp;ldquo;10.10.44, 10.10.8.0/24&amp;rdquo;&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="criteria.png" alt="img">&lt;/p></description></item><item><title>Docs: RDP App</title><link>/docs/applications/rdp-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/rdp-app/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A RDP app is a ZTNA application that allows remote access to an internal RDP server. RDP servers can be hosted internally but exposed to authorized users.&lt;/p>
+&lt;/div>
+&lt;h4 id="general">General&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>app name&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Description&lt;/th>
+&lt;td>app description&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Icon&lt;/th>
+&lt;td>the application&amp;rsquo;s icon (optional) to show in the application dashboard&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="connectivity">Connectivity&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>Connectivity type:&lt;/p>
+&lt;ul>
+&lt;li>local to gateway - the application is hosted on the same network as the gateway&lt;/li>
+&lt;li>remote node - the application is hosted on an edge node&amp;rsquo;s network&lt;/li>
+&lt;li>virtual network - the application is accessible over the Trustgrid virtual network from the ZTNA gateway&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>ZTNA Gateway - the ZTNA gateway node that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Destination Node - only available if connectivity type is Remote Node. The edge node with access to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>VRF - only available if connectivity type is Remote Node. The VRF used to connect to the application.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Internal server hostname or IP - the internal hostname or IP address of the RDP server and port number&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Virtual Network - only available if connectivity type is Virtual Network. The virtual network that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Client Virtual IP - only available if connectivity type is Virtual Network -defaults to the virtual management IP of the ZTNA gateway if it exists. The source virtual IP address that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Virtual server hostname or IP - only available if connectifity type is Virtual Network. The destination virtual IP address and port number that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="security">Security&lt;/h4>
+&lt;ul>
+&lt;li>Identity Provider - the &lt;a href="/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>Click &lt;code>Add Application&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="add-app.png" alt="img">&lt;/p>
+&lt;ol start="2">
+&lt;li>Click the &lt;code>Remote Desktop - RDP&lt;/code> option&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="rdp.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>Fill out all details in the sheet provided, then click &lt;code>Save&lt;/code> when satisfied with the information entered&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="rdp-app1.png" alt="img">&lt;/p></description></item><item><title>Docs: SSH App</title><link>/docs/applications/ssh-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/ssh-app/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A SSH app is a ZTNA application that allows remote access to internal SSH servers. SSH servers can be hosted internally but exposed to authorized users.&lt;/p>
+&lt;/div>
+&lt;h2 id="general">General&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>app name&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Description&lt;/th>
+&lt;td>app description&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Icon&lt;/th>
+&lt;td>the application&amp;rsquo;s icon (optional) to show in the application dashboard&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="connectivity">Connectivity&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Connectivity type:&lt;/p>
+&lt;ul>
+&lt;li>local to gateway - the application is hosted on the same network as the gateway&lt;/li>
+&lt;li>remote node - the application is hosted on an edge node&amp;rsquo;s network&lt;/li>
+&lt;li>virtual network - the application is accessible over the Trustgrid virtual network from the ZTNA gateway&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>ZTNA Gateway - the ZTNA gateway node that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Destination Node - only available if connectivity type is Remote Node. The edge node with access to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>VRF - only available if connectivity type is Remote Node. The VRF used to connect to the application.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Internal server hostname or IP - the internal hostname or IP address of the SSH server and port number&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Virtual Network - only available if connectivity type is Virtual Network. The virtual network that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Client Virtual IP - only available if connectivity type is Virtual Network -defaults to the virtual management IP of the ZTNA gateway if it exists. The source virtual IP address that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Virtual server hostname or IP - only available if connectifity type is Virtual Network. The destination virtual IP address and port number that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="security">Security&lt;/h2>
+&lt;ul>
+&lt;li>Identity Provider - the &lt;a href="/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>Click &lt;code>Add Application&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="add-app.png" alt="img">&lt;/p>
+&lt;ol start="2">
+&lt;li>Click the &lt;code>Secure Shell&lt;/code> option&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="shh.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>Fill out all details in the sheet provided, then click &lt;code>Save&lt;/code> when satisfied with the information entered&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="shh-app.png" alt="img">&lt;/p></description></item><item><title>Docs: Trusted Links</title><link>/docs/applications/web-app/trusted-links/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/web-app/trusted-links/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Trusted links allow a user to allow-list only specific URLs when accessed through a ZTNA application. This allows a user to access any URL on the internet through a ZTNA application, but only if the URL is explicitly allowed by the application.&lt;/p>
+&lt;/div>
+&lt;p>This can be used to permit readonly or certain operations remotely, but still require local access for more sensitive operations.&lt;/p></description></item><item><title>Docs: Visibility</title><link>/docs/applications/visibility/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/visibility/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Visibility groups determine what applications a user can see on their &lt;a href="https://portal.dev.trustgrid.io/#/applications">application dashboard&lt;/a>. A user must be a member of at least one selected group to see an application.&lt;/p>
+&lt;/div>
+&lt;p>&lt;img src="visibility.png" alt="img">&lt;/p></description></item><item><title>Docs: VNC App</title><link>/docs/applications/vnc-app/</link><pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/vnc-app/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A VNC app is a ZTNA application that allows remote access to an internal VNC server. VNC servers can be hosted internally but exposed to authorized users.&lt;/p>
+&lt;/div>
+&lt;h4 id="general">General&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>app name&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Description&lt;/th>
+&lt;td>app description&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Icon&lt;/th>
+&lt;td>the application&amp;rsquo;s icon (optional) to show in the application dashboard&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="connectivity">Connectivity&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>Connectivity type:&lt;/p>
+&lt;ul>
+&lt;li>local to gateway - the application is hosted on the same network as the gateway&lt;/li>
+&lt;li>remote node - the application is hosted on an edge node&amp;rsquo;s network&lt;/li>
+&lt;li>virtual network - the application is accessible over the Trustgrid virtual network from the ZTNA gateway&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>ZTNA Gateway - the ZTNA gateway node that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Destination Node - only available if connectivity type is Remote Node. The edge node with access to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>VRF - only available if connectivity type is Remote Node. The VRF used to connect to the application.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Internal server hostname or IP - the internal hostname or IP address of the VNC server and port number&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Virtual Network - only available if connectivity type is Virtual Network. The virtual network that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Client Virtual IP - only available if connectivity type is Virtual Network -defaults to the virtual management IP of the ZTNA gateway if it exists. The source virtual IP address that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Virtual server hostname or IP - only available if connectifity type is Virtual Network. The destination virtual IP address and port number that will be used to connect to the application&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="security">Security&lt;/h4>
+&lt;ul>
+&lt;li>Identity Provider - the &lt;a href="/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>Click &lt;code>Add Application&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="add-app.png" alt="img">&lt;/p>
+&lt;ol start="2">
+&lt;li>Click the &lt;code>Remote Desktop - VNC&lt;/code> option&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="vnc.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>Fill out all details in the sheet provided, then click &lt;code>Save&lt;/code> when satisfied with the information entered&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="vnc-app.png" alt="img">&lt;/p></description></item><item><title>Help-Center: Authorization to Request Support</title><link>/help-center/request-support/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>/help-center/request-support/</guid><description>
+&lt;p>To prevent unauthorized users from potentially compromising the control plane, Trustgrid has implemented a policy to approve customers&amp;rsquo; staff for access to technical support services. Trustgrid will not refuse support completely in cases when unauthorized staff request it, but will limit the disclosure of confidential information and will refuse to make configuration changes without approval from an authorized support contact.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>All staff who request support must have a portal login.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Trustgrid support staff will not execute any change requested by staff that exceeds that staff members access to portal.&lt;/p>
+&lt;p>a. Monitor Access: Staff can alert of issues and request remote assistance but no change in the portal can be requested or made.&lt;/p>
+&lt;p>b. Operator Access: Staff can alert of issues and request remote assistance but only changes limited to the Operator role can be requested.&lt;/p>
+&lt;p>c. Administrator Access: Staff can request any system change.&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>Docs: Groups</title><link>/docs/user-management/groups/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/user-management/groups/</guid><description>
+&lt;p>&lt;img src="group-ss.png" alt="img">&lt;/p>
+&lt;p>User Management Groups defined can be used to make Remote Access applications visible to users.&lt;/p>
+&lt;p>There are two sources for Groups&lt;/p>
+&lt;h4 id="trustgrid-native-groups">Trustgrid-native Groups&lt;/h4>
+&lt;p>These groups are created in the portal via the &lt;code>Add Group&lt;/code> button.
+Users can be added to the group by:&lt;/p>
+&lt;ol>
+&lt;li>From the &lt;code>Groups&lt;/code> page you can select the group, then click &lt;code>Add Member&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="add-to-group.png" alt="img">&lt;/p>
+&lt;ol start="2">
+&lt;li>From the &lt;code>user&lt;/code> section, search for and add the email address of the desired user.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="user-email.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>Click &lt;code>Save&lt;/code> and repeat process to add other users.&lt;/li>
+&lt;/ol>
+&lt;h4 id="identity-provider-synchronized-groups">Identity Provider-Synchronized Groups&lt;/h4>
+&lt;p>These groups are create based on Identity Provider (IdP) configuration for select IdPs (currently Gsuite and Azure OpenID). The IdP can be configured to sync all or select groups, and the sync process will update the group membership automatically.&lt;/p>
+&lt;blockquote>
+&lt;p>if users are added to an IdP-synced group in the Trustgrid portal they will automatically be removed the next time they sync runs.&lt;/p>
+&lt;/blockquote></description></item><item><title>Getting-Started: Networking</title><link>/getting-started/networking/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>/getting-started/networking/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Trustgrid delivers a software defined wide area network (SD-WAN) that enables connectivity between cloud environments, data centers, and edge or on-premise hosts. Our robust networking feature set provides layer 3 and layer 4 network overlays with cloud management tools.&lt;/p>
+&lt;/div>
+&lt;h3 id="types-of-connectivity">Types of Connectivity&lt;/h3>
+&lt;p>Trustgrid establishes mutual TLS tunnels between &lt;a href="/docs/nodes/">nodes&lt;/a> using mutual authentication. These tunnels between edge nodes and gateway nodes constitute the data plane of a Trustgrid network. Over this tunnel two distinct types of connectivity are supported, Layer 3 and Layer 4. Layer 3 supports &lt;a href="/docs/domain/virtual-networks/routes/">routed&lt;/a> traffic and Network Address Translation (NAT) to replicate traditional WAN connections. Trustgrid&amp;rsquo;s Layer 4 networking uses reverse proxies to map local IP-port number combinations to remote hosts. Each connectivity type has distinct advantages and may be used for either gateway nodes or edge nodes.&lt;/p>
+&lt;h3 id="layer-3-overview">Layer 3 Overview&lt;/h3>
+&lt;p>The Trustgrid VPN feature provides the capability to securely route IP packets between networks. In this configuration, Trustgrid &lt;a href="/docs/nodes/">nodes&lt;/a> can operate as a distributed mesh virtual private network (VPN) that can allow applications to access remote data and services at layer 3 (L3) of the network OSI model. This is done by defining a virtual L3 network (similar to an Amazon VPC) and then selecting how edge node networks are exposed and translated into the the virtual address space.&lt;/p>
+&lt;p>Layer 3 configuration is required for all Trustgrid networking deployments on the Gateway (data center / cloud) side. This allows the use of L3 or Layer 4 configurations for edge node deployments. Layer 3 connectivity enables easy support of many hosts at each side of the connection. This allows the replication of existing &lt;a href="/docs/domain/virtual-networks/routes/">routes&lt;/a> and subnets to minimize reconfiguration of any remote or local networks.&lt;/p>
+&lt;p>Layer 3 edge configuration is ideal in situations where there is an incomplete understanding of all traffic (source and destination hosts/ports) as it supports more permissive ACLs. It is required when using stateful protocols (except FTP) and other protocols such as SIP.&lt;/p>
+&lt;p>All gateway nodes must be deployed using L3 networking in a two interface (management/data NIC) configuration.&lt;/p>
+&lt;h3 id="layer-4-overview">Layer 4 Overview&lt;/h3>
+&lt;p>Trustgrid Layer 4 (L4) is only supported in edge configurations. Layer 4 networking enables a reverse proxy connection between the Gateway Node IP address:port number that maps directly to an on-premise host:port. Specific network plug-ins support stateful features like FTP using L4 connectivity. With Trustgrid&amp;rsquo;s L4 networks there is no concern of overlapping local IP subnets on either end of the tunnel because Trustgrid proxies the traffic. The source of all TCP/UDP traffic is the edge node interface, not the originating host. This is transparent to the hosts on either side.&lt;/p>
+&lt;p>Layer 4 connectivity offers slightly better performance than L3 in specific types of traffic and is ideal when there is a single or few remote/edge hosts that are being accessed with deterministic traffic. Layer 4 edge nodes are usually easier to deploy at an edge site as they can avoid the configuration of a &lt;a href="/docs/domain/virtual-networks/">virtual network&lt;/a> overlay (NATs, ACLs, &lt;a href="/docs/domain/virtual-networks/routes/">Routes&lt;/a>, etc). Remote sites that desire to view the actual source of traffic should use Layer 3 for edge configurations as the source IP for all traffic in a Layer 4 connection is the edge node&amp;rsquo;s data IP address.&lt;/p></description></item><item><title>Help-Center: Submit a Support Request</title><link>/help-center/submit-support-request/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>/help-center/submit-support-request/</guid><description>
+&lt;p>Trustgrid support is available 24/7/365 with a commitment to respond to any Emergency Support request within 30 minutes.&lt;/p>
+&lt;h4 id="to-contact-support">To contact support:&lt;/h4>
+&lt;p>Email: &lt;a href="mailto:support@trustgrid.io">support@trustgrid.io&lt;/a>&lt;/p>
+&lt;p>Phone: 888-308-8995 x2&lt;/p>
+&lt;h4 id="authorized-support">Authorized Support&lt;/h4>
+&lt;p>Trustgrid can only provide support to customers with a Trustgrid Portal account commensurate with the account&amp;rsquo;s permission level in the portal. To receive support the user must be able to respond to an email at the account&amp;rsquo;s email address in the portal.&lt;/p>
+&lt;h4 id="enable-support-for-trustgrid">Enable Support for Trustgrid&lt;/h4>
+&lt;p>Trustgrid customers can prohibit Support access to Nodes in the Portal. It may be required to enable this support to resolve certain issues.&lt;/p></description></item><item><title>Help-Center: View Configuration Changes</title><link>/help-center/view-logs/config-changes/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>/help-center/view-logs/config-changes/</guid><description>
+&lt;ul>
+&lt;li>Changes to the following configurations are audited:
+&lt;ul>
+&lt;li>API&lt;/li>
+&lt;li>&lt;a href="/docs/clusters/">Cluster&lt;/a>&lt;/li>
+&lt;li>&lt;a href="/docs/nodes/">Node&lt;/a>&lt;/li>
+&lt;li>&lt;a href="/docs/domain/">Domain&lt;/a>&lt;/li>
+&lt;li>Certificate&lt;/li>
+&lt;li>Org&lt;/li>
+&lt;li>Profile&lt;/li>
+&lt;li>Invite&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Audits record the event type (add/remove/change), the user name, the IP address, and the date of the change&lt;/li>
+&lt;li>Audits are kept for 30 days&lt;/li>
+&lt;li>Audits can be downloaded as CSV on the operations page&lt;/li>
+&lt;/ul></description></item><item><title>Help-Center: View Node Update Events</title><link>/help-center/view-logs/node-update-events/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>/help-center/view-logs/node-update-events/</guid><description>
+&lt;ul>
+&lt;li>View node update events on the Operations page&lt;/li>
+&lt;li>Node update events are kept for 30 days&lt;/li>
+&lt;li>You can download a CSV of the node updates from the Operations page&lt;/li>
+&lt;li>All Trustgrid node agent updates and OS package updates are logged&lt;/li>
+&lt;/ul></description></item><item><title>Help-Center: View User Authentication Events</title><link>/help-center/view-logs/user-authentication/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>/help-center/view-logs/user-authentication/</guid><description>
+&lt;ul>
+&lt;li>For every authentication event, we log:
+&lt;ul>
+&lt;li>user agent&lt;/li>
+&lt;li>user id&lt;/li>
+&lt;li>user name&lt;/li>
+&lt;li>IP address&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>User authentication events include:
+&lt;ul>
+&lt;li>Failed login attempts&lt;/li>
+&lt;li>Successful login attempts&lt;/li>
+&lt;li>API interactions&lt;/li>
+&lt;li>Successful sign ups&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>You can download all of the events for a 30 day period in the Operations page&lt;/li>
+&lt;li>Authentication events are kept for 30 days&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-primary" role="alert">
+If your organization is utilizing a third-party identity provider via SAML or OpenID, that provider is responsible for providing and storing authentication log records
+&lt;/div></description></item><item><title>Docs: Access Policy</title><link>/docs/domain/virtual-networks/access-policy/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/domain/virtual-networks/access-policy/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>An access policy is a list of rules that each allow, reject, or drop traffic at the VPN level.&lt;/p>
+&lt;/div>
+&lt;p>If no rules are defined, traffic will not pass through the &lt;a href="/docs/domain/virtual-networks/">virtual network&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>A rule can match traffic based on the following fields:&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Action&lt;/th>
+&lt;td>Whether to ALLOW, DROP, or REJECT the traffic.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Protocol&lt;/th>
+&lt;td>You can choose ANY, UDP, ICMP, or TCP.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Source&lt;/th>
+&lt;td>The source of the traffic. You can select a &lt;a href="/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Destination&lt;/th>
+&lt;td>The destination of the traffic. You can select a &lt;a href="/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Line Number&lt;/th>
+&lt;td>Rules are evaluated starting with the lowest numbered rule. Once a rule matches, later rules are ignored even if they might also match the traffic. &lt;strong>(confirm w/ Steven)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Port Range&lt;/th>
+&lt;td>For TCP and UDP traffic, you can specify a port (e.g., 80) or a range (e.g., 8000-9000).&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="access-policy.png" alt="img">&lt;/p>
+&lt;p>&lt;strong>Note that &lt;em>all specified&lt;/em> fields must be matched for the rule to match. (confirm w steven).&lt;/strong>&lt;/p></description></item><item><title>Docs: Alarm Filters</title><link>/docs/alarms/alarm-filters/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/alarms/alarm-filters/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Alarm Filters are used to determine which &lt;a href="/docs/alarms/events/">events&lt;/a> trigger notifications and to define which &lt;a href="/docs/alarms/channels/">channels&lt;/a> should receive those notifications.&lt;/p>
+&lt;/div>
+&lt;p>Alarm filters have the following fields:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The name should be unique.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Description&lt;/th>
+&lt;td>The description is displayed in the alarm filters table.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Enabled&lt;/th>
+&lt;td>An alarm filter must be enabled for matching &lt;a href="/docs/alarms/events/">event&lt;/a> to be sent to the selected &lt;a href="/docs/alarms/channels/">channel&lt;/a>. Deselecting the check box can be handy if you wish to suppress a specific type of &lt;a href="/docs/alarms/">alarm&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Channels&lt;/th>
+&lt;td>This section determines which &lt;a href="/docs/alarms/channels/">channels&lt;/a> matching &lt;a href="/docs/alarms/">alarms&lt;/a> will be sent to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Criteria&lt;/th>
+&lt;td>&lt;p>The criteria determine which &lt;a href="/docs/alarms/events/">events&lt;/a> will match the filter. These conditions can be set as:&lt;/p>
+&lt;ul>
+&lt;li>All (default) - All specified criteria must be true to match. Equivalent to a boolean AND condition.&lt;/li>
+&lt;li>Any - Only one criteria must be true to match. Equivalent to a boolean OR condition.&lt;/li>
+&lt;li>None - The specified criteria must be false to match. Equivalent to a boolean NOT of the criteria ANDed together.&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Node Name&lt;/th>
+&lt;td>The &amp;ldquo;Node Name&amp;rdquo; criteria llows you to select one or more specific &lt;a href="/docs/nodes/">node&lt;/a> names. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="/docs/nodes/">node&lt;/a> names is associated with the &lt;a href="/docs/alarms/events/">event&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Event Type&lt;/th>
+&lt;td>The &lt;a href="/docs/alarms/event-types/">&amp;ldquo;Event Type&amp;rdquo;&lt;/a> criteria determines which &lt;a href="/docs/alarms/events/">events&lt;/a> will match the filter. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="/docs/alarms/event-types/">event types&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Tag Matches&lt;/th>
+&lt;td>&lt;p>The &amp;ldquo;Tag Matches&amp;rdquo; criteria allows you to use &lt;a href="/docs/nodes/tags/">tag&lt;/a> name/value pairs to determine if the filter should match &lt;a href="/docs/alarms/events/">events&lt;/a>. For examples, you may what production devices to send to a high priority &lt;a href="/docs/alarms/channels/">channel&lt;/a> such as PagerDuty or OpsGenie. If your &lt;a href="/docs/nodes/">nodes&lt;/a> have a tag to indicating “prod_status=production”, you can select that name/value pair from the list to properly filter your &lt;a href="/docs/alarms/">alarms&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="tag-matches.png" alt="img">&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Severity&lt;/th>
+&lt;td>&lt;p>Each &lt;a href="/docs/alarms/events/">event&lt;/a> type has a severity level associated with it. This filter will match any &lt;a href="/docs/alarms/events/">event&lt;/a> with the selected severity type or higher. This is the only mandatory criteria.&lt;/p>
+&lt;p>The severity levels are:&lt;/p>
+&lt;ol>
+&lt;li>INFO&lt;/li>
+&lt;li>WARNING&lt;/li>
+&lt;li>ERROR&lt;/li>
+&lt;li>CRITICAL&lt;/li>
+&lt;/ol>
+&lt;p>For example, if you select the severity level of WARNING the filter will match WARNING, ERROR and CRITICAL &lt;a href="/docs/alarms/events/">events&lt;/a>.&lt;/p>
+&lt;p>Some events have a corresponding &lt;a href="/docs/alarms/events/">event&lt;/a> that will automatically resolve the alert in the portal and in some &lt;a href="/docs/alarms/channels/">channels&lt;/a> such as PagerDuty. The corresponding event may have a different severity level, so make sure you select the lower severity for the criteria. e.g. &lt;a href="/docs/nodes/">Node&lt;/a> Disconnect is a WARNING but &lt;a href="/docs/nodes/">Node&lt;/a> Connect which resolves it is only INFO. So you’d need to select both &lt;a href="/docs/alarms/event-types/">Event Types&lt;/a> and set the severity to INFO.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Contains Text&lt;/th>
+&lt;td>&lt;p>This field will accept any single string of text to match to the contents of an &lt;a href="/docs/alarms/events/">event&lt;/a>. For example, if all your gateways include &lt;code>-gw&lt;/code> in the name you could enter that without quotes in the field and it would match any &lt;a href="/docs/alarms/events/">event&lt;/a> that includes that text in the event payload. This criteria can also be used if there is another aspect of the node included in the &lt;a href="/docs/alarms/events/">event&lt;/a> payload that doesn’t match the criteria above. To see the entire payload of an &lt;a href="/docs/alarms/events/">event&lt;/a> configure a less specific payload and send to an email &lt;a href="/docs/alarms/channels/">channel&lt;/a> to see the JSON.&lt;/p>
+&lt;p>The &lt;a href="/docs/alarms/events/">event&lt;/a> payload includes the &lt;a href="/docs/nodes/">node’s&lt;/a> unique identifier (UID) which is a string of generated text and numbers. If your &amp;ldquo;Contains Text&amp;rdquo; criteria is too short, there is a chance a &lt;a href="/docs/nodes/">node&lt;/a> UID will also match unexpectedly.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Alert Suppression</title><link>/docs/alarms/alert-suppression/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/alarms/alert-suppression/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Maintenance and other planned disruptive activity can generate a large amount of alerts and notifications for no value. The Trustgrid system allows you to define alert suppression windows during which no alerts are triggered.&lt;/p>
+&lt;/div>
+&lt;h2 id="define-alert-suppression-window">Define Alert Suppression Window&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>Navigate to &lt;code>Alarms&lt;/code> -&amp;gt; &lt;code>Alert Suppression&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Enter a message to users. During the window this will be displayed on the dashboard when users first log in.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="message-to-users.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>Select a duration between 1 and 4 hours for your window.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="duration.png" alt="img">&lt;/p>
+&lt;ol start="4">
+&lt;li>From the calendar select the date that you want the window to start.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="calendar-time.png" alt="img">&lt;/p>
+&lt;ol start="5">
+&lt;li>From the drop down, select the hour that you want the window to begin. This time will be set based off your browser’s current timezone setting. This uses the 24 hour clock (e.g. 0 = 12 am, 14 = 2pm, etc.)&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="schedule-time1.png" alt="img">&lt;/p>
+&lt;ol start="6">
+&lt;li>Click the &lt;code>Schedule&lt;/code> button. You will see a notification that the window has been scheduled and a notice of when it will begin.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="alert-suppression.png" alt="img">&lt;/p>
+&lt;p>To update a scheduled window, make the desired changes and click the &lt;code>Update&lt;/code> button.&lt;/p>
+&lt;h2 id="cancel-alert-suppression-window">Cancel Alert Suppression Window&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>Navigate to &lt;code>Alarms&lt;/code> -&amp;gt; &lt;code>Alert Suppression&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You should see a notification with the scheduled window at the top. Confirm this is the window you wish to cancel.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click the &lt;code>Cancel Schedule&lt;/code> button.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="cancel.png" alt="img">&lt;/p>
+&lt;ol start="4">
+&lt;li>You should be notified that the window has been canceled.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="removal.png" alt="img">&lt;/p>
+&lt;h2 id="limitations">Limitations&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Only a single window can be scheduled at any one time.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Suppression windows apply to all devices across the entire organization.&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>Getting-Started: Basic Architecture</title><link>/getting-started/basic-architecture/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/getting-started/basic-architecture/</guid><description>
+&lt;h3 id="cloud-components">Cloud Components&lt;/h3>
+&lt;ul>
+&lt;li>Portal - The cloud management UI.&lt;/li>
+&lt;li>Gatekeeper - Provides configuration updates to edge nodes.&lt;/li>
+&lt;li>Zuul - Maintains persistent connection with &lt;a href="/docs/nodes/">nodes&lt;/a> for reporting, &lt;a href="/docs/alarms/events/">events&lt;/a>, and updates.&lt;/li>
+&lt;li>API - The management API that exposes 100% of UI elements to automation.&lt;/li>
+&lt;li>Repo - The APT repository that stores all firmware, OS, and &lt;a href="/docs/nodes/">node&lt;/a> updates.&lt;/li>
+&lt;/ul>
+&lt;h3 id="edge-components">Edge Components&lt;/h3>
+&lt;ul>
+&lt;li>Node - The software that provides core functionality in the edge including &lt;a href="/getting-started/networking/">networking&lt;/a>, &lt;a href="/getting-started/security/">security&lt;/a>, compute, and management features. Edge nodes build outbound connections to gateway nodes.&lt;/li>
+&lt;/ul>
+&lt;h3 id="use-cases">Use Cases&lt;/h3>
+&lt;ul>
+&lt;li>Software Defined Networking - Create a mesh &lt;a href="/getting-started/networking/">network&lt;/a> that connects cloud applications to edge data with load balancing, &lt;a href="/docs/clusters/">clustering&lt;/a>, and failover managed through a portal or API.&lt;/li>
+&lt;li>Edge Compute - Deploy applications to the edge to access datasets not appropriate for replication to the cloud due to &lt;a href="/getting-started/security/">security&lt;/a> or compliance concerns, latency, or cost.&lt;/li>
+&lt;li>Device Management - Manage thousands of &lt;a href="/docs/nodes/">nodes&lt;/a> with advanced tools to reduce the burden of operations at enterprise scale.&lt;/li>
+&lt;li>Edge API - Integrate thousands of edge datasets with a single API interface and ETL functions executing at the edge.&lt;/li>
+&lt;li>Security - Leverage Trustgrid&amp;rsquo;s advanced &lt;a href="/getting-started/security/">security&lt;/a> to protect against a wide range of threats.&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Channels</title><link>/docs/alarms/channels/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/alarms/channels/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A channel defines one or more method of delivering alert notifications to external systems.&lt;/p>
+&lt;/div>
+&lt;h3 id="notification-delivery-channels">Notification Delivery Channels&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>Email - One or more email address (comma separated) that will receive messages from &lt;a href="mailto:alerts@trustgrid.io">alerts@trustgrid.io&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>PagerDuty - Trustgrid will generate an incident via the PagerDuty API if provided a valid API routing key.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>OpsGenie - Trustgrid will generate an incident via the OpsGenie API if provided a valid API key with read and create and update permissions.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-primary" role="alert">
+For both PagerDuty and OpsGenie the integration will automatically resolve issues if an &lt;a href="/docs/alarms/events/">event&lt;/a> occurs that negates the initial triggering event. For example, if an &lt;a href="/docs/alarms/events/">event&lt;/a> is triggered by a Node Disconnect and the &lt;a href="/docs/nodes/">node&lt;/a> reconnects, the Node Connect &lt;a href="/docs/alarms/events/">event&lt;/a> will resolve the incident via the API.
+&lt;/div>
+&lt;ul>
+&lt;li>
+&lt;p>Slack - Trustgrid can post the &lt;a href="/docs/alarms/events/">event&lt;/a> data to a configured channel via a webhook.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Microsoft Teams - Trustgrid can post &lt;a href="/docs/alarms/events/">event&lt;/a> data to a configured Teams channel via an incoming webhook&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-primary" role="alert">
+Only a single Slack or Teams channel can be targeted by a Trustgrid channel. However, you can create multiple Trustgrid channels if you wish to post the &lt;a href="/docs/alarms/events/">event&lt;/a> data to more than one Slack/Teams channel.
+&lt;/div>
+&lt;h3 id="example-event-data">Example Event Data&lt;/h3>
+&lt;p>The &lt;a href="/docs/alarms/events/">event&lt;/a> data is delivered in JSON, as shown below, which depending on the integration can allow for additional parsing.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;nodeName&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;edge1&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Name&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">node&lt;/span> &lt;span style="color:#a40000">that&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">relates&lt;/span> &lt;span style="color:#a40000">to&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;expires&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">1604801325&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Unix&lt;/span> &lt;span style="color:#a40000">epoch&lt;/span> &lt;span style="color:#a40000">timestamp&lt;/span> &lt;span style="color:#a40000">when&lt;/span> &lt;span style="color:#a40000">this&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">will&lt;/span> &lt;span style="color:#a40000">expire&lt;/span> &lt;span style="color:#a40000">and&lt;/span> &lt;span style="color:#a40000">automatically&lt;/span> &lt;span style="color:#a40000">resolve&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;level&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;INFO&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Alert&lt;/span> &lt;span style="color:#a40000">severity&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;eventType&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Node Disconnect&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Matches&lt;/span> &lt;span style="color:#a40000">to&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">types&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;source&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;EKG&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;message&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Node disconnected&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Alert&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;orgId&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;8e1c2c05-2c86-4b1b-a0cc-############&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;GS1PK&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Org#8e1c2c05-2c86-4b1b-a0cc-############&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;_ct&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{},&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;uid&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;1jwV1R2R6itQUjPza9yqTE8a8zu&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;GS1SK&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Alert#1jwV1R2R6itQUjPza9yqTE8a8zu&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;_md&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{},&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;domain&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;example.trustgrid.io&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;SK&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Alert#Node Disconnect&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;_tp&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Alert&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;PK&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Node#0895b104-5434-447b-8577-############&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;state&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;UNKNOWN&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;nodeId&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;0895b104-5434-447b-8577-############&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;timestamp&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">1604714923&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Unix&lt;/span> &lt;span style="color:#a40000">epoch&lt;/span> &lt;span style="color:#a40000">timestamp&lt;/span> &lt;span style="color:#a40000">when&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">was&lt;/span> &lt;span style="color:#a40000">first&lt;/span> &lt;span style="color:#a40000">triggered&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;channelID&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;bc47ca84-1d04-454b-bedc-a55d1a917c0e&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">The&lt;/span> &lt;span style="color:#a40000">unique&lt;/span> &lt;span style="color:#a40000">id&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">channel&lt;/span> &lt;span style="color:#a40000">used&lt;/span> &lt;span style="color:#a40000">to&lt;/span> &lt;span style="color:#a40000">deliver&lt;/span> &lt;span style="color:#a40000">this&lt;/span> &lt;span style="color:#a40000">message.&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;notes&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Text from Description Field&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;alarmIDs&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">A&lt;/span> &lt;span style="color:#a40000">list&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">alarm&lt;/span> &lt;span style="color:#a40000">filters&lt;/span> &lt;span style="color:#a40000">that&lt;/span> &lt;span style="color:#a40000">matched&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;be324011-4bea-4392-a06a-541646decd39&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Cluster Site Health State</title><link>/docs/clusters/cluster-health/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/clusters/cluster-health/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A healthy &lt;a href="/docs/clusters/">cluster&lt;/a> should have two online Trustgrid &lt;a href="/docs/nodes/">nodes&lt;/a> in a healthy state. The Trustgrid control plane can monitor the member &lt;a href="/docs/nodes/">nodes&lt;/a> and generate &lt;a href="/docs/alarms/events/">events&lt;/a> when their state changes such that the health of the &lt;a href="/docs/clusters/">cluster&lt;/a> is impacted.&lt;/p>
+&lt;/div>
+&lt;h3 id="basics">Basics&lt;/h3>
+&lt;div class="alert alert-primary" role="alert">
+&lt;p>These events are based on the information reported by each member node to the control plane. Because of this:&lt;/p>
+&lt;ul>
+&lt;li>There can be a delay between a change and the &lt;a href="/docs/clusters/">Cluster&lt;/a> Site Health events.&lt;/li>
+&lt;li>If member &lt;a href="/docs/nodes/">nodes&lt;/a> have issues preventing control plane connections but not impacting data plane or other services the &lt;a href="/docs/alarms/events/">events&lt;/a> may not accurately reflect the state of the &lt;a href="/docs/clusters/">cluster&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h3 id="cluster-health-state">Cluster Health State&lt;/h3>
+&lt;p>The Trustgrid will now display one of three states in the portal:&lt;/p>
+&lt;table>
+&lt;tbody>
+&lt;tr>
+&lt;th>State&lt;/th>
+&lt;th>Meaning&lt;/th>
+&lt;/tr>
+&lt;tr>
+&lt;th>Healthy&lt;/th>
+&lt;td>Both members are online with a single member active.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Unhealthy&lt;/th>
+&lt;td>
+&lt;p>There is at least one online and healthy member of the &lt;a href="/docs/clusters/">cluster&lt;/a> with the active role AND one or more of these conditions is true:&lt;/p>
+&lt;ul>
+&lt;li>One of the &lt;a href="/docs/clusters/">cluster&lt;/a> members is offline, unhealthy or disabled&lt;/li>
+&lt;li>There are &lt;strong>two&lt;/strong> &lt;a href="/docs/clusters/">cluster&lt;/a> members with the active role&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Offline&lt;/th>
+&lt;td>
+&lt;p>Both &lt;a href="/docs/nodes/">nodes&lt;/a> are offline, unhealthy or disabled.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Event Types</title><link>/docs/alarms/event-types/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/alarms/event-types/</guid><description>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Filter Type Name&lt;/th>
+&lt;th>Severity&lt;/th>
+&lt;th>Message&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>All Gateways Disconnected&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>This &lt;a href="/docs/alarms/events/">event&lt;/a> will be triggered if an edge node loses connectivity to all it’s available gateways.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>All Peers Disconnected&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>This &lt;a href="/docs/alarms/events/">event&lt;/a> will be triggered if a node is configured as a gateway an it lose connectivity to all it’s configured edge nodes.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Certificate Expiring&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a certificate uploaded via Portal → Certificates is about to expire in less than three months.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cluster Failover&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;a href="/docs/nodes/">Node&lt;/a> is the active &lt;a href="/docs/clusters/">cluster&lt;/a> member&lt;/td>
+&lt;td>Sent by a &lt;a href="/docs/nodes/">node&lt;/a> when it claims the active role.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cluster Failover&lt;/td>
+&lt;td>Info&lt;/td>
+&lt;td>&lt;a href="/docs/nodes/">Node&lt;/a> is no longer the active &lt;a href="/docs/clusters/">cluster&lt;/a> member&lt;/td>
+&lt;td>Sent by a &lt;a href="/docs/nodes/">node&lt;/a> when it releases the active role.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Connection Flapping&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&lt;/a> disconnects and reconnects 10 times within 5 minutes. A follow up alert will be sent after each subsequent 120 disconnect/reconnects.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Connection Flapping&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>This alert will be sent when a &lt;a href="/docs/nodes/">node’s&lt;/a> &amp;ldquo;Connection Flapping&amp;rdquo; issue has been resolved.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Connection Timeout&lt;/td>
+&lt;td>ERROR&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&lt;/a> does not reconnect after a profile update has been pushed to the &lt;a href="/docs/nodes/">node&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Data Plane Disruption&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>This &lt;a href="/docs/alarms/events/">event&lt;/a> will be triggered if a data plane tunnel is terminated unexpectedly.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Date Plane Disruption&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>Gateway &lt;em>nodename&lt;/em> removed from the domain&lt;/td>
+&lt;td>If a &lt;a href="/docs/nodes/">node&lt;/a> acting as a gateway (public, private or hub) is disabled or the gateway service is disabled all other &lt;a href="/docs/nodes/">nodes&lt;/a> in the domain will log this &lt;a href="/docs/alarms/events/">event&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Gateway Connectivity Health Check&lt;/td>
+&lt;td>CRITICAL&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when an edge node is unable to communicate with a gateway node.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Gateway Connectivity Health Check&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when an edge node reestablishes connectivity to a gateway node after a failure is reported.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Gateway Ingress Limit Reached&lt;/td>
+&lt;td>ERROR&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a gateway node’s ingress limit is above 95 percent utilization for two minutes straight.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Metric Threshold Violation&lt;/td>
+&lt;td>ERROR&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&lt;/a> cpu, ram, disk, or latency configured metric threshold is violated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Metric Threshold Violation&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a previously reported threshold violation has been cleared.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Network Error&lt;/td>
+&lt;td>CRITICAL&lt;/td>
+&lt;td>Stale ARP detected&lt;/td>
+&lt;td>Alerts when a stale ARP entry is detected for a &lt;a href="/docs/nodes/">node’s&lt;/a> &lt;a href="/docs/clusters/">cluster&lt;/a> IP.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Network Error&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>Interface {OS interface name} is running with half-duplex&lt;/td>
+&lt;td>Alerts if an interface has been detected running at half-duplex. This is almost always a result of a failure to auto-negotiate the speed/duplex and can result in poor performance.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="/docs/nodes/">Node&lt;/a> Connect&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&lt;/a> connects to the control plane.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="/docs/nodes/">Node&lt;/a> Disconnect&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&lt;/a> disconnects from the control plane.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Order Created&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a new provisioning order has been created.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Order Commented&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a provisioning order case has been commented.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Unauthorized IP&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&amp;rsquo;s&lt;/a> public IP has been locked but the connection to the control plane comes from a different IP.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr></description></item><item><title>Docs: Production Status Tags</title><link>/docs/nodes/tags/prod-status-tag/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/nodes/tags/prod-status-tag/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Production status tags are used for for organizing large Trustgrid deployments.&lt;/p>
+&lt;/div>
+&lt;p>It is recommended that customers use a &lt;a href="/docs/nodes/tags/">tag&lt;/a> to indicate if &lt;a href="/docs/nodes/">nodes&lt;/a> are currently in production or not. For example, you may wish to have a &lt;a href="/docs/nodes/tags/">tag&lt;/a> such as prod_status with possible values like&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>deploying&lt;/code> for devices still being deployed&lt;/li>
+&lt;li>&lt;code>production&lt;/code> for devices actively in user&lt;/li>
+&lt;li>&lt;code>decommission&lt;/code> for devices that are being removed&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-primary" role="alert">
+It’s important to have these &lt;a href="/docs/nodes/tags/">tag&lt;/a> names and values be consistent within the organization including case. &lt;code>Production&lt;/code> and &lt;code>production&lt;/code> would be viewed as two different values, as an example.
+&lt;/div></description></item><item><title>Docs: Events</title><link>/docs/alarms/events/</link><pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/alarms/events/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Events are emitted from nodes and from the Trustgrid control plane when actionable things happen. Events are the basis for alarms and notifications.&lt;/p>
+&lt;/div>
+&lt;p>Events can be viewed for individual nodes by navigating to &lt;code>Events&lt;/code> under the &lt;code>History&lt;/code> section.&lt;/p>
+&lt;p>&lt;img src="node-events-list.png" alt="img">&lt;/p>
+&lt;p>Events for the entire organization can be viewed by navigating to &lt;code>Events&lt;/code> under the &lt;code>Alarms&lt;/code> section.&lt;/p>
+&lt;p>Clicking the &lt;code>Test&lt;/code> button will send the event through your configured alarms to help verify channels are configured as expected.&lt;/p>
+&lt;h4 id="event-times">Event Times&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Generated Time&lt;/th>
+&lt;td>The time the event was created.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Received Time&lt;/th>
+&lt;td>The time the event was received by the control plane. This can be later than the generated time in the event of a network disruption, for eample.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Help-Center: Site Requirements</title><link>/help-center/kb/site-requirements/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/help-center/kb/site-requirements/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Trustgrid’s architecture consists of Nodes deployed at the Edge (on-premise) and management infrastructure built in AWS. Nodes create tunnels to other nodes for data transfer, and to the management infrastructure for control. All tunnels are TLS connections and must be permitted by any firewall between&lt;/p>
+&lt;/div>
+&lt;h3 id="network-requirements-for-all-nodes">Network Requirements for All Nodes&lt;/h3>
+&lt;p>In order to connect to the Trustgrid Control Plane, the following outbound traffic must be allowed from the node’s configured primary interface IP address&lt;/p>
+&lt;ul>
+&lt;li>TCP Port 443 and TCP/UDP 8443 to:&lt;/li>
+&lt;li>
+&lt;ul>
+&lt;li>35.171.100.16/28&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;ul>
+&lt;li>34.223.12.192/28&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>TCP/UDP Port 53 to the configured DNS servers. These DNS servers must be able to resolve DNS requests for the trustgrid.io domain&lt;/li>
+&lt;/ul>
+&lt;h3 id="recommendations">Recommendations&lt;/h3>
+&lt;p>At least 10Mbps download speed is recommended for reasonable performance during upgrades. Actual bandwidth requirement will be specific to the workloads running across the device.&lt;/p>
+&lt;p>Hardware devices are recommended to be connected to ports configured for 1000 Mbps and full duplex with auto negotiation on.&lt;/p>
+&lt;h2 id="gateway-node-network-requirements">Gateway Node Network Requirements&lt;/h2>
+&lt;p>In addition to being able to connect to the Control Plane resource outlined above, Gateway Nodes must be allowed to receive inbound traffic on their configured public IP and port (typically TCP/UDP port 8443). Both the advertised public IP and port are configurable when enabling a node as a gateway.&lt;/p></description></item><item><title>Docs: API Access</title><link>/docs/user-management/api-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-management/api-access/</guid><description>
+&lt;h4 id="generating-an-api-key">Generating an API Key&lt;/h4>
+&lt;p>Navigate to &lt;code>User Management&lt;/code> -&amp;gt; &lt;code>API Access&lt;/code>, and click &lt;code>Regenerate API keys&lt;/code>. This will invalidate your existing API key, if it exists. The API key is tied to your user and will have the same permissions.&lt;/p>
+&lt;blockquote>
+&lt;p>The client secret key will only be available at time of generation - if it&amp;rsquo;s lost, the key will need to be regenerated&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="using-the-api-key">Using the API Key&lt;/h4>
+&lt;p>To use the API key in a request, pass it in as an HTTP header, like Authorization: trustgrid-token client-id:client-secret
+Anything that can be done in the Trustgrid Portal can be done with the API (except for generating an API token).&lt;/p>
+&lt;p>To query the API for all nodes, for example, you could run:&lt;/p>
+&lt;p>curl -H &amp;ldquo;Authorization: trustgrid-token YOUR-CLIENT-ID:YOUR-CLIENT-SECRET&amp;rdquo; &lt;a href="https://api.trustgrid.io/node">https://api.trustgrid.io/node&lt;/a>&lt;/p>
+&lt;p>In the &lt;a href="https://portal.trustgrid.io/api-docs/">API documentation&lt;/a>, clicking &lt;code>Authorize&lt;/code> at the top right will prompt for the API header.&lt;/p>
+&lt;p>&lt;img src="api-access.png" alt="img">&lt;/p></description></item><item><title>Tutorials: Applying Changes</title><link>/tutorials/applying-changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/applying-changes/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Because changes to a domain &lt;a href="/docs/domain/virtual-networks/">virtual network&lt;/a> affect &lt;em>all&lt;/em> &lt;a href="/docs/nodes/">nodes&lt;/a>, &lt;a href="/docs/domain/">domain&lt;/a> configuration changes must be reviewed before applied, and are applied all at once.&lt;/p>
+&lt;/div>
+&lt;p>After making changes to a &lt;a href="/docs/domain/virtual-networks/">virtual network&lt;/a>, you can review outstanding changes. A list of changes will show who made each change, with a before/after table if appropriate.&lt;/p>
+&lt;p>&lt;img src="outstanding-changes.png" alt="img">&lt;/p>
+&lt;p>Individual changes can be rejected by clicking the delete icon at the top.&lt;/p>
+&lt;p>Once changes are applied, outstanding changes will disappear from the review page, and &lt;a href="/docs/nodes/">nodes&lt;/a> will receive the configuration updates.&lt;/p></description></item><item><title>Docs: Authentication Audits</title><link>/docs/audits/authentication/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/audits/authentication/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Trustgrid records information for authentication attempts into the control plane. This information can be used to troubleshoot authentication issues, or to monitor for suspicious activity.&lt;/p>
+&lt;/div>
+&lt;p>Authentication audits are available by navigating to &lt;code>Operations&lt;/code>-&amp;gt;&lt;code>Authentication Audits&lt;/code>. Only the most recent 25 records are shown, but the last 30 days of audits can be downloaded by clicking the link at the bottom of the page.&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+Successful logins from external identity providers are logged, but failed attempts are not. Check your IDP&amp;rsquo;s documentation for information on how to view those.
+&lt;/div></description></item><item><title>Tutorials: AWS Requirements for HA Wireguard Cluster</title><link>/tutorials/deployments/aws-ha-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/deployments/aws-ha-cluster/</guid><description>
+&lt;ol>
+&lt;li>Create EC2 Target Group and add both Trustgrid gateways with the target being wireguard server port (Default UDP 51820)&lt;/li>
+&lt;/ol>
+&lt;p>The health check should be set to http with a path of /status and override traffic port to be port 80.&lt;/p>
+&lt;p>Only the active member of the Trustgrid Cluster will respond as healthy to the health check.&lt;/p>
+&lt;p>&lt;img src="wg-ha.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="health-checks.png" alt="img">&lt;/p>
+&lt;ol start="2">
+&lt;li>Create NLB (Network Load Balancer) with listener set to configured UDP wireguard server port (Default 51820) and forwarding to the target group created above. The load balancer should be created as internet facing IPV4 and mapped to the Public facing subnets of the Trustgrid gateways.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="edit-listener.png" alt="img">&lt;/p></description></item><item><title>Tutorials: AWS Requirements for HA ZTNA Gateway Cluster</title><link>/tutorials/deployments/aws-ha-ztna-gateway-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/deployments/aws-ha-ztna-gateway-cluster/</guid><description>
+&lt;ol>
+&lt;li>Create EC2 target group and add both Trustgrid application gateways with the target being TCP port 80.&lt;/li>
+&lt;/ol>
+&lt;p>The health check should be for http and the path should be &lt;code>/status&lt;/code>&lt;/p>
+&lt;p>Only the active member of the Trustgrid Cluster will respond as healthy to this check.&lt;/p>
+&lt;p>&lt;img src="nate-test.png" alt="img">&lt;/p>
+&lt;ol start="2">
+&lt;li>Create an ALB (Application Load Balancer) with the listener set to HTTPS and forwarding to the target group created above. Under secure listener settings apply the SSL Certificate provided by Trustgrid for the application gateways. &lt;code>ELBSecurityPolicy-2016-08&lt;/code> is recommended as the default security policy by AWS.&lt;/li>
+&lt;/ol>
+&lt;p>The load balancer should be created as internet facing IPV4 and mapped to the Public facing subnets of the Trustgrid gateways.&lt;/p>
+&lt;p>&lt;img src="listener-details.png" alt="img">&lt;/p></description></item><item><title>Docs: Azure AD</title><link>/docs/idps/azure-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/idps/azure-idp-fields/</guid><description>
+&lt;h4 id="setup">Setup&lt;/h4>
+&lt;p>Setting up the Azure AD integration requires the configuration of an Azure App registration. See &lt;a href="#azure-app-registration-configuration">Azure App registration configuration&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="azure_ad_config.png" alt="img">&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Issuer&lt;/th>
+&lt;td>Specifies the Azure App OpenID metadata endpoint.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Client ID&lt;/th>
+&lt;td>Specifies the Azure App client ID.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Secret&lt;/th>
+&lt;td>Specifies the Azure App secret.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-info" role="alert">
+Before being able to save the configuration, validation of the Issuer needs to be performed by pressing the &lt;code>Test&lt;/code> button.
+&lt;/div>
+&lt;p>Once the validation has been performed and the configuration saved, the sync section will be available.&lt;/p>
+&lt;p>&lt;img src="azure_ad_sync.png" alt="img">&lt;/p>
+&lt;ul>
+&lt;li>Sync all users - Syncs all available users along with all the groups associated to the users.&lt;/li>
+&lt;li>Sync users from specific groups - Syncs all users from the selected groups.&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-info" role="alert">
+&lt;ul>
+&lt;li>At any given point the sync selection can be changed and saved, and the sync will automatically start.&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h4 id="azure-app-registration-configuration">Azure App registration configuration&lt;/h4>
+&lt;div class="alert alert-info" role="alert">
+The following information is only partial Azure AD reference for configuring an App registration via the Microsoft Azure Portal. Information presented in the following images might have changed.
+&lt;/div>
+&lt;ol>
+&lt;li>Create a new &lt;code>App Registration&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="app_register.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="app_create.png" alt="img">&lt;/p>
+&lt;ol start="2">
+&lt;li>Once you’ve registered your application you need to make a note of the Application Client ID and Metadata endpoint that provides the Open ID metadata. You can find it by click on Endpoints at the top of the application. The Application Client ID will be used for the Client ID configuration parameter of the Identity Provider in Trustgrid Portal. The metadata endpoint goes in the Issuer configuration parameter
+of the Identity Provider in Trustgrid Portal. It should be something like &lt;a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/&lt;/a>&amp;lt;app_id&amp;gt;/v2.0 Ignore what comes after the /.well-known part.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="app_endpoints.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>Configure the Authentication piece of the Azure app&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="app_auth.png" alt="img">&lt;/p>
+&lt;ol start="4">
+&lt;li>Add a platform by selecting the “Web” type and add the corresponding redirect uri and logout url, and select both Access Tokens and ID tokens checkboxes.&lt;/li>
+&lt;/ol>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Trustgrid Redirect URL&lt;/th>
+&lt;td>&lt;a href="https://id.trustgrid.io/auth/openid/callback">https://id.trustgrid.io/auth/openid/callback&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Trustgrid Logout URL&lt;/th>
+&lt;td>&lt;a href="https://id.trustgrid.io/logout">https://id.trustgrid.io/logout&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ol start="5">
+&lt;li>You need to create a secret for the authentication piece. You can select the expiration to be any of the selections. Once you create the secret make sure to make a note of the “value” since that piece of information is what is going to be used under the Secret configuration parameter of the Identity Provider in Trustgrid Portal.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="app_secret.png" alt="img">&lt;/p>
+&lt;ol start="6">
+&lt;li>Once you’ve created the client secret, navigate to “Token Configuration” and add the “email” optional claim&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="app_token_config.png" alt="img">&lt;/p>
+&lt;hr></description></item><item><title>Docs: Changing Password Process with Auth0</title><link>/docs/user-management/users/auth0-change-password/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-management/users/auth0-change-password/</guid><description>
+&lt;p>Currently changing password requires users to:&lt;/p>
+&lt;ol>
+&lt;li>Log out of the portal&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="logout1.png" alt="img">&lt;/p>
+&lt;ol start="2">
+&lt;li>If needed, select &lt;code>Not your account?&lt;/code>. If yoou don&amp;rsquo;t see this option, ignore this step.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="not-mine.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>On the login page select &lt;code>Don't remember your password?&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="remember.png" alt="img">&lt;/p>
+&lt;ol start="4">
+&lt;li>Enter your email in the provided text box and click &lt;code>Send Email&lt;/code> to reset your password&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="send-email.png" alt="img">&lt;/p>
+&lt;ol start="5">
+&lt;li>You should see a notification that the email was sent on the login page.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="notify.png" alt="img">&lt;/p>
+&lt;ol start="6">
+&lt;li>In the email, you should see information like the image below. If you still wish to reset your password, click &lt;code>Confirm&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="change.png" alt="img">&lt;/p>
+&lt;ol start="7">
+&lt;li>After clicking &lt;code>Confirm&lt;/code> you will be taken to a page where you can enter your new desired password. After you finalise it by clicking &lt;code>Reset Password&lt;/code>, you will be able to log in with your new password.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="new-password.png" alt="img">&lt;/p></description></item><item><title>Tutorials: Changing the WAN Interface IP</title><link>/tutorials/wan-interface-ip/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/wan-interface-ip/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>The WAN interface of a Trustgrid node is used to build connections to both the Control Plane and any Data Plane connectivity. Any change to this IP address is disruptive and presents a risk that the device will go offline if incorrect information is provided. This could potentially require a technical resource to go onsite to reconnect physical devices.&lt;/p>
+&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+To make the below changes via the Trustgrid portal the user must have the Node Administrator or Administrator role.
+The node must also be connected to the Trustgrid Control Plane to make this change via the portal.
+&lt;/div>
+&lt;p>The document details the process of updating the ETH0 - WAN Interface IP via the Trustgrid portal. This change can also be performed via the Trustgrid LocalUI .&lt;/p>
+&lt;h4 id="network-adapter-1---wan-ip-change----try-method">Network Adapter 1 - WAN IP Change - Try Method&lt;/h4>
+&lt;p>&lt;mark>Nodes must be running version 20200331 or newer to use the Try method&lt;/mark>
+Trustgrid nodes have the ability to test a new IP configuration before permanently applying the configuration to the device. The process works like this:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>The user will enter the new IP configuration into the portal and click Try&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The user will select the duration to try the new configuration (10, 30 or 60 minutes)&lt;/p>
+&lt;p>a. If the device successfully reconnects to the control plane after the select time the user will have the option of importing and saving this new configuration permanently, or reverting to the previous configuration.&lt;/p>
+&lt;p>b. If the device does not reconnect within the chosen duration, the device will automatically revert to its previous IP address configuration.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;mark>The device will revert to the original IP if it is rebooted or power cycled after initiating the “try” option and before importing and saving those changes in the portal.&lt;/mark>&lt;/p>
+&lt;h4 id="changing-network-adapter-1---wan-via-try---detail-process">Changing Network Adapter 1 - WAN via Try - Detail Process&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>Login to the portal and navigate to the Node that you wish to reconfigure.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Confirm the node is actively connected to the cloud&lt;/p>
+&lt;blockquote>
+&lt;p>Note: If the device is not online when the below IP change is made it cannot pull this config from the device. Until it reconnects to the cloud it will continue using the original IP address.&lt;/p>
+&lt;/blockquote>
+&lt;p>a. First confirm there is a green dot next to the node name&lt;/p>
+&lt;p>&lt;img src="tester.png" alt="img">&lt;/p>
+&lt;p>b. Confirm that you can open an interactive tool such as Terminal or Sniff Interface traffic. Leave this tool open so you know it when the device&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Navigate to the Configuration &amp;gt; Network section and confirm Network Adapter 1 - WAN Interface is selected.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="network-config.png" alt="img">&lt;/p>
+&lt;ol start="4">
+&lt;li>Set the IP settings to the desired new configuration&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="lotsa-servers.png" alt="img">&lt;/p>
+&lt;pre>&lt;code>a. Not that the IP adress and the subnet mask are to be entered in CIDR notation
+&lt;/code>&lt;/pre>
+&lt;ol start="5">
+&lt;li>SCroll down and select &lt;code>Try&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="try.png" alt="img">&lt;/p>
+&lt;ol start="6">
+&lt;li>Select the duration of time the device should be allowed to be disconnected before reverting to the prior IP configuration and click &lt;code>Confirm&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="apply-confirmation.png" alt="img">&lt;/p>
+&lt;ol start="7">
+&lt;li>The below warning will be presented for confirmation. You will need to type in the word &amp;lsquo;yes&amp;rsquo; to confirm.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="type-yes.png" alt="img">&lt;/p>
+&lt;ol start="8">
+&lt;li>
+&lt;p>At this point the device will apply the new IP address and attempt to reconnect.&lt;/p>
+&lt;p>a. If the device cannot connect for the chosen duration the settings will revert to the original IP settings.&lt;/p>
+&lt;p>b. If the device successfully reconnects you will be presented with the below options. You may need to refresh the page to see these options.&lt;/p>
+&lt;p>&lt;img src="yellow-box.png" alt="img">&lt;/p>
+&lt;pre>&lt;code> i. Import - This option will update the portal to show the new IP address information.
+ii. Revert - This option will revert the portal to show the original IP address information.
+&lt;/code>&lt;/pre>
+&lt;p>c. Select the desired option and then scroll down and select &lt;code>Save&lt;/code>. Again you will be prompted to confirm the change.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="network-adapter-1---wan-ip-change---save-method">Network Adapter 1 - WAN IP Change - Save Method&lt;/h4>
+&lt;p>This process is very similar to the above with the exception that &lt;mark>&lt;strong>the change is permanent&lt;/strong>&lt;/mark>. The device will continue to use the configured IP address until either:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>The device connects to the cloud using the newly saved IP, at which point this process or the above Try method can be used to reconfigure the IP remotely&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The device is reconfigured locally using either the Trustgrid Local UI or console (contact Trustgrid Support)&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="changing-network-adapter-1---wan-via-try---detail-process-1">Changing Network Adapter 1 - WAN via Try - Detail Process&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>Login to the portal and navigate to the Node that you wish to reconfigure.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Confirm the node is actively connected to the cloud&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>Note: If the device is not online when the below IP change is made it cannot pull this config from the device. Until it reconnects to the cloud it will continue using the original IP address.&lt;/p>
+&lt;/blockquote>
+&lt;pre>&lt;code>a. First confirm there is a green dot next to the node name
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="tester.png" alt="img">&lt;/p>
+&lt;pre>&lt;code>b. Confirm that you can open an interactive tool such as Terminal or Sniff Interface traffic. Leave this tool open so you know it when the device
+&lt;/code>&lt;/pre>
+&lt;ol start="3">
+&lt;li>Navigate to &lt;code>Configuration&lt;/code> -&amp;gt; &lt;code>Network&lt;/code> section and confirm Network Adapter 1 - WAN Interface is selected.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="network-config.png" alt="img">&lt;/p>
+&lt;ol start="4">
+&lt;li>Set the IP settings to the desired new configuration&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="lotsa-servers.png" alt="img">&lt;/p>
+&lt;pre>&lt;code>a. Note that the IP address and subnet mask are to be entered in CIDR notation.
+&lt;/code>&lt;/pre>
+&lt;ol start="5">
+&lt;li>
+&lt;p>After setting the IP address click Save&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You’ll be presented with a warning like the below. Type &amp;lsquo;yes&amp;rsquo; and click &lt;code>Confirm&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="type-yes.png" alt="img">&lt;/p>
+&lt;ol start="7">
+&lt;li>
+&lt;p>The device will be notified it has an updated configuration. It will pull this configuration down and automatically restart the Trustgrid service using the new IP address.&lt;/p>
+&lt;p>a. The restart usually takes less than a minute.&lt;/p>
+&lt;p>b. What ever interactive service you were using (Terminal, etc) should disconnect.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>After the local site networking is updated (either physically by moving a cable, or logically by updating the connected switch port config) so that the new IP address can connect the device should come back online.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="addition-post-ip-change-verification">Addition Post-IP Change Verification&lt;/h3>
+&lt;p>After the WAN IP has been changed there are a few areas where the WAN interface IP may have been used:&lt;/p>
+&lt;h4 id="gateway-nodes">Gateway Nodes&lt;/h4>
+&lt;p>If the Trustgrid node is acting as either a public or private gateway, you may also need to update the Public IP field under &lt;code>System&lt;/code> -&amp;gt; &lt;code>Gateway&lt;/code> -&amp;gt; &lt;code>Server Settings&lt;/code>. If your gateway is using DNS instead you will need to update that DNS record accordingly.&lt;/p>
+&lt;p>&lt;img src="private-server.png" alt="img">&lt;/p>
+&lt;h3 id="clustered-nodes">Clustered Nodes&lt;/h3>
+&lt;p>If the Trustgrid node is clustered and the WAN interface IP was being used for the cluster heartbeat you will need to adjust the IP address it is listening.&lt;/p>
+&lt;p>The heartbeat IP and port is visible under &lt;code>System&lt;/code> -&amp;gt; &lt;code>Cluster&lt;/code> of each cluster member’s node detail page.&lt;/p>
+&lt;p>&lt;img src="cluster-system.png" alt="img">&lt;/p>
+&lt;p>If the Host field is using the old WAN interface IP address, change it to the new IP and click &lt;code>Save&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="cluster-comms.png" alt="img">&lt;/p>
+&lt;blockquote>
+&lt;p>If the nodes has two or more interfaces, it is typical that those LAN interface IPs will be used for the cluster heartbeat. In that case no change is required on this page.&lt;/p>
+&lt;/blockquote></description></item><item><title>Help-Center: Check Trustgrid Services Status</title><link>/help-center/trustgrid-service-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/help-center/trustgrid-service-status/</guid><description>
+&lt;p>View the status of all Trustgrid services on our &lt;a href="https://status.trustgrid.io/">Statuspage Account&lt;/a>&lt;/p>
+&lt;p>Within the Trustgrid Portal, hover over the username in the upper right corner and then select &lt;code>Status&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="status.png" alt="img">&lt;/p></description></item></channel></rss>

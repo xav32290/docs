@@ -1,0 +1,361 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Alarms</title><link>/docs/alarms/</link><description>Recent content in Alarms on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/docs/alarms/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Alarm Filters</title><link>/docs/alarms/alarm-filters/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/alarms/alarm-filters/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Alarm Filters are used to determine which &lt;a href="/docs/alarms/events/">events&lt;/a> trigger notifications and to define which &lt;a href="/docs/alarms/channels/">channels&lt;/a> should receive those notifications.&lt;/p>
+&lt;/div>
+&lt;p>Alarm filters have the following fields:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The name should be unique.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Description&lt;/th>
+&lt;td>The description is displayed in the alarm filters table.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Enabled&lt;/th>
+&lt;td>An alarm filter must be enabled for matching &lt;a href="/docs/alarms/events/">event&lt;/a> to be sent to the selected &lt;a href="/docs/alarms/channels/">channel&lt;/a>. Deselecting the check box can be handy if you wish to suppress a specific type of &lt;a href="/docs/alarms/">alarm&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Channels&lt;/th>
+&lt;td>This section determines which &lt;a href="/docs/alarms/channels/">channels&lt;/a> matching &lt;a href="/docs/alarms/">alarms&lt;/a> will be sent to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Criteria&lt;/th>
+&lt;td>&lt;p>The criteria determine which &lt;a href="/docs/alarms/events/">events&lt;/a> will match the filter. These conditions can be set as:&lt;/p>
+&lt;ul>
+&lt;li>All (default) - All specified criteria must be true to match. Equivalent to a boolean AND condition.&lt;/li>
+&lt;li>Any - Only one criteria must be true to match. Equivalent to a boolean OR condition.&lt;/li>
+&lt;li>None - The specified criteria must be false to match. Equivalent to a boolean NOT of the criteria ANDed together.&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Node Name&lt;/th>
+&lt;td>The &amp;ldquo;Node Name&amp;rdquo; criteria llows you to select one or more specific &lt;a href="/docs/nodes/">node&lt;/a> names. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="/docs/nodes/">node&lt;/a> names is associated with the &lt;a href="/docs/alarms/events/">event&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Event Type&lt;/th>
+&lt;td>The &lt;a href="/docs/alarms/event-types/">&amp;ldquo;Event Type&amp;rdquo;&lt;/a> criteria determines which &lt;a href="/docs/alarms/events/">events&lt;/a> will match the filter. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="/docs/alarms/event-types/">event types&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Tag Matches&lt;/th>
+&lt;td>&lt;p>The &amp;ldquo;Tag Matches&amp;rdquo; criteria allows you to use &lt;a href="/docs/nodes/tags/">tag&lt;/a> name/value pairs to determine if the filter should match &lt;a href="/docs/alarms/events/">events&lt;/a>. For examples, you may what production devices to send to a high priority &lt;a href="/docs/alarms/channels/">channel&lt;/a> such as PagerDuty or OpsGenie. If your &lt;a href="/docs/nodes/">nodes&lt;/a> have a tag to indicating “prod_status=production”, you can select that name/value pair from the list to properly filter your &lt;a href="/docs/alarms/">alarms&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="tag-matches.png" alt="img">&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Severity&lt;/th>
+&lt;td>&lt;p>Each &lt;a href="/docs/alarms/events/">event&lt;/a> type has a severity level associated with it. This filter will match any &lt;a href="/docs/alarms/events/">event&lt;/a> with the selected severity type or higher. This is the only mandatory criteria.&lt;/p>
+&lt;p>The severity levels are:&lt;/p>
+&lt;ol>
+&lt;li>INFO&lt;/li>
+&lt;li>WARNING&lt;/li>
+&lt;li>ERROR&lt;/li>
+&lt;li>CRITICAL&lt;/li>
+&lt;/ol>
+&lt;p>For example, if you select the severity level of WARNING the filter will match WARNING, ERROR and CRITICAL &lt;a href="/docs/alarms/events/">events&lt;/a>.&lt;/p>
+&lt;p>Some events have a corresponding &lt;a href="/docs/alarms/events/">event&lt;/a> that will automatically resolve the alert in the portal and in some &lt;a href="/docs/alarms/channels/">channels&lt;/a> such as PagerDuty. The corresponding event may have a different severity level, so make sure you select the lower severity for the criteria. e.g. &lt;a href="/docs/nodes/">Node&lt;/a> Disconnect is a WARNING but &lt;a href="/docs/nodes/">Node&lt;/a> Connect which resolves it is only INFO. So you’d need to select both &lt;a href="/docs/alarms/event-types/">Event Types&lt;/a> and set the severity to INFO.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Contains Text&lt;/th>
+&lt;td>&lt;p>This field will accept any single string of text to match to the contents of an &lt;a href="/docs/alarms/events/">event&lt;/a>. For example, if all your gateways include &lt;code>-gw&lt;/code> in the name you could enter that without quotes in the field and it would match any &lt;a href="/docs/alarms/events/">event&lt;/a> that includes that text in the event payload. This criteria can also be used if there is another aspect of the node included in the &lt;a href="/docs/alarms/events/">event&lt;/a> payload that doesn’t match the criteria above. To see the entire payload of an &lt;a href="/docs/alarms/events/">event&lt;/a> configure a less specific payload and send to an email &lt;a href="/docs/alarms/channels/">channel&lt;/a> to see the JSON.&lt;/p>
+&lt;p>The &lt;a href="/docs/alarms/events/">event&lt;/a> payload includes the &lt;a href="/docs/nodes/">node’s&lt;/a> unique identifier (UID) which is a string of generated text and numbers. If your &amp;ldquo;Contains Text&amp;rdquo; criteria is too short, there is a chance a &lt;a href="/docs/nodes/">node&lt;/a> UID will also match unexpectedly.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Alert Suppression</title><link>/docs/alarms/alert-suppression/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/alarms/alert-suppression/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Maintenance and other planned disruptive activity can generate a large amount of alerts and notifications for no value. The Trustgrid system allows you to define alert suppression windows during which no alerts are triggered.&lt;/p>
+&lt;/div>
+&lt;h2 id="define-alert-suppression-window">Define Alert Suppression Window&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>Navigate to &lt;code>Alarms&lt;/code> -&amp;gt; &lt;code>Alert Suppression&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Enter a message to users. During the window this will be displayed on the dashboard when users first log in.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="message-to-users.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>Select a duration between 1 and 4 hours for your window.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="duration.png" alt="img">&lt;/p>
+&lt;ol start="4">
+&lt;li>From the calendar select the date that you want the window to start.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="calendar-time.png" alt="img">&lt;/p>
+&lt;ol start="5">
+&lt;li>From the drop down, select the hour that you want the window to begin. This time will be set based off your browser’s current timezone setting. This uses the 24 hour clock (e.g. 0 = 12 am, 14 = 2pm, etc.)&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="schedule-time1.png" alt="img">&lt;/p>
+&lt;ol start="6">
+&lt;li>Click the &lt;code>Schedule&lt;/code> button. You will see a notification that the window has been scheduled and a notice of when it will begin.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="alert-suppression.png" alt="img">&lt;/p>
+&lt;p>To update a scheduled window, make the desired changes and click the &lt;code>Update&lt;/code> button.&lt;/p>
+&lt;h2 id="cancel-alert-suppression-window">Cancel Alert Suppression Window&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>Navigate to &lt;code>Alarms&lt;/code> -&amp;gt; &lt;code>Alert Suppression&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You should see a notification with the scheduled window at the top. Confirm this is the window you wish to cancel.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click the &lt;code>Cancel Schedule&lt;/code> button.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="cancel.png" alt="img">&lt;/p>
+&lt;ol start="4">
+&lt;li>You should be notified that the window has been canceled.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="removal.png" alt="img">&lt;/p>
+&lt;h2 id="limitations">Limitations&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Only a single window can be scheduled at any one time.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Suppression windows apply to all devices across the entire organization.&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Channels</title><link>/docs/alarms/channels/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/alarms/channels/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A channel defines one or more method of delivering alert notifications to external systems.&lt;/p>
+&lt;/div>
+&lt;h3 id="notification-delivery-channels">Notification Delivery Channels&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>Email - One or more email address (comma separated) that will receive messages from &lt;a href="mailto:alerts@trustgrid.io">alerts@trustgrid.io&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>PagerDuty - Trustgrid will generate an incident via the PagerDuty API if provided a valid API routing key.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>OpsGenie - Trustgrid will generate an incident via the OpsGenie API if provided a valid API key with read and create and update permissions.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-primary" role="alert">
+For both PagerDuty and OpsGenie the integration will automatically resolve issues if an &lt;a href="/docs/alarms/events/">event&lt;/a> occurs that negates the initial triggering event. For example, if an &lt;a href="/docs/alarms/events/">event&lt;/a> is triggered by a Node Disconnect and the &lt;a href="/docs/nodes/">node&lt;/a> reconnects, the Node Connect &lt;a href="/docs/alarms/events/">event&lt;/a> will resolve the incident via the API.
+&lt;/div>
+&lt;ul>
+&lt;li>
+&lt;p>Slack - Trustgrid can post the &lt;a href="/docs/alarms/events/">event&lt;/a> data to a configured channel via a webhook.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Microsoft Teams - Trustgrid can post &lt;a href="/docs/alarms/events/">event&lt;/a> data to a configured Teams channel via an incoming webhook&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-primary" role="alert">
+Only a single Slack or Teams channel can be targeted by a Trustgrid channel. However, you can create multiple Trustgrid channels if you wish to post the &lt;a href="/docs/alarms/events/">event&lt;/a> data to more than one Slack/Teams channel.
+&lt;/div>
+&lt;h3 id="example-event-data">Example Event Data&lt;/h3>
+&lt;p>The &lt;a href="/docs/alarms/events/">event&lt;/a> data is delivered in JSON, as shown below, which depending on the integration can allow for additional parsing.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;nodeName&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;edge1&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Name&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">node&lt;/span> &lt;span style="color:#a40000">that&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">relates&lt;/span> &lt;span style="color:#a40000">to&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;expires&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">1604801325&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Unix&lt;/span> &lt;span style="color:#a40000">epoch&lt;/span> &lt;span style="color:#a40000">timestamp&lt;/span> &lt;span style="color:#a40000">when&lt;/span> &lt;span style="color:#a40000">this&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">will&lt;/span> &lt;span style="color:#a40000">expire&lt;/span> &lt;span style="color:#a40000">and&lt;/span> &lt;span style="color:#a40000">automatically&lt;/span> &lt;span style="color:#a40000">resolve&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;level&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;INFO&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Alert&lt;/span> &lt;span style="color:#a40000">severity&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;eventType&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Node Disconnect&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Matches&lt;/span> &lt;span style="color:#a40000">to&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">types&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;source&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;EKG&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;message&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Node disconnected&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Alert&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;orgId&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;8e1c2c05-2c86-4b1b-a0cc-############&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;GS1PK&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Org#8e1c2c05-2c86-4b1b-a0cc-############&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;_ct&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{},&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;uid&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;1jwV1R2R6itQUjPza9yqTE8a8zu&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;GS1SK&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Alert#1jwV1R2R6itQUjPza9yqTE8a8zu&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;_md&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{},&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;domain&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;example.trustgrid.io&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;SK&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Alert#Node Disconnect&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;_tp&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Alert&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;PK&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Node#0895b104-5434-447b-8577-############&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;state&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;UNKNOWN&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;nodeId&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;0895b104-5434-447b-8577-############&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;timestamp&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">1604714923&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Unix&lt;/span> &lt;span style="color:#a40000">epoch&lt;/span> &lt;span style="color:#a40000">timestamp&lt;/span> &lt;span style="color:#a40000">when&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">was&lt;/span> &lt;span style="color:#a40000">first&lt;/span> &lt;span style="color:#a40000">triggered&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;channelID&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;bc47ca84-1d04-454b-bedc-a55d1a917c0e&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">The&lt;/span> &lt;span style="color:#a40000">unique&lt;/span> &lt;span style="color:#a40000">id&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">channel&lt;/span> &lt;span style="color:#a40000">used&lt;/span> &lt;span style="color:#a40000">to&lt;/span> &lt;span style="color:#a40000">deliver&lt;/span> &lt;span style="color:#a40000">this&lt;/span> &lt;span style="color:#a40000">message.&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;notes&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Text from Description Field&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;alarmIDs&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">A&lt;/span> &lt;span style="color:#a40000">list&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">alarm&lt;/span> &lt;span style="color:#a40000">filters&lt;/span> &lt;span style="color:#a40000">that&lt;/span> &lt;span style="color:#a40000">matched&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;be324011-4bea-4392-a06a-541646decd39&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Event Types</title><link>/docs/alarms/event-types/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/alarms/event-types/</guid><description>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Filter Type Name&lt;/th>
+&lt;th>Severity&lt;/th>
+&lt;th>Message&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>All Gateways Disconnected&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>This &lt;a href="/docs/alarms/events/">event&lt;/a> will be triggered if an edge node loses connectivity to all it’s available gateways.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>All Peers Disconnected&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>This &lt;a href="/docs/alarms/events/">event&lt;/a> will be triggered if a node is configured as a gateway an it lose connectivity to all it’s configured edge nodes.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Certificate Expiring&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a certificate uploaded via Portal → Certificates is about to expire in less than three months.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cluster Failover&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;a href="/docs/nodes/">Node&lt;/a> is the active &lt;a href="/docs/clusters/">cluster&lt;/a> member&lt;/td>
+&lt;td>Sent by a &lt;a href="/docs/nodes/">node&lt;/a> when it claims the active role.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cluster Failover&lt;/td>
+&lt;td>Info&lt;/td>
+&lt;td>&lt;a href="/docs/nodes/">Node&lt;/a> is no longer the active &lt;a href="/docs/clusters/">cluster&lt;/a> member&lt;/td>
+&lt;td>Sent by a &lt;a href="/docs/nodes/">node&lt;/a> when it releases the active role.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Connection Flapping&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&lt;/a> disconnects and reconnects 10 times within 5 minutes. A follow up alert will be sent after each subsequent 120 disconnect/reconnects.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Connection Flapping&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>This alert will be sent when a &lt;a href="/docs/nodes/">node’s&lt;/a> &amp;ldquo;Connection Flapping&amp;rdquo; issue has been resolved.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Connection Timeout&lt;/td>
+&lt;td>ERROR&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&lt;/a> does not reconnect after a profile update has been pushed to the &lt;a href="/docs/nodes/">node&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Data Plane Disruption&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>This &lt;a href="/docs/alarms/events/">event&lt;/a> will be triggered if a data plane tunnel is terminated unexpectedly.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Date Plane Disruption&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>Gateway &lt;em>nodename&lt;/em> removed from the domain&lt;/td>
+&lt;td>If a &lt;a href="/docs/nodes/">node&lt;/a> acting as a gateway (public, private or hub) is disabled or the gateway service is disabled all other &lt;a href="/docs/nodes/">nodes&lt;/a> in the domain will log this &lt;a href="/docs/alarms/events/">event&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Gateway Connectivity Health Check&lt;/td>
+&lt;td>CRITICAL&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when an edge node is unable to communicate with a gateway node.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Gateway Connectivity Health Check&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when an edge node reestablishes connectivity to a gateway node after a failure is reported.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Gateway Ingress Limit Reached&lt;/td>
+&lt;td>ERROR&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a gateway node’s ingress limit is above 95 percent utilization for two minutes straight.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Metric Threshold Violation&lt;/td>
+&lt;td>ERROR&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&lt;/a> cpu, ram, disk, or latency configured metric threshold is violated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Metric Threshold Violation&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a previously reported threshold violation has been cleared.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Network Error&lt;/td>
+&lt;td>CRITICAL&lt;/td>
+&lt;td>Stale ARP detected&lt;/td>
+&lt;td>Alerts when a stale ARP entry is detected for a &lt;a href="/docs/nodes/">node’s&lt;/a> &lt;a href="/docs/clusters/">cluster&lt;/a> IP.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Network Error&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>Interface {OS interface name} is running with half-duplex&lt;/td>
+&lt;td>Alerts if an interface has been detected running at half-duplex. This is almost always a result of a failure to auto-negotiate the speed/duplex and can result in poor performance.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="/docs/nodes/">Node&lt;/a> Connect&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&lt;/a> connects to the control plane.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="/docs/nodes/">Node&lt;/a> Disconnect&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&lt;/a> disconnects from the control plane.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Order Created&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a new provisioning order has been created.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Order Commented&lt;/td>
+&lt;td>INFO&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a provisioning order case has been commented.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Unauthorized IP&lt;/td>
+&lt;td>WARNING&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Alerts when a &lt;a href="/docs/nodes/">node&amp;rsquo;s&lt;/a> public IP has been locked but the connection to the control plane comes from a different IP.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr></description></item><item><title>Docs: Events</title><link>/docs/alarms/events/</link><pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/alarms/events/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Events are emitted from nodes and from the Trustgrid control plane when actionable things happen. Events are the basis for alarms and notifications.&lt;/p>
+&lt;/div>
+&lt;p>Events can be viewed for individual nodes by navigating to &lt;code>Events&lt;/code> under the &lt;code>History&lt;/code> section.&lt;/p>
+&lt;p>&lt;img src="node-events-list.png" alt="img">&lt;/p>
+&lt;p>Events for the entire organization can be viewed by navigating to &lt;code>Events&lt;/code> under the &lt;code>Alarms&lt;/code> section.&lt;/p>
+&lt;p>Clicking the &lt;code>Test&lt;/code> button will send the event through your configured alarms to help verify channels are configured as expected.&lt;/p>
+&lt;h4 id="event-times">Event Times&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Generated Time&lt;/th>
+&lt;td>The time the event was created.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Received Time&lt;/th>
+&lt;td>The time the event was received by the control plane. This can be later than the generated time in the event of a network disruption, for eample.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item></channel></rss>

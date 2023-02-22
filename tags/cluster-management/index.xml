@@ -1,0 +1,42 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– cluster management</title><link>/tags/cluster-management/</link><description>Recent content in cluster management on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/cluster-management/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Cluster Site Health State</title><link>/docs/clusters/cluster-health/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/clusters/cluster-health/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A healthy &lt;a href="/docs/clusters/">cluster&lt;/a> should have two online Trustgrid &lt;a href="/docs/nodes/">nodes&lt;/a> in a healthy state. The Trustgrid control plane can monitor the member &lt;a href="/docs/nodes/">nodes&lt;/a> and generate &lt;a href="/docs/alarms/events/">events&lt;/a> when their state changes such that the health of the &lt;a href="/docs/clusters/">cluster&lt;/a> is impacted.&lt;/p>
+&lt;/div>
+&lt;h3 id="basics">Basics&lt;/h3>
+&lt;div class="alert alert-primary" role="alert">
+&lt;p>These events are based on the information reported by each member node to the control plane. Because of this:&lt;/p>
+&lt;ul>
+&lt;li>There can be a delay between a change and the &lt;a href="/docs/clusters/">Cluster&lt;/a> Site Health events.&lt;/li>
+&lt;li>If member &lt;a href="/docs/nodes/">nodes&lt;/a> have issues preventing control plane connections but not impacting data plane or other services the &lt;a href="/docs/alarms/events/">events&lt;/a> may not accurately reflect the state of the &lt;a href="/docs/clusters/">cluster&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h3 id="cluster-health-state">Cluster Health State&lt;/h3>
+&lt;p>The Trustgrid will now display one of three states in the portal:&lt;/p>
+&lt;table>
+&lt;tbody>
+&lt;tr>
+&lt;th>State&lt;/th>
+&lt;th>Meaning&lt;/th>
+&lt;/tr>
+&lt;tr>
+&lt;th>Healthy&lt;/th>
+&lt;td>Both members are online with a single member active.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Unhealthy&lt;/th>
+&lt;td>
+&lt;p>There is at least one online and healthy member of the &lt;a href="/docs/clusters/">cluster&lt;/a> with the active role AND one or more of these conditions is true:&lt;/p>
+&lt;ul>
+&lt;li>One of the &lt;a href="/docs/clusters/">cluster&lt;/a> members is offline, unhealthy or disabled&lt;/li>
+&lt;li>There are &lt;strong>two&lt;/strong> &lt;a href="/docs/clusters/">cluster&lt;/a> members with the active role&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Offline&lt;/th>
+&lt;td>
+&lt;p>Both &lt;a href="/docs/nodes/">nodes&lt;/a> are offline, unhealthy or disabled.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item></channel></rss>

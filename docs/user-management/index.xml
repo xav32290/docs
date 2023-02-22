@@ -1,0 +1,236 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– User Management</title><link>/docs/user-management/</link><description>Recent content in User Management on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 30 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/docs/user-management/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Groups</title><link>/docs/user-management/groups/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/user-management/groups/</guid><description>
+&lt;p>&lt;img src="group-ss.png" alt="img">&lt;/p>
+&lt;p>User Management Groups defined can be used to make Remote Access applications visible to users.&lt;/p>
+&lt;p>There are two sources for Groups&lt;/p>
+&lt;h4 id="trustgrid-native-groups">Trustgrid-native Groups&lt;/h4>
+&lt;p>These groups are created in the portal via the &lt;code>Add Group&lt;/code> button.
+Users can be added to the group by:&lt;/p>
+&lt;ol>
+&lt;li>From the &lt;code>Groups&lt;/code> page you can select the group, then click &lt;code>Add Member&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="add-to-group.png" alt="img">&lt;/p>
+&lt;ol start="2">
+&lt;li>From the &lt;code>user&lt;/code> section, search for and add the email address of the desired user.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="user-email.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>Click &lt;code>Save&lt;/code> and repeat process to add other users.&lt;/li>
+&lt;/ol>
+&lt;h4 id="identity-provider-synchronized-groups">Identity Provider-Synchronized Groups&lt;/h4>
+&lt;p>These groups are create based on Identity Provider (IdP) configuration for select IdPs (currently Gsuite and Azure OpenID). The IdP can be configured to sync all or select groups, and the sync process will update the group membership automatically.&lt;/p>
+&lt;blockquote>
+&lt;p>if users are added to an IdP-synced group in the Trustgrid portal they will automatically be removed the next time they sync runs.&lt;/p>
+&lt;/blockquote></description></item><item><title>Docs: API Access</title><link>/docs/user-management/api-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-management/api-access/</guid><description>
+&lt;h4 id="generating-an-api-key">Generating an API Key&lt;/h4>
+&lt;p>Navigate to &lt;code>User Management&lt;/code> -&amp;gt; &lt;code>API Access&lt;/code>, and click &lt;code>Regenerate API keys&lt;/code>. This will invalidate your existing API key, if it exists. The API key is tied to your user and will have the same permissions.&lt;/p>
+&lt;blockquote>
+&lt;p>The client secret key will only be available at time of generation - if it&amp;rsquo;s lost, the key will need to be regenerated&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="using-the-api-key">Using the API Key&lt;/h4>
+&lt;p>To use the API key in a request, pass it in as an HTTP header, like Authorization: trustgrid-token client-id:client-secret
+Anything that can be done in the Trustgrid Portal can be done with the API (except for generating an API token).&lt;/p>
+&lt;p>To query the API for all nodes, for example, you could run:&lt;/p>
+&lt;p>curl -H &amp;ldquo;Authorization: trustgrid-token YOUR-CLIENT-ID:YOUR-CLIENT-SECRET&amp;rdquo; &lt;a href="https://api.trustgrid.io/node">https://api.trustgrid.io/node&lt;/a>&lt;/p>
+&lt;p>In the &lt;a href="https://portal.trustgrid.io/api-docs/">API documentation&lt;/a>, clicking &lt;code>Authorize&lt;/code> at the top right will prompt for the API header.&lt;/p>
+&lt;p>&lt;img src="api-access.png" alt="img">&lt;/p></description></item><item><title>Docs: Policies</title><link>/docs/user-management/policies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-management/policies/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>User Management Policies define what an authenticated user is allowed to do within the Trustgrid system. Policies either allow or explicitly deny specific actions by the user.&lt;/p>
+&lt;/div>
+&lt;h3 id="types-of-policies">Types of Policies&lt;/h3>
+&lt;h4 id="trustgrid-managed-policies">Trustgrid Managed Policies&lt;/h4>
+&lt;p>These policies start with the prefix &lt;code>builtin-tg&lt;/code> and are created and managed by Trustgrid to provide a starting level of permissions based on common user types. Descriptions of the user types for each role are listed below.&lt;/p>
+&lt;p>As Trustgrid adds new features or actions theses policies will automatically be updated to include appropriate permissions. These policies cannot be edited by customers.&lt;/p>
+&lt;h4 id="customer-managed-policies">Customer Managed Policies&lt;/h4>
+&lt;p>These policies can be defined by customers to meet the specific needs of their teams.&lt;/p>
+&lt;h4 id="best-practices">Best Practices&lt;/h4>
+&lt;ul>
+&lt;li>Start by attaching the Trustgrid Managed Policies that best fits the user&amp;rsquo;s minimum, required needs following the principle of “least privilege.”&lt;/li>
+&lt;li>If additional permissions are required, create a Customer Managed Policy that includes those specific rights rights. Then attach that policy to the user.&lt;/li>
+&lt;/ul>
+&lt;h4 id="trustgrid-managed-policy-descriptions">Trustgrid Managed Policy Descriptions&lt;/h4>
+&lt;p>Below are the basic descriptions of the Trustgrid Managed Policies including an example role description. Trustgrid will use this description to guide if it is appropriate to add new permissions to the policies.&lt;/p>
+&lt;p>The policies are listed from lowest permissions to highest.&lt;/p>
+&lt;h4 id="tg-builtin-apps-user">tg-builtin-apps-user&lt;/h4>
+&lt;p>This policy provides minimal permission for a user to connect to the Trustgrid applications portal for using Remote access apps. The user has no rights within the Trustgrid management portal and should likely be given a landing page of &lt;code>/apps&lt;/code> to be redirected straight to the applications portal.&lt;/p>
+&lt;p>Target User: End user for remote access applications with no knowledge of the Trustgrid system.&lt;/p>
+&lt;h4 id="tg-builtin-monitor">tg-builtin-monitor&lt;/h4>
+&lt;p>This policy provides read-only access to non-sensitive resources in the Trustgrid management portal.&lt;/p>
+&lt;p>Target User: Project manager or executive sponsor that needs to view information in the portal, but does not require tools required to troubleshoot or resolve issues.&lt;/p>
+&lt;h4 id="tg-builtin-operator">tg-builtin-operator&lt;/h4>
+&lt;p>This policy provides mostly read-only access but also has the ability to view and use tools within the portal and perform actions to resolve common issues (e.g. restarting/rebooting nodes).&lt;/p>
+&lt;p>Target User: Entry level technical resources responsible for initial triage of support issues.&lt;/p>
+&lt;h4 id="tg-builtin-node-admin">tg-builtin-node-admin&lt;/h4>
+&lt;p>This policy provides the ability to make changes to most resources but is restricted from making changes that can have a wide impact such as changing a gateway node server settings.&lt;/p>
+&lt;p>Target User: Mid-level technical resources that need to make changes to things like node VPN configuration and virtual networks routes, but should be restricted from making changes that can impact an entire organization when possible.&lt;/p>
+&lt;h4 id="tg-builtin-admin">tg-builtin-admin&lt;/h4>
+&lt;p>This policy has permissions to change almost all resources with the exceptions of Identity Providers and User Management.&lt;/p>
+&lt;p>Target User: Senior technical resources needing near full access.&lt;/p>
+&lt;h4 id="tg-builtin-access-admin">tg-builtin-access-admin&lt;/h4>
+&lt;p>This policy grants the ability to manage permissions and identity related resources including configuring Identity Providers, Add/Inviting Users, and creating and assigning policies&lt;/p>
+&lt;p>Target User: Management or access control related resources responsible for granting access to the Trustgrid system.&lt;/p>
+&lt;h4 id="resource-scoped-policies">Resource-Scoped Policies&lt;/h4>
+&lt;p>Policies have a Resources section that allow the permissions granted to be limited to specific Trustgrid resources, such as nodes and clusters. This can be used to present a user with an extremely limited view in the portal. For example, an edge site technical contact could be given a login that was only permitted to see the nodes at their site.&lt;/p>
+&lt;p>&lt;img src="resources.png" alt="img">&lt;/p>
+&lt;h4 id="trustgrid-resource-names-or-tgrn">Trustgrid Resource Names or TGRN&lt;/h4>
+&lt;p>Trustgrid has adopted a resource naming convention that follows the basic format: &lt;code>tgrn:tg::&amp;lt;service&amp;gt;:&amp;lt;resource-type&amp;gt;/&amp;lt;resource-id&amp;gt;&lt;/code>&lt;/p>
+&lt;h6 id="wildcard-tgrn">Wildcard TGRN&lt;/h6>
+&lt;p>By default the Resources field is populated with &lt;code>*&lt;/code> which grants permissions to all resources. This is included by default for new policies and would need to be removed to provide TGRN restricted permissions.&lt;/p>
+&lt;h6 id="node-tgrn">Node TGRN&lt;/h6>
+&lt;p>A node’s TGRN will start with the below prefix:
+&lt;code>tgrn:tg::nodes:node/&lt;/code>
+To get the node’s complete TGRN you’ll need to append the node ID which is visible by navigating to the node and either copying from the URL or using the Node ID field in the Info visor drop down&lt;/p>
+&lt;p>&lt;img src="node-tgrn.png" alt="img">&lt;/p>
+&lt;p>A complete &lt;a href="/docs/nodes/">node&lt;/a> TGRN looks like: &lt;code>tgrn:tg::nodes:node/ab3550cf-f3da-4d90-b4b1-b870fc85c9c7&lt;/code>&lt;/p>
+&lt;h4 id="cluster-tgrn">Cluster TGRN&lt;/h4>
+&lt;p>Cluster TGRN start with the prefix:
+&lt;code>tgrn:tg::nodes:cluster/&lt;/code>
+This is followed by the cluster’s fully qualified domain name (fqdn) which is the combination of the cluster name and your organizations trustgrid domain. This visible in the URL when you navigate to a cluster in the portal.&lt;/p>
+&lt;p>&lt;img src="cluster-tgrn.png" alt="img">&lt;/p>
+&lt;p>A complete &lt;a href="/docs/clusters/">cluster&lt;/a> TGRN looks like: &lt;code>tgrn:tg::nodes:cluster/awscluster.training.trustgrid.io&lt;/code>&lt;/p>
+&lt;h3 id="policy-management">Policy Management&lt;/h3>
+&lt;h4 id="creatingediting-policies">Creating/Editing Policies&lt;/h4>
+&lt;ol>
+&lt;li>Navigate to &lt;code>User Management&lt;/code> → &lt;code>Policies&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="policy-management.png" alt="img">&lt;/p>
+&lt;ol start="2">
+&lt;li>For a new policy click &lt;code>Create Policy&lt;/code>. To edit an existing find it in the list and click on its name.&lt;/li>
+&lt;li>The policy wizard has two sections. The left section groups permissions by category and is where you allow or deny permissions. The right section shows the resulting JSON of the policy and is read only.&lt;/li>
+&lt;li>As an example we will create a role to grant users the ability to see, edit and comment on Provisioning orders.
+a. Under Permissions, search for &lt;code>orders&lt;/code>
+b. Click the green check box next to each of the desired permissions. (Clicking the X would explicitly deny that permission which will take precedent over any other policy that allows that permission)
+c. You will notice the Policy JSON updated as you select permissions
+d. Click &lt;code>Save&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="new-policy.png" alt="img">&lt;/p>
+&lt;h4 id="attaching-policies-and-viewing-effective-permissions">Attaching Policies and Viewing Effective Permissions&lt;/h4>
+&lt;p>Policies are attached and their cumulative effect can be viewed under &lt;code>User Management&lt;/code> → &lt;code>Users&lt;/code> by selecting the desired user.&lt;/p></description></item><item><title>Docs: Users</title><link>/docs/user-management/users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-management/users/</guid><description>
+&lt;p>&lt;img src="users.png" alt="img">&lt;/p>
+&lt;p>The Users panel is the primary panel for managing user identities and the policies attached to them. All changes in this panel require either the [builtin-tg-acess-admin] policy or similar permissions.&lt;/p>
+&lt;h3 id="adding-or-inviting-users">Adding or Inviting Users&lt;/h3>
+&lt;p>Users can either be invited to the Trustgrid portal and utilize Trustgrid’s native authentication system, or be added and be authenticated by a customer configured Identity Provider (IdP).&lt;/p>
+&lt;h4 id="inviting-users">Inviting Users&lt;/h4>
+&lt;p>For users that will utilize Trustgrid’s native authentication system, you will need to invite them with a valid email address.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Navigate to &lt;code>User Management&lt;/code> → &lt;code>Users&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Under &lt;code>Actions&lt;/code> select &lt;code>Invite User&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="invite.png" alt="img">&lt;/p>
+&lt;pre>&lt;code>a. Enter the user’s valid email address and select the desired base policy (more can be attached later).
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="send-invite.png" alt="img">&lt;/p>
+&lt;p>Click &lt;code>Send Invite&lt;/code>.&lt;/p>
+&lt;pre>&lt;code>i. You should see a confirmation that the invite was sent like the one below.
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="invite-sent.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>The user will receive an email with a link to the &lt;a href="https://portal.trustgrid.io">Trustgrid Portal&lt;/a> or similar. They will need to click said link.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="linky.png" alt="img">&lt;/p>
+&lt;ol start="4">
+&lt;li>Once at the Portal, the user will need to click the &lt;code>Sign Up&lt;/code> option. &lt;strong>The user must use the same email address that was invited to get access to your account&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="sign-up.png" alt="img">&lt;/p>
+&lt;ol start="5">
+&lt;li>After filling out the required information and clicking Sign Up they will be prompted to configure Multi-Factor Authentication (MFA). Trustgrid recommends using a one-time password MFA such as Authy or Google Authenticator.&lt;/li>
+&lt;/ol>
+&lt;p>a. Scan the QR code with your app&lt;/p>
+&lt;p>&lt;img src="scan-code.png" alt="img">&lt;/p>
+&lt;p>b. Enter the passcode and click the &lt;code>&amp;gt;&lt;/code>&lt;/p>
+&lt;p>c. You’ll be provided with a recovery code. Save this in a secure place, confirm it is safely recorded and click the &lt;code>&amp;gt;&lt;/code>&lt;/p>
+&lt;p>&lt;img src="backup-code.png" alt="img">&lt;/p>
+&lt;h4 id="adding-users-with-identity-providers">Adding Users (with Identity Providers)&lt;/h4>
+&lt;p>If your account has an Identity Provider configured as a Portal Auth Provider, you use the Add User button to create an identity for them within Trustgrid.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+Some IdP’s allow for users to be synchronized automatically making this step unnecessary
+&lt;/div>
+&lt;ol>
+&lt;li>
+&lt;p>Navigate to &lt;code>User Management&lt;/code> → &lt;code>Users&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click the &lt;code>Add User&lt;/code> button&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="add-user.png" alt="img">&lt;/p>
+&lt;p>a. Enter in the user’s email address. &lt;strong>This must be the same email address the IdP sends back to Trustgrid, if unsure consult with your IdP Admin&lt;/strong>.&lt;/p>
+&lt;p>b. Select your Identity Provider (if more than one)&lt;/p>
+&lt;p>c. Select the desired base policy. More can be attached later.&lt;/p>
+&lt;p>d. Click &lt;code>Save&lt;/code>&lt;/p>
+&lt;p>&lt;img src="save-new-user.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>The user can then navigate to the portal authentication domain associated with the IdP. They will be redirected to the IdP page and required to enter their username, password and MFA (if configured), then automatically sent back to the Trustgrid portal.&lt;/li>
+&lt;/ol>
+&lt;h4 id="configuring-users">Configuring Users&lt;/h4>
+&lt;p>After a user is added you can drill down into a specific account to:&lt;/p>
+&lt;ul>
+&lt;li>Manage attached Policies&lt;/li>
+&lt;li>View Effective Permission&lt;/li>
+&lt;li>Change a User Landing Page&lt;/li>
+&lt;li>View a User’s Group Membership&lt;/li>
+&lt;li>View a User’s Associated IdP&lt;/li>
+&lt;/ul>
+&lt;h4 id="manage-policies-attached-to-a-user">Manage Policies Attached to a User&lt;/h4>
+&lt;p>To attach/detach policies attached to a user:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Under &lt;code>User Management&lt;/code> → &lt;code>User search&lt;/code> for the target user and click their name.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>To add a new policy:
+a. Click &lt;code>Attach Policy&lt;/code>&lt;/p>
+&lt;p>&lt;img src="attach-policy.png" alt="img">&lt;/p>
+&lt;p>b. Search for the desired policy then select it.&lt;/p>
+&lt;p>&lt;img src="choose-policy.png" alt="img">&lt;/p>
+&lt;p>c. Click &lt;code>Attach&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>To remove a policy from a user:
+a. Click &lt;code>Detach&lt;/code> (located to the right of target policy)&lt;/p>
+&lt;p>&lt;img src="detach.png" alt="img">&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="view-effective-permissions">View Effective Permissions&lt;/h4>
+&lt;p>To see what permissions a user currently has and what policy is providing that permission:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Under &lt;code>User Management&lt;/code> → &lt;code>User search&lt;/code> for the target user and click their name.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>In the right &lt;code>Effective Permissions&lt;/code> pane, find the permission in question. These permissions are grouped by category. Each entry will show:&lt;/p>
+&lt;p>&lt;img src="effective-permissions.png" alt="img">
+a. If the permission is allowed :check_mark:, explicitly denied :x: or not defined (both icons gray)
+b. The action name
+c. A short description of what the permission allows
+d. what policy grants/denies the user the permission&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="change-a-user-landing-page">Change a User Landing Page&lt;/h4>
+&lt;p>The Landing Page allows you to designate where a user is directed within the portal on initial login. This is most useful for users that only need access to ZTNA Remote Access application at the &lt;code>/apps&lt;/code> page.&lt;/p>
+&lt;ol>
+&lt;li>Under &lt;code>User Management&lt;/code> → &lt;code>User search&lt;/code> for the target user and click their name.&lt;/li>
+&lt;li>Enter in the desired landing page path (e.g. &lt;code>/apps&lt;/code>) and click &lt;code>Save&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="apps.png" alt="img">&lt;/p>
+&lt;h4 id="view-a-users-group-membership">View a User’s Group Membership&lt;/h4>
+&lt;p>You can view all the Groups a user is a member of from the Groups panel. To change memberships you will need to use the &lt;code>User Management&lt;/code> → &lt;code>Groups page&lt;/code>.
+To view:&lt;/p>
+&lt;ol>
+&lt;li>Under User Management → User search for the target user and click their name.&lt;/li>
+&lt;li>Select the &lt;code>Groups&lt;/code> panel on the left.&lt;/li>
+&lt;li>&lt;code>Groups&lt;/code> will be listed in a table in the main panel.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="group-membership.png" alt="img">&lt;/p>
+&lt;p>View a User’s Associated Identity Provider (IdP)
+If an Identity Provider is configured a user maybe associated with one or more IdP.&lt;br>
+To view:&lt;/p>
+&lt;ol>
+&lt;li>Under &lt;code>User Management&lt;/code> → &lt;code>User search&lt;/code> for the target user and click their name.&lt;/li>
+&lt;li>Select the &lt;code>Identity Provider&lt;/code> panel on the left.&lt;/li>
+&lt;li>The identity Providers will be listed in a table in the main panel. If no IdP is listed this indicates the user is using the Trustgrid native authentication system.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="identity.png" alt="img">&lt;/p></description></item></channel></rss>

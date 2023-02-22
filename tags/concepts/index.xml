@@ -1,0 +1,425 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– concepts</title><link>/tags/concepts/</link><description>Recent content in concepts on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/concepts/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Domain</title><link>/docs/domain/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/domain/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A domain is the logical grouping of &lt;a href="/docs/nodes/">nodes&lt;/a> inside an organization.&lt;/p>
+&lt;/div>
+&lt;p>Domains are a logical grouping of &lt;a href="/docs/nodes/">nodes&lt;/a>, allowing configuration of &lt;a href="/docs/domain/virtual-networks/">virtual networks&lt;/a> and &lt;a href="/docs/nodes/thresholds/">node thresholds&lt;/a>. Each Trustgrid deployment has a single domain.&lt;/p></description></item><item><title>Docs: Nodes</title><link>/docs/nodes/</link><pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/nodes/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A node is an instance of software used for building connections, managing compute resources, and deploying software.&lt;/p>
+&lt;/div>
+&lt;h2 id="node-types">Node Types&lt;/h2>
+&lt;p>A node can be installed on a hardware appliance, as a virtual appliance (Vsphere and Hyper-V), and deployed in a public cloud (Amazon AMI, Google, Microsoft). There are three main types of nodes - Edge, Gateway, and Management.&lt;/p>
+&lt;p>All Trustgrid nodes run on a hardened Ubuntu operating system. Nodes are managed through the Trustgrid portal or via the API (requires authentication token). A local UI exists to support the reconfiguration of an ethernet interface and diagnostic/network tests prior to connection to the Portal.&lt;/p>
+&lt;h3 id="edge-nodes">Edge Nodes&lt;/h3>
+&lt;p>Edge Nodes build outgoing TLS tunnels to Gateway Nodes. Bidirectional traffic is supported through this tunnel, subject to ACLs and &lt;a href="/getting-started/security/">security&lt;/a> policy restrictions. Edge Nodes will only require a firewall rule change if outbound internet restrictions are in place. Edge nodes can be a target for software deployment. Edge Nodes can be deployed with a single or multiple ethernet connections to support deployments behind a firewall or adjacent to a firewall (public WAN / private LAN).&lt;/p>
+&lt;h3 id="gateway-nodes">Gateway Nodes&lt;/h3>
+&lt;p>Gateway Nodes accept incoming TLS tunnels from Edge Nodes. Traffic on these tunnels is bidirectional, as permitted by ACLs or policy. Gateway Nodes usually require a firewall change to permit the incoming traffic. Gateway Nodes are identical to Edge Nodes but with a gateway configuration applied. Gateway nodes only connect to other gateways if one is of type &lt;code>hub&lt;/code>. Read more about &lt;a href="/docs/nodes/gateway/">gateway configuration&lt;/a>.&lt;/p>
+&lt;h3 id="management-nodes">Management Nodes&lt;/h3>
+&lt;p>Management Nodes are not like other &lt;a href="/docs/nodes/">nodes&lt;/a> because they do not connect to the data plane, only the control plane. Management Nodes are deployed by Trustgrid for each customer and are multi-tenant like other control plane components. Customers may elect to deploy their own Management Nodes in place of multi-tenant Management Nodes. Management Nodes facilitate the monitoring, management, and support of Edge and Gateway Nodes.&lt;/p>
+&lt;h2 id="node-list-view">Node List View&lt;/h2>
+&lt;h3 id="adding-a-tag-as-a-column-on-the-nodes-table">Adding a Tag as a Column on the Nodes Table&lt;/h3>
+&lt;p>Adding a tag as a column on the nodes tables is good way to make valuable information visible for multiple nodes at the same time. To add the column:&lt;/p>
+&lt;ol>
+&lt;li>Navigate to the nodes table page&lt;/li>
+&lt;li>Click &lt;code>Actions&lt;/code> and then select &lt;code>Columns&lt;/code> from the dropdown&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="add-column.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>Towards the bottom you will see all the available tags in the format &lt;code>tag: tag-name&lt;/code>. Select the desired tag and click &lt;code>Save&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="select-tag-column.png" alt="img">&lt;/p>
+&lt;p>The column will be added and the table can now be sorted by that column. Any node that does not have that tag set will be listed as blank.&lt;/p>
+&lt;p>&lt;img src="tag-column2.png" alt="img">&lt;/p>
+&lt;h3 id="applying-a-tag-filter-to-the-nodes-table">Applying a Tag Filter to the Nodes Table&lt;/h3>
+&lt;p>The nodes table can also be filtered to only show nodes with a specific tag name:value.&lt;/p>
+&lt;ol>
+&lt;li>On the nodes table click &lt;code>Actions&lt;/code> and select &lt;code>Add Tag Filter&lt;/code> from the drop-down menu.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="add-tag-filter-2.png" alt="img">&lt;/p>
+&lt;ol>
+&lt;li>After clicking &lt;code>Add Tag Filter&lt;/code>, select the tag-name field and you will see a list of tag-names available. Select the desired tag.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="pick-tag-filter-name2.png" alt="img">&lt;/p>
+&lt;p>You can also start typing to filter what tag names are shown.&lt;/p>
+&lt;ol start="3">
+&lt;li>
+&lt;p>Select the tag value field and you will see a list of available values. Select the desired value.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Optional) Click &lt;code>Add Tag Filter&lt;/code> to include an additional filter. Note that the two filters will be applied using AND only nodes with both tag name:value combinations matching will be shown.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click &lt;code>Apply Tag Filter&lt;/code> and the table will only show matching nodes.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="applied-filters2.png" alt="img">&lt;/p></description></item><item><title>Docs: Thresholds</title><link>/docs/nodes/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/thresholds/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the node level can override &lt;a href="/docs/domain/thresholds/">Domain Thresholds&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;p>To view and configure thresholds, a user will need &lt;code>nodes::configure::thresholds&lt;/code> permissions.&lt;/p>
+&lt;p>Navigate to a node, and click &lt;code>Thresholds&lt;/code> under the &lt;code>System&lt;/code> section.&lt;/p>
+&lt;p>&lt;img src="list.png" alt="img">&lt;/p>
+&lt;p>Note that overridden thresholds have a yellow square icon next to them.&lt;/p>
+&lt;h3 id="load-thresholds">Load Thresholds&lt;/h3>
+&lt;p>Load thresholds measure the health of the node itself.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Telemetry&lt;/th>
+&lt;td>The metric to monitor. Options are CPU usage (%), memory usage (%), disk usage (%), and embryonic flows (absolute count).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Threshold&lt;/th>
+&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Duration&lt;/th>
+&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="network-thresholds">Network Thresholds&lt;/h3>
+&lt;p>Network thresholds measure the health of the network from the node&amp;rsquo;s perspective.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Telemetry&lt;/th>
+&lt;td>The metric to monitor. Options are latency (ms), bandwidth in (Mbps), and bandwidth out (Mbps).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Threshold&lt;/th>
+&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Duration&lt;/th>
+&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Target&lt;/th>
+&lt;td>For latency, target node to measure the latency to. For bandwidth measurements, the interface to measure the bandwidth on.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Access Policy</title><link>/docs/domain/virtual-networks/access-policy/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/domain/virtual-networks/access-policy/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>An access policy is a list of rules that each allow, reject, or drop traffic at the VPN level.&lt;/p>
+&lt;/div>
+&lt;p>If no rules are defined, traffic will not pass through the &lt;a href="/docs/domain/virtual-networks/">virtual network&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>A rule can match traffic based on the following fields:&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Action&lt;/th>
+&lt;td>Whether to ALLOW, DROP, or REJECT the traffic.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Protocol&lt;/th>
+&lt;td>You can choose ANY, UDP, ICMP, or TCP.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Source&lt;/th>
+&lt;td>The source of the traffic. You can select a &lt;a href="/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Destination&lt;/th>
+&lt;td>The destination of the traffic. You can select a &lt;a href="/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Line Number&lt;/th>
+&lt;td>Rules are evaluated starting with the lowest numbered rule. Once a rule matches, later rules are ignored even if they might also match the traffic. &lt;strong>(confirm w/ Steven)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Port Range&lt;/th>
+&lt;td>For TCP and UDP traffic, you can specify a port (e.g., 80) or a range (e.g., 8000-9000).&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="access-policy.png" alt="img">&lt;/p>
+&lt;p>&lt;strong>Note that &lt;em>all specified&lt;/em> fields must be matched for the rule to match. (confirm w steven).&lt;/strong>&lt;/p></description></item><item><title>Docs: Cluster Site Health State</title><link>/docs/clusters/cluster-health/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/clusters/cluster-health/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A healthy &lt;a href="/docs/clusters/">cluster&lt;/a> should have two online Trustgrid &lt;a href="/docs/nodes/">nodes&lt;/a> in a healthy state. The Trustgrid control plane can monitor the member &lt;a href="/docs/nodes/">nodes&lt;/a> and generate &lt;a href="/docs/alarms/events/">events&lt;/a> when their state changes such that the health of the &lt;a href="/docs/clusters/">cluster&lt;/a> is impacted.&lt;/p>
+&lt;/div>
+&lt;h3 id="basics">Basics&lt;/h3>
+&lt;div class="alert alert-primary" role="alert">
+&lt;p>These events are based on the information reported by each member node to the control plane. Because of this:&lt;/p>
+&lt;ul>
+&lt;li>There can be a delay between a change and the &lt;a href="/docs/clusters/">Cluster&lt;/a> Site Health events.&lt;/li>
+&lt;li>If member &lt;a href="/docs/nodes/">nodes&lt;/a> have issues preventing control plane connections but not impacting data plane or other services the &lt;a href="/docs/alarms/events/">events&lt;/a> may not accurately reflect the state of the &lt;a href="/docs/clusters/">cluster&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h3 id="cluster-health-state">Cluster Health State&lt;/h3>
+&lt;p>The Trustgrid will now display one of three states in the portal:&lt;/p>
+&lt;table>
+&lt;tbody>
+&lt;tr>
+&lt;th>State&lt;/th>
+&lt;th>Meaning&lt;/th>
+&lt;/tr>
+&lt;tr>
+&lt;th>Healthy&lt;/th>
+&lt;td>Both members are online with a single member active.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Unhealthy&lt;/th>
+&lt;td>
+&lt;p>There is at least one online and healthy member of the &lt;a href="/docs/clusters/">cluster&lt;/a> with the active role AND one or more of these conditions is true:&lt;/p>
+&lt;ul>
+&lt;li>One of the &lt;a href="/docs/clusters/">cluster&lt;/a> members is offline, unhealthy or disabled&lt;/li>
+&lt;li>There are &lt;strong>two&lt;/strong> &lt;a href="/docs/clusters/">cluster&lt;/a> members with the active role&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Offline&lt;/th>
+&lt;td>
+&lt;p>Both &lt;a href="/docs/nodes/">nodes&lt;/a> are offline, unhealthy or disabled.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Tutorials: Applying Changes</title><link>/tutorials/applying-changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/applying-changes/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Because changes to a domain &lt;a href="/docs/domain/virtual-networks/">virtual network&lt;/a> affect &lt;em>all&lt;/em> &lt;a href="/docs/nodes/">nodes&lt;/a>, &lt;a href="/docs/domain/">domain&lt;/a> configuration changes must be reviewed before applied, and are applied all at once.&lt;/p>
+&lt;/div>
+&lt;p>After making changes to a &lt;a href="/docs/domain/virtual-networks/">virtual network&lt;/a>, you can review outstanding changes. A list of changes will show who made each change, with a before/after table if appropriate.&lt;/p>
+&lt;p>&lt;img src="outstanding-changes.png" alt="img">&lt;/p>
+&lt;p>Individual changes can be rejected by clicking the delete icon at the top.&lt;/p>
+&lt;p>Once changes are applied, outstanding changes will disappear from the review page, and &lt;a href="/docs/nodes/">nodes&lt;/a> will receive the configuration updates.&lt;/p></description></item><item><title>Docs: Network Groups</title><link>/docs/domain/virtual-networks/network-groups/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/domain/virtual-networks/network-groups/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A network group is a list of &lt;a href="/docs/domain/virtual-networks/network-objects/">network objects&lt;/a> that allows for easier rule management.&lt;/p>
+&lt;/div>
+&lt;p>A network group requires a name to be set. This will be used to reference the group in &lt;a href="/docs/domain/virtual-networks/access-policy/">access policy&lt;/a> rules.&lt;/p>
+&lt;p>&lt;img src="network-groups2.png" alt="img">&lt;/p>
+&lt;p>Navigating into a network group allows management of the group’s member objects.&lt;/p>
+&lt;p>&lt;img src="member-network-objects.png" alt="img">&lt;/p></description></item><item><title>Docs: Network Objects</title><link>/docs/domain/virtual-networks/network-objects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/domain/virtual-networks/network-objects/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A network object allows naming a CIDR inside a VPN for easier rule management.&lt;/p>
+&lt;/div>
+&lt;p>A network object requires the following fields:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The label to use when referencing this object.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>CIDR&lt;/th>
+&lt;td>Specifically an IPv4 CIDR.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="network-objects.png" alt="img">&lt;/p>
+&lt;p>Multiple network objects may be clustered into a &lt;a href="/docs/domain/virtual-networks/network-groups/">network group&lt;/a>.&lt;/p></description></item><item><title>Docs: Routes</title><link>/docs/domain/virtual-networks/routes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/domain/virtual-networks/routes/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Routes configured under &lt;a href="/docs/domain/">Domains&lt;/a> determine to which &lt;a href="/docs/nodes/">node&lt;/a> or &lt;a href="/docs/clusters/">cluster&lt;/a> the &lt;a href="/docs/domain/virtual-networks/">Trustgrid virtual network&lt;/a> should route traffic for a specific subnet.&lt;/p>
+&lt;/div>
+&lt;h2 id="route-configuration">Route Configuration&lt;/h2>
+&lt;ol>
+&lt;li>Login to the portal and select &lt;a href="/docs/domain/">&lt;code>domains&lt;/code>&lt;/a>.&lt;/li>
+&lt;li>Click the link to the desired domain under the &amp;ldquo;Name&amp;rdquo; column.&lt;/li>
+&lt;li>Scroll down to the &lt;a href="/docs/domain/virtual-networks/">&amp;ldquo;Virtual Networks&amp;rdquo;&lt;/a> section and select the &lt;code>Routes&lt;/code> tab.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="routes-list.png" alt="img">&lt;/p>
+&lt;p>A Route has Three Required Fields:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Destination&lt;/th>
+&lt;td>This will be the name of the &lt;a href="/docs/nodes/">node&lt;/a> or &lt;a href="/docs/clusters/">cluster&lt;/a> that traffic will be routed to. This list is auto-populated based on the nodes and clusters in the selected &lt;a href="/docs/domain/">domain&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Destination CIDR&lt;/th>
+&lt;td>This is the CIDR notation of the &lt;a href="/docs/domain/virtual-networks/">virtual network&lt;/a> that should be routed to the above destination &lt;a href="/docs/nodes/">node&lt;/a> or &lt;a href="/docs/clusters/">cluster&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Metric&lt;/th>
+&lt;td>If there are multiple routes for the same &lt;a href="/docs/domain/virtual-networks/">virtual network&lt;/a> the metric will determine which route will be used. The lowest number is the highest priority. See the &amp;ldquo;Automatic Failover&amp;rdquo; text below.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="route-failover">Route Failover &lt;/h2>
+&lt;p>Route failover allows a subnet to be routed to an alternate &lt;a href="/docs/nodes/">node&lt;/a> or &lt;a href="/docs/clusters/">cluster&lt;/a> in the event of a failure.  This can be automatic or performed manually.&lt;/p>
+&lt;h3 id="prerequisites">Prerequisites &lt;/h3>
+&lt;p>In either configuration, the &lt;a href="/docs/domain/virtual-networks/">virtual network&lt;/a> settings under VPN settings for the primary and backup destination &lt;a href="/docs/nodes/">nodes&lt;/a>/&lt;a href="/docs/clusters/">clusters&lt;/a> must match. Including:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Network Virtual Route&lt;/p>
+&lt;p>&lt;img src="virtual-network-route.png" alt="img">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Network Group under Outside NAT Table&lt;/p>
+&lt;p>&lt;img src="outside-nat-table.png" alt="img">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Virtual CIDR under Inside NAT Table&lt;/p>
+&lt;p>&lt;img src="inside-nat-table.png" alt="img">&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="automatic-failover">Automatic Failover&lt;/h3>
+&lt;p>To have the route failover without manual intervention you must define two routes for the same subnet (Destination CIDR) with different metrics.  The lowest numerical metric will take precedence unless the destination &lt;a href="/docs/nodes/">node&lt;/a> or &lt;a href="/docs/clusters/">cluster&lt;/a> is offline.&lt;/p>
+&lt;p>In the below example configuration we want traffic for the 10.20.0.0/24 network to the &lt;code>edge&lt;/code> &lt;a href="/docs/clusters/">cluster&lt;/a> first, and failover to the &lt;code>edge-dr&lt;/code> &lt;a href="/docs/clusters/">cluster&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="automatic-failover.png" alt="img">&lt;/p>
+&lt;h3 id="preventing-automated-failback-or-forcing-a-failover">Preventing Automated Failback or Forcing a Failover&lt;/h3>
+&lt;p>As mentioned above if multiple routes are configured traffic will route to destination with the lowest metric number. So if the primary destination fails but then comes back online traffic will be routed back automatically.&lt;/p>
+&lt;p>However, there are some circumstances where this is not desirable. For example, if the primary site is unstable you may wish to keep traffic at the backup site until the primary is stabilized. Alternately, you may wish to preemptively reroute traffic to the backup site in advance of planned maintenance at the primary site.&lt;/p>
+&lt;p>To preemptively reroute traffic to the backup site, update the backup route to have a lower metric than the primary route.&lt;/p>
+&lt;h3 id="manual-failover">Manual Failover&lt;/h3>
+&lt;p>In some circumstances, it may be preferable for failover to only occur with manual intervention. In this situation, you will have a single route under the &lt;a href="/docs/domain/">domain&lt;/a>.  To initiate a failover you&amp;rsquo;ll need to update the destination &lt;a href="/docs/clusters/">cluster&lt;/a>/&lt;a href="/docs/nodes/">node&lt;/a>.&lt;/p>
+&lt;ol>
+&lt;li>Login to the Portal and select your domain.&lt;/li>
+&lt;li>Click the link to the desired &lt;a href="/docs/domain/">domain&lt;/a> under the &amp;ldquo;Name&amp;rdquo; column.&lt;/li>
+&lt;li>Scroll down to the &lt;a href="/docs/domain/virtual-networks/">&amp;ldquo;Virtual Networks&amp;rdquo;&lt;/a> section and select the &amp;ldquo;Routes&amp;rdquo; tab.&lt;/li>
+&lt;li>Find the route you wish to failover.&lt;/li>
+&lt;li>Update the destination device. (e.g. in the below you would switch from edge to edge-dr).
+(add screenshot of instructions NEEDS TO BE FIXED)&lt;/li>
+&lt;li>Click save.&lt;/li>
+&lt;/ol></description></item><item><title>Docs: Thresholds</title><link>/docs/domain/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/domain/thresholds/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the domain level apply to all nodes in the domain, except when overridden. Events will be of type &lt;code>Metric Threshold Violation&lt;/code>.&lt;/p>
+&lt;/div>
+&lt;p>To view thresholds, a user will need &lt;code>domains::read&lt;/code> permissions. To configure them, they will need &lt;code>domains::configure:threshold&lt;/code> permissions.&lt;/p>
+&lt;p>Navigate to your domain, and click &lt;code>Thresholds&lt;/code> on the left.&lt;/p>
+&lt;p>&lt;img src="list.png" alt="img">&lt;/p>
+&lt;h3 id="load-thresholds">Load Thresholds&lt;/h3>
+&lt;p>Load thresholds measure the health of the node itself.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Telemetry&lt;/th>
+&lt;td>The metric to monitor. Options are CPU usage (%), memory usage (%), disk usage (%), and embryonic flows (absolute count).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Threshold&lt;/th>
+&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Duration&lt;/th>
+&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="network-thresholds">Network Thresholds&lt;/h3>
+&lt;p>Network thresholds measure the health of the network from the node&amp;rsquo;s perspective.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Telemetry&lt;/th>
+&lt;td>The metric to monitor. Currently only latency (measured in milliseconds) is available.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Threshold&lt;/th>
+&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Duration&lt;/th>
+&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Target&lt;/th>
+&lt;td>The target node to measure the latency to. Each node will measure the latency to the target node.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Virtual Networks</title><link>/docs/domain/virtual-networks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/domain/virtual-networks/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Virtual networks define an overlay network and routes for layer 3 connectivity. Trustgrid &lt;a href="/docs/nodes/">nodes&lt;/a> are then assigned to networks. Virtual network overlays work similarly to Amazon&amp;rsquo;s VPCs but can span between clouds, data centers, and the edge.&lt;/p>
+&lt;/div>
+&lt;p>&lt;img src="virtual-networks-page.png" alt="Virtual Networks">&lt;/p>
+&lt;h2 id="overlay-example">Overlay Example&lt;/h2>
+&lt;div style="display: flex; flex-direction: row; justify-content: center; align-items: top">
+&lt;div>
+&lt;p>&lt;img src="simple-host-communication.png" alt="img">&lt;/p>
+&lt;/div>
+&lt;div>
+&lt;h3 id="virtual-networks---layer-3">Virtual Networks - Layer 3&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>Trustgrid uses a virtual network to traffic between &lt;a href="/docs/nodes/">nodes&lt;/a>. This avoids common
+challenges like conflicting subnets in large, non-centralized networks.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Inside and outside NATs are used to expose hosts for traffic&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="/docs/domain/virtual-networks/routes/">Routes&lt;/a> may be configured on the &lt;a href="/docs/nodes/">nodes&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>ACLs can be applied&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="simple-host-communication">Simple Host Communication&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>An inside Nat on the edge node that maps 10.0.5.250 to 172.16.3.250 would allow the data center host (10.0.1.150) to communicate with 172.16.3.250 host using the address 10.0.5.250&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>An outside Nat on the edge node that maps 10.0.1.150 to 10.0.5.150 would allow the edge host (172.16.3.250) to communicate the data center host at 10.0.5.150.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>A &lt;a href="/docs/domain/virtual-networks/routes/">route&lt;/a> would have to be added to the default gateway of 172.16.3.0/24 for 10.0.5.150 to route traffic for 10.0.5.0/24 through the gw of the edge node (172.16.0.5) data interface.&lt;/p>
+&lt;/blockquote>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="virtual-ip-addresses">Virtual IP Addresses&lt;/h3>
+&lt;p>Through the use of inside and outside NAT rules, local IP addresses to the Trustgrid &lt;a href="/docs/nodes/">node&lt;/a> may be exposed on the network through a Virtual IP Address. For instance, a local device may have a local IP address of 192.168.1.100, but you may want it to appear to other devices or applications on the virtual network as IP address 10.0.20.100. Virtual IP Subnets are also supported where each IP in a subnet is mapped to the corresponding IP in a virtual subnet.&lt;/p>
+&lt;h3 id="inside-nat">Inside NAT&lt;/h3>
+&lt;p>Inside NATs are added to a network to expose hosts in the private network to authorized traffic in the virtual network. For example a host at 192.168.1.184/32 could be exposed as 172.16.1.184/32. Traffic from authorized edge nodes could then communicate with 172.16.1.184.&lt;/p>
+&lt;h3 id="outside-nat">Outside NAT&lt;/h3>
+&lt;p>The use of an outside NAT can eliminate the need to create &lt;a href="/docs/domain/virtual-networks/routes/">routes&lt;/a> on internal gateways. Outsides NATs translate address in edge (remote) private networks to a privately addressable local IP. For example a host at 172.16.10.184/32 could be translated to 192.168.1.184/32.&lt;/p>
+&lt;h3 id="routes">Routes&lt;/h3>
+&lt;p>&lt;a href="/docs/domain/virtual-networks/routes/">Routes&lt;/a> are used to specify the network interface to be used when accessing specific subnets.&lt;/p></description></item></channel></rss>

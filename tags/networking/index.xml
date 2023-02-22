@@ -1,0 +1,440 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– networking</title><link>/tags/networking/</link><description>Recent content in networking on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/networking/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Connectors</title><link>/docs/nodes/connectors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/connectors/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Connectors are configured in conjunction with &lt;a href="/docs/nodes/services/">services&lt;/a> to define a local listening port for layer 4 (L4) connectivity.&lt;/p>
+&lt;/div>
+&lt;h4 id="configuration">Configuration&lt;/h4>
+&lt;p>Connectors are configured under the Networking &amp;gt; Connectors tab of the node or cluster configuration section in the Trustgrid Portal.&lt;/p>
+&lt;figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 410px">
+&lt;img class="card-img-top" src="/docs/nodes/connectors/connector_hudc115f7e28d8cbd5e71d65766f13265f_84798_400x450_resize_catmullrom_3.png" width="400" height="450">
+&lt;/figure>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Protocol&lt;/th>
+&lt;td>&lt;p>The protocol that the listener for the connector will use. Options are TCP, UDP, FTP, and TFTP.&lt;/p>
+&lt;blockquote>
+&lt;p>FTP must operate in passive mode when using L4 services and connectors.&lt;/p>
+&lt;/blockquote>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Listen Interface&lt;/th>
+&lt;td>The interface that you want the connector to listen on. If set to &amp;ldquo;All&amp;rdquo;, the connector will listen on 0.0.0.0.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Listen Port&lt;/th>
+&lt;td>The port that you want the connector to listen on.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Remote Node&lt;/th>
+&lt;td>The remote node or cluster that traffic will be proxied to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Remote Service&lt;/th>
+&lt;td>Either the friendly name of &lt;a href="/docs/nodes/services/">service&lt;/a> that is defined on the remote node, or the IP:Port of the remote service to connect to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Rate Limit (Mb/s)&lt;/th>
+&lt;td>The maximum amount of throughput that will be allowed to traverse the tunnel when connecting to the connector. This can be used to prevent saturating the connection at either the local or remote sites.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Services</title><link>/docs/nodes/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/services/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Services are configured in conjunction with &lt;a href="/docs/nodes/connectors/">connectors&lt;/a> to define a remote host:port to connect to for layer 4 (L4) connectivity.&lt;/p>
+&lt;/div>
+&lt;h4 id="configuration">Configuration&lt;/h4>
+&lt;p>Services are configured under the Networking &amp;gt; Services tab of the node or cluster configuration section in the Trustgrid Portal.&lt;/p>
+&lt;p>&lt;img src="service.png" alt="Layer 4 - Add a service">&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Protocol&lt;/th>
+&lt;td>The protocol of the service to connect to. Options are TCP, UDP, FTP, and TFTP, along with pre-defined default ports for RDP, SSH, and VNC.&lt;/td>
+&lt;/tr>
+> FTP must operate in passive mode when using L4 services and connectors
+&lt;tr>
+&lt;th>Service Name&lt;/th>
+&lt;td>A friendly name for the service that will be used in the Remote Service field of a &lt;a href="/docs/nodes/connectors/">connector&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Host&lt;/th>
+&lt;td>The IP of the host to connect to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Port&lt;/th>
+&lt;td>The port to connect to on the host.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Health Check&lt;/th>
+&lt;td>A health check can be configured for TCP services. The health check will attempt a TCP connectivity check once per minute. After 5 consecutive failures, an Outbound L4 Service Health Check alert will be triggered and clustered nodes will be marked as unhealthy. Clustered nodes will return to a Healthy status after 5 consecitive connection attempts are successful.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Tunnels</title><link>/docs/nodes/tunnels/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/tunnels/</guid><description>
+&lt;h3 id="tunnels-overview">Tunnels Overview&lt;/h3>
+&lt;p>Trustgrid Supports configuring various tunneling protocols in order to establish secure connectivity between any appliance that supports the underlying protocol.
+The supported tunnels are listed below.&lt;/p>
+&lt;ul>
+&lt;li>IPsec - Internet Protocol Security supporting ikev1 and ikev2 tunnels&lt;/li>
+&lt;li>GRE - Generic Routing Encapsulation used for setting up a direct point to point network connection&lt;/li>
+&lt;li>Vnet - The virtual network tunnel is the Trustgrid Proprietary VPN tunneling protocol and therefore can only be used to establish connectivity to other Trustgrid nodes in the organization&lt;/li>
+&lt;li>Wireguard - The latest open source tunneling protocol aiming to provide better performance than the traditional ipsec or openvpn protocols&lt;/li>
+&lt;/ul>
+&lt;p>&amp;ldquo;Wireguard&amp;rdquo; is a registered trademark of Jason A. Donenfeld&lt;/p></description></item><item><title>Docs: VRFs</title><link>/docs/nodes/vrfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/vrfs/</guid><description>
+&lt;h3 id="overview">Overview&lt;/h3>
+&lt;p>VRFs can be used route / nat and filter what traffic is allowed to pass and how it should appear on the network. VRFs can be associated to an interface whether it be a physical interface / virtual network interface or other tunnel interfaces such as ipsec or gre. VRFs are segmented on a layer 3 level from all other traffic traversing the Trustgrid node.&lt;/p>
+&lt;p>For standard use cases of source nat and/or destination nat creating a route and a NAT is sufficient. Traffic rules can be used for more advanced controls. An applicable ACL is required for any traffic to pass as a zero trust methodology is applied.&lt;/p>
+&lt;h3 id="address-translation">Address Translation&lt;/h3>
+&lt;p>This is where NATs are created in order to translate the traffic to appear as desired on the network.
+NATs support translating both source and destination CIDRs as well as masquerading as the egress interface address.&lt;/p>
+&lt;h6 id="snat--dnat-example">SNAT / DNAT Example&lt;/h6>
+&lt;p>Using the example NAT below if a source packet was initiated from 10.10.10.100 destined for 10.10.20.100 the source address would be translated to 192.168.10.100 and the destination address would be translated to 192.168.20.100.
+It is important to note that nat translations occur before routing decisions are made.&lt;/p>
+&lt;p>&lt;img src="nat1.png" alt="img">&lt;/p>
+&lt;h6 id="maquerade-example">Maquerade Example&lt;/h6>
+&lt;p>Using the example below if a source packet is initiated from within 10.10.10.0/24 destined for anything in 192.168.10.0/24 the source would be translated to the interface address the packet is egressing on. If it was a single interface Trustgrid node it would be sourced as the wan facing interface address.&lt;/p>
+&lt;p>&lt;img src="masquerade1.png" alt="img">&lt;/p>
+&lt;h3 id="routes">Routes&lt;/h3>
+&lt;p>Note that NAT translations happen before routing so routes should be created for the destination NAT CIDR if applicable.
+Routes require a destination CIDR, interface and metric.
+A next hop is optional and only applicable for non-tunnel interfaces such as physical interfaces or vlan subinterfaces.
+The gateway of the applicable interface will be used if no next hop is defined.&lt;/p>
+&lt;p>The example below would be used for example to offload all internet bound traffic directly out the WAN facing interface&lt;/p>
+&lt;p>&lt;img src="offload.png" alt="img">&lt;/p>
+&lt;h3 id="traffic-rules">Traffic Rules&lt;/h3>
+&lt;p>Traffic rules can be used for more advanced granular traffic manipulation beyond standard source and destination nat.
+There are many more parameters that can be applied to the traffic depending on the specific use case.
+When creating a traffic rule an ACL is required for traffic to pass. The available parameters are defined below.
+Rules are evaluated based on the line number. The first matching rule is the one that will be applied to the packet.
+More specific rules should always be implemented above less specific rules. Eg a rule for a /24 network should be above a /16 network the /24 is included in.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Number&lt;/th>
+&lt;td>The line number the rule is applied to. Rules are matched in numerical order.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Action&lt;/th>
+&lt;td>&lt;p>All traffic rules have an action that is applied to the associated packet.&lt;/p>
+&lt;ul>
+&lt;li>Accept - The packet is allowed to be processed locally.&lt;/li>
+&lt;li>Drop - The packet is dropped and not responded to&lt;/li>
+&lt;li>Reject - A TCP Reset is sent in response&lt;/li>
+&lt;li>Forward - The packet is forwarded to its defined destination such as an interface or another VRF&lt;/li>
+&lt;li>Mirror - Packets are not manipulated but can be mirrored for inspection purposes.
+For example passing through an IDS container such as Snort.&lt;/li>
+&lt;li>Log - The packet is not manipulated but is marked for logging&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Ingress Interface&lt;/th>
+&lt;td>The traffic rule is applied to packets that ingress on this interface&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Forward Interface&lt;/th>
+&lt;td>Packets are forwarded out this interface once the rule is applied&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Protcol&lt;/th>
+&lt;td>The protocol that the rule should apply to. All, ICMP, TCP or UDP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Forward VRF&lt;/th>
+&lt;td>Packets are forwarded into another VRF that is associated on the node. Only configureable when a forward action is selected.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Source CIDR&lt;/th>
+&lt;td>The source network the rule should apply to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Destination CIDR&lt;/th>
+&lt;td>The destination network the rule should apply to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Masquerade&lt;/th>
+&lt;td>Translate and source all packets from the nodes interface address when enabled&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>DNAT Destination&lt;/th>
+&lt;td>Forward all traffic to the DNAT destination IP/Port. For example in order to forward all http traffic through a proxy&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Destination Mac&lt;/th>
+&lt;td>The destination mac address defined overwrites the source mac address of the packet. Necessary only for some container deployments such as Snort inpsecting traffic.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Ports&lt;/th>
+&lt;td>Used to define a port range when creating a traffic rule&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h6 id="traffic-rule-example">Traffic Rule Example&lt;/h6>
+&lt;p>In the below example the first rule on line number 1 is forwarding all traffic destined to 10.0.20.0/24 to a virtual network tunnel interface. Any NATs configured under Address Translation will be applied before the packet is forwarded to its destination. The rule on line number 10 will forward all traffic that does not match the first rule out to the internet masquerading as the WAN interfaces address.
+If the line numbers were reversed the virtual network rule would never be matched as all traffic would match the internet offload rule which is configured for all source and destination traffic.&lt;/p>
+&lt;p>&lt;img src="trafficrule1.png" alt="img">&lt;/p></description></item><item><title>Tutorials: Edge Deployment Scenarios</title><link>/tutorials/examples/edge-deployment-scenarios/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/examples/edge-deployment-scenarios/</guid><description>
+&lt;p>When deciding on an Edge deployment architecture, there are several key variables to consider:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Behind the Firewall or Beside the Firewall&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>HA or Single &lt;a href="/docs/nodes/">Node&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Multi-interface or Single-interface&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Layer 3 or Layer 4 Edge &lt;a href="/getting-started/networking/">networking&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Trustgrid supports unique configurations per site to minimize the changes required at the Edge network. The easiest scenario to deploy is a Layer 4, behind the firewall, single &lt;a href="/docs/nodes/">node&lt;/a> deployment. This is the standard recommendation. When deployed behind a firewall, the firewall must allow egress traffic to Trustgrid&amp;rsquo;s Cloud environment (see Network Requirements) and the &lt;a href="/getting-started/networking/">network(s)&lt;/a> where the gateway nodes are installed.&lt;/p>
+&lt;h3 id="beside-a-firewall">Beside a Firewall&lt;/h3>
+&lt;p>In some scenarios, you may want to deploy your Trustgrid &lt;a href="/docs/nodes/">node(s)&lt;/a> beside the firewall. In this configuration, the management interface of each &lt;a href="/docs/nodes/">node&lt;/a> will be connected directly to the internet and the data interface will get connected to a LAN such as the inside/LAN network.&lt;/p>
+&lt;h5 id="edge-network-topology">Edge Network Topology:&lt;/h5>
+&lt;p>&lt;img src="edge-topology.png" alt="img">&lt;/p>
+&lt;h3 id="considerations-in-this-configuration">Considerations in this Configuration:&lt;/h3>
+&lt;ul>
+&lt;li>A unique, static, public IP address is required for each &lt;a href="/docs/nodes/">node&lt;/a>.&lt;/li>
+&lt;li>Typical deployments beside a firewall involve a switch connected to the ISP’s ethernet handoff, the firewall, and the &lt;a href="/docs/nodes/">nodes&lt;/a>.&lt;/li>
+&lt;li>&lt;a href="/docs/clusters/">Clustered nodes&lt;/a> in this configuration may require using the data interface for &lt;a href="/docs/clusters/">cluster&lt;/a> communication.&lt;/li>
+&lt;li>It is possible to configure L4 proxy connectors that are bound to the management interface. Care should be taken to ensure that L4 proxy connectors aren’t inadvertently configured to allow access to a service from the public internet. If using L4 proxy connectors on the management interface, the source CIDR should be used to limit access to the service as desired.&lt;/li>
+&lt;/ul>
+&lt;h4 id="requirements-to-configure">Requirements to Configure:&lt;/h4>
+&lt;ul>
+&lt;li>Standard
+&lt;ul>
+&lt;li>1 Public IP Address&lt;/li>
+&lt;li>1 Private IP Address&lt;/li>
+&lt;li>2 DNS Servers&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>HA
+&lt;ul>
+&lt;li>2 Public IP Addresses&lt;/li>
+&lt;li>2 Private IP Addresses&lt;/li>
+&lt;li>1 Private IP Address for Cluster IP&lt;/li>
+&lt;li>2 DNS Servers&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="behind-a-firewall">Behind a Firewall&lt;/h3>
+&lt;p>The most typical configuration for edge nodes is to place the &lt;a href="/docs/nodes/">nodes&lt;/a> behind a firewall with the appropriate access controls in place to allow communication on the management interface. In this configuration, the management configuration can be placed in a DMZ network and the data interface would get connected to a LAN such as the inside/LAN network.&lt;/p>
+&lt;h5 id="edge-network-topology-1">Edge Network Topology:&lt;/h5>
+&lt;p>&lt;img src="edge-topology2.png" alt="img">&lt;/p>
+&lt;h4 id="considerations-in-this-configuration-1">Considerations in this Configuration:&lt;/h4>
+&lt;ul>
+&lt;li>Multiple &lt;a href="/docs/nodes/">nodes&lt;/a> can NAT to a single public IP address.&lt;/li>
+&lt;li>Firewalls in front of gateway nodes must be configured to allow access to the IP:Port of the gateway &lt;a href="/docs/nodes/">nodes&lt;/a> from the public IP address(es) that the &lt;a href="/docs/nodes/">node(s)&lt;/a> NAT to.&lt;/li>
+&lt;li>The firewall must be configured to allow outbound traffic from the management interface of the &lt;a href="/docs/nodes/">node(s)&lt;/a> based on Trustgrid&amp;rsquo;s network requirements.&lt;/li>
+&lt;/ul>
+&lt;h4 id="requirements-to-configure-1">Requirements to Configure:&lt;/h4>
+&lt;ul>
+&lt;li>Standard
+&lt;ul>
+&lt;li>1 Public IP Address&lt;/li>
+&lt;li>1 Private IP Address&lt;/li>
+&lt;li>2 DNS Servers&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>HA
+&lt;ul>
+&lt;li>2 Public IP Addresses&lt;/li>
+&lt;li>2 Private IP Addresses&lt;/li>
+&lt;li>1 Private IP Address for Cluster IP&lt;/li>
+&lt;li>2 DNS Servers&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="firewalled-nodes">Firewalled Nodes&lt;/h3>
+&lt;p>Some organizations may choose to put the management interface behind a firewall and also put a firewall between the data interface and the local &lt;a href="/getting-started/networking/">network&lt;/a>.&lt;/p>
+&lt;h5 id="edge-network-topology-2">Edge Network Topology:&lt;/h5>
+&lt;p>&lt;img src="edge-topology3.png" alt="img">&lt;/p>
+&lt;h4 id="considerations-in-this-configuration-2">Considerations in this Configuration:&lt;/h4>
+&lt;ul>
+&lt;li>Multiple &lt;a href="/docs/nodes/">nodes&lt;/a> can NAT to a single public IP address.&lt;/li>
+&lt;li>Firewalls in front of gateway &lt;a href="/docs/nodes/">nodes&lt;/a> must be configured to allow access to the IP:Port of the gateway nodes from the public IP address(es) that the &lt;a href="/docs/nodes/">node(s)&lt;/a> NAT to.&lt;/li>
+&lt;li>The firewall between the &lt;a href="/docs/nodes/">node(s)&lt;/a> and the internet must be configured to allow outbound traffic from the management interface of the &lt;a href="/docs/nodes/">node(s)&lt;/a> based on Trustgrid&amp;rsquo;s network requirements.&lt;/li>
+&lt;li>The firewall between the &lt;a href="/docs/nodes/">node(s)&lt;/a> and the LAN must allow connectivity from all IP addresses associated with the &lt;a href="/docs/nodes/">node(s)&lt;/a> data interface to resources on the necessary services on the LAN. This includes any IP addresses used in outside NAT configurations as well as the cluster IP.&lt;/li>
+&lt;/ul>
+&lt;h4 id="requirements-to-configure-2">Requirements to Configure:&lt;/h4>
+&lt;ul>
+&lt;li>Standard
+&lt;ul>
+&lt;li>1 Public IP Address&lt;/li>
+&lt;li>1 Private IP Address&lt;/li>
+&lt;li>2 DNS Servers&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>HA
+&lt;ul>
+&lt;li>2 Public IP Addresses&lt;/li>
+&lt;li>2 Private IP Addresses&lt;/li>
+&lt;li>1 Private IP Address for Cluster IP&lt;/li>
+&lt;li>2 DNS Servers&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="on-a-stick---single-node-interface">On-a-stick - Single Node Interface&lt;/h3>
+&lt;p>Our best practice recommendation is to separate the management and data traffic when possible, but in some cases the use of both network interfaces on edge nodes isn’t desirable. The most common scenario for this configuration is when the edge network is a small, basic, network where utilizing both interfaces on the &lt;a href="/docs/nodes/">node(s)&lt;/a> would mean connecting both interfaces to the same network. In this scenario, an on-a-stick configuration can be used.&lt;/p>
+&lt;h5 id="edge-network-topology-3">Edge Network Topology:&lt;/h5>
+&lt;p>&lt;img src="edge-topology4.png" alt="img">&lt;/p>
+&lt;h4 id="considerations-in-this-configuration-3">Considerations in this Configuration:&lt;/h4>
+&lt;ul>
+&lt;li>Only the management interface of the &lt;a href="/docs/nodes/">node&lt;/a> is used, requiring a minimum of three IP addresses to support both management/data traffic.&lt;/li>
+&lt;li>The management interface must be connected to a network that allows outbound access to the internet based on our network documentation, as well as access to a LAN/inside network.&lt;/li>
+&lt;li>Clustered &lt;a href="/docs/nodes/">nodes&lt;/a> should be configured with the &lt;a href="/docs/clusters/">cluster&lt;/a> communication IP set to the IP of the management interface.&lt;/li>
+&lt;/ul>
+&lt;h4 id="requirements-to-configure-3">Requirements to Configure:&lt;/h4>
+&lt;ul>
+&lt;li>Standard
+&lt;ul>
+&lt;li>1 Private IP Address&lt;/li>
+&lt;li>2 DNS Servers&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>HA
+&lt;ul>
+&lt;li>2 Private IP Addresses&lt;/li>
+&lt;li>1 Private IP Address for Cluster IP&lt;/li>
+&lt;li>2 DNS Servers&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="hosted-fi-core---access-to-remote-network-via-edge">Hosted FI Core - Access to Remote Network via Edge&lt;/h3>
+&lt;p>A common deployment scenario involves the need to access a network that is routable from the edge location, but outside of the &lt;a href="/getting-started/networking/">network&lt;/a> that the Trustgrid edge node is configured on. An example of this is a financial institution with a hosted core that may be available from the financial institution over a connection such as a VPN or MPLS.&lt;/p>
+&lt;h5 id="edge-network-topology-4">Edge Network Topology:&lt;/h5>
+&lt;p>&lt;img src="edge-topology5.png" alt="img">&lt;/p>
+&lt;h4 id="considerations-in-this-configuration-4">Considerations in this Configuration:&lt;/h4>
+&lt;ul>
+&lt;li>Inside NAT(s) for the remote address should be added on the data interface to map the hosted core IP address(es) to virtual IPs on the &lt;a href="/docs/domain/virtual-networks/">Trustgrid virtual network&lt;/a>.&lt;/li>
+&lt;li>In this scenario setting a &lt;a href="/docs/domain/virtual-networks/routes/">route&lt;/a> on the data interface from the Trustgrid portal may be necessary.&lt;/li>
+&lt;li>In most cases the hosted core provider will need to allow access to the hosted core from any IP addresses associated with a &lt;a href="/docs/nodes/">node&amp;rsquo;s&lt;/a> data interface. This includes any IP addresses used in outside NAT configurations as well as the cluster IP.&lt;/li>
+&lt;/ul>
+&lt;h3 id="outside-nat---avoiding-routing-at-the-edge">Outside NAT - Avoiding Routing at the Edge&lt;/h3>
+&lt;p>In some scenarios, it may not be desirable to have to add &lt;a href="/docs/domain/virtual-networks/routes/">routes&lt;/a> on the edge network in order to &lt;a href="/docs/domain/virtual-networks/routes/">route&lt;/a> traffic through the Trustgrid network. We recommend using L4 proxy in these scenarios when possible, however outside NAT can be utilized to allow traffic to and from the edge network without adding &lt;a href="/docs/domain/virtual-networks/routes/">routes&lt;/a> on the edge network.&lt;/p>
+&lt;h5 id="edge-network-topology-5">Edge Network Topology:&lt;/h5>
+&lt;p>&lt;img src="edge-topology6.png" alt="img">&lt;/p>
+&lt;h4 id="considerations-in-this-configuration-5">Considerations in this Configuration:&lt;/h4>
+&lt;ul>
+&lt;li>In this configuration you can configure PAT, which allows you to source all traffic from the &lt;a href="/docs/nodes/">node&lt;/a> on a single IP address that exists on the local network.&lt;/li>
+&lt;li>The IP address that you select must be a free IP address on the network that is also excluded from any DHCP scope on the subnet that it&amp;rsquo;s in.&lt;/li>
+&lt;li>In some cases it may be desirable to use multiple outside NATs in order to identify traffic from a gateway-side host using a unique source IP at the edge. Using more than a handful of outside NATs is not recommended as it may present a problem with connectivity during a HA failover situation.&lt;/li>
+&lt;/ul>
+&lt;h3 id="l3-to-l4-proxying---function-with-1-ip">L3 to L4 Proxying - Function with 1 IP&lt;/h3>
+&lt;p>In deployments where only a few services need to be accessed via an edge node, it may make sense to deploy the edge node in a mode in which the edge node intercepts layer 3 TCP traffic and proxies the traffic to a TCP service defined in the L4 Proxy configuration. The advantage of configuring the edge node in this fashion is that the traffic effectively does a source pat out of the &lt;a href="/docs/nodes/">node&lt;/a> interface IP address, thus simplifying the network configuration at the edge node location. The edge node appears to the server as a single client machine accessing the server, rather than a range of different IP clients for which the network in that location must be configured to forward traffic to. One of the biggest differences between this and the previous outside nat configuration is that all traffic is coming from the single interface IP address, rather than a separate IP address.&lt;/p>
+&lt;h4 id="considerations-in-this-configuration-6">Considerations in this Configuration:&lt;/h4>
+&lt;ul>
+&lt;li>In this configuration all traffic for a configured service will come from a single IP address. If you need to differentiate different clients by IP address, this configuration will not suffice.&lt;/li>
+&lt;li>Only TCP services can be used in this configuration. UDP and ICMP will not be usable with this configuration.&lt;/li>
+&lt;/ul></description></item><item><title>Docs: GRE</title><link>/docs/nodes/tunnels/gre/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/tunnels/gre/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Trustgrid supports configuring GRE tunnels that can be used to establish connectivity to any appliance that supports the GRE protocol.
+A GRE tunnel interface is created which can then be attached to an interface on a node. VRFs can then be used to control the flow of traffic and how it should appear on the network.&lt;/p>
+&lt;/div>
+&lt;h2 id="configure-gre-tunnel">Configure GRE Tunnel&lt;/h2>
+&lt;p>On a Trustgrid Node navigate to Tunnels under the Network Menu and select Add Tunnel and then select GRE&lt;/p>
+&lt;p>&lt;img src="add_tunnel.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="add_gre.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="gre.png" alt="img">&lt;/p>
+&lt;h3 id="gre-tunnel-configuration-parameters">GRE Tunnel Configuration Parameters&lt;/h3>
+&lt;ul>
+&lt;li>Name - the name of the GRE tunnel interface that will be created on the Trustgrid node&lt;/li>
+&lt;li>Description - optional field to used to document the purpose of the tunnel&lt;/li>
+&lt;li>IP - the ip address the tunnel is created with in CIDR&lt;/li>
+&lt;li>Peer - the remote IP address of the appliance the tunnel is being established with&lt;/li>
+&lt;li>VRF - existing VRF on the node the tunnel is being associated to&lt;/li>
+&lt;li>MTU - the MTU of the tunnel interface. Typically can be set to 1476.&lt;/li>
+&lt;/ul></description></item><item><title>Docs: IPSec</title><link>/docs/nodes/tunnels/ipsec/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/tunnels/ipsec/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Trustgrid supports configuring traditional IPSec tunnels that can be used to establish connectivity to any appliance that supports the IPSec protocol.
+Once an IPSec tunnel is configured an IPSec virtual interface is created that can be attached to a node interface. VRFs can be used in conjunction to explicitly control what traffic is allowed (VRF ACLs) to pass and how it should look on the network (VRF NATs or Traffic Rules).&lt;/p>
+&lt;/div>
+&lt;h2 id="configure-ipsec-tunnel">Configure IPSec Tunnel&lt;/h2>
+&lt;p>On a Trustgrid Node navigate to Tunnels under the Network Menu and select Add Tunnel and then select IPSEC&lt;/p>
+&lt;p>&lt;img src="add_tunnel.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="add_ipsec.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="ipsec_config.png" alt="img">&lt;/p>
+&lt;h3 id="ipsec-tunnel-configuration-parameters">IPsec Tunnel Configuration Parameters&lt;/h3>
+&lt;h4 id="required-parameters">Required Parameters&lt;/h4>
+&lt;ul>
+&lt;li>Name - the name of the IPSec tunnel interface that will be created on the node and displayed in the Trustgrid Portal&lt;/li>
+&lt;li>Description - used to document the purpose of the tunnel&lt;/li>
+&lt;li>Interface - the network interface the tunnel will be listening on. Typically this will be network adapter 1 which is the WAN interface&lt;/li>
+&lt;li>Interface IP - the ip address the tunnel will be created to use in CIDR. Typically this would be a /30.&lt;/li>
+&lt;li>Interface VRF - the VRF the tunnel will be associated with in order to apply ACLs / NATs / Routes or Traffic Rules&lt;/li>
+&lt;li>Interface MTU - the specified MTU of the tunnel interface. Typically this can be left to the default of 1436&lt;/li>
+&lt;li>IKE Version - select version 1 or version 2&lt;/li>
+&lt;li>Peer IP - The remote ip address of the appliance the tunnel is being established with&lt;/li>
+&lt;li>IKE Cipher - The cipher used for phase 1&lt;/li>
+&lt;li>IKE DH Group - The Diffie-Hellman Group used for phase 1&lt;/li>
+&lt;li>IPSEC Cipher - the cipher used for phase 2&lt;/li>
+&lt;li>PFS - The Diffie-Hellman Group used for phase 2 perfect forward secrecy&lt;/li>
+&lt;li>DPD Interval - seconds for dead peer detection&lt;/li>
+&lt;li>DPD Retries - number of dead peer detection retries before the tunnel is re-keyed / torn down&lt;/li>
+&lt;li>Rekey Interval - time in seconds before a re-key of the tunnel is initiated&lt;/li>
+&lt;li>Replay Window - size of the replay window which is used to prevent replay attacks. Typically set between 64 and 128&lt;/li>
+&lt;li>Local Subnet - the local subnet in CIDR that will be considered interesting traffic and be allowed to forward over the tunnel&lt;/li>
+&lt;li>Remote Subnet - the remote subnet in CIDR will be considered interesting traffic and be received on the tunnel&lt;/li>
+&lt;li>Auto Add - the connection is added and then waits for the remote peer to initiate the tunnel establishment&lt;/li>
+&lt;li>Auto Start - the connection is added and then attempts to initiate the tunnel to the remote peer&lt;/li>
+&lt;li>PSK - the pre-shared key used by both peers to establish the tunnel&lt;/li>
+&lt;/ul>
+&lt;h4 id="optional-parameters">Optional Parameters&lt;/h4>
+&lt;ul>
+&lt;li>Virtual Network - associate the tunnel to a Trustgrid Virtual Network&lt;/li>
+&lt;li>IKE Local ID - The IP address that will be seen by the remote peer to establish the tunnel. Typically this would be the public facing WAN IP of the Trustgrid Node.&lt;/li>
+&lt;li>IKE Remote ID - Used for identity validation. Typically this is the same address as the Peer IP&lt;/li>
+&lt;/ul></description></item><item><title>Docs: VNET</title><link>/docs/nodes/tunnels/vnet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/tunnels/vnet/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A virtual network tunnel interface can be configured on a Trustgrid node or cluster to allow forwarding of traffic to a remote Trustgrid Node or Cluster that is attached to the same virtual network. The tunnel interface is associated to a vrf which is used to define and control what traffic is allowed to pass and how it should appear on the network. There is no attachment of the vnet interface to a node interface required but the virtual network does need to be attached to the node or cluster before the tunnel interface is created.&lt;/p>
+&lt;/div>
+&lt;h2 id="configure-vnet-tunnel">Configure Vnet Tunnel&lt;/h2>
+&lt;p>On a Trustgrid Node navigate to Tunnels under the Network Menu and select Add Tunnel and then select VNET&lt;/p>
+&lt;p>&lt;img src="add_tunnel.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="add_vnet.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="vnet.png" alt="img">&lt;/p>
+&lt;h4 id="configuration-parameters">Configuration Parameters&lt;/h4>
+&lt;ul>
+&lt;li>Name - the name of the tunnel interface created on the Trustgrid Node or Cluster&lt;/li>
+&lt;li>Description - optional descriptive parameters related to the tunnel&lt;/li>
+&lt;li>Virtual Network - the Trustgrid virtual network the tunnel is being associated to. The virtual network should already be attached to the node or cluster to be selectable.&lt;/li>
+&lt;li>VRF - The vrf the tunnel is being associated to. Only vrf&amp;rsquo;s which exist on the Trustgrid Node or Cluster can be selected&lt;/li>
+&lt;li>MTU - the mtu size of the tunnel interface. Typically the default of 1430 should be used&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Wireguard</title><link>/docs/nodes/tunnels/wireguard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/tunnels/wireguard/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A wireguard tunnel interface can be configured to allow a wireguard client to connect to a Trustgrid Node running as a wireguard server.
+The tunnel interface is associated to a vrf which is used to define and control what traffic is allowed to pass and how it should appear on the network.&lt;/p>
+&lt;/div>
+&lt;h2 id="configure-wireguard-tunnel">Configure Wireguard Tunnel&lt;/h2>
+&lt;p>On a Trustgrid Node navigate to Tunnels under the Network Menu and select Add Tunnel and then select Wireguard&lt;/p>
+&lt;p>&lt;img src="add_tunnel.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="add_wireguard.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="wireguard.png" alt="img">&lt;/p>
+&lt;h4 id="wireguard-configuration-parameters">Wireguard Configuration Parameters&lt;/h4>
+&lt;ul>
+&lt;li>Name - the name of the wireguard tunnel interface created on the Trustgrid node or cluster&lt;/li>
+&lt;li>Description - optional field used to document what clients are utilizing the tunnel&lt;/li>
+&lt;li>Interface IP - the ip address in CIDR the wireguard tunnel interface will be created as&lt;/li>
+&lt;li>Public Key - the public key of the remote wireguard client&lt;/li>
+&lt;li>Pre-Shared Key - optional 256 bit to provide an additonal level of security&lt;/li>
+&lt;li>VRF - the vrf that exists on the Trustgrid node or cluster the tunnel interface is associated to&lt;/li>
+&lt;li>MTU - the MTU of the wireguard tunnel interface. Typically this can be left at 1430&lt;/li>
+&lt;/ul></description></item></channel></rss>

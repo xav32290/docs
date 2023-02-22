@@ -1,0 +1,161 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– VPN</title><link>/docs/nodes/vpn/</link><description>Recent content in VPN on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/nodes/vpn/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: DNS</title><link>/docs/nodes/vpn/dns/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/vpn/dns/</guid><description>
+&lt;p>Nodes can act as DNS servers for the virtual network. Find DNS definitions and change them under the &lt;code>DNS&lt;/code> section of the VPN configuration.&lt;/p>
+&lt;p>&lt;img src="list.png" alt="img">&lt;/p>
+&lt;h2 id="upstream-servers">Upstream Servers&lt;/h2>
+&lt;p>Upstream servers will be used to answer DNS queries for domains that are not in the virtual network.&lt;/p>
+&lt;p>&lt;tr>
+&lt;th>Host IP Address&lt;/th>
+&lt;td>The upstream DNS server&amp;rsquo;s IP address&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Host Port&lt;/th>
+&lt;td>The upstream DNS server&amp;rsquo;s port (usually 53)&lt;/td>
+&lt;/tr>&lt;/p></description></item><item><title>Docs: Dynamic Routing</title><link>/docs/nodes/vpn/dynamic-routing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/vpn/dynamic-routing/</guid><description>
+&lt;p>Dynamic routing allows a node to export and import routes from other nodes in the virtual network. Find dynamic route definitions and change them under the &lt;code>Dynamic Routing&lt;/code> section of the VPN configuration.&lt;/p>
+&lt;p>&lt;img src="list.png" alt="img">&lt;/p>
+&lt;h2 id="exports">Exports&lt;/h2>
+&lt;p>Export routes for other nodes in the virtual network to import.&lt;/p>
+&lt;p>&lt;img src="add-export.png" alt="img">&lt;/p>
+&lt;p>&lt;tr>
+&lt;th>Destination&lt;/th>
+&lt;td>The node to route traffic to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Destination CIDR&lt;/th>
+&lt;td>The network to route traffic to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Metric&lt;/th>
+&lt;td>The route metric. Lower metrics are processed first.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Gateway Path&lt;/th>
+&lt;td>An optional gateway path to use for the route.&lt;/td>
+&lt;/tr>&lt;/p>
+&lt;h2 id="imports">Imports&lt;/h2>
+&lt;p>Import routes from other nodes in the virtual network.&lt;/p>
+&lt;p>&lt;img src="add-import.png" alt="img">&lt;/p>
+&lt;p>&lt;tr>
+&lt;th>Destination&lt;/th>
+&lt;td>The node to route traffic to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Destination CIDR&lt;/th>
+&lt;td>The network to route traffic to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Metric&lt;/th>
+&lt;td>The route metric. Lower metrics are processed first.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Gateway Path&lt;/th>
+&lt;td>An optional gateway path to use for the route.&lt;/td>
+&lt;/tr>&lt;/p></description></item><item><title>Docs: NATs</title><link>/docs/nodes/vpn/nats/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/vpn/nats/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>NATs allow Trustgrid to alter the source and/or destination IP address of layer 3 traffic as it enters or leaves the VPN.&lt;/p>
+&lt;/div>
+&lt;h2 id="adding-an-interface">Adding an Interface&lt;/h2>
+&lt;p>NATs are scoped to an interface. Add an interface from the &lt;code>Actions&lt;/code> menu.&lt;/p>
+&lt;p>&lt;img src="add-interface.png" alt="img">&lt;/p>
+&lt;h2 id="inside-nats">Inside NATs&lt;/h2>
+&lt;p>An inside NAT defines how a local device IP address translates into a virtual network address. For instance, a local device may have a local IP address of 192.168.1.100, but you may want it to appear to other devices or applications on the virtual network as IP address 10.0.20.100. Or you may want an entire block of local IP addresses to show up on the virtual network as a different block. You can do this translation via Inside NATs. Inside NAT&amp;rsquo;s also control what local devices can participate on the virtual network. If a local device does not have an inside NAT configured that includes its IP address, it can&amp;rsquo;t access or be accessed by other devices on the network. Inside NATs require the following information:&lt;/p>
+&lt;tr>
+&lt;th>Local CIDR&lt;/th>
+&lt;td>The local IP address or address block that should be mapped into the virtual network. It should be entered in CIDR block format (eg - &lt;code>192.168.100.0/24&lt;/code> or &lt;code>192.168.100.51/32&lt;/code>).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Virtual CIDR&lt;/th>
+&lt;td>The network IP address or addresses that the local IP addresses should be mapped to, also entered in CIDR block format.&lt;/td>
+&lt;/tr>
+&lt;div class="alert alert-primary" role="alert">
+Network addresses map 1x1 with local addresses, so the prefix length (the /xx number of the CIDR) should be the same in both the local and network CIDR blocks of the inside NAT entry.
+&lt;/div>
+&lt;h2 id="outside-nats">Outside NATs&lt;/h2>
+&lt;p>By default, when a device on the local network of a node receives traffic from a remote device on the network, the remote device IP address will be the IP address that was entered in the local CIDR block for the remote node&amp;rsquo;s inside NAT entry for the remote device. For instance, if the remote device was mapped to network address 10.0.100.1, then its traffic on the local network will appear to come from IP address 10.0.100.1. However due to the local network configuration, there may be some situations where it is desirable to translate remote network addresses before egressing onto the local network. For instance on a local network of 192.168.0.0/16, a user may want the remote devices virtual network IP of 10.0.100.1 to be translated to 192.168.50.5 so that it fits better into the local network setup. This kind of translation can be achieved by adding outside nats. To add an outside NAT you must enter the following information:&lt;/p>
+&lt;tr>
+&lt;th>Network Group&lt;/th>
+&lt;td>The network IP address or addresses that should be translated before egressing onto the local network. This should be entered in CIDR block format.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Local CIDR&lt;/th>
+&lt;td>The local IP address or addresses that the network addresses should be mapped to, also entered in CIDR format.&lt;/td>
+&lt;/tr>
+&lt;div class="alert alert-primary" role="alert">
+An outside NAT is required for all nodes and clusters using the virtual network
+&lt;/div>
+&lt;p>Note there are situations where it may be desirable to make multiple remote devices masquerade as one local IP address though the use of port address translation (PAT). This can be achieved by defining an outside nat in which the network CIDR contains a larger address space than the local CIDR. For instance, an entry with network CIDR 10.0.1.0/24 and local CIDR 192.168.100.10 would make all remote devices with network IP addresses in 10.0.1.0/24 appear as IP address 192.168.100.10 on the local network.&lt;/p></description></item><item><title>Docs: Port Forwarding</title><link>/docs/nodes/vpn/port-forwarding/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/vpn/port-forwarding/</guid><description>
+&lt;p>Port forwarding allows a node to expose an &lt;a href="/docs/nodes/services/">L4 service&lt;/a> on the virtual network.&lt;/p>
+&lt;p>&lt;img src="list.png" alt="img">&lt;/p>
+&lt;p>&lt;tr>
+&lt;th>Virtual IP Address&lt;/th>
+&lt;td>The IP to expose the service on the virtual network.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Virtual Port&lt;/th>
+&lt;td>The port to expose the service on the virtual network.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Local Service&lt;/th>
+&lt;td>The service to expose.&lt;/td>
+&lt;/tr>&lt;/p></description></item><item><title>Docs: Static Routing</title><link>/docs/nodes/vpn/static-routing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/vpn/static-routing/</guid><description>
+&lt;p>Static routing allows a node to route traffic to a remote network. Find static route definitions and change them under the &lt;code>Static Routing&lt;/code> section of the VPN configuration.&lt;/p>
+&lt;p>&lt;img src="add-modal.png" alt="img">&lt;/p>
+&lt;p>&lt;tr>
+&lt;th>Destination&lt;/th>
+&lt;td>The node to route traffic to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Destination CIDR&lt;/th>
+&lt;td>The network to route traffic to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Metric&lt;/th>
+&lt;td>The route metric. Lower metrics are processed first.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Gateway Path&lt;/th>
+&lt;td>An optional gateway path to use for the route.&lt;/td>
+&lt;/tr>&lt;/p></description></item><item><title>Docs: WireGuard ®</title><link>/docs/nodes/vpn/wireguard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/vpn/wireguard/</guid><description>
+&lt;p>Nodes may enable a WireGuard server to expose the virtual network to WireGuard clients.&lt;/p>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>&lt;img src="wireguard.png" alt="img">&lt;/p>
+&lt;p>&lt;tr>
+&lt;th>Enabled&lt;/th>
+&lt;td>When enabled, this node will accept WireGuard client connections&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Port&lt;/th>
+&lt;td>The port clients should connect to&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Remote Traffic Forwarding&lt;/th>
+&lt;td>Whether the node should forward traffic to the virtual network&lt;/td>
+&lt;/tr>&lt;/p>
+&lt;h2 id="key-management">Key Management&lt;/h2>
+&lt;p>Clients will need the server&amp;rsquo;s public key to connect. This can be generated (using the &lt;code>Regenerate&lt;/code> action) or can be derived from the private key (imported using the &lt;code>Import&lt;/code> action).&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+Changing the server&amp;rsquo;s private key will disconnect existing clients and require their reconfiguration.
+&lt;/div>
+&lt;h2 id="clients">Clients&lt;/h2>
+&lt;p>Clients must be added before they can connect.&lt;/p>
+&lt;p>&lt;img src="wg-client.png" alt="img">&lt;/p>
+&lt;p>Each client will need to generate their own private and public key. Most WireGuard clients provide tools to do this.&lt;/p>
+&lt;p>&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The name of the client&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Pre-shared Key&lt;/th>
+&lt;td>(Optional) The client&amp;rsquo;s pre-shared key&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Public Key&lt;/th>
+&lt;td>The client&amp;rsquo;s public key&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Allow Internet&lt;/th>
+&lt;td>Whether this client should be allowed to access the public network through this server&lt;/td>
+&lt;/tr>&lt;/p>
+&lt;p>An inside NAT should be created to map the client&amp;rsquo;s local IP to an IP on the virtual network. The virtual network CIDR should not be a part of any existing routes in the domain. The IP should be included in an outside NAT network group, so that an ACL can allow the traffic.&lt;/p>
+&lt;p>An outside NAT should be created that includes the virtual network used on the gateway side.&lt;/p>
+&lt;p>&lt;em>&amp;ldquo;WireGuard&amp;rdquo; is a registered trademark of Jason A. Donenfeld.&lt;/em>&lt;/p></description></item></channel></rss>

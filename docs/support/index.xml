@@ -1,0 +1,7 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Support</title><link>/docs/support/</link><description>Recent content in Support on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/support/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Documents</title><link>/docs/support/documents/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/support/documents/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Trustgrid and customers can share documents securely in the Documents section.&lt;/p>
+&lt;/div>
+&lt;p>&lt;img src="documents.png" alt="img">&lt;/p>
+&lt;p>Adding or deleting documents requires &lt;code>documents::modify&lt;/code> permissions. Downloading and viewing documents requires &lt;code>documents::read&lt;/code> permissions.
+(show how to add and delete and download a document).&lt;/p></description></item></channel></rss>

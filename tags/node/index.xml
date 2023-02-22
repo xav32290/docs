@@ -1,0 +1,316 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– node</title><link>/tags/node/</link><description>Recent content in node on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 07 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/node/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Audits</title><link>/docs/nodes/audits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/audits/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Node audits provide records when services on a node are invoked, or when upgrades are applied. This can be helpful to see historical maintenance of a node.&lt;/p>
+&lt;/div>
+&lt;p>Node audits can be viewed for a specific node by navigating to &lt;code>Audits&lt;/code> under the &lt;code>History&lt;/code> section on the node view.&lt;/p>
+&lt;p>Users will need &lt;code>audits::read:node&lt;/code> permissions to view node audits.&lt;/p>
+&lt;p>&lt;img src="node-list.png" alt="img">&lt;/p>
+&lt;p>Node audits can also be found for the entire organization by navigating to &lt;code>Operations&lt;/code>-&amp;gt;&lt;code>Node Audits&lt;/code>.&lt;/p></description></item><item><title>Docs: Data Plane</title><link>/docs/nodes/data-plane/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/data-plane/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Data plane statistics between a node and its peers can help troubleshoot connectivity or performance issues.&lt;/p>
+&lt;/div>
+&lt;p>To view latency data between two nodes, select either the edge or gateway node, and then from the peers table, select the node to view.&lt;/p>
+&lt;div class="alert alert-info" role="alert">
+Gateway nodes will list edge nodes in their peers table
+&lt;/div>
+&lt;p>&lt;img src="peer-list.png" alt="img">&lt;/p>
+&lt;p>Once a peer is selected, the monitoring section will populate with reelvant data.&lt;/p>
+&lt;p>&lt;img src="monitoring.png" alt="img">&lt;/p>
+&lt;p>Hop data is only available for nodes that have hop monitoring enabled. See &lt;a href="/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Monitoring Network Hops to Peers&lt;/a>.&lt;/p></description></item><item><title>Docs: Interfaces</title><link>/docs/nodes/interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/interfaces/</guid><description>
+&lt;h2 id="network-interfaces">Network Interfaces&lt;/h2>
+&lt;p>Navigate to a node, then select &lt;code>Interfaces&lt;/code> under the &lt;code>Network&lt;/code> section.&lt;/p>
+&lt;p>&lt;img src="interfaces.png" alt="Interfaces Page">&lt;/p>
+&lt;p>The &lt;code>Interface&lt;/code> dropdown at the top allows you to select which interface to manage.&lt;/p>
+&lt;p>&lt;img src="select-interface.png" alt="Interface Dropdown">&lt;/p>
+&lt;h3 id="eth0---wan-interface">ETH0 - WAN Interface&lt;/h3>
+&lt;p>This interface is always used to build the outbound TLS tunnels for control and data plane connectivity. If the node is deployed in a single interface configuration, this interface will also be used for local network connectivity.&lt;/p>
+&lt;h3 id="eth1---lan-interface">ETH1 - LAN Interface&lt;/h3>
+&lt;p>Used in two-interface configurations for local network connectivity.&lt;/p>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Hardware Address&lt;/th>
+&lt;td>MAC address of the interface.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>IP Assignment (ETH0 only)&lt;/th>
+&lt;td>&lt;ul>
+&lt;li>DHCP - requires a DHCP server or relay in the same broadcast domain as the interface connection&lt;/li>
+&lt;li>Static - configured using the fields below&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>IPv4 Address CIDR&lt;/th>
+&lt;td>IP address using &lt;a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">classless inter-domain routing (CIDR) notation&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Gateway IP&lt;/th>
+&lt;td>&lt;ul>
+&lt;li>ETH0 - The IP address of the default gateway for this device. All traffic not in the same network as an interface IP or with a specified route will use this gateway.&lt;/li>
+&lt;li>ETH1 - This is only used in a 2-interface setup to access local resources outside the interface&amp;rsquo;s configured network. Routes must be defined.&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>DNS Server 1/2 IP (ETH0 only)&lt;/th>
+&lt;td>Used to resolve DNS names to connect to the Trustgrid control plane.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Cluster Virtual IP&lt;/th>
+&lt;td>Used in &lt;a href="/docs/clusters/">clusters&lt;/a>, this IP address is moved between member nodes based on the active cluster member. It can be used to route traffic between the virtual and local networks. This IP address can only be changed within the cluster interfaces page.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="interface-routes">Interface Routes&lt;/h2>
+&lt;blockquote>
+&lt;p>If the node is part of a cluster, these must be configured at the cluster level&lt;/p>
+&lt;/blockquote>
+&lt;p>These routes are used to access networks that are not in the same network as a configured interface &lt;strong>and that are not accessed using the default gateway IP configured for ETH0 - WAN Interface&lt;/strong>. It is rare to need to define these on the ETH0 interface.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Select the interface from the Network Interface dropdown.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click the &lt;code>+ Add Entry&lt;/code> button.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Enter the route information There are three fields:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Destination CIDR&lt;/th>
+&lt;td>This is the CIDR notation of the network or host that needs to be routed. For a single host, use /32 as the CIDR suffix.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Next Hop&lt;/th>
+&lt;td>The IP address to which traffic destined for the above defined network will be sent. No CIDR suffix is needed.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Description&lt;/th>
+&lt;td>Optional field to provide additional information about the route.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/li>
+&lt;li>
+&lt;p>Click the green check &lt;i class="fa-solid fa-circle-check" style="color: green;">&lt;/i> to confirm the route.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Repeat steps 2-4 with any additional routes.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click the &lt;code>Save&lt;/code> button.&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>Docs: Nodes</title><link>/docs/nodes/</link><pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/nodes/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>A node is an instance of software used for building connections, managing compute resources, and deploying software.&lt;/p>
+&lt;/div>
+&lt;h2 id="node-types">Node Types&lt;/h2>
+&lt;p>A node can be installed on a hardware appliance, as a virtual appliance (Vsphere and Hyper-V), and deployed in a public cloud (Amazon AMI, Google, Microsoft). There are three main types of nodes - Edge, Gateway, and Management.&lt;/p>
+&lt;p>All Trustgrid nodes run on a hardened Ubuntu operating system. Nodes are managed through the Trustgrid portal or via the API (requires authentication token). A local UI exists to support the reconfiguration of an ethernet interface and diagnostic/network tests prior to connection to the Portal.&lt;/p>
+&lt;h3 id="edge-nodes">Edge Nodes&lt;/h3>
+&lt;p>Edge Nodes build outgoing TLS tunnels to Gateway Nodes. Bidirectional traffic is supported through this tunnel, subject to ACLs and &lt;a href="/getting-started/security/">security&lt;/a> policy restrictions. Edge Nodes will only require a firewall rule change if outbound internet restrictions are in place. Edge nodes can be a target for software deployment. Edge Nodes can be deployed with a single or multiple ethernet connections to support deployments behind a firewall or adjacent to a firewall (public WAN / private LAN).&lt;/p>
+&lt;h3 id="gateway-nodes">Gateway Nodes&lt;/h3>
+&lt;p>Gateway Nodes accept incoming TLS tunnels from Edge Nodes. Traffic on these tunnels is bidirectional, as permitted by ACLs or policy. Gateway Nodes usually require a firewall change to permit the incoming traffic. Gateway Nodes are identical to Edge Nodes but with a gateway configuration applied. Gateway nodes only connect to other gateways if one is of type &lt;code>hub&lt;/code>. Read more about &lt;a href="/docs/nodes/gateway/">gateway configuration&lt;/a>.&lt;/p>
+&lt;h3 id="management-nodes">Management Nodes&lt;/h3>
+&lt;p>Management Nodes are not like other &lt;a href="/docs/nodes/">nodes&lt;/a> because they do not connect to the data plane, only the control plane. Management Nodes are deployed by Trustgrid for each customer and are multi-tenant like other control plane components. Customers may elect to deploy their own Management Nodes in place of multi-tenant Management Nodes. Management Nodes facilitate the monitoring, management, and support of Edge and Gateway Nodes.&lt;/p>
+&lt;h2 id="node-list-view">Node List View&lt;/h2>
+&lt;h3 id="adding-a-tag-as-a-column-on-the-nodes-table">Adding a Tag as a Column on the Nodes Table&lt;/h3>
+&lt;p>Adding a tag as a column on the nodes tables is good way to make valuable information visible for multiple nodes at the same time. To add the column:&lt;/p>
+&lt;ol>
+&lt;li>Navigate to the nodes table page&lt;/li>
+&lt;li>Click &lt;code>Actions&lt;/code> and then select &lt;code>Columns&lt;/code> from the dropdown&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="add-column.png" alt="img">&lt;/p>
+&lt;ol start="3">
+&lt;li>Towards the bottom you will see all the available tags in the format &lt;code>tag: tag-name&lt;/code>. Select the desired tag and click &lt;code>Save&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="select-tag-column.png" alt="img">&lt;/p>
+&lt;p>The column will be added and the table can now be sorted by that column. Any node that does not have that tag set will be listed as blank.&lt;/p>
+&lt;p>&lt;img src="tag-column2.png" alt="img">&lt;/p>
+&lt;h3 id="applying-a-tag-filter-to-the-nodes-table">Applying a Tag Filter to the Nodes Table&lt;/h3>
+&lt;p>The nodes table can also be filtered to only show nodes with a specific tag name:value.&lt;/p>
+&lt;ol>
+&lt;li>On the nodes table click &lt;code>Actions&lt;/code> and select &lt;code>Add Tag Filter&lt;/code> from the drop-down menu.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="add-tag-filter-2.png" alt="img">&lt;/p>
+&lt;ol>
+&lt;li>After clicking &lt;code>Add Tag Filter&lt;/code>, select the tag-name field and you will see a list of tag-names available. Select the desired tag.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="pick-tag-filter-name2.png" alt="img">&lt;/p>
+&lt;p>You can also start typing to filter what tag names are shown.&lt;/p>
+&lt;ol start="3">
+&lt;li>
+&lt;p>Select the tag value field and you will see a list of available values. Select the desired value.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Optional) Click &lt;code>Add Tag Filter&lt;/code> to include an additional filter. Note that the two filters will be applied using AND only nodes with both tag name:value combinations matching will be shown.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Click &lt;code>Apply Tag Filter&lt;/code> and the table will only show matching nodes.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="applied-filters2.png" alt="img">&lt;/p></description></item><item><title>Docs: Thresholds</title><link>/docs/nodes/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/thresholds/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the node level can override &lt;a href="/docs/domain/thresholds/">Domain Thresholds&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;p>To view and configure thresholds, a user will need &lt;code>nodes::configure::thresholds&lt;/code> permissions.&lt;/p>
+&lt;p>Navigate to a node, and click &lt;code>Thresholds&lt;/code> under the &lt;code>System&lt;/code> section.&lt;/p>
+&lt;p>&lt;img src="list.png" alt="img">&lt;/p>
+&lt;p>Note that overridden thresholds have a yellow square icon next to them.&lt;/p>
+&lt;h3 id="load-thresholds">Load Thresholds&lt;/h3>
+&lt;p>Load thresholds measure the health of the node itself.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Telemetry&lt;/th>
+&lt;td>The metric to monitor. Options are CPU usage (%), memory usage (%), disk usage (%), and embryonic flows (absolute count).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Threshold&lt;/th>
+&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Duration&lt;/th>
+&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="network-thresholds">Network Thresholds&lt;/h3>
+&lt;p>Network thresholds measure the health of the network from the node&amp;rsquo;s perspective.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Telemetry&lt;/th>
+&lt;td>The metric to monitor. Options are latency (ms), bandwidth in (Mbps), and bandwidth out (Mbps).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Threshold&lt;/th>
+&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Duration&lt;/th>
+&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Target&lt;/th>
+&lt;td>For latency, target node to measure the latency to. For bandwidth measurements, the interface to measure the bandwidth on.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Tutorials: Node Down Response</title><link>/tutorials/operations-runbook/node-down-response/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/operations-runbook/node-down-response/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>This process is intended to help customer support personnel quickly identify the scope of a &lt;a href="/docs/nodes/">node&lt;/a> down problem and get services back online as quickly as possible.&lt;/p>
+&lt;/div>
+&lt;h3 id="node-down-triage">Node Down Triage&lt;/h3>
+&lt;h4 id="triage-checklist">Triage Checklist&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>Determine Production Status of the Trustgrid Node&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Confirm High Availability or Disaster Recover is Functioning&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>If clustered, is the partner active and working&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>If there is a second site, confirm if it is active&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Determine the type of outage (Control Plane, Data Plane or Both)&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="determine-production-status-of-the-trustgrid-node">Determine Production Status of the Trustgrid Node&lt;/h3>
+&lt;p>Use the &lt;a href="/docs/nodes/tags/prod-status-tag/%7D">Production Status Tags&lt;/a> to determine if the &lt;a href="/docs/nodes/">node&lt;/a> is in use and expected to be online.&lt;/p>
+&lt;h3 id="confirm-high-availability-or-disaster-recover-is-functioning">Confirm High Availability or Disaster Recover is Functioning&lt;/h3>
+&lt;p>Before troubleshooting why a &lt;a href="/docs/nodes/">node&lt;/a> is down we should determine if the services it provided can be provided in the interim by a cluster member or devices at a secondary/disaster-recovery site.&lt;/p>
+&lt;h5 id="is-the-node-a-cluster-member">Is the Node a Cluster Member&lt;/h5>
+&lt;ul>
+&lt;li>
+&lt;p>Check if partner member is online:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>If Yes:&lt;/p>
+&lt;pre>&lt;code>- Confirm partner member is now active and operating normally.
+- The issue is limited to this specific Node. This could be its power input, the hardware or operating system, configuration, or its internet connection (if different than partner member).
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;li>
+&lt;p>If No:&lt;/p>
+&lt;pre>&lt;code>- Possible site-level issue including power or internet provider
+- Proceed to Secondary / DR Site
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="is-there-a-secondary--dr-site-for-this-nodecluster">Is there a Secondary / DR Site for this Node/Cluster?&lt;/h5>
+&lt;ul>
+&lt;li>
+&lt;p>Are the &lt;a href="/docs/nodes/">nodes&lt;/a> deployed at the secondary site online in the Trustgrid?&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>If No:&lt;/p>
+&lt;pre>&lt;code>- Confirm nodes for other end-user sites are not also offline which might indicate a wider spread issue. Escalate to Trustgrid Support if you suspect a major issue with the Trustgrid system.
+- If limited to a single customer it is recommended to contact that customer immediately. They may be experiencing an outage or performing maintenance.
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;li>
+&lt;p>If Yes:&lt;/p>
+&lt;pre>&lt;code>- If the customer is configured for Automatic Failover between sites, verify that traffic is flowing through the active member at the secondary site.
+- If the customer is configured for Manual Failover you will need to adjust the route destination to point to the secondary site.
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="determine-connectivity-status-of-the-trustgrid-node">Determine Connectivity Status of the Trustgrid Node&lt;/h3>
+&lt;p>Because Trustgrid provides independent control and data planes, there are a few ways it can manifest as “down”:&lt;/p>
+&lt;tr>
+&lt;th>Control Plane Down&lt;/th>
+&lt;td>The &lt;a href="/docs/nodes/">node&lt;/a> appears offline from within the Trustgrid portal. This indicates that the &lt;a href="/docs/nodes/">node&lt;/a> shutdown or has not sent a heartbeat notification to Trustgrid within the past 10 minutes.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Data Plane Down&lt;/th>
+&lt;td>The &lt;a href="/docs/nodes/">node&lt;/a> appears online from within the portal but reports it is unable to connect to one or more gateway nodes. This can be indicated by the Data Plane Status indicator when viewing the &lt;a href="/docs/nodes/">node&lt;/a> in the portal, or by receiving a “Gateway Connectivity Health Check” failure &lt;a href="/docs/alarms/events/">event&lt;/a> notification. Both of these only work if the Control Plane is currently working.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th>Both Control and Data Plane Down&lt;/th>
+&lt;td>In this situation the &lt;a href="/docs/nodes/">node&lt;/a> appears down in the Trustgrid Portal and users/applications are unable to reach services across the data plane between the Gateway and Edge sites. This is the most common scenario. While the Data Plane is most critical for the services provided across the device, first priority should be restoring the Control Plane connection so that additional troubleshooting tools are available. Often this process also uncovers the reason the data plane is down.&lt;/td>
+&lt;/tr></description></item></channel></rss>
