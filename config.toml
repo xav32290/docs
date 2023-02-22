@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://trustgrid.github.io/docs"
 title = "Trustgrid Docs"
 
 # Language settings
