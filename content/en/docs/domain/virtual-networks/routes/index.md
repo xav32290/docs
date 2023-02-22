@@ -74,9 +74,9 @@ To preemptively reroute traffic to the backup site, update the backup route to h
 In some circumstances, it may be preferable for failover to only occur with manual intervention. In this situation, you will have a single route under the [domain]({{<ref "docs/domain" >}}).  To initiate a failover you'll need to update the destination [cluster]({{<ref "docs/clusters" >}})/[node]({{<ref "docs/nodes" >}}).
 
 1. Login to the Portal and select your domain.
-2. Click the link to the desired [domain]({{<ref "docs/domain" >}}) under the "Name" column.
-3. Scroll down to the ["Virtual Networks"]({{<ref "docs/domain/virtual-networks" >}}) section and select the "Routes" tab.
-4. Find the route you wish to failover.
-5. Update the destination device. (e.g. in the below you would switch from edge to edge-dr).
-   (add screenshot of instructions NEEDS TO BE FIXED)
-6. Click save.
+1. Click the link to the desired [domain]({{<ref "docs/domain" >}}) under the "Name" column.
+1. Scroll down to the ["Virtual Networks"]({{<ref "docs/domain/virtual-networks" >}}) section and select the "Routes" tab.
+1. Find the route you wish to failover.
+1. Update the destination device. (e.g. in the below you would switch from edge to edge-dr).
+  ![Update Destination](update-destination.png)
+1. Click save.
