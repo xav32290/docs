@@ -149,7 +149,7 @@
 &lt;li>Scroll down to the &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">&amp;ldquo;Virtual Networks&amp;rdquo;&lt;/a> section and select the &amp;ldquo;Routes&amp;rdquo; tab.&lt;/li>
 &lt;li>Find the route you wish to failover.&lt;/li>
 &lt;li>Update the destination device. (e.g. in the below you would switch from edge to edge-dr).
-(add screenshot of instructions NEEDS TO BE FIXED)&lt;/li>
+&lt;img src="update-destination.png" alt="Update Destination">&lt;/li>
 &lt;li>Click save.&lt;/li>
 &lt;/ol></description></item><item><title>Docs: Thresholds</title><link>https://trustgrid.github.io/docs/docs/domain/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/domain/thresholds/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
