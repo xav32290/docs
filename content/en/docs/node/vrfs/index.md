@@ -6,9 +6,39 @@ date: 2023-02-06
 ---
 
 ### Overview
-VRFs can be used route / nat and filter what traffic is allowed to pass and how it should appear on the network. VRFs can be associated to an interface whether it be a physical interface / virtual network interface or other tunnel interfaces such as ipsec or gre. VRFs are segmented on a layer 3 level from all other traffic traversing the Trustgrid node.
+VRFs (virtual routing fabric) are layer 3 logical routers which enable having multiple unique network paths and providing layer 3 segmentation on a single Trustgrid node or cluster. 
+An interface on a Trustgrid node is associated to a VRF which applies the defined routes / nats / acls and traffic rules intended.
+The following interfaces can be associated to a VRF:
+- Physical interface (this could be a WAN or LAN interface of a physical or virtual Trustgrid node)
+- Vlan interface (this is a tagged vlan subinterface created on a physical interface)
+- Virtual Network Tunnel Interface
+- Ipsec Tunnel Interface
+- GRE Tunnel Interface
+
 
 For standard use cases of source nat and/or destination nat creating a route and a NAT is sufficient. Traffic rules can be used for more advanced controls. An applicable ACL is required for any traffic to pass as a zero trust methodology is applied. 
+
+
+#### Creating a VRF
+VRFs are created on a Trustgrid Node or Cluster and are unique to that node or cluster
+
+- Select the Trustgrid node or cluster 
+- Under Network > VRFs > Select "Add VRF"
+- Provide a unique name
+- Enable Forwarding (if forwarding is not enabled no traffic will be allowed to pass)
+- Provide a description of the VRF 
+- Select Save and the VRF will be created
+- You can then select the newly created VRF and add the necessary routes / nats / acls or traffic rules
+
+![img](add-vrf.png)
+
+![img](new-vrf.png "100x100")
+
+
+
+
+
+
 
 ### Address Translation
 This is where NATs are created in order to translate the traffic to appear as desired on the network. 
