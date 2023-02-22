@@ -4,7 +4,7 @@ linkTitle: "Documentation"
 ---
 
 {{<blocks/cover image_anchor="top" height="min" color="primary">}}
-<img src="/img/logo.svg" style="height: 5em; margin-bottom: 2em;"/>
+<img src="img/logo.svg" style="height: 5em; margin-bottom: 2em;"/>
 
 <h2>Connect cloud applications to data in any environment</h2>
 <a
