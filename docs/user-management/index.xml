@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– User Management</title><link>/docs/user-management/</link><description>Recent content in User Management on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 30 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/docs/user-management/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Groups</title><link>/docs/user-management/groups/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/user-management/groups/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– User Management</title><link>https://trustgrid.github.io/docs/docs/user-management/</link><description>Recent content in User Management on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 30 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/docs/user-management/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Groups</title><link>https://trustgrid.github.io/docs/docs/user-management/groups/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/user-management/groups/</guid><description>
 &lt;p>&lt;img src="group-ss.png" alt="img">&lt;/p>
 &lt;p>User Management Groups defined can be used to make Remote Access applications visible to users.&lt;/p>
 &lt;p>There are two sources for Groups&lt;/p>
@@ -20,7 +20,7 @@ Users can be added to the group by:&lt;/p>
 &lt;p>These groups are create based on Identity Provider (IdP) configuration for select IdPs (currently Gsuite and Azure OpenID). The IdP can be configured to sync all or select groups, and the sync process will update the group membership automatically.&lt;/p>
 &lt;blockquote>
 &lt;p>if users are added to an IdP-synced group in the Trustgrid portal they will automatically be removed the next time they sync runs.&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs: API Access</title><link>/docs/user-management/api-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-management/api-access/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs: API Access</title><link>https://trustgrid.github.io/docs/docs/user-management/api-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/user-management/api-access/</guid><description>
 &lt;h4 id="generating-an-api-key">Generating an API Key&lt;/h4>
 &lt;p>Navigate to &lt;code>User Management&lt;/code> -&amp;gt; &lt;code>API Access&lt;/code>, and click &lt;code>Regenerate API keys&lt;/code>. This will invalidate your existing API key, if it exists. The API key is tied to your user and will have the same permissions.&lt;/p>
 &lt;blockquote>
@@ -32,7 +32,7 @@ Anything that can be done in the Trustgrid Portal can be done with the API (exce
 &lt;p>To query the API for all nodes, for example, you could run:&lt;/p>
 &lt;p>curl -H &amp;ldquo;Authorization: trustgrid-token YOUR-CLIENT-ID:YOUR-CLIENT-SECRET&amp;rdquo; &lt;a href="https://api.trustgrid.io/node">https://api.trustgrid.io/node&lt;/a>&lt;/p>
 &lt;p>In the &lt;a href="https://portal.trustgrid.io/api-docs/">API documentation&lt;/a>, clicking &lt;code>Authorize&lt;/code> at the top right will prompt for the API header.&lt;/p>
-&lt;p>&lt;img src="api-access.png" alt="img">&lt;/p></description></item><item><title>Docs: Policies</title><link>/docs/user-management/policies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-management/policies/</guid><description>
+&lt;p>&lt;img src="api-access.png" alt="img">&lt;/p></description></item><item><title>Docs: Policies</title><link>https://trustgrid.github.io/docs/docs/user-management/policies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/user-management/policies/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>User Management Policies define what an authenticated user is allowed to do within the Trustgrid system. Policies either allow or explicitly deny specific actions by the user.&lt;/p>
 &lt;/div>
@@ -80,13 +80,13 @@ Anything that can be done in the Trustgrid Portal can be done with the API (exce
 &lt;code>tgrn:tg::nodes:node/&lt;/code>
 To get the node’s complete TGRN you’ll need to append the node ID which is visible by navigating to the node and either copying from the URL or using the Node ID field in the Info visor drop down&lt;/p>
 &lt;p>&lt;img src="node-tgrn.png" alt="img">&lt;/p>
-&lt;p>A complete &lt;a href="/docs/nodes/">node&lt;/a> TGRN looks like: &lt;code>tgrn:tg::nodes:node/ab3550cf-f3da-4d90-b4b1-b870fc85c9c7&lt;/code>&lt;/p>
+&lt;p>A complete &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> TGRN looks like: &lt;code>tgrn:tg::nodes:node/ab3550cf-f3da-4d90-b4b1-b870fc85c9c7&lt;/code>&lt;/p>
 &lt;h4 id="cluster-tgrn">Cluster TGRN&lt;/h4>
 &lt;p>Cluster TGRN start with the prefix:
 &lt;code>tgrn:tg::nodes:cluster/&lt;/code>
 This is followed by the cluster’s fully qualified domain name (fqdn) which is the combination of the cluster name and your organizations trustgrid domain. This visible in the URL when you navigate to a cluster in the portal.&lt;/p>
 &lt;p>&lt;img src="cluster-tgrn.png" alt="img">&lt;/p>
-&lt;p>A complete &lt;a href="/docs/clusters/">cluster&lt;/a> TGRN looks like: &lt;code>tgrn:tg::nodes:cluster/awscluster.training.trustgrid.io&lt;/code>&lt;/p>
+&lt;p>A complete &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> TGRN looks like: &lt;code>tgrn:tg::nodes:cluster/awscluster.training.trustgrid.io&lt;/code>&lt;/p>
 &lt;h3 id="policy-management">Policy Management&lt;/h3>
 &lt;h4 id="creatingediting-policies">Creating/Editing Policies&lt;/h4>
 &lt;ol>
@@ -104,7 +104,7 @@ d. Click &lt;code>Save&lt;/code>&lt;/li>
 &lt;/ol>
 &lt;p>&lt;img src="new-policy.png" alt="img">&lt;/p>
 &lt;h4 id="attaching-policies-and-viewing-effective-permissions">Attaching Policies and Viewing Effective Permissions&lt;/h4>
-&lt;p>Policies are attached and their cumulative effect can be viewed under &lt;code>User Management&lt;/code> → &lt;code>Users&lt;/code> by selecting the desired user.&lt;/p></description></item><item><title>Docs: Users</title><link>/docs/user-management/users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-management/users/</guid><description>
+&lt;p>Policies are attached and their cumulative effect can be viewed under &lt;code>User Management&lt;/code> → &lt;code>Users&lt;/code> by selecting the desired user.&lt;/p></description></item><item><title>Docs: Users</title><link>https://trustgrid.github.io/docs/docs/user-management/users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/user-management/users/</guid><description>
 &lt;p>&lt;img src="users.png" alt="img">&lt;/p>
 &lt;p>The Users panel is the primary panel for managing user identities and the policies attached to them. All changes in this panel require either the [builtin-tg-acess-admin] policy or similar permissions.&lt;/p>
 &lt;h3 id="adding-or-inviting-users">Adding or Inviting Users&lt;/h3>

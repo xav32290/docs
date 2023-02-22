@@ -1,13 +1,13 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Nodes</title><link>/docs/nodes/</link><description>Recent content in Nodes on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 07 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/docs/nodes/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Audits</title><link>/docs/nodes/audits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/audits/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Nodes</title><link>https://trustgrid.github.io/docs/docs/nodes/</link><description>Recent content in Nodes on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 07 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/docs/nodes/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Audits</title><link>https://trustgrid.github.io/docs/docs/nodes/audits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/audits/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Node audits provide records when services on a node are invoked, or when upgrades are applied. This can be helpful to see historical maintenance of a node.&lt;/p>
 &lt;/div>
 &lt;p>Node audits can be viewed for a specific node by navigating to &lt;code>Audits&lt;/code> under the &lt;code>History&lt;/code> section on the node view.&lt;/p>
 &lt;p>Users will need &lt;code>audits::read:node&lt;/code> permissions to view node audits.&lt;/p>
 &lt;p>&lt;img src="node-list.png" alt="img">&lt;/p>
-&lt;p>Node audits can also be found for the entire organization by navigating to &lt;code>Operations&lt;/code>-&amp;gt;&lt;code>Node Audits&lt;/code>.&lt;/p></description></item><item><title>Docs: Cluster</title><link>/docs/nodes/cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/cluster/</guid><description>
+&lt;p>Node audits can also be found for the entire organization by navigating to &lt;code>Operations&lt;/code>-&amp;gt;&lt;code>Node Audits&lt;/code>.&lt;/p></description></item><item><title>Docs: Cluster</title><link>https://trustgrid.github.io/docs/docs/nodes/cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/cluster/</guid><description>
 &lt;div class="alert alert-primary" role="alert">
-Cluster configuration is only available for nodes that are members of a &lt;a href="/docs/clusters/">cluster&lt;/a>.
+Cluster configuration is only available for nodes that are members of a &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a>.
 &lt;/div>
 &lt;h2 id="heartbeat">Heartbeat&lt;/h2>
 &lt;p>The cluster heartbeat defines a persistent connection between cluster members. The heartbeat is used to determine the health of the cluster and to determine which member is the active member.&lt;/p>
@@ -22,14 +22,14 @@ Cluster configuration is only available for nodes that are members of a &lt;a hr
 &lt;/tr>
 &lt;div class="alert alert-primary" role="alert">
 The same interface should be selected for all cluster members
-&lt;/div></description></item><item><title>Docs: Connectors</title><link>/docs/nodes/connectors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/connectors/</guid><description>
+&lt;/div></description></item><item><title>Docs: Connectors</title><link>https://trustgrid.github.io/docs/docs/nodes/connectors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/connectors/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Connectors are configured in conjunction with &lt;a href="/docs/nodes/services/">services&lt;/a> to define a local listening port for layer 4 (L4) connectivity.&lt;/p>
+&lt;p>Connectors are configured in conjunction with &lt;a href="https://trustgrid.github.io/docs/docs/nodes/services/">services&lt;/a> to define a local listening port for layer 4 (L4) connectivity.&lt;/p>
 &lt;/div>
 &lt;h4 id="configuration">Configuration&lt;/h4>
 &lt;p>Connectors are configured under the Networking &amp;gt; Connectors tab of the node or cluster configuration section in the Trustgrid Portal.&lt;/p>
 &lt;figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 410px">
-&lt;img class="card-img-top" src="/docs/nodes/connectors/connector_hudc115f7e28d8cbd5e71d65766f13265f_84798_400x450_resize_catmullrom_3.png" width="400" height="450">
+&lt;img class="card-img-top" src="https://trustgrid.github.io/docs/docs/docs/nodes/connectors/connector_hudc115f7e28d8cbd5e71d65766f13265f_84798_400x450_resize_catmullrom_3.png" width="400" height="450">
 &lt;/figure>
 &lt;table>
 &lt;thead>
@@ -61,17 +61,17 @@ The same interface should be selected for all cluster members
 &lt;/tr>
 &lt;tr>
 &lt;th>Remote Service&lt;/th>
-&lt;td>Either the friendly name of &lt;a href="/docs/nodes/services/">service&lt;/a> that is defined on the remote node, or the IP:Port of the remote service to connect to.&lt;/td>
+&lt;td>Either the friendly name of &lt;a href="https://trustgrid.github.io/docs/docs/nodes/services/">service&lt;/a> that is defined on the remote node, or the IP:Port of the remote service to connect to.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Rate Limit (Mb/s)&lt;/th>
 &lt;td>The maximum amount of throughput that will be allowed to traverse the tunnel when connecting to the connector. This can be used to prevent saturating the connection at either the local or remote sites.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Containers</title><link>/docs/nodes/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/containers/</guid><description>
+&lt;/table></description></item><item><title>Docs: Containers</title><link>https://trustgrid.github.io/docs/docs/nodes/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/containers/</guid><description>
 &lt;p>Trustgrid nodes support running Docker containers which allows for ease of deployment across an organization. Any Docker container is supported with the exception of containers that require root level access.&lt;/p>
 &lt;p>The container can be attached to both the local and virtual network space which allows both local and remote resources to communicate with the container. For example an API could be deployed on a Trustgrid Gateway which sends API Calls via the virtual network space to a container running on a Trustgrid Edge Node. The API call could then be translated to make a call to a database running on the local network and passed back up to the gateway host.&lt;/p>
-&lt;p>Before adding a container to a node, push an image to your &lt;a href="/docs/repositories/">repository&lt;/a>.&lt;/p>
+&lt;p>Before adding a container to a node, push an image to your &lt;a href="https://trustgrid.github.io/docs/docs/repositories/">repository&lt;/a>.&lt;/p>
 &lt;p>Reading and managing containers requires &lt;code>node-exec::read&lt;/code> and &lt;code>node-exec::modify&lt;/code> permissions, respectively. Executing a container requires &lt;code>node-exec::compute&lt;/code> permission.&lt;/p>
 &lt;h2 id="management">Management&lt;/h2>
 &lt;p>Navigate to &lt;code>Container Management&lt;/code> under &lt;code>Compute&lt;/code> on a node or cluster.&lt;/p>
@@ -267,7 +267,7 @@ The same interface should be selected for all cluster members
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="mounts">Mounts&lt;/h2>
-&lt;p>Mounts allow a container to persist data either as an externally defined &lt;a href="/docs/nodes/containers/volumes/">volume&lt;/a>, or a bind mount of the node&amp;rsquo;s filesystem.&lt;/p>
+&lt;p>Mounts allow a container to persist data either as an externally defined &lt;a href="https://trustgrid.github.io/docs/docs/nodes/containers/volumes/">volume&lt;/a>, or a bind mount of the node&amp;rsquo;s filesystem.&lt;/p>
 &lt;p>&lt;img src="mounts.png" alt="Container Mounts">&lt;/p>
 &lt;table>
 &lt;thead>
@@ -279,7 +279,7 @@ The same interface should be selected for all cluster members
 &lt;tbody>
 &lt;tr>
 &lt;th>Type&lt;/th>
-&lt;td>Either &lt;code>BIND&lt;/code> or &lt;code>VOLUME&lt;/code>. For type &lt;code>VOLUME&lt;/code>, the mount must reference an existing &lt;a href="/docs/nodes/containers/volumes/">volume&lt;/a>.&lt;/td>
+&lt;td>Either &lt;code>BIND&lt;/code> or &lt;code>VOLUME&lt;/code>. For type &lt;code>VOLUME&lt;/code>, the mount must reference an existing &lt;a href="https://trustgrid.github.io/docs/docs/nodes/containers/volumes/">volume&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Source&lt;/th>
@@ -405,7 +405,7 @@ The same interface should be selected for all cluster members
 &lt;td>The maximum number of log files to keep.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Data Plane</title><link>/docs/nodes/data-plane/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/data-plane/</guid><description>
+&lt;/table></description></item><item><title>Docs: Data Plane</title><link>https://trustgrid.github.io/docs/docs/nodes/data-plane/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/data-plane/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Data plane statistics between a node and its peers can help troubleshoot connectivity or performance issues.&lt;/p>
 &lt;/div>
@@ -416,7 +416,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>&lt;img src="peer-list.png" alt="img">&lt;/p>
 &lt;p>Once a peer is selected, the monitoring section will populate with reelvant data.&lt;/p>
 &lt;p>&lt;img src="monitoring.png" alt="img">&lt;/p>
-&lt;p>Hop data is only available for nodes that have hop monitoring enabled. See &lt;a href="/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Monitoring Network Hops to Peers&lt;/a>.&lt;/p></description></item><item><title>Docs: Data Store</title><link>/docs/nodes/datastore/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/datastore/</guid><description>
+&lt;p>Hop data is only available for nodes that have hop monitoring enabled. See &lt;a href="https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Monitoring Network Hops to Peers&lt;/a>.&lt;/p></description></item><item><title>Docs: Data Store</title><link>https://trustgrid.github.io/docs/docs/nodes/datastore/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/datastore/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>The data store allows artifacts (i.e. container volumes, virtual machine images) to be synced from/to a node. The data store view is located under Compute &amp;gt; Data Store.&lt;/p>
 &lt;/div>
@@ -427,14 +427,14 @@ Gateway nodes will list edge nodes in their peers table
 &lt;li>&lt;img src="home.png" alt="img"> - Takes you to the Root of the directory hierarchy.&lt;/li>
 &lt;li>&lt;img src="back.png" alt="img"> - Takes you up one directory from your current location in the directory hierarchy.&lt;/li>
 &lt;li>&lt;img src="refresh.png" alt="img"> - Refreshes the directory hierarchy to get the latest state of the data store.&lt;/li>
-&lt;li>&lt;img src="create_dir.png" alt="img"> - Create a new sub directory. See &lt;a href="/docs/nodes/datastore/mkdir/">Directory Creation&lt;/a> for more information&lt;/li>
-&lt;li>&lt;img src="sync.png" alt="img"> - Transfer a file to the data store. See &lt;a href="/docs/nodes/datastore/sync/">File Sync&lt;/a> for more information&lt;/li>
-&lt;li>&lt;img src="upload.png" alt="img"> - Upload a file from the data store. See &lt;a href="/docs/nodes/datastore/sync/">File Sync&lt;/a> for more information&lt;/li>
+&lt;li>&lt;img src="create_dir.png" alt="img"> - Create a new sub directory. See &lt;a href="https://trustgrid.github.io/docs/docs/nodes/datastore/mkdir/">Directory Creation&lt;/a> for more information&lt;/li>
+&lt;li>&lt;img src="sync.png" alt="img"> - Transfer a file to the data store. See &lt;a href="https://trustgrid.github.io/docs/docs/nodes/datastore/sync/">File Sync&lt;/a> for more information&lt;/li>
+&lt;li>&lt;img src="upload.png" alt="img"> - Upload a file from the data store. See &lt;a href="https://trustgrid.github.io/docs/docs/nodes/datastore/sync/">File Sync&lt;/a> for more information&lt;/li>
 &lt;li>&lt;img src="delete.png" alt="img"> - Delete a file from the data store.&lt;/li>
 &lt;/ul>
 &lt;h3 id="recent-tasks">Recent Tasks&lt;/h3>
 &lt;p>Allows a user to view the status of any long running tasks (i.e. Transfer file from Amazon S3, Upload file to HTTP endpoint, etc). Any task that is executing can be cancelled. Completed tasks can be cleared manually or they will be automatically removed 6 hours after completion time.&lt;/p>
-&lt;p>&lt;img src="recent_tasks.png" alt="img">&lt;/p></description></item><item><title>Docs: Flow Logs</title><link>/docs/nodes/flow-logs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/flow-logs/</guid><description>
+&lt;p>&lt;img src="recent_tasks.png" alt="img">&lt;/p></description></item><item><title>Docs: Flow Logs</title><link>https://trustgrid.github.io/docs/docs/nodes/flow-logs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/flow-logs/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Flow logs are a record of all traffic that passes through a node. They can be used to troubleshoot connectivity issues, or to monitor traffic patterns.&lt;/p>
 &lt;/div>
@@ -556,7 +556,7 @@ Gateway nodes will list edge nodes in their peers table
 }
 ]
 }
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Gateway</title><link>/docs/nodes/gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/gateway/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Gateway</title><link>https://trustgrid.github.io/docs/docs/nodes/gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/gateway/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Gateway nodes accept TLS tunnel connections from other nodes in the domain. They are responsible for routing traffic between nodes.&lt;/p>
 &lt;/div>
@@ -675,7 +675,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>To see detailed messages about gateway traffic, select the &lt;code>Troubleshoot Gateway Traffic&lt;/code> option from the services menu under &lt;code>Gateway Tools&lt;/code>.&lt;/p>
 &lt;p>&lt;img src="launch-troubleshoot-gateway-traffic.png" alt="img">&lt;/p>
 &lt;p>This will open a new window with live diagnostic messages about traffic&lt;/p>
-&lt;p>&lt;img src="troubleshoot-gateway-traffic.png" alt="img">&lt;/p></description></item><item><title>Docs: Interfaces</title><link>/docs/nodes/interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/interfaces/</guid><description>
+&lt;p>&lt;img src="troubleshoot-gateway-traffic.png" alt="img">&lt;/p></description></item><item><title>Docs: Interfaces</title><link>https://trustgrid.github.io/docs/docs/nodes/interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/interfaces/</guid><description>
 &lt;h2 id="network-interfaces">Network Interfaces&lt;/h2>
 &lt;p>Navigate to a node, then select &lt;code>Interfaces&lt;/code> under the &lt;code>Network&lt;/code> section.&lt;/p>
 &lt;p>&lt;img src="interfaces.png" alt="Interfaces Page">&lt;/p>
@@ -724,7 +724,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;/tr>
 &lt;tr>
 &lt;th>Cluster Virtual IP&lt;/th>
-&lt;td>Used in &lt;a href="/docs/clusters/">clusters&lt;/a>, this IP address is moved between member nodes based on the active cluster member. It can be used to route traffic between the virtual and local networks. This IP address can only be changed within the cluster interfaces page.&lt;/td>
+&lt;td>Used in &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">clusters&lt;/a>, this IP address is moved between member nodes based on the active cluster member. It can be used to route traffic between the virtual and local networks. This IP address can only be changed within the cluster interfaces page.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -774,11 +774,11 @@ Gateway nodes will list edge nodes in their peers table
 &lt;li>
 &lt;p>Click the &lt;code>Save&lt;/code> button.&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Docs: Location</title><link>/docs/nodes/location/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/location/</guid><description>
+&lt;/ol></description></item><item><title>Docs: Location</title><link>https://trustgrid.github.io/docs/docs/nodes/location/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/location/</guid><description>
 &lt;p>Trustgrid uses each node&amp;rsquo;s public IP address to derive location information. If it&amp;rsquo;s incorrect, the fields can be set manually. If set manually, IP changes will not update the node&amp;rsquo;s location when viewed from the nodes table or the network map.&lt;/p>
 &lt;p>&lt;img src="node-location.png" alt="img">&lt;/p>
 &lt;h6 id="to-change-the-node-location">To change the Node Location:&lt;/h6>
-&lt;p>Change the details to desired settings then click &lt;code>Save&lt;/code> when done.&lt;/p></description></item><item><title>Docs: Overview</title><link>/docs/nodes/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/overview/</guid><description>
+&lt;p>Change the details to desired settings then click &lt;code>Save&lt;/code> when done.&lt;/p></description></item><item><title>Docs: Overview</title><link>https://trustgrid.github.io/docs/docs/nodes/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/overview/</guid><description>
 &lt;h3 id="stats">Stats&lt;/h3>
 &lt;p>The Node overview page shows performance and network traffic data.&lt;/p>
 &lt;p>Supported time windows are selectable at the top. VPN and network statistics can be targeted to specific virtual networks and interfaces.&lt;/p>
@@ -817,9 +817,9 @@ Gateway nodes will list edge nodes in their peers table
 &lt;td>shows TCP errors across all interfaces&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Services</title><link>/docs/nodes/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/services/</guid><description>
+&lt;/table></description></item><item><title>Docs: Services</title><link>https://trustgrid.github.io/docs/docs/nodes/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/services/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Services are configured in conjunction with &lt;a href="/docs/nodes/connectors/">connectors&lt;/a> to define a remote host:port to connect to for layer 4 (L4) connectivity.&lt;/p>
+&lt;p>Services are configured in conjunction with &lt;a href="https://trustgrid.github.io/docs/docs/nodes/connectors/">connectors&lt;/a> to define a remote host:port to connect to for layer 4 (L4) connectivity.&lt;/p>
 &lt;/div>
 &lt;h4 id="configuration">Configuration&lt;/h4>
 &lt;p>Services are configured under the Networking &amp;gt; Services tab of the node or cluster configuration section in the Trustgrid Portal.&lt;/p>
@@ -839,7 +839,7 @@ Gateway nodes will list edge nodes in their peers table
 > FTP must operate in passive mode when using L4 services and connectors
 &lt;tr>
 &lt;th>Service Name&lt;/th>
-&lt;td>A friendly name for the service that will be used in the Remote Service field of a &lt;a href="/docs/nodes/connectors/">connector&lt;/a>.&lt;/td>
+&lt;td>A friendly name for the service that will be used in the Remote Service field of a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/connectors/">connector&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Host&lt;/th>
@@ -854,7 +854,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;td>A health check can be configured for TCP services. The health check will attempt a TCP connectivity check once per minute. After 5 consecutive failures, an Outbound L4 Service Health Check alert will be triggered and clustered nodes will be marked as unhealthy. Clustered nodes will return to a Healthy status after 5 consecitive connection attempts are successful.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: SNMP</title><link>/docs/nodes/snmp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/snmp/</guid><description>
+&lt;/table></description></item><item><title>Docs: SNMP</title><link>https://trustgrid.github.io/docs/docs/nodes/snmp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/snmp/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trustgrid Nodes support SNMP Version 3 for the monitoring of various node resources.&lt;/p>
 &lt;/div>
@@ -930,9 +930,9 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>If you are querying from across the virtual network, you’d need to use the Virtual Management IP in the correct Virtual Network.&lt;/p>
 &lt;p>Running this command should generate output like shown on this page.&lt;/p>
 &lt;p>Information Provided by SNMP
-A full list of all available OID&amp;rsquo;s supported by the Trustgrid Node is listed here.&lt;/p></description></item><item><title>Docs: Thresholds</title><link>/docs/nodes/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/thresholds/</guid><description>
+A full list of all available OID&amp;rsquo;s supported by the Trustgrid Node is listed here.&lt;/p></description></item><item><title>Docs: Thresholds</title><link>https://trustgrid.github.io/docs/docs/nodes/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/thresholds/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the node level can override &lt;a href="/docs/domain/thresholds/">Domain Thresholds&lt;/a>.&lt;/p>
+&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the node level can override &lt;a href="https://trustgrid.github.io/docs/docs/domain/thresholds/">Domain Thresholds&lt;/a>.&lt;/p>
 &lt;/div>
 &lt;p>To view and configure thresholds, a user will need &lt;code>nodes::configure::thresholds&lt;/code> permissions.&lt;/p>
 &lt;p>Navigate to a node, and click &lt;code>Thresholds&lt;/code> under the &lt;code>System&lt;/code> section.&lt;/p>
@@ -997,11 +997,11 @@ A full list of all available OID&amp;rsquo;s supported by the Trustgrid Node is 
 &lt;td>For latency, target node to measure the latency to. For bandwidth measurements, the interface to measure the bandwidth on.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Tags</title><link>/docs/nodes/tags/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/nodes/tags/</guid><description>
+&lt;/table></description></item><item><title>Docs: Tags</title><link>https://trustgrid.github.io/docs/docs/nodes/tags/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/tags/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>A tag is a name / value pair that can be used to provide additional information about a Trustgrid resource (&lt;a href="/docs/nodes/">nodes&lt;/a>, &lt;a href="/docs/clusters/">clusters&lt;/a>, etc).&lt;/p>
+&lt;p>A tag is a name / value pair that can be used to provide additional information about a Trustgrid resource (&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a>, &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">clusters&lt;/a>, etc).&lt;/p>
 &lt;/div>
-&lt;p>Tags are useful when managing enterprise-scale deployments of &lt;a href="/docs/nodes/">nodes&lt;/a>. Tags allow the user to identify quickly and easily a &lt;a href="/docs/nodes/">node&lt;/a> or group of &lt;a href="/docs/nodes/">nodes&lt;/a> with the same property. Both the name and value of the tags are set by the user. Names should provide the context and values provide the actual data. For example, to provide the address of a device you would set the name to &lt;code>address&lt;/code>, and the value to something like &lt;code>123 Main St&lt;/code>.&lt;/p>
+&lt;p>Tags are useful when managing enterprise-scale deployments of &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a>. Tags allow the user to identify quickly and easily a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> or group of &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> with the same property. Both the name and value of the tags are set by the user. Names should provide the context and values provide the actual data. For example, to provide the address of a device you would set the name to &lt;code>address&lt;/code>, and the value to something like &lt;code>123 Main St&lt;/code>.&lt;/p>
 &lt;div class="alert alert-primary" role="alert">
 It is a best practice for Trustgrid customers to standardize on a set of tag names and appropriate values. This increases the consistency of use across your organization. When adding tags the existing tag names and associated values will be prepopulated as options.
 &lt;/div>
@@ -1049,7 +1049,7 @@ Tag names and values are case-sensitive and should only consist of letters, numb
 &lt;/li>
 &lt;/ol>
 &lt;p>Tag rows can be edited in-place. Change the name or value, then click &lt;code>Save&lt;/code>.&lt;/p>
-&lt;p>To remove a tag, click the red X next to the tag name, then click &lt;code>Save&lt;/code>.&lt;/p></description></item><item><title>Docs: Tunnels</title><link>/docs/nodes/tunnels/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/tunnels/</guid><description>
+&lt;p>To remove a tag, click the red X next to the tag name, then click &lt;code>Save&lt;/code>.&lt;/p></description></item><item><title>Docs: Tunnels</title><link>https://trustgrid.github.io/docs/docs/nodes/tunnels/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/tunnels/</guid><description>
 &lt;h3 id="tunnels-overview">Tunnels Overview&lt;/h3>
 &lt;p>Trustgrid Supports configuring various tunneling protocols in order to establish secure connectivity between any appliance that supports the underlying protocol.
 The supported tunnels are listed below.&lt;/p>
@@ -1059,11 +1059,11 @@ The supported tunnels are listed below.&lt;/p>
 &lt;li>Vnet - The virtual network tunnel is the Trustgrid Proprietary VPN tunneling protocol and therefore can only be used to establish connectivity to other Trustgrid nodes in the organization&lt;/li>
 &lt;li>Wireguard - The latest open source tunneling protocol aiming to provide better performance than the traditional ipsec or openvpn protocols&lt;/li>
 &lt;/ul>
-&lt;p>&amp;ldquo;Wireguard&amp;rdquo; is a registered trademark of Jason A. Donenfeld&lt;/p></description></item><item><title>Docs: Virtual Machines</title><link>/docs/nodes/kvm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/kvm/</guid><description>
+&lt;p>&amp;ldquo;Wireguard&amp;rdquo; is a registered trademark of Jason A. Donenfeld&lt;/p></description></item><item><title>Docs: Virtual Machines</title><link>https://trustgrid.github.io/docs/docs/nodes/kvm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/kvm/</guid><description>
 &lt;p>Trustgrid nodes can deploy virtual machines (if supported) using the open source virtualization technology &lt;code>Kernel-base Virtual Machine (KVM)&lt;/code>which allows the node to act as a hypervisor to run multiple, isolated virtual guests.&lt;/p>
 &lt;p>The virtual machine can be attached to both the local and virtual network space which allows both local and remote resources to communicate with the virtual machine. For example an API could be deployed on a Trustgrid Gateway which sends API calls via the virtual network space to a virtual machine running on a Trustgrid Edge Node. The API call could then be translated to make a call to a database running on the local network and passed back up to the gateway host.&lt;/p>
 &lt;div class="alert alert-info" role="alert">
-Before being able to deploy a virtual machine to a node, an &lt;a href="/docs/nodes/kvm/images/">image&lt;/a> needs to be created.
+Before being able to deploy a virtual machine to a node, an &lt;a href="https://trustgrid.github.io/docs/docs/nodes/kvm/images/">image&lt;/a> needs to be created.
 &lt;/div>
 &lt;h2 id="management">Management&lt;/h2>
 &lt;p>Navigate to &lt;code>VM Management&lt;/code> &amp;gt; &lt;code>Virtual Machines&lt;/code> on a node.&lt;/p>
@@ -1298,14 +1298,14 @@ You can find the full cloud-init documentation &lt;strong>&lt;a href="https://cl
 &lt;div class="alert alert-info" role="alert">
 Active flows can be manually terminated.
 &lt;/div>
-&lt;p>&lt;img src="vm_history_flows.png" alt="img">&lt;/p></description></item><item><title>Docs: VPN</title><link>/docs/nodes/vpn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/vpn/</guid><description>
+&lt;p>&lt;img src="vm_history_flows.png" alt="img">&lt;/p></description></item><item><title>Docs: VPN</title><link>https://trustgrid.github.io/docs/docs/nodes/vpn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/vpn/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trustgrid nodes can be configured to provide VPN-like functionality, allowing network address translation (NAT) and routing between nodes.&lt;/p>
 &lt;/div>
 &lt;p>The VPN feature enables routing of IP packets by utilizing a virtual IP space that is configured on the nodes. In this configuration, the node can be used as the next hop for route destined for the virtual IP space, or the node can be used as the default gateway for a network. The virtual IP space is used as a transit network with NAT being utilized to translate IP addresses on to/from the virtual IP space on either side. It is also possible to preserve the original source and destination by having the virtual IP space be identical to the LAN network.&lt;/p>
 &lt;p>The Trustgrid VPN feature provides the capability to securely route IP packets between remote networks. In this configuration, Trustgrid nodes can operate as a distributed mesh virtual private network (VPN) that can allow applications to access remote data and services at layer 3 (L3) of the network OSI model. This is done by defining a virtual L3 network (similar to an Amazon VPC) and then selecting how local node networks are exposed and translated into the the virtual address space.&lt;/p>
 &lt;h2 id="attaching-a-network">Attaching a Network&lt;/h2>
-&lt;p>To use VPN functionality, a node or cluster must be attached to a domain &lt;a href="/docs/domain/virtual-networks/">virtual network&lt;/a>.&lt;/p>
+&lt;p>To use VPN functionality, a node or cluster must be attached to a domain &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual network&lt;/a>.&lt;/p>
 &lt;p>Navigate to the &lt;code>VPN&lt;/code> section for your node or cluster, and select &lt;code>Actions&lt;/code>-&amp;gt;&lt;code>Attach&lt;/code>.&lt;/p>
 &lt;p>&lt;img src="attach-network.png" alt="img">&lt;/p>
 &lt;tr>
@@ -1324,7 +1324,7 @@ Active flows can be manually terminated.
 &lt;th>Virtual Management IP&lt;/th>
 &lt;td>The virtual IP address to use in this network&lt;/td>
 &lt;/tr>
-&lt;p>Once attached, navigate into the network to manage the VPN configuration.&lt;/p></description></item><item><title>Docs: VRFs</title><link>/docs/nodes/vrfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/vrfs/</guid><description>
+&lt;p>Once attached, navigate into the network to manage the VPN configuration.&lt;/p></description></item><item><title>Docs: VRFs</title><link>https://trustgrid.github.io/docs/docs/nodes/vrfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/vrfs/</guid><description>
 &lt;h3 id="overview">Overview&lt;/h3>
 &lt;p>VRFs can be used route / nat and filter what traffic is allowed to pass and how it should appear on the network. VRFs can be associated to an interface whether it be a physical interface / virtual network interface or other tunnel interfaces such as ipsec or gre. VRFs are segmented on a layer 3 level from all other traffic traversing the Trustgrid node.&lt;/p>
 &lt;p>For standard use cases of source nat and/or destination nat creating a route and a NAT is sufficient. Traffic rules can be used for more advanced controls. An applicable ACL is required for any traffic to pass as a zero trust methodology is applied.&lt;/p>
@@ -1422,11 +1422,11 @@ For example passing through an IDS container such as Snort.&lt;/li>
 &lt;h6 id="traffic-rule-example">Traffic Rule Example&lt;/h6>
 &lt;p>In the below example the first rule on line number 1 is forwarding all traffic destined to 10.0.20.0/24 to a virtual network tunnel interface. Any NATs configured under Address Translation will be applied before the packet is forwarded to its destination. The rule on line number 10 will forward all traffic that does not match the first rule out to the internet masquerading as the WAN interfaces address.
 If the line numbers were reversed the virtual network rule would never be matched as all traffic would match the internet offload rule which is configured for all source and destination traffic.&lt;/p>
-&lt;p>&lt;img src="trafficrule1.png" alt="img">&lt;/p></description></item><item><title>Docs: ZTNA Gateway</title><link>/docs/nodes/ztna-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/ztna-gateway/</guid><description>
+&lt;p>&lt;img src="trafficrule1.png" alt="img">&lt;/p></description></item><item><title>Docs: ZTNA Gateway</title><link>https://trustgrid.github.io/docs/docs/nodes/ztna-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/ztna-gateway/</guid><description>
 &lt;p>Navigate to a node, then select &lt;code>ZTNA Gateway&lt;/code> under the &lt;code>Network&lt;/code> section.&lt;/p>
 &lt;p>&lt;img src="ztna-gateway.png" alt="ztna-gateway">&lt;/p>
 &lt;h2 id="https-endpoint">HTTPS Endpoint&lt;/h2>
-&lt;p>The HTTPS endpoint is used to provide connectivity for non-WireGuard ZTNA &lt;a href="/docs/applications/">applications&lt;/a>.&lt;/p>
+&lt;p>The HTTPS endpoint is used to provide connectivity for non-WireGuard ZTNA &lt;a href="https://trustgrid.github.io/docs/docs/applications/">applications&lt;/a>.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1441,7 +1441,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/tr>
 &lt;tr>
 &lt;th>Public FQDN&lt;/th>
-&lt;td>The IP or FQDN of the node or the load balancer in front of the node. If using a domain name without a load balancer, be sure to select the appropriate &lt;a href="/docs/certificates/">certificate&lt;/a>.&lt;/td>
+&lt;td>The IP or FQDN of the node or the load balancer in front of the node. If using a domain name without a load balancer, be sure to select the appropriate &lt;a href="https://trustgrid.github.io/docs/docs/certificates/">certificate&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Port&lt;/th>
@@ -1454,7 +1454,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="wireguard-endpoint">WireGuard Endpoint&lt;/h2>
-&lt;p>The WireGuard endpoint is used to provide connectivity for WireGuard ZTNA &lt;a href="/docs/applications/">applications&lt;/a>.&lt;/p>
+&lt;p>The WireGuard endpoint is used to provide connectivity for WireGuard ZTNA &lt;a href="https://trustgrid.github.io/docs/docs/applications/">applications&lt;/a>.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>

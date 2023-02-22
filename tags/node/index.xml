@@ -1,11 +1,11 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– node</title><link>/tags/node/</link><description>Recent content in node on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 07 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/node/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Audits</title><link>/docs/nodes/audits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/audits/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– node</title><link>https://trustgrid.github.io/docs/tags/node/</link><description>Recent content in node on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 07 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/tags/node/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Audits</title><link>https://trustgrid.github.io/docs/docs/nodes/audits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/audits/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Node audits provide records when services on a node are invoked, or when upgrades are applied. This can be helpful to see historical maintenance of a node.&lt;/p>
 &lt;/div>
 &lt;p>Node audits can be viewed for a specific node by navigating to &lt;code>Audits&lt;/code> under the &lt;code>History&lt;/code> section on the node view.&lt;/p>
 &lt;p>Users will need &lt;code>audits::read:node&lt;/code> permissions to view node audits.&lt;/p>
 &lt;p>&lt;img src="node-list.png" alt="img">&lt;/p>
-&lt;p>Node audits can also be found for the entire organization by navigating to &lt;code>Operations&lt;/code>-&amp;gt;&lt;code>Node Audits&lt;/code>.&lt;/p></description></item><item><title>Docs: Data Plane</title><link>/docs/nodes/data-plane/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/data-plane/</guid><description>
+&lt;p>Node audits can also be found for the entire organization by navigating to &lt;code>Operations&lt;/code>-&amp;gt;&lt;code>Node Audits&lt;/code>.&lt;/p></description></item><item><title>Docs: Data Plane</title><link>https://trustgrid.github.io/docs/docs/nodes/data-plane/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/data-plane/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Data plane statistics between a node and its peers can help troubleshoot connectivity or performance issues.&lt;/p>
 &lt;/div>
@@ -16,7 +16,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>&lt;img src="peer-list.png" alt="img">&lt;/p>
 &lt;p>Once a peer is selected, the monitoring section will populate with reelvant data.&lt;/p>
 &lt;p>&lt;img src="monitoring.png" alt="img">&lt;/p>
-&lt;p>Hop data is only available for nodes that have hop monitoring enabled. See &lt;a href="/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Monitoring Network Hops to Peers&lt;/a>.&lt;/p></description></item><item><title>Docs: Interfaces</title><link>/docs/nodes/interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/interfaces/</guid><description>
+&lt;p>Hop data is only available for nodes that have hop monitoring enabled. See &lt;a href="https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Monitoring Network Hops to Peers&lt;/a>.&lt;/p></description></item><item><title>Docs: Interfaces</title><link>https://trustgrid.github.io/docs/docs/nodes/interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/interfaces/</guid><description>
 &lt;h2 id="network-interfaces">Network Interfaces&lt;/h2>
 &lt;p>Navigate to a node, then select &lt;code>Interfaces&lt;/code> under the &lt;code>Network&lt;/code> section.&lt;/p>
 &lt;p>&lt;img src="interfaces.png" alt="Interfaces Page">&lt;/p>
@@ -65,7 +65,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;/tr>
 &lt;tr>
 &lt;th>Cluster Virtual IP&lt;/th>
-&lt;td>Used in &lt;a href="/docs/clusters/">clusters&lt;/a>, this IP address is moved between member nodes based on the active cluster member. It can be used to route traffic between the virtual and local networks. This IP address can only be changed within the cluster interfaces page.&lt;/td>
+&lt;td>Used in &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">clusters&lt;/a>, this IP address is moved between member nodes based on the active cluster member. It can be used to route traffic between the virtual and local networks. This IP address can only be changed within the cluster interfaces page.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -115,7 +115,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;li>
 &lt;p>Click the &lt;code>Save&lt;/code> button.&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Docs: Nodes</title><link>/docs/nodes/</link><pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/nodes/</guid><description>
+&lt;/ol></description></item><item><title>Docs: Nodes</title><link>https://trustgrid.github.io/docs/docs/nodes/</link><pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A node is an instance of software used for building connections, managing compute resources, and deploying software.&lt;/p>
 &lt;/div>
@@ -123,11 +123,11 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>A node can be installed on a hardware appliance, as a virtual appliance (Vsphere and Hyper-V), and deployed in a public cloud (Amazon AMI, Google, Microsoft). There are three main types of nodes - Edge, Gateway, and Management.&lt;/p>
 &lt;p>All Trustgrid nodes run on a hardened Ubuntu operating system. Nodes are managed through the Trustgrid portal or via the API (requires authentication token). A local UI exists to support the reconfiguration of an ethernet interface and diagnostic/network tests prior to connection to the Portal.&lt;/p>
 &lt;h3 id="edge-nodes">Edge Nodes&lt;/h3>
-&lt;p>Edge Nodes build outgoing TLS tunnels to Gateway Nodes. Bidirectional traffic is supported through this tunnel, subject to ACLs and &lt;a href="/getting-started/security/">security&lt;/a> policy restrictions. Edge Nodes will only require a firewall rule change if outbound internet restrictions are in place. Edge nodes can be a target for software deployment. Edge Nodes can be deployed with a single or multiple ethernet connections to support deployments behind a firewall or adjacent to a firewall (public WAN / private LAN).&lt;/p>
+&lt;p>Edge Nodes build outgoing TLS tunnels to Gateway Nodes. Bidirectional traffic is supported through this tunnel, subject to ACLs and &lt;a href="https://trustgrid.github.io/docs/getting-started/security/">security&lt;/a> policy restrictions. Edge Nodes will only require a firewall rule change if outbound internet restrictions are in place. Edge nodes can be a target for software deployment. Edge Nodes can be deployed with a single or multiple ethernet connections to support deployments behind a firewall or adjacent to a firewall (public WAN / private LAN).&lt;/p>
 &lt;h3 id="gateway-nodes">Gateway Nodes&lt;/h3>
-&lt;p>Gateway Nodes accept incoming TLS tunnels from Edge Nodes. Traffic on these tunnels is bidirectional, as permitted by ACLs or policy. Gateway Nodes usually require a firewall change to permit the incoming traffic. Gateway Nodes are identical to Edge Nodes but with a gateway configuration applied. Gateway nodes only connect to other gateways if one is of type &lt;code>hub&lt;/code>. Read more about &lt;a href="/docs/nodes/gateway/">gateway configuration&lt;/a>.&lt;/p>
+&lt;p>Gateway Nodes accept incoming TLS tunnels from Edge Nodes. Traffic on these tunnels is bidirectional, as permitted by ACLs or policy. Gateway Nodes usually require a firewall change to permit the incoming traffic. Gateway Nodes are identical to Edge Nodes but with a gateway configuration applied. Gateway nodes only connect to other gateways if one is of type &lt;code>hub&lt;/code>. Read more about &lt;a href="https://trustgrid.github.io/docs/docs/nodes/gateway/">gateway configuration&lt;/a>.&lt;/p>
 &lt;h3 id="management-nodes">Management Nodes&lt;/h3>
-&lt;p>Management Nodes are not like other &lt;a href="/docs/nodes/">nodes&lt;/a> because they do not connect to the data plane, only the control plane. Management Nodes are deployed by Trustgrid for each customer and are multi-tenant like other control plane components. Customers may elect to deploy their own Management Nodes in place of multi-tenant Management Nodes. Management Nodes facilitate the monitoring, management, and support of Edge and Gateway Nodes.&lt;/p>
+&lt;p>Management Nodes are not like other &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> because they do not connect to the data plane, only the control plane. Management Nodes are deployed by Trustgrid for each customer and are multi-tenant like other control plane components. Customers may elect to deploy their own Management Nodes in place of multi-tenant Management Nodes. Management Nodes facilitate the monitoring, management, and support of Edge and Gateway Nodes.&lt;/p>
 &lt;h2 id="node-list-view">Node List View&lt;/h2>
 &lt;h3 id="adding-a-tag-as-a-column-on-the-nodes-table">Adding a Tag as a Column on the Nodes Table&lt;/h3>
 &lt;p>Adding a tag as a column on the nodes tables is good way to make valuable information visible for multiple nodes at the same time. To add the column:&lt;/p>
@@ -164,9 +164,9 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>Click &lt;code>Apply Tag Filter&lt;/code> and the table will only show matching nodes.&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="applied-filters2.png" alt="img">&lt;/p></description></item><item><title>Docs: Thresholds</title><link>/docs/nodes/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/nodes/thresholds/</guid><description>
+&lt;p>&lt;img src="applied-filters2.png" alt="img">&lt;/p></description></item><item><title>Docs: Thresholds</title><link>https://trustgrid.github.io/docs/docs/nodes/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/thresholds/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the node level can override &lt;a href="/docs/domain/thresholds/">Domain Thresholds&lt;/a>.&lt;/p>
+&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the node level can override &lt;a href="https://trustgrid.github.io/docs/docs/domain/thresholds/">Domain Thresholds&lt;/a>.&lt;/p>
 &lt;/div>
 &lt;p>To view and configure thresholds, a user will need &lt;code>nodes::configure::thresholds&lt;/code> permissions.&lt;/p>
 &lt;p>Navigate to a node, and click &lt;code>Thresholds&lt;/code> under the &lt;code>System&lt;/code> section.&lt;/p>
@@ -231,9 +231,9 @@ Gateway nodes will list edge nodes in their peers table
 &lt;td>For latency, target node to measure the latency to. For bandwidth measurements, the interface to measure the bandwidth on.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Tutorials: Node Down Response</title><link>/tutorials/operations-runbook/node-down-response/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/operations-runbook/node-down-response/</guid><description>
+&lt;/table></description></item><item><title>Tutorials: Node Down Response</title><link>https://trustgrid.github.io/docs/tutorials/operations-runbook/node-down-response/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/operations-runbook/node-down-response/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>This process is intended to help customer support personnel quickly identify the scope of a &lt;a href="/docs/nodes/">node&lt;/a> down problem and get services back online as quickly as possible.&lt;/p>
+&lt;p>This process is intended to help customer support personnel quickly identify the scope of a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> down problem and get services back online as quickly as possible.&lt;/p>
 &lt;/div>
 &lt;h3 id="node-down-triage">Node Down Triage&lt;/h3>
 &lt;h4 id="triage-checklist">Triage Checklist&lt;/h4>
@@ -257,9 +257,9 @@ Gateway nodes will list edge nodes in their peers table
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="determine-production-status-of-the-trustgrid-node">Determine Production Status of the Trustgrid Node&lt;/h3>
-&lt;p>Use the &lt;a href="/docs/nodes/tags/prod-status-tag/%7D">Production Status Tags&lt;/a> to determine if the &lt;a href="/docs/nodes/">node&lt;/a> is in use and expected to be online.&lt;/p>
+&lt;p>Use the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/prod-status-tag/%7D">Production Status Tags&lt;/a> to determine if the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> is in use and expected to be online.&lt;/p>
 &lt;h3 id="confirm-high-availability-or-disaster-recover-is-functioning">Confirm High Availability or Disaster Recover is Functioning&lt;/h3>
-&lt;p>Before troubleshooting why a &lt;a href="/docs/nodes/">node&lt;/a> is down we should determine if the services it provided can be provided in the interim by a cluster member or devices at a secondary/disaster-recovery site.&lt;/p>
+&lt;p>Before troubleshooting why a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> is down we should determine if the services it provided can be provided in the interim by a cluster member or devices at a secondary/disaster-recovery site.&lt;/p>
 &lt;h5 id="is-the-node-a-cluster-member">Is the Node a Cluster Member&lt;/h5>
 &lt;ul>
 &lt;li>
@@ -283,7 +283,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;h5 id="is-there-a-secondary--dr-site-for-this-nodecluster">Is there a Secondary / DR Site for this Node/Cluster?&lt;/h5>
 &lt;ul>
 &lt;li>
-&lt;p>Are the &lt;a href="/docs/nodes/">nodes&lt;/a> deployed at the secondary site online in the Trustgrid?&lt;/p>
+&lt;p>Are the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> deployed at the secondary site online in the Trustgrid?&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>If No:&lt;/p>
@@ -304,13 +304,13 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>Because Trustgrid provides independent control and data planes, there are a few ways it can manifest as “down”:&lt;/p>
 &lt;tr>
 &lt;th>Control Plane Down&lt;/th>
-&lt;td>The &lt;a href="/docs/nodes/">node&lt;/a> appears offline from within the Trustgrid portal. This indicates that the &lt;a href="/docs/nodes/">node&lt;/a> shutdown or has not sent a heartbeat notification to Trustgrid within the past 10 minutes.&lt;/td>
+&lt;td>The &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> appears offline from within the Trustgrid portal. This indicates that the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> shutdown or has not sent a heartbeat notification to Trustgrid within the past 10 minutes.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Data Plane Down&lt;/th>
-&lt;td>The &lt;a href="/docs/nodes/">node&lt;/a> appears online from within the portal but reports it is unable to connect to one or more gateway nodes. This can be indicated by the Data Plane Status indicator when viewing the &lt;a href="/docs/nodes/">node&lt;/a> in the portal, or by receiving a “Gateway Connectivity Health Check” failure &lt;a href="/docs/alarms/events/">event&lt;/a> notification. Both of these only work if the Control Plane is currently working.&lt;/td>
+&lt;td>The &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> appears online from within the portal but reports it is unable to connect to one or more gateway nodes. This can be indicated by the Data Plane Status indicator when viewing the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> in the portal, or by receiving a “Gateway Connectivity Health Check” failure &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> notification. Both of these only work if the Control Plane is currently working.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Both Control and Data Plane Down&lt;/th>
-&lt;td>In this situation the &lt;a href="/docs/nodes/">node&lt;/a> appears down in the Trustgrid Portal and users/applications are unable to reach services across the data plane between the Gateway and Edge sites. This is the most common scenario. While the Data Plane is most critical for the services provided across the device, first priority should be restoring the Control Plane connection so that additional troubleshooting tools are available. Often this process also uncovers the reason the data plane is down.&lt;/td>
+&lt;td>In this situation the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> appears down in the Trustgrid Portal and users/applications are unable to reach services across the data plane between the Gateway and Edge sites. This is the most common scenario. While the Data Plane is most critical for the services provided across the device, first priority should be restoring the Control Plane connection so that additional troubleshooting tools are available. Often this process also uncovers the reason the data plane is down.&lt;/td>
 &lt;/tr></description></item></channel></rss>

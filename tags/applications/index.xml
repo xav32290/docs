@@ -1,10 +1,10 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– applications</title><link>/tags/applications/</link><description>Recent content in applications on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 11 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/applications/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Applications</title><link>/docs/applications/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/applications/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– applications</title><link>https://trustgrid.github.io/docs/tags/applications/</link><description>Recent content in applications on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 11 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/tags/applications/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Applications</title><link>https://trustgrid.github.io/docs/docs/applications/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/</guid><description>
 &lt;p>ZTNA Applications are managed by clicking the &lt;code>Applications&lt;/code> link on the left nav bar.&lt;/p>
 &lt;p>&lt;img src="apps1.png" alt="img">
 &lt;img src="apps2.png" alt="img">&lt;/p>
 &lt;p>Trustgrid provides several ZTNA application types that allow remote access to internal resources through a continuously validated connection.&lt;/p>
-&lt;p>Each application has an &lt;a href="/docs/applications/access-policy/">Access Policy&lt;/a> and a &lt;a href="/docs/applications/visibility/">Visibility&lt;/a> list. For a user to connect to a ZTNA application, they must (1) be permitted access by the application&amp;rsquo;s Access Policy and (2) be able to see the application.&lt;/p>
-&lt;p>Access to an application is authenticated through an &lt;a href="/docs/idps/">Identity Provider&lt;/a> (IdP).&lt;/p></description></item><item><title>Docs: Access Policy</title><link>/docs/applications/access-policy/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/access-policy/</guid><description>
+&lt;p>Each application has an &lt;a href="https://trustgrid.github.io/docs/docs/applications/access-policy/">Access Policy&lt;/a> and a &lt;a href="https://trustgrid.github.io/docs/docs/applications/visibility/">Visibility&lt;/a> list. For a user to connect to a ZTNA application, they must (1) be permitted access by the application&amp;rsquo;s Access Policy and (2) be able to see the application.&lt;/p>
+&lt;p>Access to an application is authenticated through an &lt;a href="https://trustgrid.github.io/docs/docs/idps/">Identity Provider&lt;/a> (IdP).&lt;/p></description></item><item><title>Docs: Access Policy</title><link>https://trustgrid.github.io/docs/docs/applications/access-policy/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/access-policy/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>An Access Policy is comprised of several rules that determine whether a user is permitted to access a ZTNA application. If no rule matches a user&amp;rsquo;s access attempt, the attempt will be denied.&lt;/p>
 &lt;/div>
@@ -65,7 +65,7 @@
 &lt;/tr>
 &lt;tr>
 &lt;th>IDP Groups&lt;/th>
-&lt;td>a list of &lt;a href="/docs/user-management/groups/">groups&lt;/a> that the user must be a member of&lt;/td>
+&lt;td>a list of &lt;a href="https://trustgrid.github.io/docs/docs/user-management/groups/">groups&lt;/a> that the user must be a member of&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>IP Ranges&lt;/th>
@@ -73,7 +73,7 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;img src="criteria.png" alt="img">&lt;/p></description></item><item><title>Docs: RDP App</title><link>/docs/applications/rdp-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/rdp-app/</guid><description>
+&lt;p>&lt;img src="criteria.png" alt="img">&lt;/p></description></item><item><title>Docs: RDP App</title><link>https://trustgrid.github.io/docs/docs/applications/rdp-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/rdp-app/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A RDP app is a ZTNA application that allows remote access to an internal RDP server. RDP servers can be hosted internally but exposed to authorized users.&lt;/p>
 &lt;/div>
@@ -134,7 +134,7 @@
 &lt;/ul>
 &lt;h4 id="security">Security&lt;/h4>
 &lt;ul>
-&lt;li>Identity Provider - the &lt;a href="/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
+&lt;li>Identity Provider - the &lt;a href="https://trustgrid.github.io/docs/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
 &lt;/ul>
 &lt;ol>
 &lt;li>Click &lt;code>Add Application&lt;/code>&lt;/li>
@@ -147,7 +147,7 @@
 &lt;ol start="3">
 &lt;li>Fill out all details in the sheet provided, then click &lt;code>Save&lt;/code> when satisfied with the information entered&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="rdp-app1.png" alt="img">&lt;/p></description></item><item><title>Docs: SSH App</title><link>/docs/applications/ssh-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/ssh-app/</guid><description>
+&lt;p>&lt;img src="rdp-app1.png" alt="img">&lt;/p></description></item><item><title>Docs: SSH App</title><link>https://trustgrid.github.io/docs/docs/applications/ssh-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/ssh-app/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A SSH app is a ZTNA application that allows remote access to internal SSH servers. SSH servers can be hosted internally but exposed to authorized users.&lt;/p>
 &lt;/div>
@@ -208,7 +208,7 @@
 &lt;/ul>
 &lt;h2 id="security">Security&lt;/h2>
 &lt;ul>
-&lt;li>Identity Provider - the &lt;a href="/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
+&lt;li>Identity Provider - the &lt;a href="https://trustgrid.github.io/docs/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
 &lt;/ul>
 &lt;ol>
 &lt;li>Click &lt;code>Add Application&lt;/code>&lt;/li>
@@ -221,15 +221,15 @@
 &lt;ol start="3">
 &lt;li>Fill out all details in the sheet provided, then click &lt;code>Save&lt;/code> when satisfied with the information entered&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="shh-app.png" alt="img">&lt;/p></description></item><item><title>Docs: Trusted Links</title><link>/docs/applications/web-app/trusted-links/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/web-app/trusted-links/</guid><description>
+&lt;p>&lt;img src="shh-app.png" alt="img">&lt;/p></description></item><item><title>Docs: Trusted Links</title><link>https://trustgrid.github.io/docs/docs/applications/web-app/trusted-links/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/web-app/trusted-links/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trusted links allow a user to allow-list only specific URLs when accessed through a ZTNA application. This allows a user to access any URL on the internet through a ZTNA application, but only if the URL is explicitly allowed by the application.&lt;/p>
 &lt;/div>
-&lt;p>This can be used to permit readonly or certain operations remotely, but still require local access for more sensitive operations.&lt;/p></description></item><item><title>Docs: Visibility</title><link>/docs/applications/visibility/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/visibility/</guid><description>
+&lt;p>This can be used to permit readonly or certain operations remotely, but still require local access for more sensitive operations.&lt;/p></description></item><item><title>Docs: Visibility</title><link>https://trustgrid.github.io/docs/docs/applications/visibility/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/visibility/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Visibility groups determine what applications a user can see on their &lt;a href="https://portal.dev.trustgrid.io/#/applications">application dashboard&lt;/a>. A user must be a member of at least one selected group to see an application.&lt;/p>
 &lt;/div>
-&lt;p>&lt;img src="visibility.png" alt="img">&lt;/p></description></item><item><title>Docs: Web App</title><link>/docs/applications/web-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/web-app/</guid><description>
+&lt;p>&lt;img src="visibility.png" alt="img">&lt;/p></description></item><item><title>Docs: Web App</title><link>https://trustgrid.github.io/docs/docs/applications/web-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/web-app/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A Web App is a ZTNA application that allows remote access to internal web applications. Services such as &lt;a href="https://www.jenkins.io/">Jenkins&lt;/a> or &lt;a href="https://www.atlassian.com/software/jira">JIRA&lt;/a> can be hosted internally but exposed to authorized users.&lt;/p>
 &lt;/div>
@@ -290,11 +290,11 @@
 &lt;/ul>
 &lt;h4 id="security">Security&lt;/h4>
 &lt;ul>
-&lt;li>Identity Provider - the &lt;a href="/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
+&lt;li>Identity Provider - the &lt;a href="https://trustgrid.github.io/docs/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
 &lt;li>User session duration - How long a user&amp;rsquo;s session will last before they are required to re-authenticate&lt;/li>
 &lt;li>Trust Mode:
 &lt;ul>
-&lt;li>Discovery - all URLs accessed through the application will be permitted and listed in the &lt;a href="/docs/applications/web-app/trusted-links/">Trusted Links&lt;/a> section&lt;/li>
+&lt;li>Discovery - all URLs accessed through the application will be permitted and listed in the &lt;a href="https://trustgrid.github.io/docs/docs/applications/web-app/trusted-links/">Trusted Links&lt;/a> section&lt;/li>
 &lt;li>Zero Trust - only URLs explicitly trusted by the application will be permitted&lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -310,7 +310,7 @@
 &lt;ol start="3">
 &lt;li>Fill out all details in the sheet provided, then click &lt;code>Save&lt;/code> when satisfied with the information entered&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="web-app.png" alt="img">&lt;/p></description></item><item><title>Docs: VNC App</title><link>/docs/applications/vnc-app/</link><pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate><guid>/docs/applications/vnc-app/</guid><description>
+&lt;p>&lt;img src="web-app.png" alt="img">&lt;/p></description></item><item><title>Docs: VNC App</title><link>https://trustgrid.github.io/docs/docs/applications/vnc-app/</link><pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/vnc-app/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A VNC app is a ZTNA application that allows remote access to an internal VNC server. VNC servers can be hosted internally but exposed to authorized users.&lt;/p>
 &lt;/div>
@@ -371,7 +371,7 @@
 &lt;/ul>
 &lt;h4 id="security">Security&lt;/h4>
 &lt;ul>
-&lt;li>Identity Provider - the &lt;a href="/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
+&lt;li>Identity Provider - the &lt;a href="https://trustgrid.github.io/docs/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
 &lt;/ul>
 &lt;ol>
 &lt;li>Click &lt;code>Add Application&lt;/code>&lt;/li>

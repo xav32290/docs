@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Remote Tools</title><link>/tutorials/remote-tools/</link><description>Recent content in Remote Tools on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tutorials/remote-tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Tutorials: Ping Remote Virtual Host</title><link>/tutorials/remote-tools/ping-remote-virtual-host/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/remote-tools/ping-remote-virtual-host/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Remote Tools</title><link>https://trustgrid.github.io/docs/tutorials/remote-tools/</link><description>Recent content in Remote Tools on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://trustgrid.github.io/docs/tutorials/remote-tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Tutorials: Ping Remote Virtual Host</title><link>https://trustgrid.github.io/docs/tutorials/remote-tools/ping-remote-virtual-host/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/remote-tools/ping-remote-virtual-host/</guid><description>
 &lt;h2 id="prerequisites">Prerequisites&lt;/h2>
 &lt;ul>
 &lt;li>Both the source and destination nodes should have a virtual management IP configured
@@ -11,14 +11,14 @@
 &lt;li>Metric: 1&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>Use the &lt;a href="/tutorials/remote-tools/view-virtual-route-table/">View Virtual Route Table&lt;/a> tool to verify both the source and destination nodes have valid, available routes to each other&amp;rsquo;s virtual management IP&lt;/li>
+&lt;li>Use the &lt;a href="https://trustgrid.github.io/docs/tutorials/remote-tools/view-virtual-route-table/">View Virtual Route Table&lt;/a> tool to verify both the source and destination nodes have valid, available routes to each other&amp;rsquo;s virtual management IP&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>Need to know the virtual IP address of the inside NAT if targeting a local IP on the destination network&lt;/li>
 &lt;li>Need to know the virtual management IP address of the destination node if only verifying VPN network connectivity&lt;/li>
 &lt;/ul>
 &lt;div class="alert alert-info" role="alert">
-The &lt;a href="/tutorials/gateway-tools/ping-remote-node/">Ping Remote Node&lt;/a> tool allows you to verify data plane communication by node name
+The &lt;a href="https://trustgrid.github.io/docs/tutorials/gateway-tools/ping-remote-node/">Ping Remote Node&lt;/a> tool allows you to verify data plane communication by node name
 &lt;/div>
 &lt;h2 id="usage">Usage&lt;/h2>
 &lt;ol>
@@ -45,7 +45,7 @@ The &lt;a href="/tutorials/gateway-tools/ping-remote-node/">Ping Remote Node&lt;
 &lt;h3 id="destination-net-unknown">Destination Net Unknown&lt;/h3>
 &lt;p>This error means that the node cannot find an interface network binding with an inside and outside nat that match the requests source and destination IP. You should re-examine the inside and outside nats for the node interface that is receiving the packet, and make sure that an inside nat is defined that matches the source machines local IP and an outside nat that matches the virtual destination IP (or that no outside nat is present, which defaults to 1x1).&lt;/p>
 &lt;h3 id="destination-net-unreachable">Destination Net Unreachable&lt;/h3>
-&lt;p>This error means that the node cannot find a route defined at the domain/network level for the destination IP in this request. You should examine the domain route definitions and make sure that one is included for the virtual destination IP address you are trying to ping. Use the &lt;a href="/tutorials/remote-tools/view-virtual-route-table/">View Virtual Route Table&lt;/a> tool using the target IP as a filter to confirm the route exists and is available.&lt;/p>
+&lt;p>This error means that the node cannot find a route defined at the domain/network level for the destination IP in this request. You should examine the domain route definitions and make sure that one is included for the virtual destination IP address you are trying to ping. Use the &lt;a href="https://trustgrid.github.io/docs/tutorials/remote-tools/view-virtual-route-table/">View Virtual Route Table&lt;/a> tool using the target IP as a filter to confirm the route exists and is available.&lt;/p>
 &lt;h3 id="destination-host-unreachable">Destination Host Unreachable&lt;/h3>
 &lt;p>This error indicates that there is a route defined for the ping dest IP, but that the destination node associated with the route is not currently connected to this node. You should look at the routes in the source node&amp;rsquo;s detail page in the portal and make sure that there is one included for the destination node that should be receiving the request.&lt;/p>
 &lt;h3 id="packet-filtered">Packet Filtered&lt;/h3>
@@ -53,14 +53,14 @@ The &lt;a href="/tutorials/gateway-tools/ping-remote-node/">Ping Remote Node&lt;
 &lt;h3 id="destination-host-unknown">Destination Host Unknown&lt;/h3>
 &lt;p>This error happens when the ping packet made it to the destination node, but no set of inside/outside nats could be found that include the source and destination IPs of this request. Check the destination node VPN settings to ensure an inside NAT is present for the virtual destination IP of the request, and either an outside NAT exists and includes the virtual source IP, or no outside NAT is present, which defaults to 1x1.&lt;/p>
 &lt;h3 id="no-ping-response-error">No Ping Response Error&lt;/h3>
-&lt;p>When a ping sits there and no response is received, usually the best way to troubleshoot further is to &lt;a href="/tutorials/remote-tools/sniff-interface-traffic/">sniff interface traffic&lt;/a> with a filter of &lt;code>icmp and host &amp;lt;target-ip&amp;gt;&lt;/code> on the source and dest nodes.&lt;/p>
+&lt;p>When a ping sits there and no response is received, usually the best way to troubleshoot further is to &lt;a href="https://trustgrid.github.io/docs/tutorials/remote-tools/sniff-interface-traffic/">sniff interface traffic&lt;/a> with a filter of &lt;code>icmp and host &amp;lt;target-ip&amp;gt;&lt;/code> on the source and dest nodes.&lt;/p>
 &lt;p>When troubleshooting, keep in mind that the lack of an error likely means one of the following:&lt;/p>
 &lt;ol>
 &lt;li>The local node VPN interface that should be receiving the packet hasn&amp;rsquo;t been configured correctly.&lt;/li>
 &lt;li>The local firewall, router or target machine isn&amp;rsquo;t correctly routing packets to the source node.&lt;/li>
 &lt;li>There is an ARP issue on either the source or destination node where the node isn&amp;rsquo;t responding correctly (&lt;code>tcpdump -i &amp;lt;data_nic&amp;gt; arp&lt;/code>)&lt;/li>
 &lt;li>There is no responding machine on the remote side!&lt;/li>
-&lt;/ol></description></item><item><title>Tutorials: Sniff Interface Traffic</title><link>/tutorials/remote-tools/sniff-interface-traffic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/remote-tools/sniff-interface-traffic/</guid><description>
+&lt;/ol></description></item><item><title>Tutorials: Sniff Interface Traffic</title><link>https://trustgrid.github.io/docs/tutorials/remote-tools/sniff-interface-traffic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/remote-tools/sniff-interface-traffic/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>The sniff interface traffic tool performs a traffic capture on the selected node, which can help troubleshoot connectivity issues.&lt;/p>
 &lt;/div>
@@ -155,7 +155,7 @@ The pcap files will include the data payload of any communication captured. If a
 &lt;li>To see only traffic for a specific port use &amp;ldquo;port XXXX&amp;rdquo; replacing the XXXX with the desired port number&lt;/li>
 &lt;li>If capturing traffic on a clustered node, you should filter out the cluster port traffic. Typically port 9000 or 1975. E.g., &lt;code>not port 9000&lt;/code>&lt;/li>
 &lt;li>If capturing on the ETH0 - WAN Interface, you should filter out traffic to both Trustgrid&amp;rsquo;s network (35.171.100.16/28) and your data plane gateways&amp;rsquo; network or public IP. You&amp;rsquo;ll need to identify the actual network or IPs. E.g., &lt;code>not net 35.171.100.16/28 and not net X.X.X.X/X&lt;/code> or &lt;code>not net 35.171.100.16/28 and not host X.X.X.X&lt;/code>.&lt;/li>
-&lt;/ul></description></item><item><title>Tutorials: TCP Port Test</title><link>/tutorials/remote-tools/tcp-port-test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/remote-tools/tcp-port-test/</guid><description>
+&lt;/ul></description></item><item><title>Tutorials: TCP Port Test</title><link>https://trustgrid.github.io/docs/tutorials/remote-tools/tcp-port-test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/remote-tools/tcp-port-test/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>The TCP Port Test tool initiates a TCP session with a target IP address and port to confirm fully layer 4 connectivity. This would be similar to using netcat or telnet to test connectivity to a TCP port.&lt;/p>
 &lt;/div>
@@ -182,7 +182,7 @@ The pcap files will include the data payload of any communication captured. If a
 &lt;p>A failed connection will look like this:&lt;/p>
 &lt;p>&lt;img src="failed.png" alt="img">&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Tutorials: View Virtual Route Table</title><link>/tutorials/remote-tools/view-virtual-route-table/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/remote-tools/view-virtual-route-table/</guid><description>
+&lt;/ol></description></item><item><title>Tutorials: View Virtual Route Table</title><link>https://trustgrid.github.io/docs/tutorials/remote-tools/view-virtual-route-table/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/remote-tools/view-virtual-route-table/</guid><description>
 &lt;h2 id="usage">Usage&lt;/h2>
 &lt;ol>
 &lt;li>

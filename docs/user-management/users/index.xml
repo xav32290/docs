@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Users</title><link>/docs/user-management/users/</link><description>Recent content in Users on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/user-management/users/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Changing Password Process with Auth0</title><link>/docs/user-management/users/auth0-change-password/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-management/users/auth0-change-password/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Users</title><link>https://trustgrid.github.io/docs/docs/user-management/users/</link><description>Recent content in Users on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://trustgrid.github.io/docs/docs/user-management/users/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Changing Password Process with Auth0</title><link>https://trustgrid.github.io/docs/docs/user-management/users/auth0-change-password/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/user-management/users/auth0-change-password/</guid><description>
 &lt;p>Currently changing password requires users to:&lt;/p>
 &lt;ol>
 &lt;li>Log out of the portal&lt;/li>
@@ -27,10 +27,10 @@
 &lt;ol start="7">
 &lt;li>After clicking &lt;code>Confirm&lt;/code> you will be taken to a page where you can enter your new desired password. After you finalise it by clicking &lt;code>Reset Password&lt;/code>, you will be able to log in with your new password.&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="new-password.png" alt="img">&lt;/p></description></item><item><title>Docs: Password Complexity and MFA Requirements</title><link>/docs/user-management/users/password-complexity-requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/user-management/users/password-complexity-requirements/</guid><description>
+&lt;p>&lt;img src="new-password.png" alt="img">&lt;/p></description></item><item><title>Docs: Password Complexity and MFA Requirements</title><link>https://trustgrid.github.io/docs/docs/user-management/users/password-complexity-requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/user-management/users/password-complexity-requirements/</guid><description>
 &lt;p>Invited users utilize Trustgrid&amp;rsquo;s native authentication provider for password complexity and multi-factor authentication.&lt;/p>
 &lt;blockquote>
-&lt;p>Users authenticating via a custom &lt;a href="/docs/idps/">identity provider&lt;/a> will use that system&amp;rsquo;s password complexity and MFA requirements.&lt;/p>
+&lt;p>Users authenticating via a custom &lt;a href="https://trustgrid.github.io/docs/docs/idps/">identity provider&lt;/a> will use that system&amp;rsquo;s password complexity and MFA requirements.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="password-complexity">Password Complexity&lt;/h2>
 &lt;ul>

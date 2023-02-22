@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Domain</title><link>/docs/domain/</link><description>Recent content in Domain on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/docs/domain/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Thresholds</title><link>/docs/domain/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/domain/thresholds/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Domain</title><link>https://trustgrid.github.io/docs/docs/domain/</link><description>Recent content in Domain on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/docs/domain/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Thresholds</title><link>https://trustgrid.github.io/docs/docs/domain/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/domain/thresholds/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the domain level apply to all nodes in the domain, except when overridden. Events will be of type &lt;code>Metric Threshold Violation&lt;/code>.&lt;/p>
 &lt;/div>
@@ -64,9 +64,9 @@
 &lt;td>The target node to measure the latency to. Each node will measure the latency to the target node.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Virtual Networks</title><link>/docs/domain/virtual-networks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/domain/virtual-networks/</guid><description>
+&lt;/table></description></item><item><title>Docs: Virtual Networks</title><link>https://trustgrid.github.io/docs/docs/domain/virtual-networks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/domain/virtual-networks/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Virtual networks define an overlay network and routes for layer 3 connectivity. Trustgrid &lt;a href="/docs/nodes/">nodes&lt;/a> are then assigned to networks. Virtual network overlays work similarly to Amazon&amp;rsquo;s VPCs but can span between clouds, data centers, and the edge.&lt;/p>
+&lt;p>Virtual networks define an overlay network and routes for layer 3 connectivity. Trustgrid &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> are then assigned to networks. Virtual network overlays work similarly to Amazon&amp;rsquo;s VPCs but can span between clouds, data centers, and the edge.&lt;/p>
 &lt;/div>
 &lt;p>&lt;img src="virtual-networks-page.png" alt="Virtual Networks">&lt;/p>
 &lt;h2 id="overlay-example">Overlay Example&lt;/h2>
@@ -78,14 +78,14 @@
 &lt;h3 id="virtual-networks---layer-3">Virtual Networks - Layer 3&lt;/h3>
 &lt;ul>
 &lt;li>
-&lt;p>Trustgrid uses a virtual network to traffic between &lt;a href="/docs/nodes/">nodes&lt;/a>. This avoids common
+&lt;p>Trustgrid uses a virtual network to traffic between &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a>. This avoids common
 challenges like conflicting subnets in large, non-centralized networks.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Inside and outside NATs are used to expose hosts for traffic&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;a href="/docs/domain/virtual-networks/routes/">Routes&lt;/a> may be configured on the &lt;a href="/docs/nodes/">nodes&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">Routes&lt;/a> may be configured on the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>ACLs can be applied&lt;/p>
@@ -101,15 +101,15 @@ challenges like conflicting subnets in large, non-centralized networks.&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;blockquote>
-&lt;p>A &lt;a href="/docs/domain/virtual-networks/routes/">route&lt;/a> would have to be added to the default gateway of 172.16.3.0/24 for 10.0.5.150 to route traffic for 10.0.5.0/24 through the gw of the edge node (172.16.0.5) data interface.&lt;/p>
+&lt;p>A &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">route&lt;/a> would have to be added to the default gateway of 172.16.3.0/24 for 10.0.5.150 to route traffic for 10.0.5.0/24 through the gw of the edge node (172.16.0.5) data interface.&lt;/p>
 &lt;/blockquote>
 &lt;/div>
 &lt;/div>
 &lt;h3 id="virtual-ip-addresses">Virtual IP Addresses&lt;/h3>
-&lt;p>Through the use of inside and outside NAT rules, local IP addresses to the Trustgrid &lt;a href="/docs/nodes/">node&lt;/a> may be exposed on the network through a Virtual IP Address. For instance, a local device may have a local IP address of 192.168.1.100, but you may want it to appear to other devices or applications on the virtual network as IP address 10.0.20.100. Virtual IP Subnets are also supported where each IP in a subnet is mapped to the corresponding IP in a virtual subnet.&lt;/p>
+&lt;p>Through the use of inside and outside NAT rules, local IP addresses to the Trustgrid &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> may be exposed on the network through a Virtual IP Address. For instance, a local device may have a local IP address of 192.168.1.100, but you may want it to appear to other devices or applications on the virtual network as IP address 10.0.20.100. Virtual IP Subnets are also supported where each IP in a subnet is mapped to the corresponding IP in a virtual subnet.&lt;/p>
 &lt;h3 id="inside-nat">Inside NAT&lt;/h3>
 &lt;p>Inside NATs are added to a network to expose hosts in the private network to authorized traffic in the virtual network. For example a host at 192.168.1.184/32 could be exposed as 172.16.1.184/32. Traffic from authorized edge nodes could then communicate with 172.16.1.184.&lt;/p>
 &lt;h3 id="outside-nat">Outside NAT&lt;/h3>
-&lt;p>The use of an outside NAT can eliminate the need to create &lt;a href="/docs/domain/virtual-networks/routes/">routes&lt;/a> on internal gateways. Outsides NATs translate address in edge (remote) private networks to a privately addressable local IP. For example a host at 172.16.10.184/32 could be translated to 192.168.1.184/32.&lt;/p>
+&lt;p>The use of an outside NAT can eliminate the need to create &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">routes&lt;/a> on internal gateways. Outsides NATs translate address in edge (remote) private networks to a privately addressable local IP. For example a host at 172.16.10.184/32 could be translated to 192.168.1.184/32.&lt;/p>
 &lt;h3 id="routes">Routes&lt;/h3>
-&lt;p>&lt;a href="/docs/domain/virtual-networks/routes/">Routes&lt;/a> are used to specify the network interface to be used when accessing specific subnets.&lt;/p></description></item></channel></rss>
+&lt;p>&lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">Routes&lt;/a> are used to specify the network interface to be used when accessing specific subnets.&lt;/p></description></item></channel></rss>

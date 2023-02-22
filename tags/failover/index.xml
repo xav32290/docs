@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– failover</title><link>/tags/failover/</link><description>Recent content in failover on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/failover/index.xml" rel="self" type="application/rss+xml"/><item><title>Tutorials: Site Failover</title><link>/tutorials/operations-runbook/site-failover/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/operations-runbook/site-failover/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– failover</title><link>https://trustgrid.github.io/docs/tags/failover/</link><description>Recent content in failover on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://trustgrid.github.io/docs/tags/failover/index.xml" rel="self" type="application/rss+xml"/><item><title>Tutorials: Site Failover</title><link>https://trustgrid.github.io/docs/tutorials/operations-runbook/site-failover/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/operations-runbook/site-failover/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>The below processes should be used to move traffic between sites in event of a complete site down scenario. This is handled by the Virtual Network Route Table.&lt;/p>
 &lt;/div>
@@ -6,10 +6,10 @@
 In the examples below, xxxEdgeCluster is the primary site and xxx-edge3 is the secondary/disaster recovery site.
 &lt;/div>
 &lt;h3 id="manual-failover">Manual Failover&lt;/h3>
-&lt;p>When a customer has selected manual failover, a portal user will need to adjust the destination of all &lt;a href="/docs/domain/virtual-networks/routes/">routes&lt;/a> currently pointed at the failed site.&lt;/p>
+&lt;p>When a customer has selected manual failover, a portal user will need to adjust the destination of all &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">routes&lt;/a> currently pointed at the failed site.&lt;/p>
 &lt;h4 id="failing-over">Failing Over&lt;/h4>
 &lt;blockquote>
-&lt;p>There will usually be &lt;a href="/docs/domain/virtual-networks/routes/">routes&lt;/a> for the &lt;a href="/docs/nodes/">nodes&amp;rsquo;&lt;/a> Virtual Management IP. These should not be changed in this process.&lt;/p>
+&lt;p>There will usually be &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">routes&lt;/a> for the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&amp;rsquo;&lt;/a> Virtual Management IP. These should not be changed in this process.&lt;/p>
 &lt;/blockquote>
 &lt;ol>
 &lt;li>
@@ -34,7 +34,7 @@ In the examples below, xxxEdgeCluster is the primary site and xxx-edge3 is the s
 &lt;p>Click &lt;code>Save&lt;/code>. Then select &lt;code>Review Changes&lt;/code>.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>You should see a modified &lt;a href="/docs/domain/virtual-networks/routes/">route&lt;/a> for each network you adjusted showing the previous and current destination. If everything looks correct click &lt;code>Apply Changes&lt;/code>.&lt;/p>
+&lt;p>You should see a modified &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">route&lt;/a> for each network you adjusted showing the previous and current destination. If everything looks correct click &lt;code>Apply Changes&lt;/code>.&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;p>&lt;img src="apply-changes.png" alt="img">&lt;/p>

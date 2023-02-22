@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– channels</title><link>/tags/channels/</link><description>Recent content in channels on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/channels/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Channels</title><link>/docs/alarms/channels/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>/docs/alarms/channels/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– channels</title><link>https://trustgrid.github.io/docs/tags/channels/</link><description>Recent content in channels on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/tags/channels/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Channels</title><link>https://trustgrid.github.io/docs/docs/alarms/channels/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/channels/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A channel defines one or more method of delivering alert notifications to external systems.&lt;/p>
 &lt;/div>
@@ -15,21 +15,21 @@
 &lt;/li>
 &lt;/ul>
 &lt;div class="alert alert-primary" role="alert">
-For both PagerDuty and OpsGenie the integration will automatically resolve issues if an &lt;a href="/docs/alarms/events/">event&lt;/a> occurs that negates the initial triggering event. For example, if an &lt;a href="/docs/alarms/events/">event&lt;/a> is triggered by a Node Disconnect and the &lt;a href="/docs/nodes/">node&lt;/a> reconnects, the Node Connect &lt;a href="/docs/alarms/events/">event&lt;/a> will resolve the incident via the API.
+For both PagerDuty and OpsGenie the integration will automatically resolve issues if an &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> occurs that negates the initial triggering event. For example, if an &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> is triggered by a Node Disconnect and the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> reconnects, the Node Connect &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> will resolve the incident via the API.
 &lt;/div>
 &lt;ul>
 &lt;li>
-&lt;p>Slack - Trustgrid can post the &lt;a href="/docs/alarms/events/">event&lt;/a> data to a configured channel via a webhook.&lt;/p>
+&lt;p>Slack - Trustgrid can post the &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data to a configured channel via a webhook.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Microsoft Teams - Trustgrid can post &lt;a href="/docs/alarms/events/">event&lt;/a> data to a configured Teams channel via an incoming webhook&lt;/p>
+&lt;p>Microsoft Teams - Trustgrid can post &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data to a configured Teams channel via an incoming webhook&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;div class="alert alert-primary" role="alert">
-Only a single Slack or Teams channel can be targeted by a Trustgrid channel. However, you can create multiple Trustgrid channels if you wish to post the &lt;a href="/docs/alarms/events/">event&lt;/a> data to more than one Slack/Teams channel.
+Only a single Slack or Teams channel can be targeted by a Trustgrid channel. However, you can create multiple Trustgrid channels if you wish to post the &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data to more than one Slack/Teams channel.
 &lt;/div>
 &lt;h3 id="example-event-data">Example Event Data&lt;/h3>
-&lt;p>The &lt;a href="/docs/alarms/events/">event&lt;/a> data is delivered in JSON, as shown below, which depending on the integration can allow for additional parsing.&lt;/p>
+&lt;p>The &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data is delivered in JSON, as shown below, which depending on the integration can allow for additional parsing.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;nodeName&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;edge1&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Name&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">node&lt;/span> &lt;span style="color:#a40000">that&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">relates&lt;/span> &lt;span style="color:#a40000">to&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;expires&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">1604801325&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Unix&lt;/span> &lt;span style="color:#a40000">epoch&lt;/span> &lt;span style="color:#a40000">timestamp&lt;/span> &lt;span style="color:#a40000">when&lt;/span> &lt;span style="color:#a40000">this&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">will&lt;/span> &lt;span style="color:#a40000">expire&lt;/span> &lt;span style="color:#a40000">and&lt;/span> &lt;span style="color:#a40000">automatically&lt;/span> &lt;span style="color:#a40000">resolve&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>

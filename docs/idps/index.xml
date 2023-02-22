@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Identity Providers</title><link>/docs/idps/</link><description>Recent content in Identity Providers on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/idps/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Azure AD</title><link>/docs/idps/azure-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/idps/azure-idp-fields/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Identity Providers</title><link>https://trustgrid.github.io/docs/docs/idps/</link><description>Recent content in Identity Providers on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://trustgrid.github.io/docs/docs/idps/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Azure AD</title><link>https://trustgrid.github.io/docs/docs/idps/azure-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/idps/azure-idp-fields/</guid><description>
 &lt;h4 id="setup">Setup&lt;/h4>
 &lt;p>Setting up the Azure AD integration requires the configuration of an Azure App registration. See &lt;a href="#azure-app-registration-configuration">Azure App registration configuration&lt;/a>.&lt;/p>
 &lt;p>&lt;img src="azure_ad_config.png" alt="img">&lt;/p>
@@ -85,7 +85,7 @@ of the Identity Provider in Trustgrid Portal. It should be something like &lt;a 
 &lt;li>Once you’ve created the client secret, navigate to “Token Configuration” and add the “email” optional claim&lt;/li>
 &lt;/ol>
 &lt;p>&lt;img src="app_token_config.png" alt="img">&lt;/p>
-&lt;hr></description></item><item><title>Docs: G Suite</title><link>/docs/idps/gsuite-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/idps/gsuite-idp-fields/</guid><description>
+&lt;hr></description></item><item><title>Docs: G Suite</title><link>https://trustgrid.github.io/docs/docs/idps/gsuite-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/idps/gsuite-idp-fields/</guid><description>
 &lt;h4 id="setup">Setup&lt;/h4>
 &lt;p>Setting up the G Suite integration requires a G Suite administrator to perform the configuration.&lt;/p>
 &lt;p>&lt;img src="setup_gsuite.png" alt="img">&lt;/p>
@@ -102,7 +102,7 @@ of the Identity Provider in Trustgrid Portal. It should be something like &lt;a 
 &lt;li>Automatic synchronization guarantees up to date view of users and their corresponding groups.&lt;/li>
 &lt;li>At any given point the sync selection can be changed and saved, and the sync will automatically start.&lt;/li>
 &lt;/ul>
-&lt;/div></description></item><item><title>Docs: OpenID</title><link>/docs/idps/open-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/idps/open-idp-fields/</guid><description>
+&lt;/div></description></item><item><title>Docs: OpenID</title><link>https://trustgrid.github.io/docs/docs/idps/open-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/idps/open-idp-fields/</guid><description>
 &lt;p>&lt;img src="idp-fields.png" alt="img">&lt;/p>
 &lt;table>
 &lt;thead>
@@ -125,7 +125,7 @@ of the Identity Provider in Trustgrid Portal. It should be something like &lt;a 
 &lt;td>The OpenID application client secret. This will be provided to you by your OpenID Identity Provider.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: SAML</title><link>/docs/idps/saml-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/idps/saml-idp-fields/</guid><description>
+&lt;/table></description></item><item><title>Docs: SAML</title><link>https://trustgrid.github.io/docs/docs/idps/saml-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/idps/saml-idp-fields/</guid><description>
 &lt;p>When configuring a SAML IDP, the provider will often provide a metadata XML file to simplify configuration. If provided, you can upload that on the SAML configuration page, which will automatically populate the fields necessary for SAML authentication.&lt;/p>
 &lt;table>
 &lt;thead>

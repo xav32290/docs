@@ -1,13 +1,13 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Operations Runbook</title><link>/tutorials/operations-runbook/</link><description>Recent content in Operations Runbook on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tutorials/operations-runbook/index.xml" rel="self" type="application/rss+xml"/><item><title>Tutorials: Cluster Failover Response</title><link>/tutorials/operations-runbook/cluster-failover-response/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/operations-runbook/cluster-failover-response/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Operations Runbook</title><link>https://trustgrid.github.io/docs/tutorials/operations-runbook/</link><description>Recent content in Operations Runbook on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/tutorials/operations-runbook/index.xml" rel="self" type="application/rss+xml"/><item><title>Tutorials: Cluster Failover Response</title><link>https://trustgrid.github.io/docs/tutorials/operations-runbook/cluster-failover-response/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/operations-runbook/cluster-failover-response/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>When the active (master) member of the &lt;a href="/docs/clusters/">cluster&lt;/a> goes unhealthy the standby member will take over the active role. This process should be automatic and not require manual intervention. However, in certain circumstances, such as the unexpected failover of a public gateway, it is worth investigating to confirm traffic is in a healthy state.&lt;/p>
+&lt;p>When the active (master) member of the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> goes unhealthy the standby member will take over the active role. This process should be automatic and not require manual intervention. However, in certain circumstances, such as the unexpected failover of a public gateway, it is worth investigating to confirm traffic is in a healthy state.&lt;/p>
 &lt;/div>
 &lt;h3 id="possible-messages">Possible Messages&lt;/h3>
 &lt;ul>
 &lt;li>
 &lt;p>Master role assumed - failover&lt;/p>
 &lt;ul>
-&lt;li>Indicates the master role has moved from the designated master (primary) to the backup/secondary &lt;a href="/docs/nodes/">node&lt;/a>&lt;/li>
+&lt;li>Indicates the master role has moved from the designated master (primary) to the backup/secondary &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
@@ -21,26 +21,26 @@
 &lt;p>Below is a brief description events that occur during a failover process:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;p>The &lt;a href="/docs/nodes/">node&lt;/a> assuming the master role will ARP to the network that it now owns the &lt;a href="/docs/clusters/">Cluster&lt;/a> Virtual IP (VIP)&lt;/p>
+&lt;p>The &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> assuming the master role will ARP to the network that it now owns the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">Cluster&lt;/a> Virtual IP (VIP)&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>The &lt;a href="/docs/domain/virtual-networks/routes/">Domain route&lt;/a> table will update that the assuming &lt;a href="/docs/nodes/">node&lt;/a> should receive all traffic for the &lt;a href="/docs/clusters/">cluster&lt;/a> (&lt;em>clustername-master&lt;/em>)&lt;/p>
+&lt;p>The &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">Domain route&lt;/a> table will update that the assuming &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> should receive all traffic for the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> (&lt;em>clustername-master&lt;/em>)&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>The assuming &lt;a href="/docs/nodes/">node&lt;/a> will load all NAT entries associated with the &lt;a href="/docs/clusters/">cluster&lt;/a>&lt;/p>
+&lt;p>The assuming &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> will load all NAT entries associated with the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="response-process">Response Process&lt;/h3>
 &lt;p>After a failover or failback it is necessary to verify that traffic is flowing appropriately.&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>Login to the portal and navigate to the affected &lt;a href="/docs/clusters/">cluster’s&lt;/a> page&lt;/p>
+&lt;p>Login to the portal and navigate to the affected &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster’s&lt;/a> page&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Verify that only a single &lt;a href="/docs/nodes/">node&lt;/a> shows as master&lt;/p>
+&lt;p>Verify that only a single &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> shows as master&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>On the &lt;code>Configuration&lt;/code> → &lt;code>Network&lt;/code> tab note the &lt;a href="/docs/clusters/">cluster&lt;/a> VIP&lt;/p>
+&lt;p>On the &lt;code>Configuration&lt;/code> → &lt;code>Network&lt;/code> tab note the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> VIP&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;p>&lt;img src="cluster-virtual-ip2.png" alt="img">&lt;/p>
@@ -81,7 +81,7 @@ iv. Repeat steps i-iii on the node that **is not** currently indicated as the ma
 &lt;/li>
 &lt;/ol>
 &lt;/li>
-&lt;/ol></description></item><item><title>Tutorials: Control Plane Disconnect</title><link>/tutorials/operations-runbook/control-plane-disconnect/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/operations-runbook/control-plane-disconnect/</guid><description>
+&lt;/ol></description></item><item><title>Tutorials: Control Plane Disconnect</title><link>https://trustgrid.github.io/docs/tutorials/operations-runbook/control-plane-disconnect/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/operations-runbook/control-plane-disconnect/</guid><description>
 &lt;blockquote>
 &lt;p>When the Control Plane is disconnected there is no way to utilize remote tools to resolve the issue so you will need to contact the End-user technical resource for the site to troubleshoot&lt;/p>
 &lt;/blockquote>
@@ -161,9 +161,9 @@ ii. If the browser says it cannot connect this indicates a firewall or routing i
 &lt;p>c. DPI-SSL or HTTPS altering the TLS certificate chain - Edge Node Behavior When SSL / TLS Certificate is Altered&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;h1 id="need-proper-links-to-use-and-need-to-find-how-to-add-links-to-indent-format">&lt;strong>NEED PROPER LINKS TO USE AND NEED TO FIND HOW TO ADD LINKS TO INDENT FORMAT&lt;/strong>&lt;/h1></description></item><item><title>Tutorials: Node Down Response</title><link>/tutorials/operations-runbook/node-down-response/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/operations-runbook/node-down-response/</guid><description>
+&lt;h1 id="need-proper-links-to-use-and-need-to-find-how-to-add-links-to-indent-format">&lt;strong>NEED PROPER LINKS TO USE AND NEED TO FIND HOW TO ADD LINKS TO INDENT FORMAT&lt;/strong>&lt;/h1></description></item><item><title>Tutorials: Node Down Response</title><link>https://trustgrid.github.io/docs/tutorials/operations-runbook/node-down-response/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/operations-runbook/node-down-response/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>This process is intended to help customer support personnel quickly identify the scope of a &lt;a href="/docs/nodes/">node&lt;/a> down problem and get services back online as quickly as possible.&lt;/p>
+&lt;p>This process is intended to help customer support personnel quickly identify the scope of a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> down problem and get services back online as quickly as possible.&lt;/p>
 &lt;/div>
 &lt;h3 id="node-down-triage">Node Down Triage&lt;/h3>
 &lt;h4 id="triage-checklist">Triage Checklist&lt;/h4>
@@ -187,9 +187,9 @@ ii. If the browser says it cannot connect this indicates a firewall or routing i
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="determine-production-status-of-the-trustgrid-node">Determine Production Status of the Trustgrid Node&lt;/h3>
-&lt;p>Use the &lt;a href="/docs/nodes/tags/prod-status-tag/%7D">Production Status Tags&lt;/a> to determine if the &lt;a href="/docs/nodes/">node&lt;/a> is in use and expected to be online.&lt;/p>
+&lt;p>Use the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/prod-status-tag/%7D">Production Status Tags&lt;/a> to determine if the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> is in use and expected to be online.&lt;/p>
 &lt;h3 id="confirm-high-availability-or-disaster-recover-is-functioning">Confirm High Availability or Disaster Recover is Functioning&lt;/h3>
-&lt;p>Before troubleshooting why a &lt;a href="/docs/nodes/">node&lt;/a> is down we should determine if the services it provided can be provided in the interim by a cluster member or devices at a secondary/disaster-recovery site.&lt;/p>
+&lt;p>Before troubleshooting why a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> is down we should determine if the services it provided can be provided in the interim by a cluster member or devices at a secondary/disaster-recovery site.&lt;/p>
 &lt;h5 id="is-the-node-a-cluster-member">Is the Node a Cluster Member&lt;/h5>
 &lt;ul>
 &lt;li>
@@ -213,7 +213,7 @@ ii. If the browser says it cannot connect this indicates a firewall or routing i
 &lt;h5 id="is-there-a-secondary--dr-site-for-this-nodecluster">Is there a Secondary / DR Site for this Node/Cluster?&lt;/h5>
 &lt;ul>
 &lt;li>
-&lt;p>Are the &lt;a href="/docs/nodes/">nodes&lt;/a> deployed at the secondary site online in the Trustgrid?&lt;/p>
+&lt;p>Are the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> deployed at the secondary site online in the Trustgrid?&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>If No:&lt;/p>
@@ -234,16 +234,16 @@ ii. If the browser says it cannot connect this indicates a firewall or routing i
 &lt;p>Because Trustgrid provides independent control and data planes, there are a few ways it can manifest as “down”:&lt;/p>
 &lt;tr>
 &lt;th>Control Plane Down&lt;/th>
-&lt;td>The &lt;a href="/docs/nodes/">node&lt;/a> appears offline from within the Trustgrid portal. This indicates that the &lt;a href="/docs/nodes/">node&lt;/a> shutdown or has not sent a heartbeat notification to Trustgrid within the past 10 minutes.&lt;/td>
+&lt;td>The &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> appears offline from within the Trustgrid portal. This indicates that the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> shutdown or has not sent a heartbeat notification to Trustgrid within the past 10 minutes.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Data Plane Down&lt;/th>
-&lt;td>The &lt;a href="/docs/nodes/">node&lt;/a> appears online from within the portal but reports it is unable to connect to one or more gateway nodes. This can be indicated by the Data Plane Status indicator when viewing the &lt;a href="/docs/nodes/">node&lt;/a> in the portal, or by receiving a “Gateway Connectivity Health Check” failure &lt;a href="/docs/alarms/events/">event&lt;/a> notification. Both of these only work if the Control Plane is currently working.&lt;/td>
+&lt;td>The &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> appears online from within the portal but reports it is unable to connect to one or more gateway nodes. This can be indicated by the Data Plane Status indicator when viewing the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> in the portal, or by receiving a “Gateway Connectivity Health Check” failure &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> notification. Both of these only work if the Control Plane is currently working.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Both Control and Data Plane Down&lt;/th>
-&lt;td>In this situation the &lt;a href="/docs/nodes/">node&lt;/a> appears down in the Trustgrid Portal and users/applications are unable to reach services across the data plane between the Gateway and Edge sites. This is the most common scenario. While the Data Plane is most critical for the services provided across the device, first priority should be restoring the Control Plane connection so that additional troubleshooting tools are available. Often this process also uncovers the reason the data plane is down.&lt;/td>
-&lt;/tr></description></item><item><title>Tutorials: Site Failover</title><link>/tutorials/operations-runbook/site-failover/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/tutorials/operations-runbook/site-failover/</guid><description>
+&lt;td>In this situation the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> appears down in the Trustgrid Portal and users/applications are unable to reach services across the data plane between the Gateway and Edge sites. This is the most common scenario. While the Data Plane is most critical for the services provided across the device, first priority should be restoring the Control Plane connection so that additional troubleshooting tools are available. Often this process also uncovers the reason the data plane is down.&lt;/td>
+&lt;/tr></description></item><item><title>Tutorials: Site Failover</title><link>https://trustgrid.github.io/docs/tutorials/operations-runbook/site-failover/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/operations-runbook/site-failover/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>The below processes should be used to move traffic between sites in event of a complete site down scenario. This is handled by the Virtual Network Route Table.&lt;/p>
 &lt;/div>
@@ -251,10 +251,10 @@ ii. If the browser says it cannot connect this indicates a firewall or routing i
 In the examples below, xxxEdgeCluster is the primary site and xxx-edge3 is the secondary/disaster recovery site.
 &lt;/div>
 &lt;h3 id="manual-failover">Manual Failover&lt;/h3>
-&lt;p>When a customer has selected manual failover, a portal user will need to adjust the destination of all &lt;a href="/docs/domain/virtual-networks/routes/">routes&lt;/a> currently pointed at the failed site.&lt;/p>
+&lt;p>When a customer has selected manual failover, a portal user will need to adjust the destination of all &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">routes&lt;/a> currently pointed at the failed site.&lt;/p>
 &lt;h4 id="failing-over">Failing Over&lt;/h4>
 &lt;blockquote>
-&lt;p>There will usually be &lt;a href="/docs/domain/virtual-networks/routes/">routes&lt;/a> for the &lt;a href="/docs/nodes/">nodes&amp;rsquo;&lt;/a> Virtual Management IP. These should not be changed in this process.&lt;/p>
+&lt;p>There will usually be &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">routes&lt;/a> for the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&amp;rsquo;&lt;/a> Virtual Management IP. These should not be changed in this process.&lt;/p>
 &lt;/blockquote>
 &lt;ol>
 &lt;li>
@@ -279,7 +279,7 @@ In the examples below, xxxEdgeCluster is the primary site and xxx-edge3 is the s
 &lt;p>Click &lt;code>Save&lt;/code>. Then select &lt;code>Review Changes&lt;/code>.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>You should see a modified &lt;a href="/docs/domain/virtual-networks/routes/">route&lt;/a> for each network you adjusted showing the previous and current destination. If everything looks correct click &lt;code>Apply Changes&lt;/code>.&lt;/p>
+&lt;p>You should see a modified &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">route&lt;/a> for each network you adjusted showing the previous and current destination. If everything looks correct click &lt;code>Apply Changes&lt;/code>.&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;p>&lt;img src="apply-changes.png" alt="img">&lt;/p>
