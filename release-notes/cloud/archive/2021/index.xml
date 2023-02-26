@@ -112,4 +112,35 @@
 &lt;h2 id="proxyarp-option-for-outside-nats">ProxyARP Option for Outside NATs&lt;/h2>
 &lt;p>Previously the Trustgrid node would ARP on the local network for any IP contained in the Local CIDR of an outside NAT. For example, if your Outside NAT Local CIDR was for 192.168.1.0/24, the node would respond to ARP requests for any IP in that network (192.168.1.1 - .254).&lt;/p>
 &lt;p>This is still the default behavior, but there is now an option to disable this functionality when configuring Outside NATs.&lt;/p>
-&lt;p>&lt;img src="proxy-arp-option.png" alt="Proxy ARP Option">&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="proxy-arp-option.png" alt="Proxy ARP Option">&lt;/p></description></item><item><title>Release-Notes: September</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</guid><description>
+&lt;h2 id="container--improvements">Container Improvements&lt;/h2>
+&lt;p>Trustgrid has greatly enhanced the container features we support and this release makes these features available to all users.&lt;/p>
+&lt;h3 id="container-management">Container Management&lt;/h3>
+&lt;p>You can now stop and start individual containers running as a service from within the portal.&lt;/p>
+&lt;p>&lt;img src="stop-start-buttons.png" alt="Stop Start Buttons">&lt;/p>
+&lt;h3 id="container-volumes-and-mounts">Container Volumes and Mounts&lt;/h3>
+&lt;p>Containers on Trustgrid now support creating persistent volumes and mounting them within the container. These volumes can even be encrypted using Trustgrid managed, software-based encryption.&lt;/p>
+&lt;h3 id="container-privileges">Container Privileges&lt;/h3>
+&lt;p>It is now possible to run containers as a privileged user or specify the user/group the container should execute as. Additionally, you can add or drop Linux capabilities that the container has enabled on execution.&lt;/p>
+&lt;h3 id="import-container-configuration">Import Container Configuration&lt;/h3>
+&lt;p>Container configurations can end up complex. Recreating on many nodes is tedious and error prone. Trustgrid now supports importing the configuration from an existing node or cluster that has the container defined as desired.&lt;/p>
+&lt;h2 id="interactive-tools-improvements">Interactive Tools Improvements&lt;/h2>
+&lt;h3 id="terminate-running-tools-without-closing-window">Terminate Running Tools without Closing Window&lt;/h3>
+&lt;p>Interactive tools such as Terminal and Sniff Traffic now support terminating the session without closing the window. This can be useful in situations, such as if sniffing traffic on a very active node, where you want to be able to stop the tool but still be able to analyze the output.&lt;/p>
+&lt;h3 id="traffic-capture-tool-improvements">Traffic Capture Tool Improvements&lt;/h3>
+&lt;p>The Traffic Capture tool now displays the settings used while running. This includes the interface and filter.&lt;/p>
+&lt;p>&lt;img src="capture-settings.png" alt="Capture Settings">&lt;/p>
+&lt;h2 id="provisioning-and-order-management-improvements">Provisioning and Order Management Improvements&lt;/h2>
+&lt;p>The Provisioning section of the Trustgrid portal has been extensively overhauled to improve the order management experience and make future improvements easier.&lt;/p>
+&lt;h3 id="new-look">New Look&lt;/h3>
+&lt;p>The first change you’ll notice is that clicking Provisioning opens a new tab. The orders table now makes it easier to search and filter the results.&lt;/p>
+&lt;p>The individual order screen is now a single page view to reduce the need to switch between tabs. And orders now support attaching files such as legacy device configurations or diagrams that might be useful for configuring the new devices.&lt;/p>
+&lt;h3 id="order-notifications">Order Notifications&lt;/h3>
+&lt;p>You can now configure &lt;a href="https://trustgrid.github.io/docs/docs/alarms/alarm-filters">Alarm Filters&lt;/a> for four new order based events:&lt;/p>
+&lt;ul>
+&lt;li>Order Created&lt;/li>
+&lt;li>Order Commented&lt;/li>
+&lt;li>Order Status Change&lt;/li>
+&lt;li>Order Customer Update&lt;/li>
+&lt;/ul>
+&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels">Channels&lt;/a>.&lt;/p></description></item></channel></rss>
