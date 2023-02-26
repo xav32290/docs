@@ -89,7 +89,98 @@ The same interface should be selected for all cluster members
 &lt;td>The maximum amount of throughput that will be allowed to traverse the tunnel when connecting to the connector. This can be used to prevent saturating the connection at either the local or remote sites.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Data Plane</title><link>https://trustgrid.github.io/docs/docs/nodes/data-plane/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/data-plane/</guid><description>
+&lt;/table></description></item><item><title>Release-Notes: March</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</guid><description>
+&lt;h2 id="improved-identity-provider-integration">Improved Identity Provider Integration&lt;/h2>
+&lt;p>Trustgrid has supported SAML integration to manage portal access for some time. As we began supporting additional services, such as Remote Access applications, more flexibility was needed.&lt;/p>
+&lt;h2 id="openid-support">OpenID Support&lt;/h2>
+&lt;p>OpenID is a newer standard for managing communication between an application and an Identity Provider (IdP). It offers additional functionality compared to SAML including the ability to simplify integration.&lt;/p>
+&lt;p>At this point, Trustgrid supports simplified integration with Google G Suite and Microsoft AzureAD which includes the ability to synchronize groups and group members. Trustgrid will expand this functionality to other IdPs in the future but for now, other OpenID compatible IdPs can be integrated using a more generic OpenID setup process.&lt;/p>
+&lt;h2 id="saml-self-service">SAML Self-Service&lt;/h2>
+&lt;p>Trustgrid will continue to support SAML integration. Previously the setup process required the Trustgrid Support Team to complete the configuration, but now this is available to Administrators.&lt;/p>
+&lt;h2 id="add-users-instead-of-inviting-them">Add Users Instead of Inviting Them&lt;/h2>
+&lt;p>&lt;strong>Previously&lt;/strong>, adding new users to the Trustgrid portal was a bit clunky when using the SAML integration. To add a user you would:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Invite the user. This would generate an email which the user didn’t really need.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The user would then need to successfully authenticate via the configured IdP.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You could then adjust the user&amp;rsquo;s role to reflect the appropriate permissions.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Now&lt;/strong>, when an IdP is configured there is a simplified process:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>From the User Management panel click “Add User”&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>From a single prompt, you can enter the user’s email address (matching what is configured in the Identify Provider), set their Role, and select the correct Identity Provider (if there is more than one).&lt;/p>
+&lt;p>&lt;img src="add-user-modal.png" alt="Add User Modal">&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>The option to Invite Users is still available under Actions if you need to create users in the Trustgrid native IdP.&lt;/p>
+&lt;h2 id="domain-improvements">Domain Improvements&lt;/h2>
+&lt;p>In addition to the changes outlined below, it is worth noting that Domains have been moved under the Management section of the navigation bar.&lt;/p>
+&lt;h3 id="review-changes">Review Changes&lt;/h3>
+&lt;p>Trustgrid Domains encompass configuration settings that impact many nodes and clusters, such as Virtual Network Routes. The impacts of changes here can have a wide effect and it is not uncommon for multiple members of a team to be working in this context at the same time without knowing it.&lt;/p>
+&lt;p>To address this Trustgrid has updated the user interface to reduce the risk of improper or conflicting changes. After a change is made within a domain it is not immediately applied.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Instead, a warning icon will be added to the Review Changes panel. Navigating to this panel will display all changes that are waiting to be applied.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The changes will include the user making the change. If more than one user has made changes they can confirm with that user if they are ready for that change to go into effect.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Optionally, if they determine one of the changes should not be applied it can be removed by clicking the red X. Be aware that if this is done the change would have to be recreated and reviewed to add later.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Once the user has confirmed the changes look correct they can click Apply Changes. You will be prompted to confirm and then the changes will be pushed out to nodes in the domain.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="review-changes.png" alt="Review Changes Screen">&lt;/p>
+&lt;h3 id="improved-virtual-network-routes-table">Improved Virtual Network Routes Table&lt;/h3>
+&lt;p>The Virtual Network Routes table has been significantly reworked in this release.&lt;/p>
+&lt;p>The biggest improvement is in the Destination selection method. The old interface required selecting from a long list of all nodes and clusters in the domains which became unmanageable as the number of these increased. Additionally, there was no distinguishing between nodes and clusters beyond the name.&lt;/p>
+&lt;p>Now when the Destination field is selected you are given a list (typeahead filtered) that now has a prefix of Cluster or Node to clearly identify the destination type.&lt;/p>
+&lt;p>Additionally, the Save and Add Routes buttons have been moved to the top of the table to reduce the need to scroll down as you work.&lt;/p>
+&lt;h3 id="no-nat-virtual-networks">No-NAT Virtual Networks&lt;/h3>
+&lt;p>Making Network Address Translation (NAT) easier to manage and scale has been a primary use case for Trustgrid. However, there are some situations where altering the IP addresses is unnecessary and even undesirable.&lt;/p>
+&lt;p>To address this we have added the ability to create a Virtual Network that will perform no address translation by default. This should greatly increase the ease of configuring such networks.&lt;/p>
+&lt;p>When adding a new Virtual Network set the “No NAT Mode” to Yes. For a Network CIDR just enter 0.0.0.0/0, this field will be made optional in a later release.&lt;/p>
+&lt;p>&lt;img src="add-network-modal.png" alt="Add Network Modal">&lt;/p>
+&lt;p>After creation, you will see that NO-NAT Mode is enabled in the table.&lt;/p>
+&lt;p>&lt;img src="networks-table.png" alt="Networks Table">&lt;/p>
+&lt;p>Whenever this network is attached to a Node or Cluster interface you will see a notice like the below.&lt;/p>
+&lt;p>&lt;img src="no-nat-notice.png" alt="No NAT Notice">&lt;/p>
+&lt;h2 id="vpn-improvements">VPN Improvements&lt;/h2>
+&lt;p>The VPN interface in the portal has been reworked in ways we hope will simplify the experience when configuring and managing.&lt;/p>
+&lt;h3 id="feature-navigation-panels">Feature Navigation Panels&lt;/h3>
+&lt;p>The legacy VPN page frequently required significant scrolling to get to the most relevant section. The new interface breaks these sections into multiple panels.&lt;/p>
+&lt;p>Since Address Translation is the most commonly used section it is automatically selected when you navigate into the VPN context.&lt;/p>
+&lt;h3 id="improved-multiple-virtual-network-support">Improved Multiple Virtual Network Support&lt;/h3>
+&lt;p>Trustgrid has supported Nodes and Clusters being attached to multiple Virtual Networks but the user experience interacting with them was cumbersome. For example, in a number of places, you had to select from a list of all the available virtual networks, even if they weren’t attached. This experience has been greatly improved.&lt;/p>
+&lt;h3 id="vpn-virtual-networks-table">VPN Virtual Networks Table&lt;/h3>
+&lt;p>If the Node or Cluster is already attached to a single Virtual Network this will be selected automatically when you select the VPN navigation link. However, if you have multiple networks you will be presented with a table of only the attached Virtual Networks.&lt;/p>
+&lt;p>&lt;img src="virtual-networks-table.png" alt="Virtual Networks Table">&lt;/p>
+&lt;p>The Actions dropdown of this table will enable you to Attach additional Virtual Networks or Detach the current Virtual Networks.&lt;/p>
+&lt;h3 id="overview-virtual-network-graph">Overview Virtual Network Graph&lt;/h3>
+&lt;p>Previously the Overview Virtual Network graph listed all Virtual Networks within a domain. Now it will only show attached networks.&lt;/p>
+&lt;h2 id="vpn-toolbar">VPN Toolbar&lt;/h2>
+&lt;p>Once you have navigated to the VPN context of a node and selected a Virtual Network you will see a bar like the below at the top of the page. The bar provides important data about the Virtual Network including the node’s Virtual Management IP (and the ability to edit it).&lt;/p>
+&lt;p>&lt;img src="vpn-toolbar.png" alt="VPN Toolbar">&lt;/p>
+&lt;p>Clicking the Tools button on the right of the bar brings up a menu of both Virtual Network and Interface tools. Users no longer have to switch between tabs to access these different toolsets.&lt;/p>
+&lt;p>&lt;img src="vpn-tools.png" alt="VPN Tools">&lt;/p>
+&lt;h2 id="new-virtual-translation-table-interface">New Virtual Translation Table Interface&lt;/h2>
+&lt;p>The View Virtual Translation Table shows active NATs similar to a &lt;code>show connections&lt;/code> command from legacy solutions. Previously running this tool produced raw console output that could be challenging to work with when there were large numbers of active connections.&lt;/p>
+&lt;p>The new version of the tools creates a paginated table that is easily searchable and can be refreshed without needing to return to the Tools section.&lt;/p>
+&lt;p>&lt;img src="virtual-nats-table.png" alt="Virtual NATs Table">&lt;/p>
+&lt;h2 id="proxyarp-option-for-outside-nats">ProxyARP Option for Outside NATs&lt;/h2>
+&lt;p>Previously the Trustgrid node would ARP on the local network for any IP contained in the Local CIDR of an outside NAT. For example, if your Outside NAT Local CIDR was for 192.168.1.0/24, the node would respond to ARP requests for any IP in that network (192.168.1.1 - .254).&lt;/p>
+&lt;p>This is still the default behavior, but there is now an option to disable this functionality when configuring Outside NATs.&lt;/p>
+&lt;p>&lt;img src="proxy-arp-option.png" alt="Proxy ARP Option">&lt;/p></description></item><item><title>Docs: Data Plane</title><link>https://trustgrid.github.io/docs/docs/nodes/data-plane/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/data-plane/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Data plane statistics between a node and its peers can help troubleshoot connectivity or performance issues.&lt;/p>
 &lt;/div>
@@ -347,7 +438,30 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>To see detailed messages about gateway traffic, select the &lt;code>Troubleshoot Gateway Traffic&lt;/code> option from the services menu under &lt;code>Gateway Tools&lt;/code>.&lt;/p>
 &lt;p>&lt;img src="launch-troubleshoot-gateway-traffic.png" alt="img">&lt;/p>
 &lt;p>This will open a new window with live diagnostic messages about traffic&lt;/p>
-&lt;p>&lt;img src="troubleshoot-gateway-traffic.png" alt="img">&lt;/p></description></item><item><title>Docs: Interfaces</title><link>https://trustgrid.github.io/docs/docs/nodes/interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/interfaces/</guid><description>
+&lt;p>&lt;img src="troubleshoot-gateway-traffic.png" alt="img">&lt;/p></description></item><item><title>Release-Notes: August</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</guid><description>
+&lt;h2 id="tag-improvements">Tag Improvements&lt;/h2>
+&lt;p>Two major improvements regarding tags.&lt;/p>
+&lt;h3 id="cluster-members-inherit-tags">Cluster Members Inherit Tags&lt;/h3>
+&lt;p>Previously you had to set tags at the node and cluster level which required a lot of duplicate effort. Now when you configure tags at the cluster level the member nodes inherit this tag.&lt;/p>
+&lt;h3 id="tags-searchable-in-the-nodes-table">Tags Searchable in the Nodes Table&lt;/h3>
+&lt;p>With this release if you add a tag as a column to the nodes table, you can then search the table for matching values.&lt;/p>
+&lt;h2 id="nodes-table-improvements">Nodes Table Improvements&lt;/h2>
+&lt;p>Two new columns can be added to the nodes table:&lt;/p>
+&lt;h3 id="virtual-management-ip-column">Virtual Management IP Column&lt;/h3>
+&lt;p>You can now see from the table the virtual management IP assigned to each node. If you have multiple virtual networks you will have the option to select each network as a column. These columns have the prefix &lt;code>MGMT IP:&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="available-columns.png" alt="Available Columns">&lt;/p>
+&lt;h3 id="device-type-column">Device Type Column&lt;/h3>
+&lt;p>You can now see what type of device, physical or virtual, is running the node software.&lt;/p>
+&lt;h2 id="generic-webhook-support-as-an-alert-channel">Generic Webhook Support as an Alert Channel&lt;/h2>
+&lt;p>This version adds the ability to publish alerts to a channel utilizing a generic webhook. This should allow integration with additional systems beyond the built-in channels Trustgrid supports.&lt;/p>
+&lt;p>To utilize either edit an existing channel or create a new one and populate the Generic Webhook section.&lt;/p>
+&lt;p>&lt;img src="generic-webhook.png" alt="Generic Webhook">&lt;/p>
+&lt;h2 id="provisioning-improvements">Provisioning Improvements&lt;/h2>
+&lt;p>There have been several changes to the Provisioning (formerly Orders) section of the Portal including:&lt;/p>
+&lt;ul>
+&lt;li>Due Dates for Orders&lt;/li>
+&lt;li>Support for specific device models (as opposed to just hardware vs virtual)&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Interfaces</title><link>https://trustgrid.github.io/docs/docs/nodes/interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/interfaces/</guid><description>
 &lt;h2 id="network-interfaces">Network Interfaces&lt;/h2>
 &lt;p>Navigate to a node, then select &lt;code>Interfaces&lt;/code> under the &lt;code>Network&lt;/code> section.&lt;/p>
 &lt;p>&lt;img src="interfaces.png" alt="Interfaces Page">&lt;/p>
@@ -446,7 +560,60 @@ Gateway nodes will list edge nodes in their peers table
 &lt;li>
 &lt;p>Click the &lt;code>Save&lt;/code> button.&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Docs: Location</title><link>https://trustgrid.github.io/docs/docs/nodes/location/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/location/</guid><description>
+&lt;/ol></description></item><item><title>Release-Notes: September</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</guid><description>
+&lt;h2 id="container--improvements">Container Improvements&lt;/h2>
+&lt;p>Trustgrid has greatly enhanced the container features we support and this release makes these features available to all users.&lt;/p>
+&lt;h3 id="container-management">Container Management&lt;/h3>
+&lt;p>You can now stop and start individual containers running as a service from within the portal.&lt;/p>
+&lt;p>&lt;img src="stop-start-buttons.png" alt="Stop Start Buttons">&lt;/p>
+&lt;h3 id="container-volumes-and-mounts">Container Volumes and Mounts&lt;/h3>
+&lt;p>Containers on Trustgrid now support creating persistent volumes and mounting them within the container. These volumes can even be encrypted using Trustgrid managed, software-based encryption.&lt;/p>
+&lt;h3 id="container-privileges">Container Privileges&lt;/h3>
+&lt;p>It is now possible to run containers as a privileged user or specify the user/group the container should execute as. Additionally, you can add or drop Linux capabilities that the container has enabled on execution.&lt;/p>
+&lt;h3 id="import-container-configuration">Import Container Configuration&lt;/h3>
+&lt;p>Container configurations can end up complex. Recreating on many nodes is tedious and error prone. Trustgrid now supports importing the configuration from an existing node or cluster that has the container defined as desired.&lt;/p>
+&lt;h2 id="interactive-tools-improvements">Interactive Tools Improvements&lt;/h2>
+&lt;h3 id="terminate-running-tools-without-closing-window">Terminate Running Tools without Closing Window&lt;/h3>
+&lt;p>Interactive tools such as Terminal and Sniff Traffic now support terminating the session without closing the window. This can be useful in situations, such as if sniffing traffic on a very active node, where you want to be able to stop the tool but still be able to analyze the output.&lt;/p>
+&lt;h3 id="traffic-capture-tool-improvements">Traffic Capture Tool Improvements&lt;/h3>
+&lt;p>The Traffic Capture tool now displays the settings used while running. This includes the interface and filter.&lt;/p>
+&lt;p>&lt;img src="capture-settings.png" alt="Capture Settings">&lt;/p>
+&lt;h2 id="provisioning-and-order-management-improvements">Provisioning and Order Management Improvements&lt;/h2>
+&lt;p>The Provisioning section of the Trustgrid portal has been extensively overhauled to improve the order management experience and make future improvements easier.&lt;/p>
+&lt;h3 id="new-look">New Look&lt;/h3>
+&lt;p>The first change you’ll notice is that clicking Provisioning opens a new tab. The orders table now makes it easier to search and filter the results.&lt;/p>
+&lt;p>The individual order screen is now a single page view to reduce the need to switch between tabs. And orders now support attaching files such as legacy device configurations or diagrams that might be useful for configuring the new devices.&lt;/p>
+&lt;h3 id="order-notifications">Order Notifications&lt;/h3>
+&lt;p>You can now configure &lt;a href="https://trustgrid.github.io/docs/docs/alarms/alarm-filters">Alarm Filters&lt;/a> for four new order based events:&lt;/p>
+&lt;ul>
+&lt;li>Order Created&lt;/li>
+&lt;li>Order Commented&lt;/li>
+&lt;li>Order Status Change&lt;/li>
+&lt;li>Order Customer Update&lt;/li>
+&lt;/ul>
+&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels">Channels&lt;/a>.&lt;/p></description></item><item><title>Release-Notes: December</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</guid><description>
+&lt;h2 id="data-plane-status-table">Data Plane Status Table&lt;/h2>
+&lt;p>Previously Trustgrid had a visual indicator on the Node detail page to show the Data Plane health of a node, but it only showed the state as &lt;code>Connected&lt;/code>, &lt;code>Degraded&lt;/code> or &lt;code>Disconnected&lt;/code>. While connected and disconnected were clear, there was little information on why the status was Degraded.&lt;/p>
+&lt;p>With this release hovering over the Data Plane status icon will bring up a pop-up screen showing all the peers and and their connection status. Additionally, if the peer is connected it will show:&lt;/p>
+&lt;ul>
+&lt;li>The public IP of the peer&lt;/li>
+&lt;li>The mode used to connect to with the peer (TLS or UDP)&lt;/li>
+&lt;li>The route trip time (RTT) between the devices when the tool was last run.&lt;/li>
+&lt;/ul>
+&lt;p>This data can be searched and refreshed. In a future release we will make historical RTT time viewable for each peer.&lt;/p>
+&lt;p>&lt;img src="data-plane-hover.png" alt="Data Plane Status">&lt;/p>
+&lt;h2 id="flow-log-improvements">Flow Log Improvements&lt;/h2>
+&lt;p>Flow logs provide valuable metadata about traffic across Trustgrid networks but our search had performance and reliability issues that made it difficult to use. With this release we’ve rearchitected how search these logs to allow for a significant performance improvement.&lt;/p>
+&lt;h2 id="improved-ip-geolocation-data">Improved IP Geolocation Data&lt;/h2>
+&lt;p>Trustgrid has changed our public IP geolocation data providers to improve the accuracy of the information we use to place nodes on our Network Maps. This new provider will also allow us to present additional information such as ISP and ASN in the future, which could be handy for identifying when multiple devices from the same ISP or ASN start having issues.&lt;/p>
+&lt;h2 id="custom-portal-roles">Custom Portal Roles&lt;/h2>
+&lt;p>Trustgrid is working on moving our permission structure beyond the four default roles (Monitor, Operator, Node-Administrator and Administrator) to allow customers to tailor roles to just the permissions their users need. For example, you could allow a user Monitor (read-only) permissions to most of the Trustgrid environment but grant them the ability to stop and start containers.&lt;/p>
+&lt;p>Currently this requires working with Trustgrid Support to define these new roles but once defined they can be assigned by Node Administrators and Administrators.&lt;/p>
+&lt;h2 id="other-improvements">Other Improvements&lt;/h2>
+&lt;ul>
+&lt;li>You can now search the Nodes table for Management IPs and Device types&lt;/li>
+&lt;li>Fixed a broken link in the new user invite email for customers without IDP integration&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Location</title><link>https://trustgrid.github.io/docs/docs/nodes/location/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/location/</guid><description>
 &lt;p>Trustgrid uses each node&amp;rsquo;s public IP address to derive location information. If it&amp;rsquo;s incorrect, the fields can be set manually. If set manually, IP changes will not update the node&amp;rsquo;s location when viewed from the nodes table or the network map.&lt;/p>
 &lt;p>&lt;img src="node-location.png" alt="img">&lt;/p>
 &lt;h6 id="to-change-the-node-location">To change the Node Location:&lt;/h6>
@@ -1682,30 +1849,7 @@ Anything that can be done in the Trustgrid Portal can be done with the API (exce
 &lt;p>After making changes to a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual network&lt;/a>, you can review outstanding changes. A list of changes will show who made each change, with a before/after table if appropriate.&lt;/p>
 &lt;p>&lt;img src="outstanding-changes.png" alt="img">&lt;/p>
 &lt;p>Individual changes can be rejected by clicking the delete icon at the top.&lt;/p>
-&lt;p>Once changes are applied, outstanding changes will disappear from the review page, and &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> will receive the configuration updates.&lt;/p></description></item><item><title>Release-Notes: August</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</guid><description>
-&lt;h2 id="tag-improvements">Tag Improvements&lt;/h2>
-&lt;p>Two major improvements regarding tags.&lt;/p>
-&lt;h3 id="cluster-members-inherit-tags">Cluster Members Inherit Tags&lt;/h3>
-&lt;p>Previously you had to set tags at the node and cluster level which required a lot of duplicate effort. Now when you configure tags at the cluster level the member nodes inherit this tag.&lt;/p>
-&lt;h3 id="tags-searchable-in-the-nodes-table">Tags Searchable in the Nodes Table&lt;/h3>
-&lt;p>With this release if you add a tag as a column to the nodes table, you can then search the table for matching values.&lt;/p>
-&lt;h2 id="nodes-table-improvements">Nodes Table Improvements&lt;/h2>
-&lt;p>Two new columns can be added to the nodes table:&lt;/p>
-&lt;h3 id="virtual-management-ip-column">Virtual Management IP Column&lt;/h3>
-&lt;p>You can now see from the table the virtual management IP assigned to each node. If you have multiple virtual networks you will have the option to select each network as a column. These columns have the prefix &lt;code>MGMT IP:&lt;/code>.&lt;/p>
-&lt;p>&lt;img src="available-columns.png" alt="Available Columns">&lt;/p>
-&lt;h3 id="device-type-column">Device Type Column&lt;/h3>
-&lt;p>You can now see what type of device, physical or virtual, is running the node software.&lt;/p>
-&lt;h2 id="generic-webhook-support-as-an-alert-channel">Generic Webhook Support as an Alert Channel&lt;/h2>
-&lt;p>This version adds the ability to publish alerts to a channel utilizing a generic webhook. This should allow integration with additional systems beyond the built-in channels Trustgrid supports.&lt;/p>
-&lt;p>To utilize either edit an existing channel or create a new one and populate the Generic Webhook section.&lt;/p>
-&lt;p>&lt;img src="generic-webhook.png" alt="Generic Webhook">&lt;/p>
-&lt;h2 id="provisioning-improvements">Provisioning Improvements&lt;/h2>
-&lt;p>There have been several changes to the Provisioning (formerly Orders) section of the Portal including:&lt;/p>
-&lt;ul>
-&lt;li>Due Dates for Orders&lt;/li>
-&lt;li>Support for specific device models (as opposed to just hardware vs virtual)&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Authentication Audits</title><link>https://trustgrid.github.io/docs/docs/audits/authentication/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/audits/authentication/</guid><description>
+&lt;p>Once changes are applied, outstanding changes will disappear from the review page, and &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> will receive the configuration updates.&lt;/p></description></item><item><title>Docs: Authentication Audits</title><link>https://trustgrid.github.io/docs/docs/audits/authentication/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/audits/authentication/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trustgrid records information for authentication attempts into the control plane. This information can be used to troubleshoot authentication issues, or to monitor for suspicious activity.&lt;/p>
 &lt;/div>
@@ -1734,261 +1878,4 @@ Successful logins from external identity providers are logged, but failed attemp
 &lt;li>Create an ALB (Application Load Balancer) with the listener set to HTTPS and forwarding to the target group created above. Under secure listener settings apply the SSL Certificate provided by Trustgrid for the application gateways. &lt;code>ELBSecurityPolicy-2016-08&lt;/code> is recommended as the default security policy by AWS.&lt;/li>
 &lt;/ol>
 &lt;p>The load balancer should be created as internet facing IPV4 and mapped to the Public facing subnets of the Trustgrid gateways.&lt;/p>
-&lt;p>&lt;img src="listener-details.png" alt="img">&lt;/p></description></item><item><title>Docs: Azure AD</title><link>https://trustgrid.github.io/docs/docs/idps/azure-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/idps/azure-idp-fields/</guid><description>
-&lt;h4 id="setup">Setup&lt;/h4>
-&lt;p>Setting up the Azure AD integration requires the configuration of an Azure App registration. See &lt;a href="#azure-app-registration-configuration">Azure App registration configuration&lt;/a>.&lt;/p>
-&lt;p>&lt;img src="azure_ad_config.png" alt="img">&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Field Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;th>Issuer&lt;/th>
-&lt;td>Specifies the Azure App OpenID metadata endpoint.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;th>Client ID&lt;/th>
-&lt;td>Specifies the Azure App client ID.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;th>Secret&lt;/th>
-&lt;td>Specifies the Azure App secret.&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;div class="alert alert-info" role="alert">
-Before being able to save the configuration, validation of the Issuer needs to be performed by pressing the &lt;code>Test&lt;/code> button.
-&lt;/div>
-&lt;p>Once the validation has been performed and the configuration saved, the sync section will be available.&lt;/p>
-&lt;p>&lt;img src="azure_ad_sync.png" alt="img">&lt;/p>
-&lt;ul>
-&lt;li>Sync all users - Syncs all available users along with all the groups associated to the users.&lt;/li>
-&lt;li>Sync users from specific groups - Syncs all users from the selected groups.&lt;/li>
-&lt;/ul>
-&lt;div class="alert alert-info" role="alert">
-&lt;ul>
-&lt;li>At any given point the sync selection can be changed and saved, and the sync will automatically start.&lt;/li>
-&lt;/ul>
-&lt;/div>
-&lt;h4 id="azure-app-registration-configuration">Azure App registration configuration&lt;/h4>
-&lt;div class="alert alert-info" role="alert">
-The following information is only partial Azure AD reference for configuring an App registration via the Microsoft Azure Portal. Information presented in the following images might have changed.
-&lt;/div>
-&lt;ol>
-&lt;li>Create a new &lt;code>App Registration&lt;/code>&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="app_register.png" alt="img">&lt;/p>
-&lt;p>&lt;img src="app_create.png" alt="img">&lt;/p>
-&lt;ol start="2">
-&lt;li>Once you’ve registered your application you need to make a note of the Application Client ID and Metadata endpoint that provides the Open ID metadata. You can find it by click on Endpoints at the top of the application. The Application Client ID will be used for the Client ID configuration parameter of the Identity Provider in Trustgrid Portal. The metadata endpoint goes in the Issuer configuration parameter
-of the Identity Provider in Trustgrid Portal. It should be something like &lt;a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/&lt;/a>&amp;lt;app_id&amp;gt;/v2.0 Ignore what comes after the /.well-known part.&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="app_endpoints.png" alt="img">&lt;/p>
-&lt;ol start="3">
-&lt;li>Configure the Authentication piece of the Azure app&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="app_auth.png" alt="img">&lt;/p>
-&lt;ol start="4">
-&lt;li>Add a platform by selecting the “Web” type and add the corresponding redirect uri and logout url, and select both Access Tokens and ID tokens checkboxes.&lt;/li>
-&lt;/ol>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Field Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;th>Trustgrid Redirect URL&lt;/th>
-&lt;td>&lt;a href="https://id.trustgrid.io/auth/openid/callback">https://id.trustgrid.io/auth/openid/callback&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;th>Trustgrid Logout URL&lt;/th>
-&lt;td>&lt;a href="https://id.trustgrid.io/logout">https://id.trustgrid.io/logout&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;ol start="5">
-&lt;li>You need to create a secret for the authentication piece. You can select the expiration to be any of the selections. Once you create the secret make sure to make a note of the “value” since that piece of information is what is going to be used under the Secret configuration parameter of the Identity Provider in Trustgrid Portal.&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="app_secret.png" alt="img">&lt;/p>
-&lt;ol start="6">
-&lt;li>Once you’ve created the client secret, navigate to “Token Configuration” and add the “email” optional claim&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="app_token_config.png" alt="img">&lt;/p>
-&lt;hr></description></item><item><title>Docs: Changing Password Process with Auth0</title><link>https://trustgrid.github.io/docs/docs/user-management/users/auth0-change-password/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/user-management/users/auth0-change-password/</guid><description>
-&lt;p>Currently changing password requires users to:&lt;/p>
-&lt;ol>
-&lt;li>Log out of the portal&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="logout1.png" alt="img">&lt;/p>
-&lt;ol start="2">
-&lt;li>If needed, select &lt;code>Not your account?&lt;/code>. If yoou don&amp;rsquo;t see this option, ignore this step.&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="not-mine.png" alt="img">&lt;/p>
-&lt;ol start="3">
-&lt;li>On the login page select &lt;code>Don't remember your password?&lt;/code>&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="remember.png" alt="img">&lt;/p>
-&lt;ol start="4">
-&lt;li>Enter your email in the provided text box and click &lt;code>Send Email&lt;/code> to reset your password&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="send-email.png" alt="img">&lt;/p>
-&lt;ol start="5">
-&lt;li>You should see a notification that the email was sent on the login page.&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="notify.png" alt="img">&lt;/p>
-&lt;ol start="6">
-&lt;li>In the email, you should see information like the image below. If you still wish to reset your password, click &lt;code>Confirm&lt;/code>.&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="change.png" alt="img">&lt;/p>
-&lt;ol start="7">
-&lt;li>After clicking &lt;code>Confirm&lt;/code> you will be taken to a page where you can enter your new desired password. After you finalise it by clicking &lt;code>Reset Password&lt;/code>, you will be able to log in with your new password.&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="new-password.png" alt="img">&lt;/p></description></item><item><title>Tutorials: Changing the WAN Interface IP</title><link>https://trustgrid.github.io/docs/tutorials/wan-interface-ip/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/wan-interface-ip/</guid><description>
-&lt;div class="pageinfo pageinfo-primary">
-&lt;p>The WAN interface of a Trustgrid node is used to build connections to both the Control Plane and any Data Plane connectivity. Any change to this IP address is disruptive and presents a risk that the device will go offline if incorrect information is provided. This could potentially require a technical resource to go onsite to reconnect physical devices.&lt;/p>
-&lt;/div>
-&lt;div class="alert alert-primary" role="alert">
-To make the below changes via the Trustgrid portal the user must have the Node Administrator or Administrator role.
-The node must also be connected to the Trustgrid Control Plane to make this change via the portal.
-&lt;/div>
-&lt;p>The document details the process of updating the ETH0 - WAN Interface IP via the Trustgrid portal. This change can also be performed via the Trustgrid LocalUI .&lt;/p>
-&lt;h4 id="network-adapter-1---wan-ip-change----try-method">Network Adapter 1 - WAN IP Change - Try Method&lt;/h4>
-&lt;p>&lt;mark>Nodes must be running version 20200331 or newer to use the Try method&lt;/mark>
-Trustgrid nodes have the ability to test a new IP configuration before permanently applying the configuration to the device. The process works like this:&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>The user will enter the new IP configuration into the portal and click Try&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>The user will select the duration to try the new configuration (10, 30 or 60 minutes)&lt;/p>
-&lt;p>a. If the device successfully reconnects to the control plane after the select time the user will have the option of importing and saving this new configuration permanently, or reverting to the previous configuration.&lt;/p>
-&lt;p>b. If the device does not reconnect within the chosen duration, the device will automatically revert to its previous IP address configuration.&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>&lt;mark>The device will revert to the original IP if it is rebooted or power cycled after initiating the “try” option and before importing and saving those changes in the portal.&lt;/mark>&lt;/p>
-&lt;h4 id="changing-network-adapter-1---wan-via-try---detail-process">Changing Network Adapter 1 - WAN via Try - Detail Process&lt;/h4>
-&lt;ol>
-&lt;li>
-&lt;p>Login to the portal and navigate to the Node that you wish to reconfigure.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Confirm the node is actively connected to the cloud&lt;/p>
-&lt;blockquote>
-&lt;p>Note: If the device is not online when the below IP change is made it cannot pull this config from the device. Until it reconnects to the cloud it will continue using the original IP address.&lt;/p>
-&lt;/blockquote>
-&lt;p>a. First confirm there is a green dot next to the node name&lt;/p>
-&lt;p>&lt;img src="tester.png" alt="img">&lt;/p>
-&lt;p>b. Confirm that you can open an interactive tool such as Terminal or Sniff Interface traffic. Leave this tool open so you know it when the device&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Navigate to the Configuration &amp;gt; Network section and confirm Network Adapter 1 - WAN Interface is selected.&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="network-config.png" alt="img">&lt;/p>
-&lt;ol start="4">
-&lt;li>Set the IP settings to the desired new configuration&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="lotsa-servers.png" alt="img">&lt;/p>
-&lt;pre>&lt;code>a. Not that the IP adress and the subnet mask are to be entered in CIDR notation
-&lt;/code>&lt;/pre>
-&lt;ol start="5">
-&lt;li>SCroll down and select &lt;code>Try&lt;/code>&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="try.png" alt="img">&lt;/p>
-&lt;ol start="6">
-&lt;li>Select the duration of time the device should be allowed to be disconnected before reverting to the prior IP configuration and click &lt;code>Confirm&lt;/code>&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="apply-confirmation.png" alt="img">&lt;/p>
-&lt;ol start="7">
-&lt;li>The below warning will be presented for confirmation. You will need to type in the word &amp;lsquo;yes&amp;rsquo; to confirm.&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="type-yes.png" alt="img">&lt;/p>
-&lt;ol start="8">
-&lt;li>
-&lt;p>At this point the device will apply the new IP address and attempt to reconnect.&lt;/p>
-&lt;p>a. If the device cannot connect for the chosen duration the settings will revert to the original IP settings.&lt;/p>
-&lt;p>b. If the device successfully reconnects you will be presented with the below options. You may need to refresh the page to see these options.&lt;/p>
-&lt;p>&lt;img src="yellow-box.png" alt="img">&lt;/p>
-&lt;pre>&lt;code> i. Import - This option will update the portal to show the new IP address information.
-ii. Revert - This option will revert the portal to show the original IP address information.
-&lt;/code>&lt;/pre>
-&lt;p>c. Select the desired option and then scroll down and select &lt;code>Save&lt;/code>. Again you will be prompted to confirm the change.&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;h4 id="network-adapter-1---wan-ip-change---save-method">Network Adapter 1 - WAN IP Change - Save Method&lt;/h4>
-&lt;p>This process is very similar to the above with the exception that &lt;mark>&lt;strong>the change is permanent&lt;/strong>&lt;/mark>. The device will continue to use the configured IP address until either:&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>The device connects to the cloud using the newly saved IP, at which point this process or the above Try method can be used to reconfigure the IP remotely&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>The device is reconfigured locally using either the Trustgrid Local UI or console (contact Trustgrid Support)&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h4 id="changing-network-adapter-1---wan-via-try---detail-process-1">Changing Network Adapter 1 - WAN via Try - Detail Process&lt;/h4>
-&lt;ol>
-&lt;li>
-&lt;p>Login to the portal and navigate to the Node that you wish to reconfigure.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Confirm the node is actively connected to the cloud&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;blockquote>
-&lt;p>Note: If the device is not online when the below IP change is made it cannot pull this config from the device. Until it reconnects to the cloud it will continue using the original IP address.&lt;/p>
-&lt;/blockquote>
-&lt;pre>&lt;code>a. First confirm there is a green dot next to the node name
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="tester.png" alt="img">&lt;/p>
-&lt;pre>&lt;code>b. Confirm that you can open an interactive tool such as Terminal or Sniff Interface traffic. Leave this tool open so you know it when the device
-&lt;/code>&lt;/pre>
-&lt;ol start="3">
-&lt;li>Navigate to &lt;code>Configuration&lt;/code> -&amp;gt; &lt;code>Network&lt;/code> section and confirm Network Adapter 1 - WAN Interface is selected.&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="network-config.png" alt="img">&lt;/p>
-&lt;ol start="4">
-&lt;li>Set the IP settings to the desired new configuration&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="lotsa-servers.png" alt="img">&lt;/p>
-&lt;pre>&lt;code>a. Note that the IP address and subnet mask are to be entered in CIDR notation.
-&lt;/code>&lt;/pre>
-&lt;ol start="5">
-&lt;li>
-&lt;p>After setting the IP address click Save&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>You’ll be presented with a warning like the below. Type &amp;lsquo;yes&amp;rsquo; and click &lt;code>Confirm&lt;/code>.&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="type-yes.png" alt="img">&lt;/p>
-&lt;ol start="7">
-&lt;li>
-&lt;p>The device will be notified it has an updated configuration. It will pull this configuration down and automatically restart the Trustgrid service using the new IP address.&lt;/p>
-&lt;p>a. The restart usually takes less than a minute.&lt;/p>
-&lt;p>b. What ever interactive service you were using (Terminal, etc) should disconnect.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>After the local site networking is updated (either physically by moving a cable, or logically by updating the connected switch port config) so that the new IP address can connect the device should come back online.&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;h3 id="addition-post-ip-change-verification">Addition Post-IP Change Verification&lt;/h3>
-&lt;p>After the WAN IP has been changed there are a few areas where the WAN interface IP may have been used:&lt;/p>
-&lt;h4 id="gateway-nodes">Gateway Nodes&lt;/h4>
-&lt;p>If the Trustgrid node is acting as either a public or private gateway, you may also need to update the Public IP field under &lt;code>System&lt;/code> -&amp;gt; &lt;code>Gateway&lt;/code> -&amp;gt; &lt;code>Server Settings&lt;/code>. If your gateway is using DNS instead you will need to update that DNS record accordingly.&lt;/p>
-&lt;p>&lt;img src="private-server.png" alt="img">&lt;/p>
-&lt;h3 id="clustered-nodes">Clustered Nodes&lt;/h3>
-&lt;p>If the Trustgrid node is clustered and the WAN interface IP was being used for the cluster heartbeat you will need to adjust the IP address it is listening.&lt;/p>
-&lt;p>The heartbeat IP and port is visible under &lt;code>System&lt;/code> -&amp;gt; &lt;code>Cluster&lt;/code> of each cluster member’s node detail page.&lt;/p>
-&lt;p>&lt;img src="cluster-system.png" alt="img">&lt;/p>
-&lt;p>If the Host field is using the old WAN interface IP address, change it to the new IP and click &lt;code>Save&lt;/code>.&lt;/p>
-&lt;p>&lt;img src="cluster-comms.png" alt="img">&lt;/p>
-&lt;blockquote>
-&lt;p>If the nodes has two or more interfaces, it is typical that those LAN interface IPs will be used for the cluster heartbeat. In that case no change is required on this page.&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;p>&lt;img src="listener-details.png" alt="img">&lt;/p></description></item></channel></rss>

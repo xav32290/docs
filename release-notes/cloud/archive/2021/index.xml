@@ -1,27 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– 2021</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/</link><description>Recent content in 2021 on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>Release-Notes: August</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</guid><description>
-&lt;h2 id="tag-improvements">Tag Improvements&lt;/h2>
-&lt;p>Two major improvements regarding tags.&lt;/p>
-&lt;h3 id="cluster-members-inherit-tags">Cluster Members Inherit Tags&lt;/h3>
-&lt;p>Previously you had to set tags at the node and cluster level which required a lot of duplicate effort. Now when you configure tags at the cluster level the member nodes inherit this tag.&lt;/p>
-&lt;h3 id="tags-searchable-in-the-nodes-table">Tags Searchable in the Nodes Table&lt;/h3>
-&lt;p>With this release if you add a tag as a column to the nodes table, you can then search the table for matching values.&lt;/p>
-&lt;h2 id="nodes-table-improvements">Nodes Table Improvements&lt;/h2>
-&lt;p>Two new columns can be added to the nodes table:&lt;/p>
-&lt;h3 id="virtual-management-ip-column">Virtual Management IP Column&lt;/h3>
-&lt;p>You can now see from the table the virtual management IP assigned to each node. If you have multiple virtual networks you will have the option to select each network as a column. These columns have the prefix &lt;code>MGMT IP:&lt;/code>.&lt;/p>
-&lt;p>&lt;img src="available-columns.png" alt="Available Columns">&lt;/p>
-&lt;h3 id="device-type-column">Device Type Column&lt;/h3>
-&lt;p>You can now see what type of device, physical or virtual, is running the node software.&lt;/p>
-&lt;h2 id="generic-webhook-support-as-an-alert-channel">Generic Webhook Support as an Alert Channel&lt;/h2>
-&lt;p>This version adds the ability to publish alerts to a channel utilizing a generic webhook. This should allow integration with additional systems beyond the built-in channels Trustgrid supports.&lt;/p>
-&lt;p>To utilize either edit an existing channel or create a new one and populate the Generic Webhook section.&lt;/p>
-&lt;p>&lt;img src="generic-webhook.png" alt="Generic Webhook">&lt;/p>
-&lt;h2 id="provisioning-improvements">Provisioning Improvements&lt;/h2>
-&lt;p>There have been several changes to the Provisioning (formerly Orders) section of the Portal including:&lt;/p>
-&lt;ul>
-&lt;li>Due Dates for Orders&lt;/li>
-&lt;li>Support for specific device models (as opposed to just hardware vs virtual)&lt;/li>
-&lt;/ul></description></item><item><title>Release-Notes: March</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– 2021</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/</link><description>Recent content in 2021 on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>Release-Notes: March</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</guid><description>
 &lt;h2 id="improved-identity-provider-integration">Improved Identity Provider Integration&lt;/h2>
 &lt;p>Trustgrid has supported SAML integration to manage portal access for some time. As we began supporting additional services, such as Remote Access applications, more flexibility was needed.&lt;/p>
 &lt;h2 id="openid-support">OpenID Support&lt;/h2>
@@ -112,7 +89,30 @@
 &lt;h2 id="proxyarp-option-for-outside-nats">ProxyARP Option for Outside NATs&lt;/h2>
 &lt;p>Previously the Trustgrid node would ARP on the local network for any IP contained in the Local CIDR of an outside NAT. For example, if your Outside NAT Local CIDR was for 192.168.1.0/24, the node would respond to ARP requests for any IP in that network (192.168.1.1 - .254).&lt;/p>
 &lt;p>This is still the default behavior, but there is now an option to disable this functionality when configuring Outside NATs.&lt;/p>
-&lt;p>&lt;img src="proxy-arp-option.png" alt="Proxy ARP Option">&lt;/p></description></item><item><title>Release-Notes: September</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</guid><description>
+&lt;p>&lt;img src="proxy-arp-option.png" alt="Proxy ARP Option">&lt;/p></description></item><item><title>Release-Notes: August</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</guid><description>
+&lt;h2 id="tag-improvements">Tag Improvements&lt;/h2>
+&lt;p>Two major improvements regarding tags.&lt;/p>
+&lt;h3 id="cluster-members-inherit-tags">Cluster Members Inherit Tags&lt;/h3>
+&lt;p>Previously you had to set tags at the node and cluster level which required a lot of duplicate effort. Now when you configure tags at the cluster level the member nodes inherit this tag.&lt;/p>
+&lt;h3 id="tags-searchable-in-the-nodes-table">Tags Searchable in the Nodes Table&lt;/h3>
+&lt;p>With this release if you add a tag as a column to the nodes table, you can then search the table for matching values.&lt;/p>
+&lt;h2 id="nodes-table-improvements">Nodes Table Improvements&lt;/h2>
+&lt;p>Two new columns can be added to the nodes table:&lt;/p>
+&lt;h3 id="virtual-management-ip-column">Virtual Management IP Column&lt;/h3>
+&lt;p>You can now see from the table the virtual management IP assigned to each node. If you have multiple virtual networks you will have the option to select each network as a column. These columns have the prefix &lt;code>MGMT IP:&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="available-columns.png" alt="Available Columns">&lt;/p>
+&lt;h3 id="device-type-column">Device Type Column&lt;/h3>
+&lt;p>You can now see what type of device, physical or virtual, is running the node software.&lt;/p>
+&lt;h2 id="generic-webhook-support-as-an-alert-channel">Generic Webhook Support as an Alert Channel&lt;/h2>
+&lt;p>This version adds the ability to publish alerts to a channel utilizing a generic webhook. This should allow integration with additional systems beyond the built-in channels Trustgrid supports.&lt;/p>
+&lt;p>To utilize either edit an existing channel or create a new one and populate the Generic Webhook section.&lt;/p>
+&lt;p>&lt;img src="generic-webhook.png" alt="Generic Webhook">&lt;/p>
+&lt;h2 id="provisioning-improvements">Provisioning Improvements&lt;/h2>
+&lt;p>There have been several changes to the Provisioning (formerly Orders) section of the Portal including:&lt;/p>
+&lt;ul>
+&lt;li>Due Dates for Orders&lt;/li>
+&lt;li>Support for specific device models (as opposed to just hardware vs virtual)&lt;/li>
+&lt;/ul></description></item><item><title>Release-Notes: September</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</guid><description>
 &lt;h2 id="container--improvements">Container Improvements&lt;/h2>
 &lt;p>Trustgrid has greatly enhanced the container features we support and this release makes these features available to all users.&lt;/p>
 &lt;h3 id="container-management">Container Management&lt;/h3>
@@ -143,4 +143,26 @@
 &lt;li>Order Status Change&lt;/li>
 &lt;li>Order Customer Update&lt;/li>
 &lt;/ul>
-&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels">Channels&lt;/a>.&lt;/p></description></item></channel></rss>
+&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels">Channels&lt;/a>.&lt;/p></description></item><item><title>Release-Notes: December</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</guid><description>
+&lt;h2 id="data-plane-status-table">Data Plane Status Table&lt;/h2>
+&lt;p>Previously Trustgrid had a visual indicator on the Node detail page to show the Data Plane health of a node, but it only showed the state as &lt;code>Connected&lt;/code>, &lt;code>Degraded&lt;/code> or &lt;code>Disconnected&lt;/code>. While connected and disconnected were clear, there was little information on why the status was Degraded.&lt;/p>
+&lt;p>With this release hovering over the Data Plane status icon will bring up a pop-up screen showing all the peers and and their connection status. Additionally, if the peer is connected it will show:&lt;/p>
+&lt;ul>
+&lt;li>The public IP of the peer&lt;/li>
+&lt;li>The mode used to connect to with the peer (TLS or UDP)&lt;/li>
+&lt;li>The route trip time (RTT) between the devices when the tool was last run.&lt;/li>
+&lt;/ul>
+&lt;p>This data can be searched and refreshed. In a future release we will make historical RTT time viewable for each peer.&lt;/p>
+&lt;p>&lt;img src="data-plane-hover.png" alt="Data Plane Status">&lt;/p>
+&lt;h2 id="flow-log-improvements">Flow Log Improvements&lt;/h2>
+&lt;p>Flow logs provide valuable metadata about traffic across Trustgrid networks but our search had performance and reliability issues that made it difficult to use. With this release we’ve rearchitected how search these logs to allow for a significant performance improvement.&lt;/p>
+&lt;h2 id="improved-ip-geolocation-data">Improved IP Geolocation Data&lt;/h2>
+&lt;p>Trustgrid has changed our public IP geolocation data providers to improve the accuracy of the information we use to place nodes on our Network Maps. This new provider will also allow us to present additional information such as ISP and ASN in the future, which could be handy for identifying when multiple devices from the same ISP or ASN start having issues.&lt;/p>
+&lt;h2 id="custom-portal-roles">Custom Portal Roles&lt;/h2>
+&lt;p>Trustgrid is working on moving our permission structure beyond the four default roles (Monitor, Operator, Node-Administrator and Administrator) to allow customers to tailor roles to just the permissions their users need. For example, you could allow a user Monitor (read-only) permissions to most of the Trustgrid environment but grant them the ability to stop and start containers.&lt;/p>
+&lt;p>Currently this requires working with Trustgrid Support to define these new roles but once defined they can be assigned by Node Administrators and Administrators.&lt;/p>
+&lt;h2 id="other-improvements">Other Improvements&lt;/h2>
+&lt;ul>
+&lt;li>You can now search the Nodes table for Management IPs and Device types&lt;/li>
+&lt;li>Fixed a broken link in the new user invite email for customers without IDP integration&lt;/li>
+&lt;/ul></description></item></channel></rss>
