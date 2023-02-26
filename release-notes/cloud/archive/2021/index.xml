@@ -1,4 +1,27 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– 2021</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/</link><description>Recent content in 2021 on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>Release-Notes: March</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– 2021</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/</link><description>Recent content in 2021 on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>Release-Notes: August</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</guid><description>
+&lt;h2 id="tag-improvements">Tag Improvements&lt;/h2>
+&lt;p>Two major improvements regarding tags.&lt;/p>
+&lt;h3 id="cluster-members-inherit-tags">Cluster Members Inherit Tags&lt;/h3>
+&lt;p>Previously you had to set tags at the node and cluster level which required a lot of duplicate effort. Now when you configure tags at the cluster level the member nodes inherit this tag.&lt;/p>
+&lt;h3 id="tags-searchable-in-the-nodes-table">Tags Searchable in the Nodes Table&lt;/h3>
+&lt;p>With this release if you add a tag as a column to the nodes table, you can then search the table for matching values.&lt;/p>
+&lt;h2 id="nodes-table-improvements">Nodes Table Improvements&lt;/h2>
+&lt;p>Two new columns can be added to the nodes table:&lt;/p>
+&lt;h3 id="virtual-management-ip-column">Virtual Management IP Column&lt;/h3>
+&lt;p>You can now see from the table the virtual management IP assigned to each node. If you have multiple virtual networks you will have the option to select each network as a column. These columns have the prefix &lt;code>MGMT IP:&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="available-columns.png" alt="Available Columns">&lt;/p>
+&lt;h3 id="device-type-column">Device Type Column&lt;/h3>
+&lt;p>You can now see what type of device, physical or virtual, is running the node software.&lt;/p>
+&lt;h2 id="generic-webhook-support-as-an-alert-channel">Generic Webhook Support as an Alert Channel&lt;/h2>
+&lt;p>This version adds the ability to publish alerts to a channel utilizing a generic webhook. This should allow integration with additional systems beyond the built-in channels Trustgrid supports.&lt;/p>
+&lt;p>To utilize either edit an existing channel or create a new one and populate the Generic Webhook section.&lt;/p>
+&lt;p>&lt;img src="generic-webhook.png" alt="Generic Webhook">&lt;/p>
+&lt;h2 id="provisioning-improvements">Provisioning Improvements&lt;/h2>
+&lt;p>There have been several changes to the Provisioning (formerly Orders) section of the Portal including:&lt;/p>
+&lt;ul>
+&lt;li>Due Dates for Orders&lt;/li>
+&lt;li>Support for specific device models (as opposed to just hardware vs virtual)&lt;/li>
+&lt;/ul></description></item><item><title>Release-Notes: March</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</guid><description>
 &lt;h2 id="improved-identity-provider-integration">Improved Identity Provider Integration&lt;/h2>
 &lt;p>Trustgrid has supported SAML integration to manage portal access for some time. As we began supporting additional services, such as Remote Access applications, more flexibility was needed.&lt;/p>
 &lt;h2 id="openid-support">OpenID Support&lt;/h2>

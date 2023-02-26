@@ -1682,7 +1682,30 @@ Anything that can be done in the Trustgrid Portal can be done with the API (exce
 &lt;p>After making changes to a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual network&lt;/a>, you can review outstanding changes. A list of changes will show who made each change, with a before/after table if appropriate.&lt;/p>
 &lt;p>&lt;img src="outstanding-changes.png" alt="img">&lt;/p>
 &lt;p>Individual changes can be rejected by clicking the delete icon at the top.&lt;/p>
-&lt;p>Once changes are applied, outstanding changes will disappear from the review page, and &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> will receive the configuration updates.&lt;/p></description></item><item><title>Docs: Authentication Audits</title><link>https://trustgrid.github.io/docs/docs/audits/authentication/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/audits/authentication/</guid><description>
+&lt;p>Once changes are applied, outstanding changes will disappear from the review page, and &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> will receive the configuration updates.&lt;/p></description></item><item><title>Release-Notes: August</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</guid><description>
+&lt;h2 id="tag-improvements">Tag Improvements&lt;/h2>
+&lt;p>Two major improvements regarding tags.&lt;/p>
+&lt;h3 id="cluster-members-inherit-tags">Cluster Members Inherit Tags&lt;/h3>
+&lt;p>Previously you had to set tags at the node and cluster level which required a lot of duplicate effort. Now when you configure tags at the cluster level the member nodes inherit this tag.&lt;/p>
+&lt;h3 id="tags-searchable-in-the-nodes-table">Tags Searchable in the Nodes Table&lt;/h3>
+&lt;p>With this release if you add a tag as a column to the nodes table, you can then search the table for matching values.&lt;/p>
+&lt;h2 id="nodes-table-improvements">Nodes Table Improvements&lt;/h2>
+&lt;p>Two new columns can be added to the nodes table:&lt;/p>
+&lt;h3 id="virtual-management-ip-column">Virtual Management IP Column&lt;/h3>
+&lt;p>You can now see from the table the virtual management IP assigned to each node. If you have multiple virtual networks you will have the option to select each network as a column. These columns have the prefix &lt;code>MGMT IP:&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="available-columns.png" alt="Available Columns">&lt;/p>
+&lt;h3 id="device-type-column">Device Type Column&lt;/h3>
+&lt;p>You can now see what type of device, physical or virtual, is running the node software.&lt;/p>
+&lt;h2 id="generic-webhook-support-as-an-alert-channel">Generic Webhook Support as an Alert Channel&lt;/h2>
+&lt;p>This version adds the ability to publish alerts to a channel utilizing a generic webhook. This should allow integration with additional systems beyond the built-in channels Trustgrid supports.&lt;/p>
+&lt;p>To utilize either edit an existing channel or create a new one and populate the Generic Webhook section.&lt;/p>
+&lt;p>&lt;img src="generic-webhook.png" alt="Generic Webhook">&lt;/p>
+&lt;h2 id="provisioning-improvements">Provisioning Improvements&lt;/h2>
+&lt;p>There have been several changes to the Provisioning (formerly Orders) section of the Portal including:&lt;/p>
+&lt;ul>
+&lt;li>Due Dates for Orders&lt;/li>
+&lt;li>Support for specific device models (as opposed to just hardware vs virtual)&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Authentication Audits</title><link>https://trustgrid.github.io/docs/docs/audits/authentication/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/audits/authentication/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trustgrid records information for authentication attempts into the control plane. This information can be used to troubleshoot authentication issues, or to monitor for suspicious activity.&lt;/p>
 &lt;/div>
@@ -1968,7 +1991,4 @@ ii. Revert - This option will revert the portal to show the original IP address 
 &lt;p>&lt;img src="cluster-comms.png" alt="img">&lt;/p>
 &lt;blockquote>
 &lt;p>If the nodes has two or more interfaces, it is typical that those LAN interface IPs will be used for the cluster heartbeat. In that case no change is required on this page.&lt;/p>
-&lt;/blockquote></description></item><item><title>Help-Center: Check Trustgrid Services Status</title><link>https://trustgrid.github.io/docs/help-center/trustgrid-service-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/trustgrid-service-status/</guid><description>
-&lt;p>View the status of all Trustgrid services on our &lt;a href="https://status.trustgrid.io/">Statuspage Account&lt;/a>&lt;/p>
-&lt;p>Within the Trustgrid Portal, hover over the username in the upper right corner and then select &lt;code>Status&lt;/code>.&lt;/p>
-&lt;p>&lt;img src="status.png" alt="img">&lt;/p></description></item></channel></rss>
+&lt;/blockquote></description></item></channel></rss>
