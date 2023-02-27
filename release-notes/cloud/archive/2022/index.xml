@@ -218,4 +218,17 @@
 &lt;li>&lt;code>public&lt;/code> - public will cover all other IP v4 addresses&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></description></item><item><title>Release-Notes: August</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/august/</guid><description>
+&lt;h2 id="resource-scoped-permission-policies">Resource-Scoped Permission Policies&lt;/h2>
+&lt;p>The &lt;a href="https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/may/">May 2022 release&lt;/a> enabled the creation of more granular permissions policies. With this release we’ve added the ability to grant permissions to specific &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> or &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> resources. This enables you to limit a user to only see specific devices with very limited permissions.&lt;/p>
+&lt;p>Polices now have a &lt;code>Resources&lt;/code> section. This can be populated with a list of Trustgrid Resource Names (TGRN) to limit where the defined permissions are applied. See the documentation on &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#resource-scoped-policies">Resource-Scoped Polices&lt;/a> for more info.&lt;/p>
+&lt;h2 id="monitor-network-hops">Monitor Network Hops&lt;/h2>
+&lt;p>Trustgrid has add a troubleshooting feature to collect traceroute like data on a regular basis. When enabled a node will collect 3 samples a minute and store the data in the cloud. This data will assist in determining the source of packet loss or high latency between devices. See &lt;a href="https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Monitoring Network Hops to Peers&lt;/a> to learn more.&lt;/p>
+&lt;p>&lt;img src="network-hops.png" alt="Network Hops">&lt;/p>
+&lt;h2 id="show-isp-and-asn-for-public-ip">Show ISP and ASN for Public IP&lt;/h2>
+&lt;p>Trustgrid now uses our IP geolocation database provider to supply the internet service provider (ISP) and autonomous system number (ASN) associated with the public IP of nodes. This info is visible under History → Location, listed under the IP-Derived Info panel.&lt;/p>
+&lt;p>&lt;img src="asn-isp.png" alt="ISP and ASN">&lt;/p>
+&lt;p>It should be noted the accuracy of this information varies between ISPs&lt;/p>
+&lt;h2 id="identity-provider-idp-logins-in-authentication-audits">Identity Provider (IdP) Logins in Authentication Audits&lt;/h2>
+&lt;p>Previously, the logs under the Operations → Authentication Audits only displayed logins using the Trustgrid native authentication provider. If you were using an IdP you would need to review the providers logs to see when users logged in.&lt;/p>
+&lt;p>With this release we now display IdP portal logins the same way native logins are reported.&lt;/p></description></item></channel></rss>
