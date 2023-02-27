@@ -42,12 +42,12 @@ The first change you’ll notice is that clicking Provisioning opens a new tab. 
 The individual order screen is now a single page view to reduce the need to switch between tabs.  And orders now support attaching files such as legacy device configurations or diagrams that might be useful for configuring the new devices. 
 
 ### Order Notifications 
-You can now configure [Alarm Filters](/docs/alarms/alarm-filters) for four new order based events:
+You can now configure [Alarm Filters]({{<ref "/docs/alarms/alarm-filters">}}) for four new order based events:
 
 * Order Created
 * Order Commented
 * Order Status Change
 * Order Customer Update 
 
-These events can then be sent to existing or newly defined [Channels](/docs/alarms/channels).
+These events can then be sent to existing or newly defined [channels]({{<ref "/docs/alarms/channels">}}).
 
