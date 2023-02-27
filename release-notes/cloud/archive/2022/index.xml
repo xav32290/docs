@@ -113,4 +113,68 @@
 &lt;p>&lt;img src="node-visor.png" alt="AWS Metadata">&lt;/p>
 &lt;h2 id="timestamps-for-virtual-network-changes">Timestamps for Virtual Network Changes&lt;/h2>
 &lt;p>Before changes are committed to a virtual network setting, such as the virtual network route table, they are listed in the Changes panel for approval. This made it easier to see if other users had outstanding changes that might be in conflict. However, it wasn’t clear if the other user just made that change or if it had been left accidentally. With this release we’ve added a timestamp that shows when the user saved the change.&lt;/p>
-&lt;p>&lt;img src="modified-route.png" alt="Change Example">&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="modified-route.png" alt="Change Example">&lt;/p></description></item><item><title>Release-Notes: May</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/may/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/may/</guid><description>
+&lt;h2 id="trustgrid-permissions-restructuring">Trustgrid Permissions Restructuring&lt;/h2>
+&lt;p>Trustgrid’s portal and API have used Role based permissions to manage access within the Trustgrid system. As Trustgrid has expanded our feature set, adding features like containers, and our user base have grown the predefined role structure has become a poor fit. Many times these new features required Trustgrid Support to grant access to users. Additionally, what each role could and could not do was opaque to customers.&lt;/p>
+&lt;p>With this release will be migrating to a &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/">policy-based&lt;/a> approach that will allow customers to independently tailor permissions to meet their own use cases. Customers will also be able to see exactly what rights policies allow and what policy is granting a user access &lt;a href="https://trustgrid.github.io/docs/docs/user-management/users/#view-effective-permissions">directly in the portal&lt;/a>.&lt;/p>
+&lt;p>This migration will also allow future enhancements such as automatic policy assignment based on group membership, resource based policies limiting users to specific nodes/clusters, and more.&lt;/p>
+&lt;h3 id="how-it-works">How it Works&lt;/h3>
+&lt;p>The new policy permission works as such:&lt;/p>
+&lt;ul>
+&lt;li>Users can be attached to one or more policy&lt;/li>
+&lt;li>Policies are defined that either allow or explicitly deny permissions or actions
+&lt;ul>
+&lt;li>Permission are grouped according to the related feature/objects set
+&lt;ul>
+&lt;li>Read allows a user to view that group of related objects&lt;/li>
+&lt;li>Modify will allow users to add, change or delete those objects&lt;/li>
+&lt;li>Additional actions such as running tools on a node can be allowed/denied&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>A denied permission will override any allowed permission in another policy&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="migration-of-role-permissions-to-policies">Migration of Role Permissions to Policies&lt;/h3>
+&lt;p>Trustgrid previously had 4 predefined roles. With this release these will be migrated into 5 new builtin policies, and an additional policy will be created. As part of this migration Trustgrid is also making sure these policies only include the “least-privileges” required to perform the intent of each of the previously defined roles.&lt;/p>
+&lt;p>During the release process users previously assigned a role will be automatically assigned the corresponding policy or policies listed below&lt;/p>
+&lt;p>Below is a list of our historic roles and the policies that replace them plus any known changes. If users previously assigned a role lose a tool or function they need, they can either be attached to a higher level builtin policy with the appropriate permissions or a custom policy can be created and attached.&lt;/p>
+&lt;h4 id="monitor-now-tg-builtin-monitorhahahugoshortcode-s2-hbhb-policy">Monitor (now &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#tg-builtin-monitor">tg-builtin-monitor&lt;/a> policy)&lt;/h4>
+&lt;p>Changes:&lt;/p>
+&lt;ul>
+&lt;li>Monitor no longer has access to troubleshooting tools. These were removed because some of these seemed to exceed the privileges required for the user types expected to have this role.&lt;/li>
+&lt;/ul>
+&lt;h4 id="operator-now-tg-builtin-operatorhahahugoshortcode-s3-hbhb-policy">Operator (now &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#tg-builtin-operator">tg-builtin-operator&lt;/a> policy)&lt;/h4>
+&lt;p>No changes.&lt;/p>
+&lt;h4 id="node-administrator-now-tg-builtin-node-adminhahahugoshortcode-s4-hbhb-policy">Node-Administrator (now &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#tg-builtin-node-admin">tg-builtin-node-admin&lt;/a> policy)&lt;/h4>
+&lt;p>No changes.&lt;/p>
+&lt;h4 id="administrator-now-tg-builtin-adminhahahugoshortcode-s5-hbhb-and-tg-builtin-access-adminhahahugoshortcode-s6-hbhb-policy">Administrator (now &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#tg-builtin-admin">tg-builtin-admin&lt;/a> and &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#tg-builtin-access-admin">tg-builtin-access-admin&lt;/a> policy)&lt;/h4>
+&lt;p>The administrator role previously included both the ability to make almost all technical changes and the ability to control access and permission to the portal.&lt;/p>
+&lt;p>Trustgrid determined that these functions are separate and many companies may want to further restrict the access administration to a subset of users. The functions have been split into two policies:&lt;/p>
+&lt;ul>
+&lt;li>builtin-tg-admin - Full access to make technical changes&lt;/li>
+&lt;li>builtin-tg-access-admin - Ability to add or invite users, change and attach policies, and configure Identity Providers&lt;/li>
+&lt;/ul>
+&lt;p>However, Trustgrid cannot determine who within an organization should and should not have each of these functions so during this migration any user that was previously assigned the Administrator role will be attached to both policies.&lt;/p>
+&lt;blockquote>
+&lt;p>It is highly recommended customers review which users are attached to the builtin-tg-access-admin policy and remove from those that do not require it.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="provisioning-order-improvements">Provisioning Order Improvements&lt;/h2>
+&lt;h3 id="contacts-and-stakeholders">Contacts and Stakeholders&lt;/h3>
+&lt;p>Orders historically only had fields for a general order contact and a technical contact. With this release additional stakeholders can be listed (such as a project manager associated with the project or other executive contacts).&lt;/p>
+&lt;p>&lt;img src="stakeholders.png" alt="Stakeholders List">&lt;/p>
+&lt;p>The goal is to eventually provide a method to send status updates to all contacts in a more automated fashion as order progress.&lt;/p>
+&lt;h3 id="add-provisioning-contacts-for-your-organization">Add Provisioning Contacts for your Organization&lt;/h3>
+&lt;p>If you have stakeholders that will frequently be used on orders, you can add them as Contacts.&lt;/p>
+&lt;p>&lt;img src="contacts.png" alt="Add Contact">&lt;/p>
+&lt;p>These will then be available to select in the stakeholders section of an order and will auto-polulate the fields&lt;/p>
+&lt;p>&lt;img src="add-stakeholder.png" alt="Add Stakeholder">&lt;/p>
+&lt;h3 id="activity-report">Activity Report&lt;/h3>
+&lt;p>&lt;img src="activity-report.png" alt="Activity Report">&lt;/p>
+&lt;p>The new Activity Report will list all orders that transitioned to the selected Status during the selected Time Range and the results can be exported as a CSV. This can be useful for tracking progress of provisioning projects over time.&lt;/p>
+&lt;h3 id="rack-mount-field-added">Rack Mount Field Added&lt;/h3>
+&lt;p>Some Trustgrid hardware has the option of including rack mounts. Previously this was documented in notes, but with this release a field has been added. If an appliance type does not have a rack mount option this will show as “unavailable”&lt;/p>
+&lt;p>&lt;img src="rack-mounts.png" alt="Rack Mount">&lt;/p>
+&lt;blockquote>
+&lt;p>Access to the Provisioning section of the portal is not a part of a builtin policy at this time. Access admins should create policies to grant users orders permissions and attach to the appropriate users.&lt;/p>
+&lt;/blockquote></description></item></channel></rss>
