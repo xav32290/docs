@@ -136,14 +136,14 @@
 &lt;p>The first change you’ll notice is that clicking Provisioning opens a new tab. The orders table now makes it easier to search and filter the results.&lt;/p>
 &lt;p>The individual order screen is now a single page view to reduce the need to switch between tabs. And orders now support attaching files such as legacy device configurations or diagrams that might be useful for configuring the new devices.&lt;/p>
 &lt;h3 id="order-notifications">Order Notifications&lt;/h3>
-&lt;p>You can now configure &lt;a href="https://trustgrid.github.io/docs/docs/alarms/alarm-filters">Alarm Filters&lt;/a> for four new order based events:&lt;/p>
+&lt;p>You can now configure &lt;a href="https://trustgrid.github.io/docs/docs/alarms/alarm-filters/">Alarm Filters&lt;/a> for four new order based events:&lt;/p>
 &lt;ul>
 &lt;li>Order Created&lt;/li>
 &lt;li>Order Commented&lt;/li>
 &lt;li>Order Status Change&lt;/li>
 &lt;li>Order Customer Update&lt;/li>
 &lt;/ul>
-&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels">Channels&lt;/a>.&lt;/p></description></item><item><title>Release-Notes: December</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</guid><description>
+&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a>.&lt;/p></description></item><item><title>Release-Notes: December</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</guid><description>
 &lt;h2 id="data-plane-status-table">Data Plane Status Table&lt;/h2>
 &lt;p>Previously Trustgrid had a visual indicator on the Node detail page to show the Data Plane health of a node, but it only showed the state as &lt;code>Connected&lt;/code>, &lt;code>Degraded&lt;/code> or &lt;code>Disconnected&lt;/code>. While connected and disconnected were clear, there was little information on why the status was Degraded.&lt;/p>
 &lt;p>With this release hovering over the Data Plane status icon will bring up a pop-up screen showing all the peers and and their connection status. Additionally, if the peer is connected it will show:&lt;/p>
