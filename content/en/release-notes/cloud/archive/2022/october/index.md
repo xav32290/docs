@@ -18,14 +18,14 @@ We display the cluster health on the list view:
 
 And on the cluster overview:
 
-{{< cardpane >}}
-  {{< card header="Unhealthy notice on cluster overview" >}}
+{{<cardpane>}}
+  {{<card header="Unhealthy notice on cluster overview">}}
 ![cluster unhealthy notice](cluster-unhealthy-notice.png)
-  {{< /card >}}
-  {{< card header="Offline notice on cluster overview" >}}
+  {{</card>}}
+  {{<card header="Offline notice on cluster overview">}}
 ![cluster offline notice](cluster-offline-notice.png)
-  {{< /card >}}
-{{< /cardpane >}}
+  {{</card>}}
+{{</cardpane>}}
 
 ### Cluster Status Endpoint
 
