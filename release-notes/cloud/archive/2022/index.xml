@@ -231,4 +231,63 @@
 &lt;p>It should be noted the accuracy of this information varies between ISPs&lt;/p>
 &lt;h2 id="identity-provider-idp-logins-in-authentication-audits">Identity Provider (IdP) Logins in Authentication Audits&lt;/h2>
 &lt;p>Previously, the logs under the Operations → Authentication Audits only displayed logins using the Trustgrid native authentication provider. If you were using an IdP you would need to review the providers logs to see when users logged in.&lt;/p>
-&lt;p>With this release we now display IdP portal logins the same way native logins are reported.&lt;/p></description></item></channel></rss>
+&lt;p>With this release we now display IdP portal logins the same way native logins are reported.&lt;/p></description></item><item><title>Release-Notes: October</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october/</guid><description>
+&lt;h2 id="cluster-improvements">Cluster Improvements&lt;/h2>
+&lt;h3 id="cluster-site-health-state">Cluster Site Health State&lt;/h3>
+&lt;p>With this release we introduce the concept of &lt;a href="https://trustgrid.github.io/docs/docs/clusters/cluster-health/">Cluster Site Health State&lt;/a>. This addition makes it more obvious when there is an issue with a cluster at a site and possible to configure &lt;a href="https://trustgrid.github.io/docs/docs/alarms/alarm-filters/">alarm filters&lt;/a> to notify your team when changes occur.&lt;/p>
+&lt;p>We display the cluster health on the list view:&lt;/p>
+&lt;img src="cluster-list.png" width="400px" />
+&lt;p>And on the cluster overview:&lt;/p>
+&lt;div class="td-card-deck card-deck mb-4">
+&lt;div class="td-card card mb-4">
+&lt;div class="card-header">
+Unhealthy notice on cluster overview
+&lt;/div>
+&lt;div class="card-body">
+&lt;p class="card-text">
+&lt;img src="cluster-unhealthy-notice.png" alt="cluster unhealthy notice">
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="td-card card mb-4">
+&lt;div class="card-header">
+Offline notice on cluster overview
+&lt;/div>
+&lt;div class="card-body">
+&lt;p class="card-text">
+&lt;img src="cluster-offline-notice.png" alt="cluster offline notice">
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="cluster-status-endpoint">Cluster Status Endpoint&lt;/h3>
+&lt;p>When placing a load balancer in front of a Trustgrid cluster it is necessary to give the load balancer a way to determine which node is active so that it can send the traffic appropriately. We’ve added an optional HTTP endpoint that will listen on cluster members but will only return a 200 code on the active member of the cluster.&lt;/p>
+&lt;p>There is now a new section under System → Cluster for cluster members where you can define the port on which the node will listen. This endpoint will always listen on the WAN interface IP.&lt;/p>
+&lt;img src="status-endpoint.png" width="600px" />
+&lt;blockquote>
+&lt;p>Requires node version 20220808 or newer&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="enable-different-interface-routes-for-cluster-members">Enable Different Interface Routes for Cluster Members&lt;/h3>
+&lt;p>Traditionally, cluster members share the interface routes configured at the cluster level. This is usually desirable, but certain situations can require each member to have a different route defined. For example, If you have deployed your cluster members in different AWS Availability Zones for redundancy and you have the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/#cluster-heartbeat-communication">heartbeat communication&lt;/a> on a LAN interface each would need a different route.&lt;/p>
+&lt;p>With this release you will see the ability to “Add Entry” for additional routes under the LAN interface section of cluster members. You will also see a read-only entry with a blue square for any cluster-defined route.&lt;/p>
+&lt;p>&lt;img src="interface-routes.png" alt="interface routes">&lt;/p>
+&lt;h2 id="data-plane-panel-improvements">Data Plane Panel Improvements&lt;/h2>
+&lt;h3 id="easier-peer-selection">Easier Peer Selection&lt;/h3>
+&lt;p>Previously, to select a node in the data plane peers table you had to click exactly on the node’s name. Now, you can click anywhere in the name box.&lt;/p>
+&lt;h3 id="display-data-plane-stats-for-gateways">Display Data Plane Stats for Gateways&lt;/h3>
+&lt;p>Prior to this release we only displayed Tunnel Latency and &lt;a href="https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Network Hops&lt;/a> (when enabled) on edge node devices. With this release you can now navigate to a gateway’s data plane panel and select a client edge node. The data displayed is based on the edge node’s perspective but can still provide useful information on the state of the connection between devices.&lt;/p>
+&lt;h2 id="other-improvements">Other Improvements&lt;/h2>
+&lt;h3 id="flow-log-advanced-search-by-tcp-flags">Flow Log Advanced Search by TCP Flags&lt;/h3>
+&lt;p>The Flow Log Advanced Search now has the ability to search for TCP flows with specified TCP flags. In the TCP Flag section just click the flags that you want to search for and the matching flows will be returned. If multiple flags are selected, only flows with all matching flags will be returned.&lt;/p>
+&lt;p>&lt;img src="flow-logs-search.png" alt="advanced search">&lt;/p>
+&lt;h3 id="node-audits-shows-node-version-changes">Node Audits Shows Node Version Changes&lt;/h3>
+&lt;p>When a node is upgraded and successfully reconnects, the Node Audits section will display the new and previous versions.&lt;/p>
+&lt;p>&lt;img src="audits.png" alt="audits">&lt;/p>
+&lt;h3 id="swagger-api-improvements">Swagger API Improvements&lt;/h3>
+&lt;p>A number of new areas are now documented in our public swagger documentation: &lt;a href="https://portal.trustgrid.io/api-docs/">https://portal.trustgrid.io/api-docs/&lt;/a>&lt;/p>
+&lt;p>The new sections include:&lt;/p>
+&lt;ul>
+&lt;li>Additional Audit endpoints&lt;/li>
+&lt;li>Container and VM configuration&lt;/li>
+&lt;li>ZTNA Gateway&lt;/li>
+&lt;/ul></description></item></channel></rss>

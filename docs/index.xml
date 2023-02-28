@@ -824,7 +824,66 @@ Gateway nodes will list edge nodes in their peers table
 &lt;li>Order Status Change&lt;/li>
 &lt;li>Order Customer Update&lt;/li>
 &lt;/ul>
-&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a>.&lt;/p></description></item><item><title>Release-Notes: December</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</guid><description>
+&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a>.&lt;/p></description></item><item><title>Release-Notes: October</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october/</guid><description>
+&lt;h2 id="cluster-improvements">Cluster Improvements&lt;/h2>
+&lt;h3 id="cluster-site-health-state">Cluster Site Health State&lt;/h3>
+&lt;p>With this release we introduce the concept of &lt;a href="https://trustgrid.github.io/docs/docs/clusters/cluster-health/">Cluster Site Health State&lt;/a>. This addition makes it more obvious when there is an issue with a cluster at a site and possible to configure &lt;a href="https://trustgrid.github.io/docs/docs/alarms/alarm-filters/">alarm filters&lt;/a> to notify your team when changes occur.&lt;/p>
+&lt;p>We display the cluster health on the list view:&lt;/p>
+&lt;img src="cluster-list.png" width="400px" />
+&lt;p>And on the cluster overview:&lt;/p>
+&lt;div class="td-card-deck card-deck mb-4">
+&lt;div class="td-card card mb-4">
+&lt;div class="card-header">
+Unhealthy notice on cluster overview
+&lt;/div>
+&lt;div class="card-body">
+&lt;p class="card-text">
+&lt;img src="cluster-unhealthy-notice.png" alt="cluster unhealthy notice">
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="td-card card mb-4">
+&lt;div class="card-header">
+Offline notice on cluster overview
+&lt;/div>
+&lt;div class="card-body">
+&lt;p class="card-text">
+&lt;img src="cluster-offline-notice.png" alt="cluster offline notice">
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="cluster-status-endpoint">Cluster Status Endpoint&lt;/h3>
+&lt;p>When placing a load balancer in front of a Trustgrid cluster it is necessary to give the load balancer a way to determine which node is active so that it can send the traffic appropriately. We’ve added an optional HTTP endpoint that will listen on cluster members but will only return a 200 code on the active member of the cluster.&lt;/p>
+&lt;p>There is now a new section under System → Cluster for cluster members where you can define the port on which the node will listen. This endpoint will always listen on the WAN interface IP.&lt;/p>
+&lt;img src="status-endpoint.png" width="600px" />
+&lt;blockquote>
+&lt;p>Requires node version 20220808 or newer&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="enable-different-interface-routes-for-cluster-members">Enable Different Interface Routes for Cluster Members&lt;/h3>
+&lt;p>Traditionally, cluster members share the interface routes configured at the cluster level. This is usually desirable, but certain situations can require each member to have a different route defined. For example, If you have deployed your cluster members in different AWS Availability Zones for redundancy and you have the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/#cluster-heartbeat-communication">heartbeat communication&lt;/a> on a LAN interface each would need a different route.&lt;/p>
+&lt;p>With this release you will see the ability to “Add Entry” for additional routes under the LAN interface section of cluster members. You will also see a read-only entry with a blue square for any cluster-defined route.&lt;/p>
+&lt;p>&lt;img src="interface-routes.png" alt="interface routes">&lt;/p>
+&lt;h2 id="data-plane-panel-improvements">Data Plane Panel Improvements&lt;/h2>
+&lt;h3 id="easier-peer-selection">Easier Peer Selection&lt;/h3>
+&lt;p>Previously, to select a node in the data plane peers table you had to click exactly on the node’s name. Now, you can click anywhere in the name box.&lt;/p>
+&lt;h3 id="display-data-plane-stats-for-gateways">Display Data Plane Stats for Gateways&lt;/h3>
+&lt;p>Prior to this release we only displayed Tunnel Latency and &lt;a href="https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Network Hops&lt;/a> (when enabled) on edge node devices. With this release you can now navigate to a gateway’s data plane panel and select a client edge node. The data displayed is based on the edge node’s perspective but can still provide useful information on the state of the connection between devices.&lt;/p>
+&lt;h2 id="other-improvements">Other Improvements&lt;/h2>
+&lt;h3 id="flow-log-advanced-search-by-tcp-flags">Flow Log Advanced Search by TCP Flags&lt;/h3>
+&lt;p>The Flow Log Advanced Search now has the ability to search for TCP flows with specified TCP flags. In the TCP Flag section just click the flags that you want to search for and the matching flows will be returned. If multiple flags are selected, only flows with all matching flags will be returned.&lt;/p>
+&lt;p>&lt;img src="flow-logs-search.png" alt="advanced search">&lt;/p>
+&lt;h3 id="node-audits-shows-node-version-changes">Node Audits Shows Node Version Changes&lt;/h3>
+&lt;p>When a node is upgraded and successfully reconnects, the Node Audits section will display the new and previous versions.&lt;/p>
+&lt;p>&lt;img src="audits.png" alt="audits">&lt;/p>
+&lt;h3 id="swagger-api-improvements">Swagger API Improvements&lt;/h3>
+&lt;p>A number of new areas are now documented in our public swagger documentation: &lt;a href="https://portal.trustgrid.io/api-docs/">https://portal.trustgrid.io/api-docs/&lt;/a>&lt;/p>
+&lt;p>The new sections include:&lt;/p>
+&lt;ul>
+&lt;li>Additional Audit endpoints&lt;/li>
+&lt;li>Container and VM configuration&lt;/li>
+&lt;li>ZTNA Gateway&lt;/li>
+&lt;/ul></description></item><item><title>Release-Notes: December</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</guid><description>
 &lt;h2 id="data-plane-status-table">Data Plane Status Table&lt;/h2>
 &lt;p>Previously Trustgrid had a visual indicator on the Node detail page to show the Data Plane health of a node, but it only showed the state as &lt;code>Connected&lt;/code>, &lt;code>Degraded&lt;/code> or &lt;code>Disconnected&lt;/code>. While connected and disconnected were clear, there was little information on why the status was Degraded.&lt;/p>
 &lt;p>With this release hovering over the Data Plane status icon will bring up a pop-up screen showing all the peers and and their connection status. Additionally, if the peer is connected it will show:&lt;/p>
@@ -2039,28 +2098,4 @@ It’s important to have these &lt;a href="https://trustgrid.github.io/docs/docs
 &lt;td>The time the event was received by the control plane. This can be later than the generated time in the event of a network disruption, for eample.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Help-Center: Site Requirements</title><link>https://trustgrid.github.io/docs/help-center/kb/site-requirements/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/kb/site-requirements/</guid><description>
-&lt;div class="pageinfo pageinfo-primary">
-&lt;p>Trustgrid’s architecture consists of Nodes deployed at the Edge (on-premise) and management infrastructure built in AWS. Nodes create tunnels to other nodes for data transfer, and to the management infrastructure for control. All tunnels are TLS connections and must be permitted by any firewall between&lt;/p>
-&lt;/div>
-&lt;h3 id="network-requirements-for-all-nodes">Network Requirements for All Nodes&lt;/h3>
-&lt;p>In order to connect to the Trustgrid Control Plane, the following outbound traffic must be allowed from the node’s configured primary interface IP address&lt;/p>
-&lt;ul>
-&lt;li>TCP Port 443 and TCP/UDP 8443 to:&lt;/li>
-&lt;li>
-&lt;ul>
-&lt;li>35.171.100.16/28&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;ul>
-&lt;li>34.223.12.192/28&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>TCP/UDP Port 53 to the configured DNS servers. These DNS servers must be able to resolve DNS requests for the trustgrid.io domain&lt;/li>
-&lt;/ul>
-&lt;h3 id="recommendations">Recommendations&lt;/h3>
-&lt;p>At least 10Mbps download speed is recommended for reasonable performance during upgrades. Actual bandwidth requirement will be specific to the workloads running across the device.&lt;/p>
-&lt;p>Hardware devices are recommended to be connected to ports configured for 1000 Mbps and full duplex with auto negotiation on.&lt;/p>
-&lt;h2 id="gateway-node-network-requirements">Gateway Node Network Requirements&lt;/h2>
-&lt;p>In addition to being able to connect to the Control Plane resource outlined above, Gateway Nodes must be allowed to receive inbound traffic on their configured public IP and port (typically TCP/UDP port 8443). Both the advertised public IP and port are configurable when enabling a node as a gateway.&lt;/p></description></item></channel></rss>
+&lt;/table></description></item></channel></rss>
