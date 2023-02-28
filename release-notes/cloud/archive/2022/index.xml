@@ -341,4 +341,36 @@ Hyperlink Form
 &lt;p>&lt;img src="flow-log-history.png" alt="Flow Log Search">&lt;/p>
 &lt;h3 id="events-table-search">Events Table Search&lt;/h3>
 &lt;p>The Events table now has a search field that will filter the events shown. This has been added both at the Node Detail Events page and under Operation to see events across all nodes in the org.&lt;/p>
-&lt;p>&lt;img src="events.png" alt="Events Table Search">&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="events.png" alt="Events Table Search">&lt;/p></description></item><item><title>Release-Notes: October Third Release</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october-3/</guid><description>
+&lt;h2 id="repository-performance-improvements">Repository Performance Improvements&lt;/h2>
+&lt;p>This release includes a significant overhaul of the the repository control plane service. This service is responsible for providing upgrade packages and pushing/pulling container images.&lt;/p>
+&lt;h2 id="data-plane-stats-for-private-and-hub-gateways">Data Plane Stats for Private and Hub Gateways&lt;/h2>
+&lt;p>Prior to this release, viewing the Data Plane stats such as tunnel latency and [network hops](https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/ would not display. These stats will now be displayed the just like edge and public gateway stats.&lt;/p>
+&lt;h2 id="changing-configured-master-active-logging">Changing Configured Master (Active) Logging&lt;/h2>
+&lt;p>With this release, if a user changes which node is configured as the master (active) member of the cluster it will be logged on &lt;code>Changes&lt;/code> for the cluster.&lt;/p>
+&lt;div style="display: flex; flex-direction: row;">
+&lt;div style="width: 25%;">
+&lt;div class="td-card card mb-4">
+&lt;div class="card-header">
+Changing the configured master (active) node
+&lt;/div>
+&lt;div class="card-body">
+&lt;p class="card-text">
+&lt;img src="set-active.png" alt="set active">
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div style="width: 75%;">
+&lt;div class="td-card card mb-4">
+&lt;div class="card-header">
+Change entry for active member change
+&lt;/div>
+&lt;div class="card-body">
+&lt;p class="card-text">
+&lt;img src="changes.png" alt="change list">
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

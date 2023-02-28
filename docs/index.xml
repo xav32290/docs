@@ -934,7 +934,39 @@ Hyperlink Form
 &lt;p>&lt;img src="flow-log-history.png" alt="Flow Log Search">&lt;/p>
 &lt;h3 id="events-table-search">Events Table Search&lt;/h3>
 &lt;p>The Events table now has a search field that will filter the events shown. This has been added both at the Node Detail Events page and under Operation to see events across all nodes in the org.&lt;/p>
-&lt;p>&lt;img src="events.png" alt="Events Table Search">&lt;/p></description></item><item><title>Release-Notes: December</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</guid><description>
+&lt;p>&lt;img src="events.png" alt="Events Table Search">&lt;/p></description></item><item><title>Release-Notes: October Third Release</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october-3/</guid><description>
+&lt;h2 id="repository-performance-improvements">Repository Performance Improvements&lt;/h2>
+&lt;p>This release includes a significant overhaul of the the repository control plane service. This service is responsible for providing upgrade packages and pushing/pulling container images.&lt;/p>
+&lt;h2 id="data-plane-stats-for-private-and-hub-gateways">Data Plane Stats for Private and Hub Gateways&lt;/h2>
+&lt;p>Prior to this release, viewing the Data Plane stats such as tunnel latency and [network hops](https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/ would not display. These stats will now be displayed the just like edge and public gateway stats.&lt;/p>
+&lt;h2 id="changing-configured-master-active-logging">Changing Configured Master (Active) Logging&lt;/h2>
+&lt;p>With this release, if a user changes which node is configured as the master (active) member of the cluster it will be logged on &lt;code>Changes&lt;/code> for the cluster.&lt;/p>
+&lt;div style="display: flex; flex-direction: row;">
+&lt;div style="width: 25%;">
+&lt;div class="td-card card mb-4">
+&lt;div class="card-header">
+Changing the configured master (active) node
+&lt;/div>
+&lt;div class="card-body">
+&lt;p class="card-text">
+&lt;img src="set-active.png" alt="set active">
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div style="width: 75%;">
+&lt;div class="td-card card mb-4">
+&lt;div class="card-header">
+Change entry for active member change
+&lt;/div>
+&lt;div class="card-body">
+&lt;p class="card-text">
+&lt;img src="changes.png" alt="change list">
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Release-Notes: December</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</guid><description>
 &lt;h2 id="data-plane-status-table">Data Plane Status Table&lt;/h2>
 &lt;p>Previously Trustgrid had a visual indicator on the Node detail page to show the Data Plane health of a node, but it only showed the state as &lt;code>Connected&lt;/code>, &lt;code>Degraded&lt;/code> or &lt;code>Disconnected&lt;/code>. While connected and disconnected were clear, there was little information on why the status was Degraded.&lt;/p>
 &lt;p>With this release hovering over the Data Plane status icon will bring up a pop-up screen showing all the peers and and their connection status. Additionally, if the peer is connected it will show:&lt;/p>
@@ -2111,16 +2143,4 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;hr></description></item><item><title>Docs: Production Status Tags</title><link>https://trustgrid.github.io/docs/docs/nodes/tags/prod-status-tag/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/tags/prod-status-tag/</guid><description>
-&lt;div class="pageinfo pageinfo-primary">
-&lt;p>Production status tags are used for for organizing large Trustgrid deployments.&lt;/p>
-&lt;/div>
-&lt;p>It is recommended that customers use a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">tag&lt;/a> to indicate if &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> are currently in production or not. For example, you may wish to have a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">tag&lt;/a> such as prod_status with possible values like&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>deploying&lt;/code> for devices still being deployed&lt;/li>
-&lt;li>&lt;code>production&lt;/code> for devices actively in user&lt;/li>
-&lt;li>&lt;code>decommission&lt;/code> for devices that are being removed&lt;/li>
-&lt;/ul>
-&lt;div class="alert alert-primary" role="alert">
-It’s important to have these &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">tag&lt;/a> names and values be consistent within the organization including case. &lt;code>Production&lt;/code> and &lt;code>production&lt;/code> would be viewed as two different values, as an example.
-&lt;/div></description></item></channel></rss>
+&lt;hr></description></item></channel></rss>
