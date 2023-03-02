@@ -1,5 +1,5 @@
 ---
-title: "Trustgrid Security"
+title: "Security"
 date: 2022-12-30
 ---
 

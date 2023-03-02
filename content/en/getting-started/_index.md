@@ -42,7 +42,3 @@ All Trustgrid nodes are entirely managed through our control plane:
 * Software updates are provided through our apt repository that ensures nodes have security updates available and only run with tested software permutations
 * Network, node, user, and application configuration is managed through our web portal
 * Configuration changes are broadcast to nodes as needed, for example when adding routes or adding a gateway to your network
-
-## Next Steps
-
-The first step to try out Trustgrid is [create an account]({{<ref "getting-started/new-account">}}).

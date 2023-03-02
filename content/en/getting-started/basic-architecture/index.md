@@ -1,5 +1,6 @@
 ---
 categories: ["overview"]
+weight: 1
 tags: ["architecture"]
 title: "Basic Architecture"
 date: 2022-12-28
