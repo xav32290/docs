@@ -11,13 +11,27 @@
 &lt;h4 id="secure-gateway-nodes">Secure Gateway Nodes&lt;/h4>
 &lt;p>Trustgrid customer&amp;rsquo;s should apply access controls to ingress traffic for gateway nodes. By restricting ingress access to edge nodes IP ranges the system security is improved and many common attacks easily avoided.&lt;/p>
 &lt;h4 id="encrypt-traffic-with-customer-certificates">Encrypt Traffic with Customer Certificates&lt;/h4>
-&lt;p>By default, Trustgrid encrypts all traffic on the data and control planes with privately issued certificates from our PKI. Customers may elect to provide their own certificates for data plane encryption ensuring Trustgrid maintains a zero-knowledge security posture of all data plane traffic.&lt;/p></description></item><item><title>Getting-Started: Create an account</title><link>https://trustgrid.github.io/docs/getting-started/new-account/</link><pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/getting-started/new-account/</guid><description>
-&lt;div class="pageinfo pageinfo-primary">
-&lt;p>A Trustgrid account is necessary to use our services. Signing up is easy and free.&lt;/p>
-&lt;/div>
-&lt;p>Visit &lt;a href="https://id.dev.trustgrid.io/auth/demo/signup">Trustgrid&lt;/a> to create a new account. Once your email has been verified, you&amp;rsquo;ll be placed into
-the Trustgrid management portal, where you can see a newly provisioned ZTNA Gateway and try out some ZTNA demo applications, like a Jenkins
-instance.&lt;/p></description></item><item><title>Docs: Audits</title><link>https://trustgrid.github.io/docs/docs/nodes/audits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/audits/</guid><description>
+&lt;p>By default, Trustgrid encrypts all traffic on the data and control planes with privately issued certificates from our PKI. Customers may elect to provide their own certificates for data plane encryption ensuring Trustgrid maintains a zero-knowledge security posture of all data plane traffic.&lt;/p></description></item><item><title>Getting-Started: Basic Architecture</title><link>https://trustgrid.github.io/docs/getting-started/basic-architecture/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/getting-started/basic-architecture/</guid><description>
+&lt;h3 id="cloud-components">Cloud Components&lt;/h3>
+&lt;ul>
+&lt;li>Portal - The cloud management UI.&lt;/li>
+&lt;li>Gatekeeper - Provides configuration updates to edge nodes.&lt;/li>
+&lt;li>Zuul - Maintains persistent connection with &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> for reporting, &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a>, and updates.&lt;/li>
+&lt;li>API - The management API that exposes 100% of UI elements to automation.&lt;/li>
+&lt;li>Repo - The APT repository that stores all firmware, OS, and &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> updates.&lt;/li>
+&lt;/ul>
+&lt;h3 id="edge-components">Edge Components&lt;/h3>
+&lt;ul>
+&lt;li>Node - The software that provides core functionality in the edge including &lt;a href="https://trustgrid.github.io/docs/getting-started/networking/">networking&lt;/a>, &lt;a href="https://trustgrid.github.io/docs/getting-started/security/">security&lt;/a>, compute, and management features. Edge nodes build outbound connections to gateway nodes.&lt;/li>
+&lt;/ul>
+&lt;h3 id="use-cases">Use Cases&lt;/h3>
+&lt;ul>
+&lt;li>Software Defined Networking - Create a mesh &lt;a href="https://trustgrid.github.io/docs/getting-started/networking/">network&lt;/a> that connects cloud applications to edge data with load balancing, &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">clustering&lt;/a>, and failover managed through a portal or API.&lt;/li>
+&lt;li>Edge Compute - Deploy applications to the edge to access datasets not appropriate for replication to the cloud due to &lt;a href="https://trustgrid.github.io/docs/getting-started/security/">security&lt;/a> or compliance concerns, latency, or cost.&lt;/li>
+&lt;li>Device Management - Manage thousands of &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> with advanced tools to reduce the burden of operations at enterprise scale.&lt;/li>
+&lt;li>Edge API - Integrate thousands of edge datasets with a single API interface and ETL functions executing at the edge.&lt;/li>
+&lt;li>Security - Leverage Trustgrid&amp;rsquo;s advanced &lt;a href="https://trustgrid.github.io/docs/getting-started/security/">security&lt;/a> to protect against a wide range of threats.&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Audits</title><link>https://trustgrid.github.io/docs/docs/nodes/audits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/audits/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Node audits provide records when services on a node are invoked, or when upgrades are applied. This can be helpful to see historical maintenance of a node.&lt;/p>
 &lt;/div>
@@ -1878,26 +1892,6 @@ If your organization is utilizing a third-party identity provider via SAML or Op
 &lt;li>
 &lt;p>Suppression windows apply to all devices across the entire organization.&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Getting-Started: Basic Architecture</title><link>https://trustgrid.github.io/docs/getting-started/basic-architecture/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/getting-started/basic-architecture/</guid><description>
-&lt;h3 id="cloud-components">Cloud Components&lt;/h3>
-&lt;ul>
-&lt;li>Portal - The cloud management UI.&lt;/li>
-&lt;li>Gatekeeper - Provides configuration updates to edge nodes.&lt;/li>
-&lt;li>Zuul - Maintains persistent connection with &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> for reporting, &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a>, and updates.&lt;/li>
-&lt;li>API - The management API that exposes 100% of UI elements to automation.&lt;/li>
-&lt;li>Repo - The APT repository that stores all firmware, OS, and &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> updates.&lt;/li>
-&lt;/ul>
-&lt;h3 id="edge-components">Edge Components&lt;/h3>
-&lt;ul>
-&lt;li>Node - The software that provides core functionality in the edge including &lt;a href="https://trustgrid.github.io/docs/getting-started/networking/">networking&lt;/a>, &lt;a href="https://trustgrid.github.io/docs/getting-started/security/">security&lt;/a>, compute, and management features. Edge nodes build outbound connections to gateway nodes.&lt;/li>
-&lt;/ul>
-&lt;h3 id="use-cases">Use Cases&lt;/h3>
-&lt;ul>
-&lt;li>Software Defined Networking - Create a mesh &lt;a href="https://trustgrid.github.io/docs/getting-started/networking/">network&lt;/a> that connects cloud applications to edge data with load balancing, &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">clustering&lt;/a>, and failover managed through a portal or API.&lt;/li>
-&lt;li>Edge Compute - Deploy applications to the edge to access datasets not appropriate for replication to the cloud due to &lt;a href="https://trustgrid.github.io/docs/getting-started/security/">security&lt;/a> or compliance concerns, latency, or cost.&lt;/li>
-&lt;li>Device Management - Manage thousands of &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> with advanced tools to reduce the burden of operations at enterprise scale.&lt;/li>
-&lt;li>Edge API - Integrate thousands of edge datasets with a single API interface and ETL functions executing at the edge.&lt;/li>
-&lt;li>Security - Leverage Trustgrid&amp;rsquo;s advanced &lt;a href="https://trustgrid.github.io/docs/getting-started/security/">security&lt;/a> to protect against a wide range of threats.&lt;/li>
 &lt;/ul></description></item><item><title>Docs: Channels</title><link>https://trustgrid.github.io/docs/docs/alarms/channels/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/channels/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A channel defines one or more method of delivering alert notifications to external systems.&lt;/p>
@@ -2143,4 +2137,16 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;hr></description></item></channel></rss>
+&lt;hr></description></item><item><title>Docs: Production Status Tags</title><link>https://trustgrid.github.io/docs/docs/nodes/tags/prod-status-tag/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/tags/prod-status-tag/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Production status tags are used for for organizing large Trustgrid deployments.&lt;/p>
+&lt;/div>
+&lt;p>It is recommended that customers use a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">tag&lt;/a> to indicate if &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> are currently in production or not. For example, you may wish to have a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">tag&lt;/a> such as prod_status with possible values like&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>deploying&lt;/code> for devices still being deployed&lt;/li>
+&lt;li>&lt;code>production&lt;/code> for devices actively in user&lt;/li>
+&lt;li>&lt;code>decommission&lt;/code> for devices that are being removed&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-primary" role="alert">
+It’s important to have these &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">tag&lt;/a> names and values be consistent within the organization including case. &lt;code>Production&lt;/code> and &lt;code>production&lt;/code> would be viewed as two different values, as an example.
+&lt;/div></description></item></channel></rss>
