@@ -25,6 +25,7 @@ type Param struct {
 	Type        ParamType     `json:"type,omitempty"`
 	Schema      *Schema       `json:"schema,omitempty"`
 	Enum        []interface{} `json:"enum,omitempty"`
+	Items       *Schema       `json:"items,omitempty"`
 }
 
 type ParamConfig func(p *Param)
@@ -67,6 +68,14 @@ func P_Body(p *Param) {
 func P_Schema(s *Schema) ParamConfig {
 	return func(p *Param) {
 		p.Schema = s
+	}
+}
+
+func P_ArraySchema(items *Schema) ParamConfig {
+	return func(p *Param) {
+		p.Items = &Schema{
+			Items: items,
+		}
 	}
 }
 

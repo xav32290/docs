@@ -646,7 +646,9 @@ func addAuditAPI(api *s.API) {
 		Param(s.NewParam("dstNode", "Dest node name", s.P_Query)).
 		Param(s.NewParam("node", "Flow logging node ID", s.P_Query)).
 		Param(s.NewParam("reverse", "When true, newer flow logs will be listed first", s.P_Query, s.P_Boolean)).
-		Param(s.NewParam("tcpFlags", "If provided, a flow must match at least one of the TCP flags provided. Decimal encoded, see flow log TCP flag encoding.", s.P_Query, s.P_Array, s.P_Schema(tcpFlagParam))).
+		Param(s.NewParam("tcpFlags",
+			"If provided, a flow must match at least one of the TCP flags provided. Decimal encoded, see flow log TCP flag encoding.",
+			s.P_Query, s.P_Array, s.P_ArraySchema(tcpFlagParam))).
 		Param(s.NewParam("cursor", "Continuation cursor from previous query", s.P_Query)).
 		Response(200, "OK", s.NewArraySchema(flowLog), s.Header{Name: "x-cursor", Type: "string", Description: "Continuation cursor for the next query"})
 

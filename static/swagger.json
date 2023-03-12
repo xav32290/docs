@@ -190,7 +190,7 @@
                   },
                   "itemId": {
                     "description": "Unique ID of the item that was changed",
-                    "example": "79f33270-5f0e-4161-a042-340bf14da075",
+                    "example": "f7618964-ff07-40ff-99f8-d81be8cc99fb",
                     "type": "object"
                   },
                   "itemType": {
@@ -205,12 +205,12 @@
                   },
                   "timestamp": {
                     "description": "Unix timestamp when the change happened",
-                    "example": 1676408990,
+                    "example": 1678654790,
                     "type": "object"
                   },
                   "uid": {
                     "description": "Unique ID of the change",
-                    "example": "b3f11e46-cf5b-490e-a725-19db804a466f",
+                    "example": "3cbd823e-06af-4992-aa14-ce3eb09e5f70",
                     "type": "object"
                   },
                   "userName": {
@@ -351,18 +351,20 @@
           {
             "description": "If provided, a flow must match at least one of the TCP flags provided. Decimal encoded, see flow log TCP flag encoding.",
             "in": "query",
-            "name": "tcpFlags",
-            "schema": {
-              "example": [
-                1,
-                2
-              ],
+            "items": {
               "items": {
-                "description": "tcpFlags",
-                "type": "number"
-              },
-              "type": "array"
+                "example": [
+                  1,
+                  2
+                ],
+                "items": {
+                  "description": "tcpFlags",
+                  "type": "number"
+                },
+                "type": "array"
+              }
             },
+            "name": "tcpFlags",
             "type": "array"
           },
           {
@@ -390,7 +392,7 @@
                 "properties": {
                   "activityID": {
                     "description": "Threat Intelligence activity ID",
-                    "example": "cce55e2b-d385-4ee0-8dc5-91384c00f62a",
+                    "example": "a5697692-bee3-4846-bcca-a3841ae5ca97",
                     "type": "object"
                   },
                   "destBytes": {
@@ -461,12 +463,12 @@
                   },
                   "ztnaAppID": {
                     "description": "ZTNA application ID",
-                    "example": "cce55e2b-d385-4ee0-8dc5-91384c00f62a",
+                    "example": "a5697692-bee3-4846-bcca-a3841ae5ca97",
                     "type": "object"
                   },
                   "ztnaSessionID": {
                     "description": "ZTNA application ID",
-                    "example": "cce55e2b-d385-4ee0-8dc5-91384c00f62a",
+                    "example": "a5697692-bee3-4846-bcca-a3841ae5ca97",
                     "type": "object"
                   }
                 },
@@ -11323,7 +11325,7 @@
         },
         "node_id": {
           "description": "Node ID that generated the alert",
-          "example": "79f33270-5f0e-4161-a042-340bf14da075",
+          "example": "f7618964-ff07-40ff-99f8-d81be8cc99fb",
           "type": "string"
         },
         "timestamp": {
@@ -11381,7 +11383,7 @@
         },
         "nodeId": {
           "description": "Node ID that generated the alert",
-          "example": "79f33270-5f0e-4161-a042-340bf14da075",
+          "example": "f7618964-ff07-40ff-99f8-d81be8cc99fb",
           "type": "string"
         },
         "nodeName": {
@@ -11468,8 +11470,8 @@
         }
       },
       "required": [
-        "action",
-        "name"
+        "name",
+        "action"
       ],
       "title": "Application Access Rule",
       "type": "object"
@@ -11584,7 +11586,7 @@
         },
         "id": {
           "description": "Container ID",
-          "example": "639cd97e-ff94-4bd0-ac00-36c8b3444372",
+          "example": "6bbae68a-517b-4d9a-a36f-08004f713222",
           "type": "string"
         },
         "image": {
@@ -11741,7 +11743,7 @@
         },
         "uid": {
           "description": "UID",
-          "example": "a492430b-edd3-44b5-a005-79bb89d51100",
+          "example": "76ecd123-1c5b-481b-aad3-0099b150c8d8",
           "type": "string"
         }
       },
@@ -11884,7 +11886,7 @@
         },
         "uid": {
           "description": "UID",
-          "example": "037fb44d-a7c9-4488-b4d9-cfa79c6e98af",
+          "example": "c9a784f0-da4c-4c9c-9349-d02974e3a210",
           "type": "string"
         }
       },
@@ -11919,7 +11921,7 @@
         },
         "uid": {
           "description": "UID",
-          "example": "5f61bc77-7cc5-4a81-8fd7-73ea2a9f9ba8",
+          "example": "71b1f781-2125-4713-9998-ad4d014524c6",
           "type": "string"
         }
       },
@@ -11974,7 +11976,7 @@
         },
         "uid": {
           "description": "UID",
-          "example": "98e04666-4246-4f58-b31c-470476bca02d",
+          "example": "6d581c59-fbe0-438d-af7e-c8190a147450",
           "type": "string"
         }
       },
@@ -12812,7 +12814,7 @@
         },
         "uid": {
           "description": "Node ID",
-          "example": "79f33270-5f0e-4161-a042-340bf14da075",
+          "example": "f7618964-ff07-40ff-99f8-d81be8cc99fb",
           "type": "string"
         }
       },
