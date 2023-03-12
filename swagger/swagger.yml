@@ -32,12 +32,60 @@ paths:
             items:
               "$ref": "#/definitions/UserModel"
     post:
-      description: Invite a user
+      description: >
+        Invite a user. For organizations using the default Trustgrid authentication provider, users must be **invited** and then they should sign up with the invited email address.
+
+        For custom IDP integrations, users should be **added** instead.
       parameters:
         - name: user
           in: body
           schema:
-            "$ref": "#/definitions/InviteUserModel"
+            type: object
+            properties:
+              email:
+                type: string
+                description: User's email
+              policyId:
+                type: string
+                description: ID of the policy to be applied to the user upon account creation
+            required:
+              - email
+              - policyId
+      consumes:
+        - application/json
+      tags:
+        - User
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+  "/user/add":
+    post:
+      description: >
+        Add a user. This is only available to organizations with custom IDP integrations.
+      parameters:
+        - name: user
+          in: body
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+                description: User's email
+              idp:
+                type: string
+                description: ID of the IDP to be used for the user
+              policyIds:
+                type: array
+                items:
+                  type: string
+                description: IDs of the policy/policies to be applied to the user
+            required:
+              - email
+              - policyIds
+              - idp
       consumes:
         - application/json
       tags:
@@ -4480,19 +4528,6 @@ definitions:
       name:
         type: string
 
-  InviteUserModel:
-    type: object
-    properties:
-      email:
-        type: string
-        description: User's email
-      org:
-        type: string
-        description: Organization ID
-    required:
-      - email
-      - org
-    title: InviteUserModel
   UserModel:
     type: object
     properties:

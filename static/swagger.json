@@ -190,7 +190,7 @@
                   },
                   "itemId": {
                     "description": "Unique ID of the item that was changed",
-                    "example": "f7618964-ff07-40ff-99f8-d81be8cc99fb",
+                    "example": "f090da17-9848-4443-a811-34d26e36e309",
                     "type": "object"
                   },
                   "itemType": {
@@ -205,12 +205,12 @@
                   },
                   "timestamp": {
                     "description": "Unix timestamp when the change happened",
-                    "example": 1678654790,
+                    "example": 1678655517,
                     "type": "object"
                   },
                   "uid": {
                     "description": "Unique ID of the change",
-                    "example": "3cbd823e-06af-4992-aa14-ce3eb09e5f70",
+                    "example": "f400c451-6130-49ff-bc2c-7d83a0cb071f",
                     "type": "object"
                   },
                   "userName": {
@@ -392,7 +392,7 @@
                 "properties": {
                   "activityID": {
                     "description": "Threat Intelligence activity ID",
-                    "example": "a5697692-bee3-4846-bcca-a3841ae5ca97",
+                    "example": "400fa255-2586-4586-8013-9f2934770393",
                     "type": "object"
                   },
                   "destBytes": {
@@ -463,12 +463,12 @@
                   },
                   "ztnaAppID": {
                     "description": "ZTNA application ID",
-                    "example": "a5697692-bee3-4846-bcca-a3841ae5ca97",
+                    "example": "400fa255-2586-4586-8013-9f2934770393",
                     "type": "object"
                   },
                   "ztnaSessionID": {
                     "description": "ZTNA application ID",
-                    "example": "a5697692-bee3-4846-bcca-a3841ae5ca97",
+                    "example": "400fa255-2586-4586-8013-9f2934770393",
                     "type": "object"
                   }
                 },
@@ -3658,13 +3658,77 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Invite a user",
+        "description": "Invite a user. For organizations using the default Trustgrid authentication provider, users must be **invited** and then they should sign up with the invited email address.\nFor custom IDP integrations, users should be **added** instead.\n",
         "parameters": [
           {
             "in": "body",
             "name": "user",
             "schema": {
-              "$ref": "#/definitions/InviteUserModel"
+              "properties": {
+                "email": {
+                  "description": "User's email",
+                  "type": "string"
+                },
+                "policyId": {
+                  "description": "ID of the policy to be applied to the user upon account creation",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "email",
+                "policyId"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/user/add": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Add a user. This is only available to organizations with custom IDP integrations.\n",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "user",
+            "schema": {
+              "properties": {
+                "email": {
+                  "description": "User's email",
+                  "type": "string"
+                },
+                "idp": {
+                  "description": "ID of the IDP to be used for the user",
+                  "type": "string"
+                },
+                "policyIds": {
+                  "description": "IDs of the policy/policies to be applied to the user",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "email",
+                "policyIds",
+                "idp"
+              ],
+              "type": "object"
             }
           }
         ],
@@ -11325,7 +11389,7 @@
         },
         "node_id": {
           "description": "Node ID that generated the alert",
-          "example": "f7618964-ff07-40ff-99f8-d81be8cc99fb",
+          "example": "f090da17-9848-4443-a811-34d26e36e309",
           "type": "string"
         },
         "timestamp": {
@@ -11383,7 +11447,7 @@
         },
         "nodeId": {
           "description": "Node ID that generated the alert",
-          "example": "f7618964-ff07-40ff-99f8-d81be8cc99fb",
+          "example": "f090da17-9848-4443-a811-34d26e36e309",
           "type": "string"
         },
         "nodeName": {
@@ -11509,8 +11573,8 @@
         }
       },
       "required": [
-        "chain",
-        "private_key"
+        "private_key",
+        "chain"
       ],
       "title": "CertificateParts",
       "type": "object"
@@ -11586,7 +11650,7 @@
         },
         "id": {
           "description": "Container ID",
-          "example": "6bbae68a-517b-4d9a-a36f-08004f713222",
+          "example": "94590101-c9b7-4033-91a2-8bbf0f042bed",
           "type": "string"
         },
         "image": {
@@ -11743,7 +11807,7 @@
         },
         "uid": {
           "description": "UID",
-          "example": "76ecd123-1c5b-481b-aad3-0099b150c8d8",
+          "example": "078f0ba8-d391-4277-91d8-dc8c4ce6b892",
           "type": "string"
         }
       },
@@ -11886,7 +11950,7 @@
         },
         "uid": {
           "description": "UID",
-          "example": "c9a784f0-da4c-4c9c-9349-d02974e3a210",
+          "example": "d5fb3a93-86ba-48e6-a047-aa429ddc94e9",
           "type": "string"
         }
       },
@@ -11921,7 +11985,7 @@
         },
         "uid": {
           "description": "UID",
-          "example": "71b1f781-2125-4713-9998-ad4d014524c6",
+          "example": "d1890e21-8d56-4366-a1c6-a5ab5ac83504",
           "type": "string"
         }
       },
@@ -11976,7 +12040,7 @@
         },
         "uid": {
           "description": "UID",
-          "example": "6d581c59-fbe0-438d-af7e-c8190a147450",
+          "example": "076f2fd5-755c-4794-8ed6-4dc148692675",
           "type": "string"
         }
       },
@@ -12444,24 +12508,6 @@
       "title": "Image",
       "type": "object"
     },
-    "InviteUserModel": {
-      "properties": {
-        "email": {
-          "description": "User's email",
-          "type": "string"
-        },
-        "org": {
-          "description": "Organization ID",
-          "type": "string"
-        }
-      },
-      "required": [
-        "email",
-        "org"
-      ],
-      "title": "InviteUserModel",
-      "type": "object"
-    },
     "KVMCPUConfig": {
       "description": "CPU configuration for the machine",
       "example": {
@@ -12814,7 +12860,7 @@
         },
         "uid": {
           "description": "Node ID",
-          "example": "f7618964-ff07-40ff-99f8-d81be8cc99fb",
+          "example": "f090da17-9848-4443-a811-34d26e36e309",
           "type": "string"
         }
       },
