@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– VPN</title><link>https://trustgrid.github.io/docs/docs/nodes/vpn/</link><description>Recent content in VPN on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://trustgrid.github.io/docs/docs/nodes/vpn/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: DNS</title><link>https://trustgrid.github.io/docs/docs/nodes/vpn/dns/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/vpn/dns/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– VPN</title><link>https://docs.trustgrid.io/docs/nodes/vpn/</link><description>Recent content in VPN on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.trustgrid.io/docs/nodes/vpn/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: DNS</title><link>https://docs.trustgrid.io/docs/nodes/vpn/dns/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/vpn/dns/</guid><description>
 &lt;p>Nodes can act as DNS servers for the virtual network. Find DNS definitions and change them under the &lt;code>DNS&lt;/code> section of the VPN configuration.&lt;/p>
 &lt;p>&lt;img src="list.png" alt="img">&lt;/p>
 &lt;h2 id="upstream-servers">Upstream Servers&lt;/h2>
@@ -10,7 +10,7 @@
 &lt;tr>
 &lt;th>Host Port&lt;/th>
 &lt;td>The upstream DNS server&amp;rsquo;s port (usually 53)&lt;/td>
-&lt;/tr>&lt;/p></description></item><item><title>Docs: Dynamic Routing</title><link>https://trustgrid.github.io/docs/docs/nodes/vpn/dynamic-routing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/vpn/dynamic-routing/</guid><description>
+&lt;/tr>&lt;/p></description></item><item><title>Docs: Dynamic Routing</title><link>https://docs.trustgrid.io/docs/nodes/vpn/dynamic-routing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/vpn/dynamic-routing/</guid><description>
 &lt;p>Dynamic routing allows a node to export and import routes from other nodes in the virtual network. Find dynamic route definitions and change them under the &lt;code>Dynamic Routing&lt;/code> section of the VPN configuration.&lt;/p>
 &lt;p>&lt;img src="list.png" alt="img">&lt;/p>
 &lt;h2 id="exports">Exports&lt;/h2>
@@ -50,7 +50,7 @@
 &lt;tr>
 &lt;th>Gateway Path&lt;/th>
 &lt;td>An optional gateway path to use for the route.&lt;/td>
-&lt;/tr>&lt;/p></description></item><item><title>Docs: NATs</title><link>https://trustgrid.github.io/docs/docs/nodes/vpn/nats/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/vpn/nats/</guid><description>
+&lt;/tr>&lt;/p></description></item><item><title>Docs: NATs</title><link>https://docs.trustgrid.io/docs/nodes/vpn/nats/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/vpn/nats/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>NATs allow Trustgrid to alter the source and/or destination IP address of layer 3 traffic as it enters or leaves the VPN.&lt;/p>
 &lt;/div>
@@ -83,8 +83,8 @@ Network addresses map 1x1 with local addresses, so the prefix length (the /xx nu
 &lt;div class="alert alert-primary" role="alert">
 An outside NAT is required for all nodes and clusters using the virtual network
 &lt;/div>
-&lt;p>Note there are situations where it may be desirable to make multiple remote devices masquerade as one local IP address though the use of port address translation (PAT). This can be achieved by defining an outside nat in which the network CIDR contains a larger address space than the local CIDR. For instance, an entry with network CIDR 10.0.1.0/24 and local CIDR 192.168.100.10 would make all remote devices with network IP addresses in 10.0.1.0/24 appear as IP address 192.168.100.10 on the local network.&lt;/p></description></item><item><title>Docs: Port Forwarding</title><link>https://trustgrid.github.io/docs/docs/nodes/vpn/port-forwarding/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/vpn/port-forwarding/</guid><description>
-&lt;p>Port forwarding allows a node to expose an &lt;a href="https://trustgrid.github.io/docs/docs/nodes/services/">L4 service&lt;/a> on the virtual network.&lt;/p>
+&lt;p>Note there are situations where it may be desirable to make multiple remote devices masquerade as one local IP address though the use of port address translation (PAT). This can be achieved by defining an outside nat in which the network CIDR contains a larger address space than the local CIDR. For instance, an entry with network CIDR 10.0.1.0/24 and local CIDR 192.168.100.10 would make all remote devices with network IP addresses in 10.0.1.0/24 appear as IP address 192.168.100.10 on the local network.&lt;/p></description></item><item><title>Docs: Port Forwarding</title><link>https://docs.trustgrid.io/docs/nodes/vpn/port-forwarding/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/vpn/port-forwarding/</guid><description>
+&lt;p>Port forwarding allows a node to expose an &lt;a href="https://docs.trustgrid.io/docs/nodes/services/">L4 service&lt;/a> on the virtual network.&lt;/p>
 &lt;p>&lt;img src="list.png" alt="img">&lt;/p>
 &lt;p>&lt;tr>
 &lt;th>Virtual IP Address&lt;/th>
@@ -97,7 +97,7 @@ An outside NAT is required for all nodes and clusters using the virtual network
 &lt;tr>
 &lt;th>Local Service&lt;/th>
 &lt;td>The service to expose.&lt;/td>
-&lt;/tr>&lt;/p></description></item><item><title>Docs: Static Routing</title><link>https://trustgrid.github.io/docs/docs/nodes/vpn/static-routing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/vpn/static-routing/</guid><description>
+&lt;/tr>&lt;/p></description></item><item><title>Docs: Static Routing</title><link>https://docs.trustgrid.io/docs/nodes/vpn/static-routing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/vpn/static-routing/</guid><description>
 &lt;p>Static routing allows a node to route traffic to a remote network. Find static route definitions and change them under the &lt;code>Static Routing&lt;/code> section of the VPN configuration.&lt;/p>
 &lt;p>&lt;img src="add-modal.png" alt="img">&lt;/p>
 &lt;p>&lt;tr>
@@ -115,7 +115,7 @@ An outside NAT is required for all nodes and clusters using the virtual network
 &lt;tr>
 &lt;th>Gateway Path&lt;/th>
 &lt;td>An optional gateway path to use for the route.&lt;/td>
-&lt;/tr>&lt;/p></description></item><item><title>Docs: WireGuard ®</title><link>https://trustgrid.github.io/docs/docs/nodes/vpn/wireguard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/vpn/wireguard/</guid><description>
+&lt;/tr>&lt;/p></description></item><item><title>Docs: WireGuard ®</title><link>https://docs.trustgrid.io/docs/nodes/vpn/wireguard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/vpn/wireguard/</guid><description>
 &lt;p>Nodes may enable a WireGuard server to expose the virtual network to WireGuard clients.&lt;/p>
 &lt;h2 id="configuration">Configuration&lt;/h2>
 &lt;p>&lt;img src="wireguard.png" alt="img">&lt;/p>

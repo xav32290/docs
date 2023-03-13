@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Tunnels</title><link>https://trustgrid.github.io/docs/docs/nodes/tunnels/</link><description>Recent content in Tunnels on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://trustgrid.github.io/docs/docs/nodes/tunnels/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: GRE</title><link>https://trustgrid.github.io/docs/docs/nodes/tunnels/gre/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/tunnels/gre/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Tunnels</title><link>https://docs.trustgrid.io/docs/nodes/tunnels/</link><description>Recent content in Tunnels on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.trustgrid.io/docs/nodes/tunnels/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: GRE</title><link>https://docs.trustgrid.io/docs/nodes/tunnels/gre/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/tunnels/gre/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trustgrid supports configuring GRE tunnels that can be used to establish connectivity to any appliance that supports the GRE protocol.
 A GRE tunnel interface is created which can then be attached to an interface on a node. VRFs can then be used to control the flow of traffic and how it should appear on the network.&lt;/p>
@@ -16,7 +16,7 @@ A GRE tunnel interface is created which can then be attached to an interface on 
 &lt;li>Peer - the remote IP address of the appliance the tunnel is being established with&lt;/li>
 &lt;li>VRF - existing VRF on the node the tunnel is being associated to&lt;/li>
 &lt;li>MTU - the MTU of the tunnel interface. Typically can be set to 1476.&lt;/li>
-&lt;/ul></description></item><item><title>Docs: IPSec</title><link>https://trustgrid.github.io/docs/docs/nodes/tunnels/ipsec/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/tunnels/ipsec/</guid><description>
+&lt;/ul></description></item><item><title>Docs: IPSec</title><link>https://docs.trustgrid.io/docs/nodes/tunnels/ipsec/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/tunnels/ipsec/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trustgrid supports configuring traditional IPSec tunnels that can be used to establish connectivity to any appliance that supports the IPSec protocol.
 Once an IPSec tunnel is configured an IPSec virtual interface is created that can be attached to a node interface. VRFs can be used in conjunction to explicitly control what traffic is allowed (VRF ACLs) to pass and how it should look on the network (VRF NATs or Traffic Rules).&lt;/p>
@@ -56,7 +56,7 @@ Once an IPSec tunnel is configured an IPSec virtual interface is created that ca
 &lt;li>Virtual Network - associate the tunnel to a Trustgrid Virtual Network&lt;/li>
 &lt;li>IKE Local ID - The IP address that will be seen by the remote peer to establish the tunnel. Typically this would be the public facing WAN IP of the Trustgrid Node.&lt;/li>
 &lt;li>IKE Remote ID - Used for identity validation. Typically this is the same address as the Peer IP&lt;/li>
-&lt;/ul></description></item><item><title>Docs: VNET</title><link>https://trustgrid.github.io/docs/docs/nodes/tunnels/vnet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/tunnels/vnet/</guid><description>
+&lt;/ul></description></item><item><title>Docs: VNET</title><link>https://docs.trustgrid.io/docs/nodes/tunnels/vnet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/tunnels/vnet/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A virtual network tunnel interface can be configured on a Trustgrid node or cluster to allow forwarding of traffic to a remote Trustgrid Node or Cluster that is attached to the same virtual network. The tunnel interface is associated to a vrf which is used to define and control what traffic is allowed to pass and how it should appear on the network. There is no attachment of the vnet interface to a node interface required but the virtual network does need to be attached to the node or cluster before the tunnel interface is created.&lt;/p>
 &lt;/div>
@@ -72,7 +72,7 @@ Once an IPSec tunnel is configured an IPSec virtual interface is created that ca
 &lt;li>Virtual Network - the Trustgrid virtual network the tunnel is being associated to. The virtual network should already be attached to the node or cluster to be selectable.&lt;/li>
 &lt;li>VRF - The vrf the tunnel is being associated to. Only vrf&amp;rsquo;s which exist on the Trustgrid Node or Cluster can be selected&lt;/li>
 &lt;li>MTU - the mtu size of the tunnel interface. Typically the default of 1430 should be used&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Wireguard</title><link>https://trustgrid.github.io/docs/docs/nodes/tunnels/wireguard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/tunnels/wireguard/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Wireguard</title><link>https://docs.trustgrid.io/docs/nodes/tunnels/wireguard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/tunnels/wireguard/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A wireguard tunnel interface can be configured to allow a wireguard client to connect to a Trustgrid Node running as a wireguard server.
 The tunnel interface is associated to a vrf which is used to define and control what traffic is allowed to pass and how it should appear on the network.&lt;/p>

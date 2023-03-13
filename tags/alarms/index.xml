@@ -1,20 +1,20 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– alarms</title><link>https://trustgrid.github.io/docs/tags/alarms/</link><description>Recent content in alarms on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/tags/alarms/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Alarms</title><link>https://trustgrid.github.io/docs/docs/alarms/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– alarms</title><link>https://docs.trustgrid.io/tags/alarms/</link><description>Recent content in alarms on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.trustgrid.io/tags/alarms/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Alarms</title><link>https://docs.trustgrid.io/docs/alarms/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/alarms/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Trustgrid’s Alarms system notifies users of &lt;a href="https://trustgrid.github.io/docs/docs/alarms/event-types/">events&lt;/a> both within our portal and via notification integrations such as email, PagerDuty, OpsGenie, Slack, and Teams.&lt;/p>
+&lt;p>Trustgrid’s Alarms system notifies users of &lt;a href="https://docs.trustgrid.io/docs/alarms/event-types/">events&lt;/a> both within our portal and via notification integrations such as email, PagerDuty, OpsGenie, Slack, and Teams.&lt;/p>
 &lt;/div>
 &lt;ol>
 &lt;li>
-&lt;p>Changes in status (such as a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> disconnecting or reconnecting) create &lt;a href="https://trustgrid.github.io/docs/docs/alarms/event-types/">events&lt;/a> within the Trustgrid portal.&lt;/p>
+&lt;p>Changes in status (such as a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> disconnecting or reconnecting) create &lt;a href="https://docs.trustgrid.io/docs/alarms/event-types/">events&lt;/a> within the Trustgrid portal.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>These &lt;a href="https://trustgrid.github.io/docs/docs/alarms/event-types/">events&lt;/a> are evaluated against &lt;a href="https://trustgrid.github.io/docs/docs/alarms/alarm-filters/">alarm filters&lt;/a>, which define criteria to match events, like the node name or event severity.&lt;/p>
+&lt;p>These &lt;a href="https://docs.trustgrid.io/docs/alarms/event-types/">events&lt;/a> are evaluated against &lt;a href="https://docs.trustgrid.io/docs/alarms/alarm-filters/">alarm filters&lt;/a>, which define criteria to match events, like the node name or event severity.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>If an event matches the criteria of an alarm filter, then an &lt;strong>alert&lt;/strong> is generated and notifications are broadcast to the configured &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a>.&lt;/p>
+&lt;p>If an event matches the criteria of an alarm filter, then an &lt;strong>alert&lt;/strong> is generated and notifications are broadcast to the configured &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channels&lt;/a>.&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Docs: Alarm Filters</title><link>https://trustgrid.github.io/docs/docs/alarms/alarm-filters/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/alarm-filters/</guid><description>
+&lt;/ol></description></item><item><title>Docs: Alarm Filters</title><link>https://docs.trustgrid.io/docs/alarms/alarm-filters/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/alarms/alarm-filters/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Alarm Filters are used to determine which &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a> trigger notifications and to define which &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a> should receive those notifications.&lt;/p>
+&lt;p>Alarm Filters are used to determine which &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a> trigger notifications and to define which &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channels&lt;/a> should receive those notifications.&lt;/p>
 &lt;/div>
 &lt;p>Alarm filters have the following fields:&lt;/p>
 &lt;table>
@@ -35,15 +35,15 @@
 &lt;/tr>
 &lt;tr>
 &lt;th>Enabled&lt;/th>
-&lt;td>An alarm filter must be enabled for matching &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> to be sent to the selected &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channel&lt;/a>. Deselecting the check box can be handy if you wish to suppress a specific type of &lt;a href="https://trustgrid.github.io/docs/docs/alarms/">alarm&lt;/a>.&lt;/td>
+&lt;td>An alarm filter must be enabled for matching &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> to be sent to the selected &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channel&lt;/a>. Deselecting the check box can be handy if you wish to suppress a specific type of &lt;a href="https://docs.trustgrid.io/docs/alarms/">alarm&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Channels&lt;/th>
-&lt;td>This section determines which &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a> matching &lt;a href="https://trustgrid.github.io/docs/docs/alarms/">alarms&lt;/a> will be sent to.&lt;/td>
+&lt;td>This section determines which &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channels&lt;/a> matching &lt;a href="https://docs.trustgrid.io/docs/alarms/">alarms&lt;/a> will be sent to.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Criteria&lt;/th>
-&lt;td>&lt;p>The criteria determine which &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a> will match the filter. These conditions can be set as:&lt;/p>
+&lt;td>&lt;p>The criteria determine which &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a> will match the filter. These conditions can be set as:&lt;/p>
 &lt;ul>
 &lt;li>All (default) - All specified criteria must be true to match. Equivalent to a boolean AND condition.&lt;/li>
 &lt;li>Any - Only one criteria must be true to match. Equivalent to a boolean OR condition.&lt;/li>
@@ -53,21 +53,21 @@
 &lt;/tr>
 &lt;tr>
 &lt;th>Node Name&lt;/th>
-&lt;td>The &amp;ldquo;Node Name&amp;rdquo; criteria llows you to select one or more specific &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> names. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> names is associated with the &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a>.&lt;/td>
+&lt;td>The &amp;ldquo;Node Name&amp;rdquo; criteria llows you to select one or more specific &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> names. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> names is associated with the &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Event Type&lt;/th>
-&lt;td>The &lt;a href="https://trustgrid.github.io/docs/docs/alarms/event-types/">&amp;ldquo;Event Type&amp;rdquo;&lt;/a> criteria determines which &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a> will match the filter. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="https://trustgrid.github.io/docs/docs/alarms/event-types/">event types&lt;/a>.&lt;/td>
+&lt;td>The &lt;a href="https://docs.trustgrid.io/docs/alarms/event-types/">&amp;ldquo;Event Type&amp;rdquo;&lt;/a> criteria determines which &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a> will match the filter. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="https://docs.trustgrid.io/docs/alarms/event-types/">event types&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Tag Matches&lt;/th>
-&lt;td>&lt;p>The &amp;ldquo;Tag Matches&amp;rdquo; criteria allows you to use &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">tag&lt;/a> name/value pairs to determine if the filter should match &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a>. For examples, you may what production devices to send to a high priority &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channel&lt;/a> such as PagerDuty or OpsGenie. If your &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> have a tag to indicating “prod_status=production”, you can select that name/value pair from the list to properly filter your &lt;a href="https://trustgrid.github.io/docs/docs/alarms/">alarms&lt;/a>.&lt;/p>
+&lt;td>&lt;p>The &amp;ldquo;Tag Matches&amp;rdquo; criteria allows you to use &lt;a href="https://docs.trustgrid.io/docs/nodes/tags/">tag&lt;/a> name/value pairs to determine if the filter should match &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a>. For examples, you may what production devices to send to a high priority &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channel&lt;/a> such as PagerDuty or OpsGenie. If your &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> have a tag to indicating “prod_status=production”, you can select that name/value pair from the list to properly filter your &lt;a href="https://docs.trustgrid.io/docs/alarms/">alarms&lt;/a>.&lt;/p>
 &lt;p>&lt;img src="tag-matches.png" alt="img">&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Severity&lt;/th>
-&lt;td>&lt;p>Each &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> type has a severity level associated with it. This filter will match any &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> with the selected severity type or higher. This is the only mandatory criteria.&lt;/p>
+&lt;td>&lt;p>Each &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> type has a severity level associated with it. This filter will match any &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> with the selected severity type or higher. This is the only mandatory criteria.&lt;/p>
 &lt;p>The severity levels are:&lt;/p>
 &lt;ol>
 &lt;li>INFO&lt;/li>
@@ -75,18 +75,18 @@
 &lt;li>ERROR&lt;/li>
 &lt;li>CRITICAL&lt;/li>
 &lt;/ol>
-&lt;p>For example, if you select the severity level of WARNING the filter will match WARNING, ERROR and CRITICAL &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a>.&lt;/p>
-&lt;p>Some events have a corresponding &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> that will automatically resolve the alert in the portal and in some &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a> such as PagerDuty. The corresponding event may have a different severity level, so make sure you select the lower severity for the criteria. e.g. &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> Disconnect is a WARNING but &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> Connect which resolves it is only INFO. So you’d need to select both &lt;a href="https://trustgrid.github.io/docs/docs/alarms/event-types/">Event Types&lt;/a> and set the severity to INFO.&lt;/p>
+&lt;p>For example, if you select the severity level of WARNING the filter will match WARNING, ERROR and CRITICAL &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a>.&lt;/p>
+&lt;p>Some events have a corresponding &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> that will automatically resolve the alert in the portal and in some &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channels&lt;/a> such as PagerDuty. The corresponding event may have a different severity level, so make sure you select the lower severity for the criteria. e.g. &lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> Disconnect is a WARNING but &lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> Connect which resolves it is only INFO. So you’d need to select both &lt;a href="https://docs.trustgrid.io/docs/alarms/event-types/">Event Types&lt;/a> and set the severity to INFO.&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Contains Text&lt;/th>
-&lt;td>&lt;p>This field will accept any single string of text to match to the contents of an &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a>. For example, if all your gateways include &lt;code>-gw&lt;/code> in the name you could enter that without quotes in the field and it would match any &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> that includes that text in the event payload. This criteria can also be used if there is another aspect of the node included in the &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> payload that doesn’t match the criteria above. To see the entire payload of an &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> configure a less specific payload and send to an email &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channel&lt;/a> to see the JSON.&lt;/p>
-&lt;p>The &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> payload includes the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node’s&lt;/a> unique identifier (UID) which is a string of generated text and numbers. If your &amp;ldquo;Contains Text&amp;rdquo; criteria is too short, there is a chance a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> UID will also match unexpectedly.&lt;/p>
+&lt;td>&lt;p>This field will accept any single string of text to match to the contents of an &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a>. For example, if all your gateways include &lt;code>-gw&lt;/code> in the name you could enter that without quotes in the field and it would match any &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> that includes that text in the event payload. This criteria can also be used if there is another aspect of the node included in the &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> payload that doesn’t match the criteria above. To see the entire payload of an &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> configure a less specific payload and send to an email &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channel&lt;/a> to see the JSON.&lt;/p>
+&lt;p>The &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> payload includes the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node’s&lt;/a> unique identifier (UID) which is a string of generated text and numbers. If your &amp;ldquo;Contains Text&amp;rdquo; criteria is too short, there is a chance a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> UID will also match unexpectedly.&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Alert Suppression</title><link>https://trustgrid.github.io/docs/docs/alarms/alert-suppression/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/alert-suppression/</guid><description>
+&lt;/table></description></item><item><title>Docs: Alert Suppression</title><link>https://docs.trustgrid.io/docs/alarms/alert-suppression/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/alarms/alert-suppression/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Maintenance and other planned disruptive activity can generate a large amount of alerts and notifications for no value. The Trustgrid system allows you to define alert suppression windows during which no alerts are triggered.&lt;/p>
 &lt;/div>
@@ -142,7 +142,7 @@
 &lt;li>
 &lt;p>Suppression windows apply to all devices across the entire organization.&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Docs: Channels</title><link>https://trustgrid.github.io/docs/docs/alarms/channels/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/channels/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Channels</title><link>https://docs.trustgrid.io/docs/alarms/channels/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/alarms/channels/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A channel defines one or more method of delivering alert notifications to external systems.&lt;/p>
 &lt;/div>
@@ -159,21 +159,21 @@
 &lt;/li>
 &lt;/ul>
 &lt;div class="alert alert-primary" role="alert">
-For both PagerDuty and OpsGenie the integration will automatically resolve issues if an &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> occurs that negates the initial triggering event. For example, if an &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> is triggered by a Node Disconnect and the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> reconnects, the Node Connect &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> will resolve the incident via the API.
+For both PagerDuty and OpsGenie the integration will automatically resolve issues if an &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> occurs that negates the initial triggering event. For example, if an &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> is triggered by a Node Disconnect and the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> reconnects, the Node Connect &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> will resolve the incident via the API.
 &lt;/div>
 &lt;ul>
 &lt;li>
-&lt;p>Slack - Trustgrid can post the &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data to a configured channel via a webhook.&lt;/p>
+&lt;p>Slack - Trustgrid can post the &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> data to a configured channel via a webhook.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Microsoft Teams - Trustgrid can post &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data to a configured Teams channel via an incoming webhook&lt;/p>
+&lt;p>Microsoft Teams - Trustgrid can post &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> data to a configured Teams channel via an incoming webhook&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;div class="alert alert-primary" role="alert">
-Only a single Slack or Teams channel can be targeted by a Trustgrid channel. However, you can create multiple Trustgrid channels if you wish to post the &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data to more than one Slack/Teams channel.
+Only a single Slack or Teams channel can be targeted by a Trustgrid channel. However, you can create multiple Trustgrid channels if you wish to post the &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> data to more than one Slack/Teams channel.
 &lt;/div>
 &lt;h3 id="example-event-data">Example Event Data&lt;/h3>
-&lt;p>The &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data is delivered in JSON, as shown below, which depending on the integration can allow for additional parsing.&lt;/p>
+&lt;p>The &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> data is delivered in JSON, as shown below, which depending on the integration can allow for additional parsing.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;nodeName&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;edge1&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Name&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">node&lt;/span> &lt;span style="color:#a40000">that&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">relates&lt;/span> &lt;span style="color:#a40000">to&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;expires&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">1604801325&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Unix&lt;/span> &lt;span style="color:#a40000">epoch&lt;/span> &lt;span style="color:#a40000">timestamp&lt;/span> &lt;span style="color:#a40000">when&lt;/span> &lt;span style="color:#a40000">this&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">will&lt;/span> &lt;span style="color:#a40000">expire&lt;/span> &lt;span style="color:#a40000">and&lt;/span> &lt;span style="color:#a40000">automatically&lt;/span> &lt;span style="color:#a40000">resolve&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
@@ -201,7 +201,7 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">A&lt;/span> &lt;span style="color:#a40000">list&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">alarm&lt;/span> &lt;span style="color:#a40000">filters&lt;/span> &lt;span style="color:#a40000">that&lt;/span> &lt;span style="color:#a40000">matched&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;be324011-4bea-4392-a06a-541646decd39&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Event Types</title><link>https://trustgrid.github.io/docs/docs/alarms/event-types/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/event-types/</guid><description>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Event Types</title><link>https://docs.trustgrid.io/docs/alarms/event-types/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/alarms/event-types/</guid><description>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -216,13 +216,13 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;td>All Gateways Disconnected&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>This &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> will be triggered if an edge node loses connectivity to all it’s available gateways.&lt;/td>
+&lt;td>This &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> will be triggered if an edge node loses connectivity to all it’s available gateways.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>All Peers Disconnected&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>This &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> will be triggered if a node is configured as a gateway an it lose connectivity to all it’s configured edge nodes.&lt;/td>
+&lt;td>This &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> will be triggered if a node is configured as a gateway an it lose connectivity to all it’s configured edge nodes.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Certificate Expiring&lt;/td>
@@ -233,44 +233,44 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;tr>
 &lt;td>Cluster Failover&lt;/td>
 &lt;td>INFO&lt;/td>
-&lt;td>&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> is the active &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> member&lt;/td>
-&lt;td>Sent by a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> when it claims the active role.&lt;/td>
+&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> is the active &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> member&lt;/td>
+&lt;td>Sent by a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> when it claims the active role.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Cluster Failover&lt;/td>
 &lt;td>Info&lt;/td>
-&lt;td>&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> is no longer the active &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> member&lt;/td>
-&lt;td>Sent by a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> when it releases the active role.&lt;/td>
+&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> is no longer the active &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> member&lt;/td>
+&lt;td>Sent by a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> when it releases the active role.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Connection Flapping&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> disconnects and reconnects 10 times within 5 minutes. A follow up alert will be sent after each subsequent 120 disconnect/reconnects.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> disconnects and reconnects 10 times within 5 minutes. A follow up alert will be sent after each subsequent 120 disconnect/reconnects.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Connection Flapping&lt;/td>
 &lt;td>INFO&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>This alert will be sent when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node’s&lt;/a> &amp;ldquo;Connection Flapping&amp;rdquo; issue has been resolved.&lt;/td>
+&lt;td>This alert will be sent when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node’s&lt;/a> &amp;ldquo;Connection Flapping&amp;rdquo; issue has been resolved.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Connection Timeout&lt;/td>
 &lt;td>ERROR&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> does not reconnect after a profile update has been pushed to the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a>.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> does not reconnect after a profile update has been pushed to the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Data Plane Disruption&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>This &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> will be triggered if a data plane tunnel is terminated unexpectedly.&lt;/td>
+&lt;td>This &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> will be triggered if a data plane tunnel is terminated unexpectedly.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Date Plane Disruption&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>Gateway &lt;em>nodename&lt;/em> removed from the domain&lt;/td>
-&lt;td>If a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> acting as a gateway (public, private or hub) is disabled or the gateway service is disabled all other &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> in the domain will log this &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a>.&lt;/td>
+&lt;td>If a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> acting as a gateway (public, private or hub) is disabled or the gateway service is disabled all other &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> in the domain will log this &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Gateway Connectivity Health Check&lt;/td>
@@ -294,7 +294,7 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;td>Metric Threshold Violation&lt;/td>
 &lt;td>ERROR&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> cpu, ram, disk, or latency configured metric threshold is violated.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> cpu, ram, disk, or latency configured metric threshold is violated.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Metric Threshold Violation&lt;/td>
@@ -306,7 +306,7 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;td>Network Error&lt;/td>
 &lt;td>CRITICAL&lt;/td>
 &lt;td>Stale ARP detected&lt;/td>
-&lt;td>Alerts when a stale ARP entry is detected for a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node’s&lt;/a> &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> IP.&lt;/td>
+&lt;td>Alerts when a stale ARP entry is detected for a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node’s&lt;/a> &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> IP.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Network Error&lt;/td>
@@ -315,16 +315,16 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;td>Alerts if an interface has been detected running at half-duplex. This is almost always a result of a failure to auto-negotiate the speed/duplex and can result in poor performance.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> Connect&lt;/td>
+&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> Connect&lt;/td>
 &lt;td>INFO&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> connects to the control plane.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> connects to the control plane.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> Disconnect&lt;/td>
+&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> Disconnect&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> disconnects from the control plane.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> disconnects from the control plane.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Order Created&lt;/td>
@@ -342,11 +342,11 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;td>Unauthorized IP&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&amp;rsquo;s&lt;/a> public IP has been locked but the connection to the control plane comes from a different IP.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&amp;rsquo;s&lt;/a> public IP has been locked but the connection to the control plane comes from a different IP.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;hr></description></item><item><title>Docs: Events</title><link>https://trustgrid.github.io/docs/docs/alarms/events/</link><pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/events/</guid><description>
+&lt;hr></description></item><item><title>Docs: Events</title><link>https://docs.trustgrid.io/docs/alarms/events/</link><pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/alarms/events/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Events are emitted from nodes and from the Trustgrid control plane when actionable things happen. Events are the basis for alarms and notifications.&lt;/p>
 &lt;/div>

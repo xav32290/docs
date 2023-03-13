@@ -1,11 +1,11 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– View Logs</title><link>https://trustgrid.github.io/docs/help-center/view-logs/</link><description>Recent content in View Logs on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 30 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/help-center/view-logs/index.xml" rel="self" type="application/rss+xml"/><item><title>Help-Center: View Configuration Changes</title><link>https://trustgrid.github.io/docs/help-center/view-logs/config-changes/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/view-logs/config-changes/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– View Logs</title><link>https://docs.trustgrid.io/help-center/view-logs/</link><description>Recent content in View Logs on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 30 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.trustgrid.io/help-center/view-logs/index.xml" rel="self" type="application/rss+xml"/><item><title>Help-Center: View Configuration Changes</title><link>https://docs.trustgrid.io/help-center/view-logs/config-changes/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/view-logs/config-changes/</guid><description>
 &lt;ul>
 &lt;li>Changes to the following configurations are audited:
 &lt;ul>
 &lt;li>API&lt;/li>
-&lt;li>&lt;a href="https://trustgrid.github.io/docs/docs/clusters/">Cluster&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://trustgrid.github.io/docs/docs/domain/">Domain&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.trustgrid.io/docs/clusters/">Cluster&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.trustgrid.io/docs/domain/">Domain&lt;/a>&lt;/li>
 &lt;li>Certificate&lt;/li>
 &lt;li>Org&lt;/li>
 &lt;li>Profile&lt;/li>
@@ -15,13 +15,13 @@
 &lt;li>Audits record the event type (add/remove/change), the user name, the IP address, and the date of the change&lt;/li>
 &lt;li>Audits are kept for 30 days&lt;/li>
 &lt;li>Audits can be downloaded as CSV on the operations page&lt;/li>
-&lt;/ul></description></item><item><title>Help-Center: View Node Update Events</title><link>https://trustgrid.github.io/docs/help-center/view-logs/node-update-events/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/view-logs/node-update-events/</guid><description>
+&lt;/ul></description></item><item><title>Help-Center: View Node Update Events</title><link>https://docs.trustgrid.io/help-center/view-logs/node-update-events/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/view-logs/node-update-events/</guid><description>
 &lt;ul>
 &lt;li>View node update events on the Operations page&lt;/li>
 &lt;li>Node update events are kept for 30 days&lt;/li>
 &lt;li>You can download a CSV of the node updates from the Operations page&lt;/li>
 &lt;li>All Trustgrid node agent updates and OS package updates are logged&lt;/li>
-&lt;/ul></description></item><item><title>Help-Center: View User Authentication Events</title><link>https://trustgrid.github.io/docs/help-center/view-logs/user-authentication/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/view-logs/user-authentication/</guid><description>
+&lt;/ul></description></item><item><title>Help-Center: View User Authentication Events</title><link>https://docs.trustgrid.io/help-center/view-logs/user-authentication/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/view-logs/user-authentication/</guid><description>
 &lt;ul>
 &lt;li>For every authentication event, we log:
 &lt;ul>

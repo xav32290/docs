@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Gateway Tools</title><link>https://trustgrid.github.io/docs/tutorials/gateway-tools/</link><description>Recent content in Gateway Tools on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://trustgrid.github.io/docs/tutorials/gateway-tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Tutorials: Monitoring Network Hops to Peers</title><link>https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Gateway Tools</title><link>https://docs.trustgrid.io/tutorials/gateway-tools/</link><description>Recent content in Gateway Tools on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.trustgrid.io/tutorials/gateway-tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Tutorials: Monitoring Network Hops to Peers</title><link>https://docs.trustgrid.io/tutorials/gateway-tools/monitoring-network-hops-to-peers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/tutorials/gateway-tools/monitoring-network-hops-to-peers/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>This feature collects traceroute-like data to all its connected peers and stores the results in the Trustgrid cloud for historical review.&lt;/p>
 &lt;/div>
@@ -65,7 +65,7 @@ The rule has to allow the destination of any which is not without risk. Make you
 &lt;li>Select &lt;code>Data Plane&lt;/code> on the left&lt;/li>
 &lt;li>Select the peer you wish to view data for. You will see a table of hops appear in the bottom right. &lt;img src="network-hops.png" alt="img">&lt;/li>
 &lt;li>You can select a time point on the latency chart, and the hops table will update to show the data for that time point. &lt;img src="monitoring.png" alt="img">&lt;/li>
-&lt;/ol></description></item><item><title>Tutorials: Ping Remote Node</title><link>https://trustgrid.github.io/docs/tutorials/gateway-tools/ping-remote-node/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/gateway-tools/ping-remote-node/</guid><description>
+&lt;/ol></description></item><item><title>Tutorials: Ping Remote Node</title><link>https://docs.trustgrid.io/tutorials/gateway-tools/ping-remote-node/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/tutorials/gateway-tools/ping-remote-node/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>This tool runs a ping from the gateway node to a remote edge node to verify the Trustgrid overlay network is functioning as expected.&lt;/p>
 &lt;/div>

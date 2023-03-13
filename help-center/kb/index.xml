@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Knowledge Base</title><link>https://trustgrid.github.io/docs/help-center/kb/</link><description>Recent content in Knowledge Base on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://trustgrid.github.io/docs/help-center/kb/index.xml" rel="self" type="application/rss+xml"/><item><title>Help-Center: Site Requirements</title><link>https://trustgrid.github.io/docs/help-center/kb/site-requirements/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/kb/site-requirements/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Knowledge Base</title><link>https://docs.trustgrid.io/help-center/kb/</link><description>Recent content in Knowledge Base on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.trustgrid.io/help-center/kb/index.xml" rel="self" type="application/rss+xml"/><item><title>Help-Center: Site Requirements</title><link>https://docs.trustgrid.io/help-center/kb/site-requirements/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/kb/site-requirements/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trustgrid’s architecture consists of Nodes deployed at the Edge (on-premise) and management infrastructure built in AWS. Nodes create tunnels to other nodes for data transfer, and to the management infrastructure for control. All tunnels are TLS connections and must be permitted by any firewall between&lt;/p>
 &lt;/div>
@@ -22,7 +22,7 @@
 &lt;p>At least 10Mbps download speed is recommended for reasonable performance during upgrades. Actual bandwidth requirement will be specific to the workloads running across the device.&lt;/p>
 &lt;p>Hardware devices are recommended to be connected to ports configured for 1000 Mbps and full duplex with auto negotiation on.&lt;/p>
 &lt;h2 id="gateway-node-network-requirements">Gateway Node Network Requirements&lt;/h2>
-&lt;p>In addition to being able to connect to the Control Plane resource outlined above, Gateway Nodes must be allowed to receive inbound traffic on their configured public IP and port (typically TCP/UDP port 8443). Both the advertised public IP and port are configurable when enabling a node as a gateway.&lt;/p></description></item><item><title>Help-Center: Edge Node Behavior When DNS Resolution Fails</title><link>https://trustgrid.github.io/docs/help-center/kb/dns-failure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/kb/dns-failure/</guid><description>
+&lt;p>In addition to being able to connect to the Control Plane resource outlined above, Gateway Nodes must be allowed to receive inbound traffic on their configured public IP and port (typically TCP/UDP port 8443). Both the advertised public IP and port are configurable when enabling a node as a gateway.&lt;/p></description></item><item><title>Help-Center: Edge Node Behavior When DNS Resolution Fails</title><link>https://docs.trustgrid.io/help-center/kb/dns-failure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/kb/dns-failure/</guid><description>
 &lt;h2 id="symptoms">Symptoms&lt;/h2>
 &lt;ul>
 &lt;li>Node does not connect to the Portal&lt;/li>
@@ -44,7 +44,7 @@
 &lt;li>Ensure the edge node can make TCP/UDP connection on port 53 to the configured DNS server&lt;/li>
 &lt;li>If using private DNS server ensure they have forwarders configured that can resolve trustgrid.io DNS records&lt;/li>
 &lt;li>If configured DNS servers are incorrect the node will need to be manually reconfigured. Contact Trustgrid Support for assistance&lt;/li>
-&lt;/ul></description></item><item><title>Help-Center: Edge Node Behavior When Port 443 is blocked</title><link>https://trustgrid.github.io/docs/help-center/kb/443-blocked/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/kb/443-blocked/</guid><description>
+&lt;/ul></description></item><item><title>Help-Center: Edge Node Behavior When Port 443 is blocked</title><link>https://docs.trustgrid.io/help-center/kb/443-blocked/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/kb/443-blocked/</guid><description>
 &lt;h2 id="symptoms">Symptoms&lt;/h2>
 &lt;ul>
 &lt;li>Node will not update either automatically or when manually triggered&lt;/li>
@@ -57,8 +57,8 @@
 &lt;ul>
 &lt;li>Confirm the node can resolve repo.trustgrid.io&lt;/li>
 &lt;li>Ensure the node can connect to repo.trustgrid.io:443&lt;/li>
-&lt;li>&lt;a href="https://trustgrid.github.io/docs/help-center/kb/ssl-tls-tampering/">Verify no DPI-SSL or HTTPS proxy&lt;/a> is interfereing with the SSL certificate for repo.trustgrid.io&lt;/li>
-&lt;/ul></description></item><item><title>Help-Center: Edge Node Behavior When Port 8443 is blocked</title><link>https://trustgrid.github.io/docs/help-center/kb/8443-blocked/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/kb/8443-blocked/</guid><description>
+&lt;li>&lt;a href="https://docs.trustgrid.io/help-center/kb/ssl-tls-tampering/">Verify no DPI-SSL or HTTPS proxy&lt;/a> is interfereing with the SSL certificate for repo.trustgrid.io&lt;/li>
+&lt;/ul></description></item><item><title>Help-Center: Edge Node Behavior When Port 8443 is blocked</title><link>https://docs.trustgrid.io/help-center/kb/8443-blocked/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/kb/8443-blocked/</guid><description>
 &lt;h2 id="symptoms">Symptoms&lt;/h2>
 &lt;ul>
 &lt;li>Node will not connect to the portal&lt;/li>
@@ -81,7 +81,7 @@
 &lt;/ul>
 &lt;h2 id="cause">Cause&lt;/h2>
 &lt;ul>
-&lt;li>The Trustgrid edge node cannot connect to the &lt;a href="https://trustgrid.github.io/docs/help-center/kb/site-requirements/">Trustgrid control plane&lt;/a> over 8443&lt;/li>
+&lt;li>The Trustgrid edge node cannot connect to the &lt;a href="https://docs.trustgrid.io/help-center/kb/site-requirements/">Trustgrid control plane&lt;/a> over 8443&lt;/li>
 &lt;/ul>
 &lt;h2 id="verification">Verification&lt;/h2>
 &lt;ul>
@@ -89,8 +89,8 @@
 &lt;/ul>
 &lt;h2 id="resolution">Resolution&lt;/h2>
 &lt;ul>
-&lt;li>Adjust firewall settings to ensure TCP traffic over port 8443 is allowed to all of the &lt;a href="https://trustgrid.github.io/docs/help-center/kb/site-requirements/">Trustgrid control plane&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Help-Center: Edge Node Behavior When SSL / TLS Certificate is Altered</title><link>https://trustgrid.github.io/docs/help-center/kb/ssl-tls-tampering/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/kb/ssl-tls-tampering/</guid><description>
+&lt;li>Adjust firewall settings to ensure TCP traffic over port 8443 is allowed to all of the &lt;a href="https://docs.trustgrid.io/help-center/kb/site-requirements/">Trustgrid control plane&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Help-Center: Edge Node Behavior When SSL / TLS Certificate is Altered</title><link>https://docs.trustgrid.io/help-center/kb/ssl-tls-tampering/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/kb/ssl-tls-tampering/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Products that alter SSL/TLS certificate chains will prevent the node from functioning normally.&lt;/p>
 &lt;/div>
@@ -124,9 +124,9 @@
 &lt;p>&lt;img src="cert.png" alt="img">&lt;/p>
 &lt;h2 id="resolution">Resolution&lt;/h2>
 &lt;ul>
-&lt;li>Traffic on ports 443 and 8443 between the Trustgrid node and the &lt;a href="https://trustgrid.github.io/docs/help-center/kb/site-requirements/">Trustgrid public IPs&lt;/a> and/or *.trustgrid.io must be excluded from any SSL/TLS decryption/inspection&lt;/li>
+&lt;li>Traffic on ports 443 and 8443 between the Trustgrid node and the &lt;a href="https://docs.trustgrid.io/help-center/kb/site-requirements/">Trustgrid public IPs&lt;/a> and/or *.trustgrid.io must be excluded from any SSL/TLS decryption/inspection&lt;/li>
 &lt;li>After excluding the traffic, restart the edge node&lt;/li>
-&lt;/ul></description></item><item><title>Help-Center: Edge Node Startup &amp; Update Communication Process</title><link>https://trustgrid.github.io/docs/help-center/kb/startup-process/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/kb/startup-process/</guid><description>
+&lt;/ul></description></item><item><title>Help-Center: Edge Node Startup &amp; Update Communication Process</title><link>https://docs.trustgrid.io/help-center/kb/startup-process/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/kb/startup-process/</guid><description>
 &lt;h2 id="startup-process">Startup Process&lt;/h2>
 &lt;ol>
 &lt;li>ARP for the default gateway&lt;/li>

@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– 2021</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/</link><description>Recent content in 2021 on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>Release-Notes: March</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– 2021</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2021/</link><description>Recent content in 2021 on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.trustgrid.io/release-notes/cloud/archive/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>Release-Notes: March</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2021/march/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2021/march/</guid><description>
 &lt;h2 id="improved-identity-provider-integration">Improved Identity Provider Integration&lt;/h2>
 &lt;p>Trustgrid has supported SAML integration to manage portal access for some time. As we began supporting additional services, such as Remote Access applications, more flexibility was needed.&lt;/p>
 &lt;h2 id="openid-support">OpenID Support&lt;/h2>
@@ -89,7 +89,7 @@
 &lt;h2 id="proxyarp-option-for-outside-nats">ProxyARP Option for Outside NATs&lt;/h2>
 &lt;p>Previously the Trustgrid node would ARP on the local network for any IP contained in the Local CIDR of an outside NAT. For example, if your Outside NAT Local CIDR was for 192.168.1.0/24, the node would respond to ARP requests for any IP in that network (192.168.1.1 - .254).&lt;/p>
 &lt;p>This is still the default behavior, but there is now an option to disable this functionality when configuring Outside NATs.&lt;/p>
-&lt;p>&lt;img src="proxy-arp-option.png" alt="Proxy ARP Option">&lt;/p></description></item><item><title>Release-Notes: August</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</guid><description>
+&lt;p>&lt;img src="proxy-arp-option.png" alt="Proxy ARP Option">&lt;/p></description></item><item><title>Release-Notes: August</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2021/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2021/august/</guid><description>
 &lt;h2 id="tag-improvements">Tag Improvements&lt;/h2>
 &lt;p>Two major improvements regarding tags.&lt;/p>
 &lt;h3 id="cluster-members-inherit-tags">Cluster Members Inherit Tags&lt;/h3>
@@ -112,7 +112,7 @@
 &lt;ul>
 &lt;li>Due Dates for Orders&lt;/li>
 &lt;li>Support for specific device models (as opposed to just hardware vs virtual)&lt;/li>
-&lt;/ul></description></item><item><title>Release-Notes: September</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</guid><description>
+&lt;/ul></description></item><item><title>Release-Notes: September</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2021/september/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2021/september/</guid><description>
 &lt;h2 id="container--improvements">Container Improvements&lt;/h2>
 &lt;p>Trustgrid has greatly enhanced the container features we support and this release makes these features available to all users.&lt;/p>
 &lt;h3 id="container-management">Container Management&lt;/h3>
@@ -136,14 +136,14 @@
 &lt;p>The first change you’ll notice is that clicking Provisioning opens a new tab. The orders table now makes it easier to search and filter the results.&lt;/p>
 &lt;p>The individual order screen is now a single page view to reduce the need to switch between tabs. And orders now support attaching files such as legacy device configurations or diagrams that might be useful for configuring the new devices.&lt;/p>
 &lt;h3 id="order-notifications">Order Notifications&lt;/h3>
-&lt;p>You can now configure &lt;a href="https://trustgrid.github.io/docs/docs/alarms/alarm-filters/">Alarm Filters&lt;/a> for four new order based events:&lt;/p>
+&lt;p>You can now configure &lt;a href="https://docs.trustgrid.io/docs/alarms/alarm-filters/">Alarm Filters&lt;/a> for four new order based events:&lt;/p>
 &lt;ul>
 &lt;li>Order Created&lt;/li>
 &lt;li>Order Commented&lt;/li>
 &lt;li>Order Status Change&lt;/li>
 &lt;li>Order Customer Update&lt;/li>
 &lt;/ul>
-&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a>.&lt;/p></description></item><item><title>Release-Notes: December</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</guid><description>
+&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channels&lt;/a>.&lt;/p></description></item><item><title>Release-Notes: December</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2021/december/</guid><description>
 &lt;h2 id="data-plane-status-table">Data Plane Status Table&lt;/h2>
 &lt;p>Previously Trustgrid had a visual indicator on the Node detail page to show the Data Plane health of a node, but it only showed the state as &lt;code>Connected&lt;/code>, &lt;code>Degraded&lt;/code> or &lt;code>Disconnected&lt;/code>. While connected and disconnected were clear, there was little information on why the status was Degraded.&lt;/p>
 &lt;p>With this release hovering over the Data Plane status icon will bring up a pop-up screen showing all the peers and and their connection status. Additionally, if the peer is connected it will show:&lt;/p>

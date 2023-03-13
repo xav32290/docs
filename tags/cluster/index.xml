@@ -1,9 +1,9 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– cluster</title><link>https://trustgrid.github.io/docs/tags/cluster/</link><description>Recent content in cluster on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/tags/cluster/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Clusters</title><link>https://trustgrid.github.io/docs/docs/clusters/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/clusters/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– cluster</title><link>https://docs.trustgrid.io/tags/cluster/</link><description>Recent content in cluster on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.trustgrid.io/tags/cluster/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Clusters</title><link>https://docs.trustgrid.io/docs/clusters/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/clusters/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>A cluster is a pair of &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> that share configuration and an active/standby relationship, providing automated high-availability (HA) connectivity.&lt;/p>
+&lt;p>A cluster is a pair of &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> that share configuration and an active/standby relationship, providing automated high-availability (HA) connectivity.&lt;/p>
 &lt;/div>
-&lt;p>A cluster is a pair of &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> at a single site that share some configurations and provide automatic failover. An additional IP address is assigned as a Cluster Virtual IP address that can move between the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> if failover occurs.&lt;/p>
-&lt;p>Certain settings such as network services and VPN settings can be configured for the cluster and these settings will override the individual &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&amp;rsquo;s&lt;/a> configuration.&lt;/p>
+&lt;p>A cluster is a pair of &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> at a single site that share some configurations and provide automatic failover. An additional IP address is assigned as a Cluster Virtual IP address that can move between the &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> if failover occurs.&lt;/p>
+&lt;p>Certain settings such as network services and VPN settings can be configured for the cluster and these settings will override the individual &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&amp;rsquo;s&lt;/a> configuration.&lt;/p>
 &lt;div class="alert alert-primary" role="alert">
 Formerly the active member was referred to as the “master.” We are in the process moving to the terms active and standby. This documentation will use those terms but elements in the UI may retain the &lt;em>master&lt;/em> term.
 &lt;/div>
@@ -26,7 +26,7 @@ Formerly the active member was referred to as the “master.” We are in the pr
 &lt;div class="alert alert-primary" role="alert">
 Local ACLs allow only the partner cluster member to connect to the listening port.
 &lt;/div>
-&lt;p>Heartbeat communication is configured on each node&amp;rsquo;s &lt;a href="https://trustgrid.github.io/docs/docs/nodes/cluster/">cluster&lt;/a> page.&lt;/p>
+&lt;p>Heartbeat communication is configured on each node&amp;rsquo;s &lt;a href="https://docs.trustgrid.io/docs/nodes/cluster/">cluster&lt;/a> page.&lt;/p>
 &lt;h3 id="cluster-mode">Cluster Mode&lt;/h3>
 &lt;p>A cluster can be configured in two different modes to determine what happens when a failed member returns to healthy status:&lt;/p>
 &lt;ul>
@@ -123,7 +123,7 @@ Use caution before configuring multiple services with health checks. This could 
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="tags">Tags&lt;/h2>
-&lt;p>&lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">Tags&lt;/a> are visible at the bottom of the overview page for the resource.&lt;/p>
+&lt;p>&lt;a href="https://docs.trustgrid.io/docs/nodes/tags/">Tags&lt;/a> are visible at the bottom of the overview page for the resource.&lt;/p>
 &lt;p>&lt;img src="cluster-tags.png" alt="img">&lt;/p>
 &lt;h3 id="modifying-tags">Modifying Tags&lt;/h3>
 &lt;p>To add a tag:&lt;/p>
@@ -168,16 +168,16 @@ Use caution before configuring multiple services with health checks. This could 
 &lt;p>Click &lt;code>Apply Tag Filter&lt;/code> and the table will only show matching clusters.&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="applied-filters2.png" alt="img">&lt;/p></description></item><item><title>Tutorials: Cluster Failover Response</title><link>https://trustgrid.github.io/docs/tutorials/operations-runbook/cluster-failover-response/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/operations-runbook/cluster-failover-response/</guid><description>
+&lt;p>&lt;img src="applied-filters2.png" alt="img">&lt;/p></description></item><item><title>Tutorials: Cluster Failover Response</title><link>https://docs.trustgrid.io/tutorials/operations-runbook/cluster-failover-response/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/tutorials/operations-runbook/cluster-failover-response/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>When the active (master) member of the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> goes unhealthy the standby member will take over the active role. This process should be automatic and not require manual intervention. However, in certain circumstances, such as the unexpected failover of a public gateway, it is worth investigating to confirm traffic is in a healthy state.&lt;/p>
+&lt;p>When the active (master) member of the &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> goes unhealthy the standby member will take over the active role. This process should be automatic and not require manual intervention. However, in certain circumstances, such as the unexpected failover of a public gateway, it is worth investigating to confirm traffic is in a healthy state.&lt;/p>
 &lt;/div>
 &lt;h3 id="possible-messages">Possible Messages&lt;/h3>
 &lt;ul>
 &lt;li>
 &lt;p>Master role assumed - failover&lt;/p>
 &lt;ul>
-&lt;li>Indicates the master role has moved from the designated master (primary) to the backup/secondary &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a>&lt;/li>
+&lt;li>Indicates the master role has moved from the designated master (primary) to the backup/secondary &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
@@ -191,26 +191,26 @@ Use caution before configuring multiple services with health checks. This could 
 &lt;p>Below is a brief description events that occur during a failover process:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;p>The &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> assuming the master role will ARP to the network that it now owns the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">Cluster&lt;/a> Virtual IP (VIP)&lt;/p>
+&lt;p>The &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> assuming the master role will ARP to the network that it now owns the &lt;a href="https://docs.trustgrid.io/docs/clusters/">Cluster&lt;/a> Virtual IP (VIP)&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>The &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">Domain route&lt;/a> table will update that the assuming &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> should receive all traffic for the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> (&lt;em>clustername-master&lt;/em>)&lt;/p>
+&lt;p>The &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">Domain route&lt;/a> table will update that the assuming &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> should receive all traffic for the &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> (&lt;em>clustername-master&lt;/em>)&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>The assuming &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> will load all NAT entries associated with the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a>&lt;/p>
+&lt;p>The assuming &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> will load all NAT entries associated with the &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="response-process">Response Process&lt;/h3>
 &lt;p>After a failover or failback it is necessary to verify that traffic is flowing appropriately.&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>Login to the portal and navigate to the affected &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster’s&lt;/a> page&lt;/p>
+&lt;p>Login to the portal and navigate to the affected &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster’s&lt;/a> page&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Verify that only a single &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> shows as master&lt;/p>
+&lt;p>Verify that only a single &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> shows as master&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>On the &lt;code>Configuration&lt;/code> → &lt;code>Network&lt;/code> tab note the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> VIP&lt;/p>
+&lt;p>On the &lt;code>Configuration&lt;/code> → &lt;code>Network&lt;/code> tab note the &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> VIP&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;p>&lt;img src="cluster-virtual-ip2.png" alt="img">&lt;/p>

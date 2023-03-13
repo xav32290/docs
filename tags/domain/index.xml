@@ -1,12 +1,12 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– domain</title><link>https://trustgrid.github.io/docs/tags/domain/</link><description>Recent content in domain on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://trustgrid.github.io/docs/tags/domain/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Domain</title><link>https://trustgrid.github.io/docs/docs/domain/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/domain/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– domain</title><link>https://docs.trustgrid.io/tags/domain/</link><description>Recent content in domain on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.trustgrid.io/tags/domain/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Domain</title><link>https://docs.trustgrid.io/docs/domain/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>A domain is the logical grouping of &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> inside an organization.&lt;/p>
+&lt;p>A domain is the logical grouping of &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> inside an organization.&lt;/p>
 &lt;/div>
-&lt;p>Domains are a logical grouping of &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a>, allowing configuration of &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual networks&lt;/a> and &lt;a href="https://trustgrid.github.io/docs/docs/nodes/thresholds/">node thresholds&lt;/a>. Each Trustgrid deployment has a single domain.&lt;/p></description></item><item><title>Docs: Access Policy</title><link>https://trustgrid.github.io/docs/docs/domain/virtual-networks/access-policy/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/domain/virtual-networks/access-policy/</guid><description>
+&lt;p>Domains are a logical grouping of &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a>, allowing configuration of &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">virtual networks&lt;/a> and &lt;a href="https://docs.trustgrid.io/docs/nodes/thresholds/">node thresholds&lt;/a>. Each Trustgrid deployment has a single domain.&lt;/p></description></item><item><title>Docs: Access Policy</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/access-policy/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/virtual-networks/access-policy/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>An access policy is a list of rules that each allow, reject, or drop traffic at the VPN level.&lt;/p>
 &lt;/div>
-&lt;p>If no rules are defined, traffic will not pass through the &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual network&lt;/a>.&lt;/p>
+&lt;p>If no rules are defined, traffic will not pass through the &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">virtual network&lt;/a>.&lt;/p>
 &lt;p>&lt;strong>A rule can match traffic based on the following fields:&lt;/strong>&lt;/p>
 &lt;table>
 &lt;thead>
@@ -26,11 +26,11 @@
 &lt;/tr>
 &lt;tr>
 &lt;th>Source&lt;/th>
-&lt;td>The source of the traffic. You can select a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
+&lt;td>The source of the traffic. You can select a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Destination&lt;/th>
-&lt;td>The destination of the traffic. You can select a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
+&lt;td>The destination of the traffic. You can select a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Line Number&lt;/th>
@@ -43,21 +43,21 @@
 &lt;/tbody>
 &lt;/table>
 &lt;p>&lt;img src="access-policy.png" alt="img">&lt;/p>
-&lt;p>&lt;strong>Note that &lt;em>all specified&lt;/em> fields must be matched for the rule to match. (confirm w steven).&lt;/strong>&lt;/p></description></item><item><title>Tutorials: Applying Changes</title><link>https://trustgrid.github.io/docs/tutorials/applying-changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/tutorials/applying-changes/</guid><description>
+&lt;p>&lt;strong>Note that &lt;em>all specified&lt;/em> fields must be matched for the rule to match. (confirm w steven).&lt;/strong>&lt;/p></description></item><item><title>Tutorials: Applying Changes</title><link>https://docs.trustgrid.io/tutorials/applying-changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/tutorials/applying-changes/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Because changes to a domain &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual network&lt;/a> affect &lt;em>all&lt;/em> &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a>, &lt;a href="https://trustgrid.github.io/docs/docs/domain/">domain&lt;/a> configuration changes must be reviewed before applied, and are applied all at once.&lt;/p>
+&lt;p>Because changes to a domain &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">virtual network&lt;/a> affect &lt;em>all&lt;/em> &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a>, &lt;a href="https://docs.trustgrid.io/docs/domain/">domain&lt;/a> configuration changes must be reviewed before applied, and are applied all at once.&lt;/p>
 &lt;/div>
-&lt;p>After making changes to a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual network&lt;/a>, you can review outstanding changes. A list of changes will show who made each change, with a before/after table if appropriate.&lt;/p>
+&lt;p>After making changes to a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">virtual network&lt;/a>, you can review outstanding changes. A list of changes will show who made each change, with a before/after table if appropriate.&lt;/p>
 &lt;p>&lt;img src="outstanding-changes.png" alt="img">&lt;/p>
 &lt;p>Individual changes can be rejected by clicking the delete icon at the top.&lt;/p>
-&lt;p>Once changes are applied, outstanding changes will disappear from the review page, and &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> will receive the configuration updates.&lt;/p></description></item><item><title>Docs: Network Groups</title><link>https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-groups/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-groups/</guid><description>
+&lt;p>Once changes are applied, outstanding changes will disappear from the review page, and &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> will receive the configuration updates.&lt;/p></description></item><item><title>Docs: Network Groups</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/network-groups/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/virtual-networks/network-groups/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>A network group is a list of &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-objects/">network objects&lt;/a> that allows for easier rule management.&lt;/p>
+&lt;p>A network group is a list of &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-objects/">network objects&lt;/a> that allows for easier rule management.&lt;/p>
 &lt;/div>
-&lt;p>A network group requires a name to be set. This will be used to reference the group in &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/access-policy/">access policy&lt;/a> rules.&lt;/p>
+&lt;p>A network group requires a name to be set. This will be used to reference the group in &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/access-policy/">access policy&lt;/a> rules.&lt;/p>
 &lt;p>&lt;img src="network-groups2.png" alt="img">&lt;/p>
 &lt;p>Navigating into a network group allows management of the group’s member objects.&lt;/p>
-&lt;p>&lt;img src="member-network-objects.png" alt="img">&lt;/p></description></item><item><title>Docs: Network Objects</title><link>https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-objects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-objects/</guid><description>
+&lt;p>&lt;img src="member-network-objects.png" alt="img">&lt;/p></description></item><item><title>Docs: Network Objects</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/network-objects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/virtual-networks/network-objects/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A network object allows naming a CIDR inside a VPN for easier rule management.&lt;/p>
 &lt;/div>
@@ -81,15 +81,15 @@
 &lt;/tbody>
 &lt;/table>
 &lt;p>&lt;img src="network-objects.png" alt="img">&lt;/p>
-&lt;p>Multiple network objects may be clustered into a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-groups/">network group&lt;/a>.&lt;/p></description></item><item><title>Docs: Routes</title><link>https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/</guid><description>
+&lt;p>Multiple network objects may be clustered into a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-groups/">network group&lt;/a>.&lt;/p></description></item><item><title>Docs: Routes</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/routes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/virtual-networks/routes/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Routes configured under &lt;a href="https://trustgrid.github.io/docs/docs/domain/">Domains&lt;/a> determine to which &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> or &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> the &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">Trustgrid virtual network&lt;/a> should route traffic for a specific subnet.&lt;/p>
+&lt;p>Routes configured under &lt;a href="https://docs.trustgrid.io/docs/domain/">Domains&lt;/a> determine to which &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> or &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> the &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">Trustgrid virtual network&lt;/a> should route traffic for a specific subnet.&lt;/p>
 &lt;/div>
 &lt;h2 id="route-configuration">Route Configuration&lt;/h2>
 &lt;ol>
-&lt;li>Login to the portal and select &lt;a href="https://trustgrid.github.io/docs/docs/domain/">&lt;code>domains&lt;/code>&lt;/a>.&lt;/li>
+&lt;li>Login to the portal and select &lt;a href="https://docs.trustgrid.io/docs/domain/">&lt;code>domains&lt;/code>&lt;/a>.&lt;/li>
 &lt;li>Click the link to the desired domain under the &amp;ldquo;Name&amp;rdquo; column.&lt;/li>
-&lt;li>Scroll down to the &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">&amp;ldquo;Virtual Networks&amp;rdquo;&lt;/a> section and select the &lt;code>Routes&lt;/code> tab.&lt;/li>
+&lt;li>Scroll down to the &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">&amp;ldquo;Virtual Networks&amp;rdquo;&lt;/a> section and select the &lt;code>Routes&lt;/code> tab.&lt;/li>
 &lt;/ol>
 &lt;p>&lt;img src="routes-list.png" alt="img">&lt;/p>
 &lt;p>A Route has Three Required Fields:&lt;/p>
@@ -103,22 +103,22 @@
 &lt;tbody>
 &lt;tr>
 &lt;th>Destination&lt;/th>
-&lt;td>This will be the name of the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> or &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> that traffic will be routed to. This list is auto-populated based on the nodes and clusters in the selected &lt;a href="https://trustgrid.github.io/docs/docs/domain/">domain&lt;/a>.&lt;/td>
+&lt;td>This will be the name of the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> or &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> that traffic will be routed to. This list is auto-populated based on the nodes and clusters in the selected &lt;a href="https://docs.trustgrid.io/docs/domain/">domain&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Destination CIDR&lt;/th>
-&lt;td>This is the CIDR notation of the &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual network&lt;/a> that should be routed to the above destination &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> or &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a>.&lt;/td>
+&lt;td>This is the CIDR notation of the &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">virtual network&lt;/a> that should be routed to the above destination &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> or &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Metric&lt;/th>
-&lt;td>If there are multiple routes for the same &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual network&lt;/a> the metric will determine which route will be used. The lowest number is the highest priority. See the &amp;ldquo;Automatic Failover&amp;rdquo; text below.&lt;/td>
+&lt;td>If there are multiple routes for the same &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">virtual network&lt;/a> the metric will determine which route will be used. The lowest number is the highest priority. See the &amp;ldquo;Automatic Failover&amp;rdquo; text below.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="route-failover">Route Failover &lt;/h2>
-&lt;p>Route failover allows a subnet to be routed to an alternate &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> or &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> in the event of a failure.  This can be automatic or performed manually.&lt;/p>
+&lt;p>Route failover allows a subnet to be routed to an alternate &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> or &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> in the event of a failure.  This can be automatic or performed manually.&lt;/p>
 &lt;h3 id="prerequisites">Prerequisites &lt;/h3>
-&lt;p>In either configuration, the &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual network&lt;/a> settings under VPN settings for the primary and backup destination &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a>/&lt;a href="https://trustgrid.github.io/docs/docs/clusters/">clusters&lt;/a> must match. Including:&lt;/p>
+&lt;p>In either configuration, the &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">virtual network&lt;/a> settings under VPN settings for the primary and backup destination &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a>/&lt;a href="https://docs.trustgrid.io/docs/clusters/">clusters&lt;/a> must match. Including:&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>Network Virtual Route&lt;/p>
@@ -134,24 +134,24 @@
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="automatic-failover">Automatic Failover&lt;/h3>
-&lt;p>To have the route failover without manual intervention you must define two routes for the same subnet (Destination CIDR) with different metrics.  The lowest numerical metric will take precedence unless the destination &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> or &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> is offline.&lt;/p>
-&lt;p>In the below example configuration we want traffic for the 10.20.0.0/24 network to the &lt;code>edge&lt;/code> &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> first, and failover to the &lt;code>edge-dr&lt;/code> &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a>.&lt;/p>
+&lt;p>To have the route failover without manual intervention you must define two routes for the same subnet (Destination CIDR) with different metrics.  The lowest numerical metric will take precedence unless the destination &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> or &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> is offline.&lt;/p>
+&lt;p>In the below example configuration we want traffic for the 10.20.0.0/24 network to the &lt;code>edge&lt;/code> &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> first, and failover to the &lt;code>edge-dr&lt;/code> &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a>.&lt;/p>
 &lt;p>&lt;img src="automatic-failover.png" alt="img">&lt;/p>
 &lt;h3 id="preventing-automated-failback-or-forcing-a-failover">Preventing Automated Failback or Forcing a Failover&lt;/h3>
 &lt;p>As mentioned above if multiple routes are configured traffic will route to destination with the lowest metric number. So if the primary destination fails but then comes back online traffic will be routed back automatically.&lt;/p>
 &lt;p>However, there are some circumstances where this is not desirable. For example, if the primary site is unstable you may wish to keep traffic at the backup site until the primary is stabilized. Alternately, you may wish to preemptively reroute traffic to the backup site in advance of planned maintenance at the primary site.&lt;/p>
 &lt;p>To preemptively reroute traffic to the backup site, update the backup route to have a lower metric than the primary route.&lt;/p>
 &lt;h3 id="manual-failover">Manual Failover&lt;/h3>
-&lt;p>In some circumstances, it may be preferable for failover to only occur with manual intervention. In this situation, you will have a single route under the &lt;a href="https://trustgrid.github.io/docs/docs/domain/">domain&lt;/a>.  To initiate a failover you&amp;rsquo;ll need to update the destination &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a>/&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a>.&lt;/p>
+&lt;p>In some circumstances, it may be preferable for failover to only occur with manual intervention. In this situation, you will have a single route under the &lt;a href="https://docs.trustgrid.io/docs/domain/">domain&lt;/a>.  To initiate a failover you&amp;rsquo;ll need to update the destination &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a>/&lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a>.&lt;/p>
 &lt;ol>
 &lt;li>Login to the Portal and select your domain.&lt;/li>
-&lt;li>Click the link to the desired &lt;a href="https://trustgrid.github.io/docs/docs/domain/">domain&lt;/a> under the &amp;ldquo;Name&amp;rdquo; column.&lt;/li>
-&lt;li>Scroll down to the &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">&amp;ldquo;Virtual Networks&amp;rdquo;&lt;/a> section and select the &amp;ldquo;Routes&amp;rdquo; tab.&lt;/li>
+&lt;li>Click the link to the desired &lt;a href="https://docs.trustgrid.io/docs/domain/">domain&lt;/a> under the &amp;ldquo;Name&amp;rdquo; column.&lt;/li>
+&lt;li>Scroll down to the &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">&amp;ldquo;Virtual Networks&amp;rdquo;&lt;/a> section and select the &amp;ldquo;Routes&amp;rdquo; tab.&lt;/li>
 &lt;li>Find the route you wish to failover.&lt;/li>
 &lt;li>Update the destination device. (e.g. in the below you would switch from edge to edge-dr).
 &lt;img src="update-destination.png" alt="Update Destination">&lt;/li>
 &lt;li>Click save.&lt;/li>
-&lt;/ol></description></item><item><title>Docs: Thresholds</title><link>https://trustgrid.github.io/docs/docs/domain/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/domain/thresholds/</guid><description>
+&lt;/ol></description></item><item><title>Docs: Thresholds</title><link>https://docs.trustgrid.io/docs/domain/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/thresholds/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the domain level apply to all nodes in the domain, except when overridden. Events will be of type &lt;code>Metric Threshold Violation&lt;/code>.&lt;/p>
 &lt;/div>
@@ -217,9 +217,9 @@
 &lt;td>The target node to measure the latency to. Each node will measure the latency to the target node.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Virtual Networks</title><link>https://trustgrid.github.io/docs/docs/domain/virtual-networks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/domain/virtual-networks/</guid><description>
+&lt;/table></description></item><item><title>Docs: Virtual Networks</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/virtual-networks/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Virtual networks define an overlay network and routes for layer 3 connectivity. Trustgrid &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> are then assigned to networks. Virtual network overlays work similarly to Amazon&amp;rsquo;s VPCs but can span between clouds, data centers, and the edge.&lt;/p>
+&lt;p>Virtual networks define an overlay network and routes for layer 3 connectivity. Trustgrid &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> are then assigned to networks. Virtual network overlays work similarly to Amazon&amp;rsquo;s VPCs but can span between clouds, data centers, and the edge.&lt;/p>
 &lt;/div>
 &lt;p>&lt;img src="virtual-networks-page.png" alt="Virtual Networks">&lt;/p>
 &lt;h2 id="overlay-example">Overlay Example&lt;/h2>
@@ -231,14 +231,14 @@
 &lt;h3 id="virtual-networks---layer-3">Virtual Networks - Layer 3&lt;/h3>
 &lt;ul>
 &lt;li>
-&lt;p>Trustgrid uses a virtual network to traffic between &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a>. This avoids common
+&lt;p>Trustgrid uses a virtual network to traffic between &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a>. This avoids common
 challenges like conflicting subnets in large, non-centralized networks.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Inside and outside NATs are used to expose hosts for traffic&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">Routes&lt;/a> may be configured on the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">Routes&lt;/a> may be configured on the &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>ACLs can be applied&lt;/p>
@@ -254,15 +254,15 @@ challenges like conflicting subnets in large, non-centralized networks.&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;blockquote>
-&lt;p>A &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">route&lt;/a> would have to be added to the default gateway of 172.16.3.0/24 for 10.0.5.150 to route traffic for 10.0.5.0/24 through the gw of the edge node (172.16.0.5) data interface.&lt;/p>
+&lt;p>A &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">route&lt;/a> would have to be added to the default gateway of 172.16.3.0/24 for 10.0.5.150 to route traffic for 10.0.5.0/24 through the gw of the edge node (172.16.0.5) data interface.&lt;/p>
 &lt;/blockquote>
 &lt;/div>
 &lt;/div>
 &lt;h3 id="virtual-ip-addresses">Virtual IP Addresses&lt;/h3>
-&lt;p>Through the use of inside and outside NAT rules, local IP addresses to the Trustgrid &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> may be exposed on the network through a Virtual IP Address. For instance, a local device may have a local IP address of 192.168.1.100, but you may want it to appear to other devices or applications on the virtual network as IP address 10.0.20.100. Virtual IP Subnets are also supported where each IP in a subnet is mapped to the corresponding IP in a virtual subnet.&lt;/p>
+&lt;p>Through the use of inside and outside NAT rules, local IP addresses to the Trustgrid &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> may be exposed on the network through a Virtual IP Address. For instance, a local device may have a local IP address of 192.168.1.100, but you may want it to appear to other devices or applications on the virtual network as IP address 10.0.20.100. Virtual IP Subnets are also supported where each IP in a subnet is mapped to the corresponding IP in a virtual subnet.&lt;/p>
 &lt;h3 id="inside-nat">Inside NAT&lt;/h3>
 &lt;p>Inside NATs are added to a network to expose hosts in the private network to authorized traffic in the virtual network. For example a host at 192.168.1.184/32 could be exposed as 172.16.1.184/32. Traffic from authorized edge nodes could then communicate with 172.16.1.184.&lt;/p>
 &lt;h3 id="outside-nat">Outside NAT&lt;/h3>
-&lt;p>The use of an outside NAT can eliminate the need to create &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">routes&lt;/a> on internal gateways. Outsides NATs translate address in edge (remote) private networks to a privately addressable local IP. For example a host at 172.16.10.184/32 could be translated to 192.168.1.184/32.&lt;/p>
+&lt;p>The use of an outside NAT can eliminate the need to create &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">routes&lt;/a> on internal gateways. Outsides NATs translate address in edge (remote) private networks to a privately addressable local IP. For example a host at 172.16.10.184/32 could be translated to 192.168.1.184/32.&lt;/p>
 &lt;h3 id="routes">Routes&lt;/h3>
-&lt;p>&lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">Routes&lt;/a> are used to specify the network interface to be used when accessing specific subnets.&lt;/p></description></item></channel></rss>
+&lt;p>&lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">Routes&lt;/a> are used to specify the network interface to be used when accessing specific subnets.&lt;/p></description></item></channel></rss>

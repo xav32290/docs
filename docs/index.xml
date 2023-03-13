@@ -1,58 +1,58 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Documentation</title><link>https://trustgrid.github.io/docs/docs/</link><description>Recent content in Documentation on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://trustgrid.github.io/docs/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting-Started: Customer Responsibilities</title><link>https://trustgrid.github.io/docs/getting-started/security/customer-responsibilities/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/getting-started/security/customer-responsibilities/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Documentation</title><link>https://docs.trustgrid.io/docs/</link><description>Recent content in Documentation on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.trustgrid.io/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting-Started: Customer Responsibilities</title><link>https://docs.trustgrid.io/getting-started/security/customer-responsibilities/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/getting-started/security/customer-responsibilities/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trustgrid and our customers share the responsibilities of securing the Trustgrid network. Trustgrid assumes and automates a significant part of the overall security challenges. These challenges range from the cloud to the firmware on hardware appliances. Our customers are responsible for securing physical environments, identity and access management, and all security aspects of the environments where Trustgrid is installed.&lt;/p>
 &lt;/div>
 &lt;h4 id="trustgrid-secures-the-cloud">Trustgrid Secures the Cloud&lt;/h4>
 &lt;p>All cloud management components are secured and monitored by Trustgrid. This includes the hardware, software, and network for all cloud components including the Portal/Management API and other management tools. Customers are responsible for issuing credentials to the Portal for each authorized user and maintaining the security of those accounts.&lt;/p>
 &lt;h4 id="network-security-is-a-shared-responsibility">Network Security is a Shared Responsibility&lt;/h4>
-&lt;p>Trustgrid is responsible for the security of all data plane traffic from the time it enters a Trustgrid &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> until the time it exits a Trustgrid &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a>. Customers are responsible for the security of all network traffic eggressing from any Trustgrid &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a>.&lt;/p>
+&lt;p>Trustgrid is responsible for the security of all data plane traffic from the time it enters a Trustgrid &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> until the time it exits a Trustgrid &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a>. Customers are responsible for the security of all network traffic eggressing from any Trustgrid &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a>.&lt;/p>
 &lt;h4 id="trustgrid-teams-with-customers-for-edge-security">Trustgrid Teams with Customers for Edge Security&lt;/h4>
 &lt;p>All virtual or hardware appliances are secured by Trustgrid. Trustgrid&amp;rsquo;s ability to secure hardware is restricted to supported hardware appliances with specific exceptions. Customers are responsible for the security of the physical and logical environments into which Trustgrid is integrated.&lt;/p>
 &lt;h4 id="secure-gateway-nodes">Secure Gateway Nodes&lt;/h4>
 &lt;p>Trustgrid customer&amp;rsquo;s should apply access controls to ingress traffic for gateway nodes. By restricting ingress access to edge nodes IP ranges the system security is improved and many common attacks easily avoided.&lt;/p>
 &lt;h4 id="encrypt-traffic-with-customer-certificates">Encrypt Traffic with Customer Certificates&lt;/h4>
-&lt;p>By default, Trustgrid encrypts all traffic on the data and control planes with privately issued certificates from our PKI. Customers may elect to provide their own certificates for data plane encryption ensuring Trustgrid maintains a zero-knowledge security posture of all data plane traffic.&lt;/p></description></item><item><title>Getting-Started: Basic Architecture</title><link>https://trustgrid.github.io/docs/getting-started/basic-architecture/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/getting-started/basic-architecture/</guid><description>
+&lt;p>By default, Trustgrid encrypts all traffic on the data and control planes with privately issued certificates from our PKI. Customers may elect to provide their own certificates for data plane encryption ensuring Trustgrid maintains a zero-knowledge security posture of all data plane traffic.&lt;/p></description></item><item><title>Getting-Started: Basic Architecture</title><link>https://docs.trustgrid.io/getting-started/basic-architecture/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/getting-started/basic-architecture/</guid><description>
 &lt;h3 id="cloud-components">Cloud Components&lt;/h3>
 &lt;ul>
 &lt;li>Portal - The cloud management UI.&lt;/li>
 &lt;li>Gatekeeper - Provides configuration updates to edge nodes.&lt;/li>
-&lt;li>Zuul - Maintains persistent connection with &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> for reporting, &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a>, and updates.&lt;/li>
+&lt;li>Zuul - Maintains persistent connection with &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> for reporting, &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a>, and updates.&lt;/li>
 &lt;li>API - The management API that exposes 100% of UI elements to automation.&lt;/li>
-&lt;li>Repo - The APT repository that stores all firmware, OS, and &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> updates.&lt;/li>
+&lt;li>Repo - The APT repository that stores all firmware, OS, and &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> updates.&lt;/li>
 &lt;/ul>
 &lt;h3 id="edge-components">Edge Components&lt;/h3>
 &lt;ul>
-&lt;li>Node - The software that provides core functionality in the edge including &lt;a href="https://trustgrid.github.io/docs/getting-started/networking/">networking&lt;/a>, &lt;a href="https://trustgrid.github.io/docs/getting-started/security/">security&lt;/a>, compute, and management features. Edge nodes build outbound connections to gateway nodes.&lt;/li>
+&lt;li>Node - The software that provides core functionality in the edge including &lt;a href="https://docs.trustgrid.io/getting-started/networking/">networking&lt;/a>, &lt;a href="https://docs.trustgrid.io/getting-started/security/">security&lt;/a>, compute, and management features. Edge nodes build outbound connections to gateway nodes.&lt;/li>
 &lt;/ul>
 &lt;h3 id="use-cases">Use Cases&lt;/h3>
 &lt;ul>
-&lt;li>Software Defined Networking - Create a mesh &lt;a href="https://trustgrid.github.io/docs/getting-started/networking/">network&lt;/a> that connects cloud applications to edge data with load balancing, &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">clustering&lt;/a>, and failover managed through a portal or API.&lt;/li>
-&lt;li>Edge Compute - Deploy applications to the edge to access datasets not appropriate for replication to the cloud due to &lt;a href="https://trustgrid.github.io/docs/getting-started/security/">security&lt;/a> or compliance concerns, latency, or cost.&lt;/li>
-&lt;li>Device Management - Manage thousands of &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> with advanced tools to reduce the burden of operations at enterprise scale.&lt;/li>
+&lt;li>Software Defined Networking - Create a mesh &lt;a href="https://docs.trustgrid.io/getting-started/networking/">network&lt;/a> that connects cloud applications to edge data with load balancing, &lt;a href="https://docs.trustgrid.io/docs/clusters/">clustering&lt;/a>, and failover managed through a portal or API.&lt;/li>
+&lt;li>Edge Compute - Deploy applications to the edge to access datasets not appropriate for replication to the cloud due to &lt;a href="https://docs.trustgrid.io/getting-started/security/">security&lt;/a> or compliance concerns, latency, or cost.&lt;/li>
+&lt;li>Device Management - Manage thousands of &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> with advanced tools to reduce the burden of operations at enterprise scale.&lt;/li>
 &lt;li>Edge API - Integrate thousands of edge datasets with a single API interface and ETL functions executing at the edge.&lt;/li>
-&lt;li>Security - Leverage Trustgrid&amp;rsquo;s advanced &lt;a href="https://trustgrid.github.io/docs/getting-started/security/">security&lt;/a> to protect against a wide range of threats.&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Audits</title><link>https://trustgrid.github.io/docs/docs/nodes/audits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/audits/</guid><description>
+&lt;li>Security - Leverage Trustgrid&amp;rsquo;s advanced &lt;a href="https://docs.trustgrid.io/getting-started/security/">security&lt;/a> to protect against a wide range of threats.&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Audits</title><link>https://docs.trustgrid.io/docs/nodes/audits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/audits/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Node audits provide records when services on a node are invoked, or when upgrades are applied. This can be helpful to see historical maintenance of a node.&lt;/p>
 &lt;/div>
 &lt;p>Node audits can be viewed for a specific node by navigating to &lt;code>Audits&lt;/code> under the &lt;code>History&lt;/code> section on the node view.&lt;/p>
 &lt;p>Users will need &lt;code>audits::read:node&lt;/code> permissions to view node audits.&lt;/p>
 &lt;p>&lt;img src="node-list.png" alt="img">&lt;/p>
-&lt;p>Node audits can also be found for the entire organization by navigating to &lt;code>Operations&lt;/code>-&amp;gt;&lt;code>Node Audits&lt;/code>.&lt;/p></description></item><item><title>Getting-Started: Trustgrid's Access to Nodes</title><link>https://trustgrid.github.io/docs/getting-started/security/trustgrid-node-access/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/getting-started/security/trustgrid-node-access/</guid><description>
-&lt;p>By default, Trustgrid support has access to all &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> via the Control Plane, subject to Trustgrid policies and procedures. Trustgrid customers may opt to disallow Trustgrid support access to their &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a>. Disabling support access does not interfere with automated management features such as patching, updating, logging, or authentication.&lt;/p>
-&lt;p>Changes to the support flag are audited.&lt;/p></description></item><item><title>Release-Notes: February</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/february/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/february/</guid><description>
+&lt;p>Node audits can also be found for the entire organization by navigating to &lt;code>Operations&lt;/code>-&amp;gt;&lt;code>Node Audits&lt;/code>.&lt;/p></description></item><item><title>Getting-Started: Trustgrid's Access to Nodes</title><link>https://docs.trustgrid.io/getting-started/security/trustgrid-node-access/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/getting-started/security/trustgrid-node-access/</guid><description>
+&lt;p>By default, Trustgrid support has access to all &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> via the Control Plane, subject to Trustgrid policies and procedures. Trustgrid customers may opt to disallow Trustgrid support access to their &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a>. Disabling support access does not interfere with automated management features such as patching, updating, logging, or authentication.&lt;/p>
+&lt;p>Changes to the support flag are audited.&lt;/p></description></item><item><title>Release-Notes: February</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2022/february/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2022/february/</guid><description>
 &lt;h2 id="data-plane-status-panel">Data Plane Status Panel&lt;/h2>
 &lt;p>The previous release added a pop-up table that displayed statistics about a node’s connections to other node such as gateways. We’ve now moved most of this information to a new panel dedicated for this purpose.&lt;/p>
 &lt;p>Hovering over the Data Plane status indicator next to the node name still includes basic details about the number of gateways known and connected. And it includes a link to the new panel for more detail:&lt;/p>
 &lt;p>&lt;img src="data-plane-hover.png" alt="Data Plane Hover">&lt;/p>
-&lt;p>Clicking that link or just selecting the Data Plane panel from the left navigation bar will bring you to a new page showing much of the same detail as the &lt;a href="https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/">previous pop-up table&lt;/a>.&lt;/p>
+&lt;p>Clicking that link or just selecting the Data Plane panel from the left navigation bar will bring you to a new page showing much of the same detail as the &lt;a href="https://docs.trustgrid.io/release-notes/cloud/archive/2021/december/">previous pop-up table&lt;/a>.&lt;/p>
 &lt;h3 id="data-plane-historical-stats">Data Plane Historical Stats&lt;/h3>
 &lt;p>You can now load historical latency data about a connection between this node and a connected gateway. Simply select the gateway from the table by clicking it, choose a start and end time and click &lt;code>Load&lt;/code>.&lt;/p>
 &lt;p>&lt;img src="data-plane-view.png" alt="Data Plane View">&lt;/p>
 &lt;h2 id="portal-tool-improvements">Portal Tool Improvements&lt;/h2>
 &lt;h3 id="tool-setting-history">Tool Setting History&lt;/h3>
 &lt;p>A common pain point when using the tools within the Trustgrid Portal was that if you had to rerun a tool you had to reenter the values into the prompt. With this release Trustgrid is introducing an execution history that will make rerunning a tool much simpler for users.&lt;/p>
-&lt;p>As an example, if I run the Interface &lt;a href="https://trustgrid.github.io/docs/tutorials/remote-tools/tcp-port-test/">TCP Port Test&lt;/a> tool for the first time, the target IP and port will be the defaults 192.168.1.1 and port 80&lt;/p>
+&lt;p>As an example, if I run the Interface &lt;a href="https://docs.trustgrid.io/tutorials/remote-tools/tcp-port-test/">TCP Port Test&lt;/a> tool for the first time, the target IP and port will be the defaults 192.168.1.1 and port 80&lt;/p>
 &lt;p>&lt;img src="tcp-port-test.png" alt="TCP Port Test">&lt;/p>
 &lt;p>If I change these to a new IP and port and run (e.g. 172.16.22.199 and port 22) and run the tool. The next time I run the tool these settings will be populated automatically.&lt;/p>
 &lt;p>&lt;img src="tcp-port-test-2.png" alt="TCP Port Test">&lt;/p>
@@ -114,7 +114,7 @@
 &lt;p>&lt;img src="overridden-threshold.png" alt="Threshold Override">&lt;/p>
 &lt;h3 id="threshold-alerts-included-data-points">Threshold Alerts Included Data Points&lt;/h3>
 &lt;p>Previously it wasn’t always clear why a threshold alert, such as an alarm regarding latency, exceeded the configured threshold. Even if you connected immediate to the device and checked the latency might have returned to normal.&lt;/p>
-&lt;p>Now the JSON payload sent to alarm &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a> (email, Slack, PagerDuty, etc.) can include the data points used to calculate the average that exceeded the threshold. This is in a new section called &lt;code>details&lt;/code> and the values are in pairs of the timestamp &lt;code>t&lt;/code> (unix time) and value &lt;code>v&lt;/code> (in milliseconds in the example below).&lt;/p>
+&lt;p>Now the JSON payload sent to alarm &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channels&lt;/a> (email, Slack, PagerDuty, etc.) can include the data points used to calculate the average that exceeded the threshold. This is in a new section called &lt;code>details&lt;/code> and the values are in pairs of the timestamp &lt;code>t&lt;/code> (unix time) and value &lt;code>v&lt;/code> (in milliseconds in the example below).&lt;/p>
 &lt;div class="td-card card">
 &lt;div class="card-header bg-white">Alert Payload&lt;/div>
 &lt;div class="card-body code p-l0 m-0">
@@ -132,9 +132,9 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a40000">...&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: Cluster</title><link>https://trustgrid.github.io/docs/docs/nodes/cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/cluster/</guid><description>
+&lt;/div></description></item><item><title>Docs: Cluster</title><link>https://docs.trustgrid.io/docs/nodes/cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/cluster/</guid><description>
 &lt;div class="alert alert-primary" role="alert">
-Cluster configuration is only available for nodes that are members of a &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a>.
+Cluster configuration is only available for nodes that are members of a &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a>.
 &lt;/div>
 &lt;h2 id="heartbeat">Heartbeat&lt;/h2>
 &lt;p>The cluster heartbeat defines a persistent connection between cluster members. The heartbeat is used to determine the health of the cluster and to determine which member is the active member.&lt;/p>
@@ -149,14 +149,14 @@ Cluster configuration is only available for nodes that are members of a &lt;a hr
 &lt;/tr>
 &lt;div class="alert alert-primary" role="alert">
 The same interface should be selected for all cluster members
-&lt;/div></description></item><item><title>Docs: Connectors</title><link>https://trustgrid.github.io/docs/docs/nodes/connectors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/connectors/</guid><description>
+&lt;/div></description></item><item><title>Docs: Connectors</title><link>https://docs.trustgrid.io/docs/nodes/connectors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/connectors/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Connectors are configured in conjunction with &lt;a href="https://trustgrid.github.io/docs/docs/nodes/services/">services&lt;/a> to define a local listening port for layer 4 (L4) connectivity.&lt;/p>
+&lt;p>Connectors are configured in conjunction with &lt;a href="https://docs.trustgrid.io/docs/nodes/services/">services&lt;/a> to define a local listening port for layer 4 (L4) connectivity.&lt;/p>
 &lt;/div>
 &lt;h4 id="configuration">Configuration&lt;/h4>
 &lt;p>Connectors are configured under the Networking &amp;gt; Connectors tab of the node or cluster configuration section in the Trustgrid Portal.&lt;/p>
 &lt;figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 410px">
-&lt;img class="card-img-top" src="https://trustgrid.github.io/docs/docs/docs/nodes/connectors/connector_hudc115f7e28d8cbd5e71d65766f13265f_84798_400x450_resize_catmullrom_3.png" width="400" height="450">
+&lt;img class="card-img-top" src="https://docs.trustgrid.io/docs/nodes/connectors/connector_hudc115f7e28d8cbd5e71d65766f13265f_84798_400x450_resize_catmullrom_3.png" width="400" height="450">
 &lt;/figure>
 &lt;table>
 &lt;thead>
@@ -188,14 +188,14 @@ The same interface should be selected for all cluster members
 &lt;/tr>
 &lt;tr>
 &lt;th>Remote Service&lt;/th>
-&lt;td>Either the friendly name of &lt;a href="https://trustgrid.github.io/docs/docs/nodes/services/">service&lt;/a> that is defined on the remote node, or the IP:Port of the remote service to connect to.&lt;/td>
+&lt;td>Either the friendly name of &lt;a href="https://docs.trustgrid.io/docs/nodes/services/">service&lt;/a> that is defined on the remote node, or the IP:Port of the remote service to connect to.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Rate Limit (Mb/s)&lt;/th>
 &lt;td>The maximum amount of throughput that will be allowed to traverse the tunnel when connecting to the connector. This can be used to prevent saturating the connection at either the local or remote sites.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Release-Notes: March</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/march/</guid><description>
+&lt;/table></description></item><item><title>Release-Notes: March</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2021/march/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2021/march/</guid><description>
 &lt;h2 id="improved-identity-provider-integration">Improved Identity Provider Integration&lt;/h2>
 &lt;p>Trustgrid has supported SAML integration to manage portal access for some time. As we began supporting additional services, such as Remote Access applications, more flexibility was needed.&lt;/p>
 &lt;h2 id="openid-support">OpenID Support&lt;/h2>
@@ -286,9 +286,9 @@ The same interface should be selected for all cluster members
 &lt;h2 id="proxyarp-option-for-outside-nats">ProxyARP Option for Outside NATs&lt;/h2>
 &lt;p>Previously the Trustgrid node would ARP on the local network for any IP contained in the Local CIDR of an outside NAT. For example, if your Outside NAT Local CIDR was for 192.168.1.0/24, the node would respond to ARP requests for any IP in that network (192.168.1.1 - .254).&lt;/p>
 &lt;p>This is still the default behavior, but there is now an option to disable this functionality when configuring Outside NATs.&lt;/p>
-&lt;p>&lt;img src="proxy-arp-option.png" alt="Proxy ARP Option">&lt;/p></description></item><item><title>Release-Notes: March</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/march/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/march/</guid><description>
+&lt;p>&lt;img src="proxy-arp-option.png" alt="Proxy ARP Option">&lt;/p></description></item><item><title>Release-Notes: March</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2022/march/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2022/march/</guid><description>
 &lt;h2 id="data-plane-panel-improvements">Data Plane Panel Improvements&lt;/h2>
-&lt;p>In the February 2022 release we introduced the &lt;a href="https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/february/">Data Plane status panel&lt;/a> for investigating connections between edge and gateway nodes. With this release we’ve added some tools to this panel. The new Ping and Test Performance tools are linked in the far right column of each gateway’s row.&lt;/p>
+&lt;p>In the February 2022 release we introduced the &lt;a href="https://docs.trustgrid.io/release-notes/cloud/archive/2022/february/">Data Plane status panel&lt;/a> for investigating connections between edge and gateway nodes. With this release we’ve added some tools to this panel. The new Ping and Test Performance tools are linked in the far right column of each gateway’s row.&lt;/p>
 &lt;img src="ping-test-performance.png" width="400px" />
 &lt;h3 id="gateway-ping">Gateway Ping&lt;/h3>
 &lt;img src="gateway-ping-modal.png" width="400px" />
@@ -302,14 +302,14 @@ The same interface should be selected for all cluster members
 &lt;p>The periods are posted for about every 1MB of data sent. If you see exclamation marks this can indicate lost packets.&lt;/p>
 &lt;h2 id="tool-improvements">Tool Improvements&lt;/h2>
 &lt;h3 id="mtr-improvements">MTR Improvements&lt;/h3>
-&lt;p>MTR, which was &lt;a href="https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/february/">recently added to the portal&lt;/a>, can be powerful troubleshooting tool, but it has many options which can be tricky for newer users. To simplify the use we’ve added a new user interface that provides graphical options for selecting common parameters.&lt;/p>
+&lt;p>MTR, which was &lt;a href="https://docs.trustgrid.io/release-notes/cloud/archive/2022/february/">recently added to the portal&lt;/a>, can be powerful troubleshooting tool, but it has many options which can be tricky for newer users. To simplify the use we’ve added a new user interface that provides graphical options for selecting common parameters.&lt;/p>
 &lt;img src="mtr-modal.png" width="400px" />
 &lt;h2 id="aws-instances-metadata">AWS Instances Metadata&lt;/h2>
 &lt;p>When the Trustgrid software is deployed in AWS we can gather additional metadata about the underlying instance. With this release we have added the availability zone, instances type and instance ID to the Info panel available on every node.&lt;/p>
 &lt;p>&lt;img src="node-visor.png" alt="AWS Metadata">&lt;/p>
 &lt;h2 id="timestamps-for-virtual-network-changes">Timestamps for Virtual Network Changes&lt;/h2>
 &lt;p>Before changes are committed to a virtual network setting, such as the virtual network route table, they are listed in the Changes panel for approval. This made it easier to see if other users had outstanding changes that might be in conflict. However, it wasn’t clear if the other user just made that change or if it had been left accidentally. With this release we’ve added a timestamp that shows when the user saved the change.&lt;/p>
-&lt;p>&lt;img src="modified-route.png" alt="Change Example">&lt;/p></description></item><item><title>Docs: Data Plane</title><link>https://trustgrid.github.io/docs/docs/nodes/data-plane/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/data-plane/</guid><description>
+&lt;p>&lt;img src="modified-route.png" alt="Change Example">&lt;/p></description></item><item><title>Docs: Data Plane</title><link>https://docs.trustgrid.io/docs/nodes/data-plane/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/data-plane/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Data plane statistics between a node and its peers can help troubleshoot connectivity or performance issues.&lt;/p>
 &lt;/div>
@@ -320,16 +320,16 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>&lt;img src="peer-list.png" alt="img">&lt;/p>
 &lt;p>Once a peer is selected, the monitoring section will populate with reelvant data.&lt;/p>
 &lt;p>&lt;img src="monitoring.png" alt="img">&lt;/p>
-&lt;p>Hop data is only available for nodes that have hop monitoring enabled. See &lt;a href="https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Monitoring Network Hops to Peers&lt;/a>.&lt;/p></description></item><item><title>Docs: Documents</title><link>https://trustgrid.github.io/docs/docs/support/documents/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/support/documents/</guid><description>
+&lt;p>Hop data is only available for nodes that have hop monitoring enabled. See &lt;a href="https://docs.trustgrid.io/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Monitoring Network Hops to Peers&lt;/a>.&lt;/p></description></item><item><title>Docs: Documents</title><link>https://docs.trustgrid.io/docs/support/documents/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/support/documents/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trustgrid and customers can share documents securely in the Documents section.&lt;/p>
 &lt;/div>
 &lt;p>&lt;img src="documents.png" alt="img">&lt;/p>
 &lt;p>Adding or deleting documents requires &lt;code>documents::modify&lt;/code> permissions. Downloading and viewing documents requires &lt;code>documents::read&lt;/code> permissions.
-(show how to add and delete and download a document).&lt;/p></description></item><item><title>Release-Notes: May</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/may/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/may/</guid><description>
+(show how to add and delete and download a document).&lt;/p></description></item><item><title>Release-Notes: May</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2022/may/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2022/may/</guid><description>
 &lt;h2 id="trustgrid-permissions-restructuring">Trustgrid Permissions Restructuring&lt;/h2>
 &lt;p>Trustgrid’s portal and API have used Role based permissions to manage access within the Trustgrid system. As Trustgrid has expanded our feature set, adding features like containers, and our user base have grown the predefined role structure has become a poor fit. Many times these new features required Trustgrid Support to grant access to users. Additionally, what each role could and could not do was opaque to customers.&lt;/p>
-&lt;p>With this release will be migrating to a &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/">policy-based&lt;/a> approach that will allow customers to independently tailor permissions to meet their own use cases. Customers will also be able to see exactly what rights policies allow and what policy is granting a user access &lt;a href="https://trustgrid.github.io/docs/docs/user-management/users/#view-effective-permissions">directly in the portal&lt;/a>.&lt;/p>
+&lt;p>With this release will be migrating to a &lt;a href="https://docs.trustgrid.io/docs/user-management/policies/">policy-based&lt;/a> approach that will allow customers to independently tailor permissions to meet their own use cases. Customers will also be able to see exactly what rights policies allow and what policy is granting a user access &lt;a href="https://docs.trustgrid.io/docs/user-management/users/#view-effective-permissions">directly in the portal&lt;/a>.&lt;/p>
 &lt;p>This migration will also allow future enhancements such as automatic policy assignment based on group membership, resource based policies limiting users to specific nodes/clusters, and more.&lt;/p>
 &lt;h3 id="how-it-works">How it Works&lt;/h3>
 &lt;p>The new policy permission works as such:&lt;/p>
@@ -352,16 +352,16 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>Trustgrid previously had 4 predefined roles. With this release these will be migrated into 5 new builtin policies, and an additional policy will be created. As part of this migration Trustgrid is also making sure these policies only include the “least-privileges” required to perform the intent of each of the previously defined roles.&lt;/p>
 &lt;p>During the release process users previously assigned a role will be automatically assigned the corresponding policy or policies listed below&lt;/p>
 &lt;p>Below is a list of our historic roles and the policies that replace them plus any known changes. If users previously assigned a role lose a tool or function they need, they can either be attached to a higher level builtin policy with the appropriate permissions or a custom policy can be created and attached.&lt;/p>
-&lt;h4 id="monitor-now-tg-builtin-monitorhahahugoshortcode-s2-hbhb-policy">Monitor (now &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#tg-builtin-monitor">tg-builtin-monitor&lt;/a> policy)&lt;/h4>
+&lt;h4 id="monitor-now-tg-builtin-monitorhahahugoshortcode-s2-hbhb-policy">Monitor (now &lt;a href="https://docs.trustgrid.io/docs/user-management/policies/#tg-builtin-monitor">tg-builtin-monitor&lt;/a> policy)&lt;/h4>
 &lt;p>Changes:&lt;/p>
 &lt;ul>
 &lt;li>Monitor no longer has access to troubleshooting tools. These were removed because some of these seemed to exceed the privileges required for the user types expected to have this role.&lt;/li>
 &lt;/ul>
-&lt;h4 id="operator-now-tg-builtin-operatorhahahugoshortcode-s3-hbhb-policy">Operator (now &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#tg-builtin-operator">tg-builtin-operator&lt;/a> policy)&lt;/h4>
+&lt;h4 id="operator-now-tg-builtin-operatorhahahugoshortcode-s3-hbhb-policy">Operator (now &lt;a href="https://docs.trustgrid.io/docs/user-management/policies/#tg-builtin-operator">tg-builtin-operator&lt;/a> policy)&lt;/h4>
 &lt;p>No changes.&lt;/p>
-&lt;h4 id="node-administrator-now-tg-builtin-node-adminhahahugoshortcode-s4-hbhb-policy">Node-Administrator (now &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#tg-builtin-node-admin">tg-builtin-node-admin&lt;/a> policy)&lt;/h4>
+&lt;h4 id="node-administrator-now-tg-builtin-node-adminhahahugoshortcode-s4-hbhb-policy">Node-Administrator (now &lt;a href="https://docs.trustgrid.io/docs/user-management/policies/#tg-builtin-node-admin">tg-builtin-node-admin&lt;/a> policy)&lt;/h4>
 &lt;p>No changes.&lt;/p>
-&lt;h4 id="administrator-now-tg-builtin-adminhahahugoshortcode-s5-hbhb-and-tg-builtin-access-adminhahahugoshortcode-s6-hbhb-policy">Administrator (now &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#tg-builtin-admin">tg-builtin-admin&lt;/a> and &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#tg-builtin-access-admin">tg-builtin-access-admin&lt;/a> policy)&lt;/h4>
+&lt;h4 id="administrator-now-tg-builtin-adminhahahugoshortcode-s5-hbhb-and-tg-builtin-access-adminhahahugoshortcode-s6-hbhb-policy">Administrator (now &lt;a href="https://docs.trustgrid.io/docs/user-management/policies/#tg-builtin-admin">tg-builtin-admin&lt;/a> and &lt;a href="https://docs.trustgrid.io/docs/user-management/policies/#tg-builtin-access-admin">tg-builtin-access-admin&lt;/a> policy)&lt;/h4>
 &lt;p>The administrator role previously included both the ability to make almost all technical changes and the ability to control access and permission to the portal.&lt;/p>
 &lt;p>Trustgrid determined that these functions are separate and many companies may want to further restrict the access administration to a subset of users. The functions have been split into two policies:&lt;/p>
 &lt;ul>
@@ -390,7 +390,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>&lt;img src="rack-mounts.png" alt="Rack Mount">&lt;/p>
 &lt;blockquote>
 &lt;p>Access to the Provisioning section of the portal is not a part of a builtin policy at this time. Access admins should create policies to grant users orders permissions and attach to the appropriate users.&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs: Flow Logs</title><link>https://trustgrid.github.io/docs/docs/nodes/flow-logs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/flow-logs/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs: Flow Logs</title><link>https://docs.trustgrid.io/docs/nodes/flow-logs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/flow-logs/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Flow logs are a record of all traffic that passes through a node. They can be used to troubleshoot connectivity issues, or to monitor traffic patterns.&lt;/p>
 &lt;/div>
@@ -512,7 +512,7 @@ Gateway nodes will list edge nodes in their peers table
 }
 ]
 }
-&lt;/code>&lt;/pre></description></item><item><title>Release-Notes: June</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/june/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/june/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Release-Notes: June</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2022/june/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2022/june/</guid><description>
 &lt;h2 id="faster-node-overview-graphs">Faster Node Overview Graphs&lt;/h2>
 &lt;p>With this release we have reduced the time it takes for the initial Overview graphs to load when you first navigate to the node.&lt;/p>
 &lt;h2 id="new-time-range-selector">New Time Range Selector&lt;/h2>
@@ -553,7 +553,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;li>&lt;code>public&lt;/code> - public will cover all other IP v4 addresses&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>Docs: Gateway</title><link>https://trustgrid.github.io/docs/docs/nodes/gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/gateway/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Gateway</title><link>https://docs.trustgrid.io/docs/nodes/gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/gateway/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Gateway nodes accept TLS tunnel connections from other nodes in the domain. They are responsible for routing traffic between nodes.&lt;/p>
 &lt;/div>
@@ -672,7 +672,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>To see detailed messages about gateway traffic, select the &lt;code>Troubleshoot Gateway Traffic&lt;/code> option from the services menu under &lt;code>Gateway Tools&lt;/code>.&lt;/p>
 &lt;p>&lt;img src="launch-troubleshoot-gateway-traffic.png" alt="img">&lt;/p>
 &lt;p>This will open a new window with live diagnostic messages about traffic&lt;/p>
-&lt;p>&lt;img src="troubleshoot-gateway-traffic.png" alt="img">&lt;/p></description></item><item><title>Release-Notes: August</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/august/</guid><description>
+&lt;p>&lt;img src="troubleshoot-gateway-traffic.png" alt="img">&lt;/p></description></item><item><title>Release-Notes: August</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2021/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2021/august/</guid><description>
 &lt;h2 id="tag-improvements">Tag Improvements&lt;/h2>
 &lt;p>Two major improvements regarding tags.&lt;/p>
 &lt;h3 id="cluster-members-inherit-tags">Cluster Members Inherit Tags&lt;/h3>
@@ -695,12 +695,12 @@ Gateway nodes will list edge nodes in their peers table
 &lt;ul>
 &lt;li>Due Dates for Orders&lt;/li>
 &lt;li>Support for specific device models (as opposed to just hardware vs virtual)&lt;/li>
-&lt;/ul></description></item><item><title>Release-Notes: August</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/august/</guid><description>
+&lt;/ul></description></item><item><title>Release-Notes: August</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2022/august/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2022/august/</guid><description>
 &lt;h2 id="resource-scoped-permission-policies">Resource-Scoped Permission Policies&lt;/h2>
-&lt;p>The &lt;a href="https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/may/">May 2022 release&lt;/a> enabled the creation of more granular permissions policies. With this release we’ve added the ability to grant permissions to specific &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> or &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> resources. This enables you to limit a user to only see specific devices with very limited permissions.&lt;/p>
-&lt;p>Polices now have a &lt;code>Resources&lt;/code> section. This can be populated with a list of Trustgrid Resource Names (TGRN) to limit where the defined permissions are applied. See the documentation on &lt;a href="https://trustgrid.github.io/docs/docs/user-management/policies/#resource-scoped-policies">Resource-Scoped Polices&lt;/a> for more info.&lt;/p>
+&lt;p>The &lt;a href="https://docs.trustgrid.io/release-notes/cloud/archive/2022/may/">May 2022 release&lt;/a> enabled the creation of more granular permissions policies. With this release we’ve added the ability to grant permissions to specific &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> or &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> resources. This enables you to limit a user to only see specific devices with very limited permissions.&lt;/p>
+&lt;p>Polices now have a &lt;code>Resources&lt;/code> section. This can be populated with a list of Trustgrid Resource Names (TGRN) to limit where the defined permissions are applied. See the documentation on &lt;a href="https://docs.trustgrid.io/docs/user-management/policies/#resource-scoped-policies">Resource-Scoped Polices&lt;/a> for more info.&lt;/p>
 &lt;h2 id="monitor-network-hops">Monitor Network Hops&lt;/h2>
-&lt;p>Trustgrid has add a troubleshooting feature to collect traceroute like data on a regular basis. When enabled a node will collect 3 samples a minute and store the data in the cloud. This data will assist in determining the source of packet loss or high latency between devices. See &lt;a href="https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Monitoring Network Hops to Peers&lt;/a> to learn more.&lt;/p>
+&lt;p>Trustgrid has add a troubleshooting feature to collect traceroute like data on a regular basis. When enabled a node will collect 3 samples a minute and store the data in the cloud. This data will assist in determining the source of packet loss or high latency between devices. See &lt;a href="https://docs.trustgrid.io/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Monitoring Network Hops to Peers&lt;/a> to learn more.&lt;/p>
 &lt;p>&lt;img src="network-hops.png" alt="Network Hops">&lt;/p>
 &lt;h2 id="show-isp-and-asn-for-public-ip">Show ISP and ASN for Public IP&lt;/h2>
 &lt;p>Trustgrid now uses our IP geolocation database provider to supply the internet service provider (ISP) and autonomous system number (ASN) associated with the public IP of nodes. This info is visible under History → Location, listed under the IP-Derived Info panel.&lt;/p>
@@ -708,7 +708,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>It should be noted the accuracy of this information varies between ISPs&lt;/p>
 &lt;h2 id="identity-provider-idp-logins-in-authentication-audits">Identity Provider (IdP) Logins in Authentication Audits&lt;/h2>
 &lt;p>Previously, the logs under the Operations → Authentication Audits only displayed logins using the Trustgrid native authentication provider. If you were using an IdP you would need to review the providers logs to see when users logged in.&lt;/p>
-&lt;p>With this release we now display IdP portal logins the same way native logins are reported.&lt;/p></description></item><item><title>Docs: Interfaces</title><link>https://trustgrid.github.io/docs/docs/nodes/interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/interfaces/</guid><description>
+&lt;p>With this release we now display IdP portal logins the same way native logins are reported.&lt;/p></description></item><item><title>Docs: Interfaces</title><link>https://docs.trustgrid.io/docs/nodes/interfaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/interfaces/</guid><description>
 &lt;h2 id="network-interfaces">Network Interfaces&lt;/h2>
 &lt;p>Navigate to a node, then select &lt;code>Interfaces&lt;/code> under the &lt;code>Network&lt;/code> section.&lt;/p>
 &lt;p>&lt;img src="interfaces.png" alt="Interfaces Page">&lt;/p>
@@ -757,7 +757,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;/tr>
 &lt;tr>
 &lt;th>Cluster Virtual IP&lt;/th>
-&lt;td>Used in &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">clusters&lt;/a>, this IP address is moved between member nodes based on the active cluster member. It can be used to route traffic between the virtual and local networks. This IP address can only be changed within the cluster interfaces page.&lt;/td>
+&lt;td>Used in &lt;a href="https://docs.trustgrid.io/docs/clusters/">clusters&lt;/a>, this IP address is moved between member nodes based on the active cluster member. It can be used to route traffic between the virtual and local networks. This IP address can only be changed within the cluster interfaces page.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -807,7 +807,7 @@ Gateway nodes will list edge nodes in their peers table
 &lt;li>
 &lt;p>Click the &lt;code>Save&lt;/code> button.&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Release-Notes: September</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/september/</guid><description>
+&lt;/ol></description></item><item><title>Release-Notes: September</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2021/september/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2021/september/</guid><description>
 &lt;h2 id="container--improvements">Container Improvements&lt;/h2>
 &lt;p>Trustgrid has greatly enhanced the container features we support and this release makes these features available to all users.&lt;/p>
 &lt;h3 id="container-management">Container Management&lt;/h3>
@@ -831,17 +831,17 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>The first change you’ll notice is that clicking Provisioning opens a new tab. The orders table now makes it easier to search and filter the results.&lt;/p>
 &lt;p>The individual order screen is now a single page view to reduce the need to switch between tabs. And orders now support attaching files such as legacy device configurations or diagrams that might be useful for configuring the new devices.&lt;/p>
 &lt;h3 id="order-notifications">Order Notifications&lt;/h3>
-&lt;p>You can now configure &lt;a href="https://trustgrid.github.io/docs/docs/alarms/alarm-filters/">Alarm Filters&lt;/a> for four new order based events:&lt;/p>
+&lt;p>You can now configure &lt;a href="https://docs.trustgrid.io/docs/alarms/alarm-filters/">Alarm Filters&lt;/a> for four new order based events:&lt;/p>
 &lt;ul>
 &lt;li>Order Created&lt;/li>
 &lt;li>Order Commented&lt;/li>
 &lt;li>Order Status Change&lt;/li>
 &lt;li>Order Customer Update&lt;/li>
 &lt;/ul>
-&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a>.&lt;/p></description></item><item><title>Release-Notes: October</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october/</guid><description>
+&lt;p>These events can then be sent to existing or newly defined &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channels&lt;/a>.&lt;/p></description></item><item><title>Release-Notes: October</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2022/october/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2022/october/</guid><description>
 &lt;h2 id="cluster-improvements">Cluster Improvements&lt;/h2>
 &lt;h3 id="cluster-site-health-state">Cluster Site Health State&lt;/h3>
-&lt;p>With this release we introduce the concept of &lt;a href="https://trustgrid.github.io/docs/docs/clusters/cluster-health/">Cluster Site Health State&lt;/a>. This addition makes it more obvious when there is an issue with a cluster at a site and possible to configure &lt;a href="https://trustgrid.github.io/docs/docs/alarms/alarm-filters/">alarm filters&lt;/a> to notify your team when changes occur.&lt;/p>
+&lt;p>With this release we introduce the concept of &lt;a href="https://docs.trustgrid.io/docs/clusters/cluster-health/">Cluster Site Health State&lt;/a>. This addition makes it more obvious when there is an issue with a cluster at a site and possible to configure &lt;a href="https://docs.trustgrid.io/docs/alarms/alarm-filters/">alarm filters&lt;/a> to notify your team when changes occur.&lt;/p>
 &lt;p>We display the cluster health on the list view:&lt;/p>
 &lt;img src="cluster-list.png" width="400px" />
 &lt;p>And on the cluster overview:&lt;/p>
@@ -875,14 +875,14 @@ Offline notice on cluster overview
 &lt;p>Requires node version 20220808 or newer&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="enable-different-interface-routes-for-cluster-members">Enable Different Interface Routes for Cluster Members&lt;/h3>
-&lt;p>Traditionally, cluster members share the interface routes configured at the cluster level. This is usually desirable, but certain situations can require each member to have a different route defined. For example, If you have deployed your cluster members in different AWS Availability Zones for redundancy and you have the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/#cluster-heartbeat-communication">heartbeat communication&lt;/a> on a LAN interface each would need a different route.&lt;/p>
+&lt;p>Traditionally, cluster members share the interface routes configured at the cluster level. This is usually desirable, but certain situations can require each member to have a different route defined. For example, If you have deployed your cluster members in different AWS Availability Zones for redundancy and you have the &lt;a href="https://docs.trustgrid.io/docs/clusters/#cluster-heartbeat-communication">heartbeat communication&lt;/a> on a LAN interface each would need a different route.&lt;/p>
 &lt;p>With this release you will see the ability to “Add Entry” for additional routes under the LAN interface section of cluster members. You will also see a read-only entry with a blue square for any cluster-defined route.&lt;/p>
 &lt;p>&lt;img src="interface-routes.png" alt="interface routes">&lt;/p>
 &lt;h2 id="data-plane-panel-improvements">Data Plane Panel Improvements&lt;/h2>
 &lt;h3 id="easier-peer-selection">Easier Peer Selection&lt;/h3>
 &lt;p>Previously, to select a node in the data plane peers table you had to click exactly on the node’s name. Now, you can click anywhere in the name box.&lt;/p>
 &lt;h3 id="display-data-plane-stats-for-gateways">Display Data Plane Stats for Gateways&lt;/h3>
-&lt;p>Prior to this release we only displayed Tunnel Latency and &lt;a href="https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Network Hops&lt;/a> (when enabled) on edge node devices. With this release you can now navigate to a gateway’s data plane panel and select a client edge node. The data displayed is based on the edge node’s perspective but can still provide useful information on the state of the connection between devices.&lt;/p>
+&lt;p>Prior to this release we only displayed Tunnel Latency and &lt;a href="https://docs.trustgrid.io/tutorials/gateway-tools/monitoring-network-hops-to-peers/">Network Hops&lt;/a> (when enabled) on edge node devices. With this release you can now navigate to a gateway’s data plane panel and select a client edge node. The data displayed is based on the edge node’s perspective but can still provide useful information on the state of the connection between devices.&lt;/p>
 &lt;h2 id="other-improvements">Other Improvements&lt;/h2>
 &lt;h3 id="flow-log-advanced-search-by-tcp-flags">Flow Log Advanced Search by TCP Flags&lt;/h3>
 &lt;p>The Flow Log Advanced Search now has the ability to search for TCP flows with specified TCP flags. In the TCP Flag section just click the flags that you want to search for and the matching flows will be returned. If multiple flags are selected, only flows with all matching flags will be returned.&lt;/p>
@@ -897,7 +897,7 @@ Offline notice on cluster overview
 &lt;li>Additional Audit endpoints&lt;/li>
 &lt;li>Container and VM configuration&lt;/li>
 &lt;li>ZTNA Gateway&lt;/li>
-&lt;/ul></description></item><item><title>Release-Notes: October Second Release</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october-2/</guid><description>
+&lt;/ul></description></item><item><title>Release-Notes: October Second Release</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2022/october-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2022/october-2/</guid><description>
 &lt;h2 id="order-management-improvements">Order Management Improvements&lt;/h2>
 &lt;p>This release is primarily focused on making improvements to our order management system.&lt;/p>
 &lt;h3 id="notification-of-changes-in-open-orders">Notification of Changes in Open Orders&lt;/h3>
@@ -948,11 +948,11 @@ Hyperlink Form
 &lt;p>&lt;img src="flow-log-history.png" alt="Flow Log Search">&lt;/p>
 &lt;h3 id="events-table-search">Events Table Search&lt;/h3>
 &lt;p>The Events table now has a search field that will filter the events shown. This has been added both at the Node Detail Events page and under Operation to see events across all nodes in the org.&lt;/p>
-&lt;p>&lt;img src="events.png" alt="Events Table Search">&lt;/p></description></item><item><title>Release-Notes: October Third Release</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2022/october-3/</guid><description>
+&lt;p>&lt;img src="events.png" alt="Events Table Search">&lt;/p></description></item><item><title>Release-Notes: October Third Release</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2022/october-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2022/october-3/</guid><description>
 &lt;h2 id="repository-performance-improvements">Repository Performance Improvements&lt;/h2>
 &lt;p>This release includes a significant overhaul of the the repository control plane service. This service is responsible for providing upgrade packages and pushing/pulling container images.&lt;/p>
 &lt;h2 id="data-plane-stats-for-private-and-hub-gateways">Data Plane Stats for Private and Hub Gateways&lt;/h2>
-&lt;p>Prior to this release, viewing the Data Plane stats such as tunnel latency and [network hops](https://trustgrid.github.io/docs/tutorials/gateway-tools/monitoring-network-hops-to-peers/ would not display. These stats will now be displayed the just like edge and public gateway stats.&lt;/p>
+&lt;p>Prior to this release, viewing the Data Plane stats such as tunnel latency and [network hops](https://docs.trustgrid.io/tutorials/gateway-tools/monitoring-network-hops-to-peers/ would not display. These stats will now be displayed the just like edge and public gateway stats.&lt;/p>
 &lt;h2 id="changing-configured-master-active-logging">Changing Configured Master (Active) Logging&lt;/h2>
 &lt;p>With this release, if a user changes which node is configured as the master (active) member of the cluster it will be logged on &lt;code>Changes&lt;/code> for the cluster.&lt;/p>
 &lt;div style="display: flex; flex-direction: row;">
@@ -980,7 +980,7 @@ Change entry for active member change
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Release-Notes: December</title><link>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/release-notes/cloud/archive/2021/december/</guid><description>
+&lt;/div></description></item><item><title>Release-Notes: December</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/2021/december/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/2021/december/</guid><description>
 &lt;h2 id="data-plane-status-table">Data Plane Status Table&lt;/h2>
 &lt;p>Previously Trustgrid had a visual indicator on the Node detail page to show the Data Plane health of a node, but it only showed the state as &lt;code>Connected&lt;/code>, &lt;code>Degraded&lt;/code> or &lt;code>Disconnected&lt;/code>. While connected and disconnected were clear, there was little information on why the status was Degraded.&lt;/p>
 &lt;p>With this release hovering over the Data Plane status icon will bring up a pop-up screen showing all the peers and and their connection status. Additionally, if the peer is connected it will show:&lt;/p>
@@ -1002,11 +1002,11 @@ Change entry for active member change
 &lt;ul>
 &lt;li>You can now search the Nodes table for Management IPs and Device types&lt;/li>
 &lt;li>Fixed a broken link in the new user invite email for customers without IDP integration&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Location</title><link>https://trustgrid.github.io/docs/docs/nodes/location/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/location/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Location</title><link>https://docs.trustgrid.io/docs/nodes/location/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/location/</guid><description>
 &lt;p>Trustgrid uses each node&amp;rsquo;s public IP address to derive location information. If it&amp;rsquo;s incorrect, the fields can be set manually. If set manually, IP changes will not update the node&amp;rsquo;s location when viewed from the nodes table or the network map.&lt;/p>
 &lt;p>&lt;img src="node-location.png" alt="img">&lt;/p>
 &lt;h6 id="to-change-the-node-location">To change the Node Location:&lt;/h6>
-&lt;p>Change the details to desired settings then click &lt;code>Save&lt;/code> when done.&lt;/p></description></item><item><title>Docs: Overview</title><link>https://trustgrid.github.io/docs/docs/nodes/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/overview/</guid><description>
+&lt;p>Change the details to desired settings then click &lt;code>Save&lt;/code> when done.&lt;/p></description></item><item><title>Docs: Overview</title><link>https://docs.trustgrid.io/docs/nodes/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/overview/</guid><description>
 &lt;h3 id="stats">Stats&lt;/h3>
 &lt;p>The Node overview page shows performance and network traffic data.&lt;/p>
 &lt;p>Supported time windows are selectable at the top. VPN and network statistics can be targeted to specific virtual networks and interfaces.&lt;/p>
@@ -1045,7 +1045,7 @@ Change entry for active member change
 &lt;td>shows TCP errors across all interfaces&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Repositories</title><link>https://trustgrid.github.io/docs/docs/repositories/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/repositories/</guid><description>
+&lt;/table></description></item><item><title>Docs: Repositories</title><link>https://docs.trustgrid.io/docs/repositories/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/repositories/</guid><description>
 &lt;h4 id="list-view">List View&lt;/h4>
 &lt;p>Trustgrid provides a fully managed private container registry. Uploaded container images may be viewed by navigating to Repositories in the portal:&lt;/p>
 &lt;p>&lt;img src="list-view.png" alt="img">&lt;/p>
@@ -1060,9 +1060,9 @@ Change entry for active member change
 &lt;h4 id="container-repo-view">Container Repo View&lt;/h4>
 &lt;p>Each repository can be managed. Clicking into a container will show its uploaded tags and digests, as well as the URI that can be used to pull the container.&lt;/p>
 &lt;h4 id="node-container-auth">Node Container Auth&lt;/h4>
-&lt;p>Trustgrid nodes authenticate automatically with the Trustgrid container registry and can pull any image uploaded to the registry.&lt;/p></description></item><item><title>Docs: Services</title><link>https://trustgrid.github.io/docs/docs/nodes/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/services/</guid><description>
+&lt;p>Trustgrid nodes authenticate automatically with the Trustgrid container registry and can pull any image uploaded to the registry.&lt;/p></description></item><item><title>Docs: Services</title><link>https://docs.trustgrid.io/docs/nodes/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/services/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Services are configured in conjunction with &lt;a href="https://trustgrid.github.io/docs/docs/nodes/connectors/">connectors&lt;/a> to define a remote host:port to connect to for layer 4 (L4) connectivity.&lt;/p>
+&lt;p>Services are configured in conjunction with &lt;a href="https://docs.trustgrid.io/docs/nodes/connectors/">connectors&lt;/a> to define a remote host:port to connect to for layer 4 (L4) connectivity.&lt;/p>
 &lt;/div>
 &lt;h4 id="configuration">Configuration&lt;/h4>
 &lt;p>Services are configured under the Networking &amp;gt; Services tab of the node or cluster configuration section in the Trustgrid Portal.&lt;/p>
@@ -1082,7 +1082,7 @@ Change entry for active member change
 > FTP must operate in passive mode when using L4 services and connectors
 &lt;tr>
 &lt;th>Service Name&lt;/th>
-&lt;td>A friendly name for the service that will be used in the Remote Service field of a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/connectors/">connector&lt;/a>.&lt;/td>
+&lt;td>A friendly name for the service that will be used in the Remote Service field of a &lt;a href="https://docs.trustgrid.io/docs/nodes/connectors/">connector&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Host&lt;/th>
@@ -1097,9 +1097,9 @@ Change entry for active member change
 &lt;td>A health check can be configured for TCP services. The health check will attempt a TCP connectivity check once per minute. After 5 consecutive failures, an Outbound L4 Service Health Check alert will be triggered and clustered nodes will be marked as unhealthy. Clustered nodes will return to a Healthy status after 5 consecitive connection attempts are successful.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Thresholds</title><link>https://trustgrid.github.io/docs/docs/nodes/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/thresholds/</guid><description>
+&lt;/table></description></item><item><title>Docs: Thresholds</title><link>https://docs.trustgrid.io/docs/nodes/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/thresholds/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the node level can override &lt;a href="https://trustgrid.github.io/docs/docs/domain/thresholds/">Domain Thresholds&lt;/a>.&lt;/p>
+&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the node level can override &lt;a href="https://docs.trustgrid.io/docs/domain/thresholds/">Domain Thresholds&lt;/a>.&lt;/p>
 &lt;/div>
 &lt;p>To view and configure thresholds, a user will need &lt;code>nodes::configure::thresholds&lt;/code> permissions.&lt;/p>
 &lt;p>Navigate to a node, and click &lt;code>Thresholds&lt;/code> under the &lt;code>System&lt;/code> section.&lt;/p>
@@ -1164,7 +1164,7 @@ Change entry for active member change
 &lt;td>For latency, target node to measure the latency to. For bandwidth measurements, the interface to measure the bandwidth on.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: VRFs</title><link>https://trustgrid.github.io/docs/docs/nodes/vrfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/vrfs/</guid><description>
+&lt;/table></description></item><item><title>Docs: VRFs</title><link>https://docs.trustgrid.io/docs/nodes/vrfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/vrfs/</guid><description>
 &lt;h3 id="overview">Overview&lt;/h3>
 &lt;p>VRFs can be used route / nat and filter what traffic is allowed to pass and how it should appear on the network. VRFs can be associated to an interface whether it be a physical interface / virtual network interface or other tunnel interfaces such as ipsec or gre. VRFs are segmented on a layer 3 level from all other traffic traversing the Trustgrid node.&lt;/p>
 &lt;p>For standard use cases of source nat and/or destination nat creating a route and a NAT is sufficient. Traffic rules can be used for more advanced controls. An applicable ACL is required for any traffic to pass as a zero trust methodology is applied.&lt;/p>
@@ -1262,11 +1262,11 @@ For example passing through an IDS container such as Snort.&lt;/li>
 &lt;h6 id="traffic-rule-example">Traffic Rule Example&lt;/h6>
 &lt;p>In the below example the first rule on line number 1 is forwarding all traffic destined to 10.0.20.0/24 to a virtual network tunnel interface. Any NATs configured under Address Translation will be applied before the packet is forwarded to its destination. The rule on line number 10 will forward all traffic that does not match the first rule out to the internet masquerading as the WAN interfaces address.
 If the line numbers were reversed the virtual network rule would never be matched as all traffic would match the internet offload rule which is configured for all source and destination traffic.&lt;/p>
-&lt;p>&lt;img src="trafficrule1.png" alt="img">&lt;/p></description></item><item><title>Docs: ZTNA Gateway</title><link>https://trustgrid.github.io/docs/docs/nodes/ztna-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/ztna-gateway/</guid><description>
+&lt;p>&lt;img src="trafficrule1.png" alt="img">&lt;/p></description></item><item><title>Docs: ZTNA Gateway</title><link>https://docs.trustgrid.io/docs/nodes/ztna-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/ztna-gateway/</guid><description>
 &lt;p>Navigate to a node, then select &lt;code>ZTNA Gateway&lt;/code> under the &lt;code>Network&lt;/code> section.&lt;/p>
 &lt;p>&lt;img src="ztna-gateway.png" alt="ztna-gateway">&lt;/p>
 &lt;h2 id="https-endpoint">HTTPS Endpoint&lt;/h2>
-&lt;p>The HTTPS endpoint is used to provide connectivity for non-WireGuard ZTNA &lt;a href="https://trustgrid.github.io/docs/docs/applications/">applications&lt;/a>.&lt;/p>
+&lt;p>The HTTPS endpoint is used to provide connectivity for non-WireGuard ZTNA &lt;a href="https://docs.trustgrid.io/docs/applications/">applications&lt;/a>.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1281,7 +1281,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/tr>
 &lt;tr>
 &lt;th>Public FQDN&lt;/th>
-&lt;td>The IP or FQDN of the node or the load balancer in front of the node. If using a domain name without a load balancer, be sure to select the appropriate &lt;a href="https://trustgrid.github.io/docs/docs/certificates/">certificate&lt;/a>.&lt;/td>
+&lt;td>The IP or FQDN of the node or the load balancer in front of the node. If using a domain name without a load balancer, be sure to select the appropriate &lt;a href="https://docs.trustgrid.io/docs/certificates/">certificate&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Port&lt;/th>
@@ -1294,7 +1294,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="wireguard-endpoint">WireGuard Endpoint&lt;/h2>
-&lt;p>The WireGuard endpoint is used to provide connectivity for WireGuard ZTNA &lt;a href="https://trustgrid.github.io/docs/docs/applications/">applications&lt;/a>.&lt;/p>
+&lt;p>The WireGuard endpoint is used to provide connectivity for WireGuard ZTNA &lt;a href="https://docs.trustgrid.io/docs/applications/">applications&lt;/a>.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1321,7 +1321,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;em>“WireGuard” is a registered trademark of Jason A. Donenfeld.&lt;/em>&lt;/p></description></item><item><title>Docs: Access Policy</title><link>https://trustgrid.github.io/docs/docs/applications/access-policy/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/access-policy/</guid><description>
+&lt;p>&lt;em>“WireGuard” is a registered trademark of Jason A. Donenfeld.&lt;/em>&lt;/p></description></item><item><title>Docs: Access Policy</title><link>https://docs.trustgrid.io/docs/applications/access-policy/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/access-policy/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>An Access Policy is comprised of several rules that determine whether a user is permitted to access a ZTNA application. If no rule matches a user&amp;rsquo;s access attempt, the attempt will be denied.&lt;/p>
 &lt;/div>
@@ -1382,7 +1382,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/tr>
 &lt;tr>
 &lt;th>IDP Groups&lt;/th>
-&lt;td>a list of &lt;a href="https://trustgrid.github.io/docs/docs/user-management/groups/">groups&lt;/a> that the user must be a member of&lt;/td>
+&lt;td>a list of &lt;a href="https://docs.trustgrid.io/docs/user-management/groups/">groups&lt;/a> that the user must be a member of&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>IP Ranges&lt;/th>
@@ -1390,7 +1390,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;img src="criteria.png" alt="img">&lt;/p></description></item><item><title>Docs: RDP App</title><link>https://trustgrid.github.io/docs/docs/applications/rdp-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/rdp-app/</guid><description>
+&lt;p>&lt;img src="criteria.png" alt="img">&lt;/p></description></item><item><title>Docs: RDP App</title><link>https://docs.trustgrid.io/docs/applications/rdp-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/rdp-app/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A RDP app is a ZTNA application that allows remote access to an internal RDP server. RDP servers can be hosted internally but exposed to authorized users.&lt;/p>
 &lt;/div>
@@ -1451,7 +1451,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/ul>
 &lt;h4 id="security">Security&lt;/h4>
 &lt;ul>
-&lt;li>Identity Provider - the &lt;a href="https://trustgrid.github.io/docs/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
+&lt;li>Identity Provider - the &lt;a href="https://docs.trustgrid.io/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
 &lt;/ul>
 &lt;ol>
 &lt;li>Click &lt;code>Add Application&lt;/code>&lt;/li>
@@ -1464,7 +1464,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;ol start="3">
 &lt;li>Fill out all details in the sheet provided, then click &lt;code>Save&lt;/code> when satisfied with the information entered&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="rdp-app1.png" alt="img">&lt;/p></description></item><item><title>Docs: SSH App</title><link>https://trustgrid.github.io/docs/docs/applications/ssh-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/ssh-app/</guid><description>
+&lt;p>&lt;img src="rdp-app1.png" alt="img">&lt;/p></description></item><item><title>Docs: SSH App</title><link>https://docs.trustgrid.io/docs/applications/ssh-app/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/ssh-app/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A SSH app is a ZTNA application that allows remote access to internal SSH servers. SSH servers can be hosted internally but exposed to authorized users.&lt;/p>
 &lt;/div>
@@ -1525,7 +1525,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/ul>
 &lt;h2 id="security">Security&lt;/h2>
 &lt;ul>
-&lt;li>Identity Provider - the &lt;a href="https://trustgrid.github.io/docs/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
+&lt;li>Identity Provider - the &lt;a href="https://docs.trustgrid.io/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
 &lt;/ul>
 &lt;ol>
 &lt;li>Click &lt;code>Add Application&lt;/code>&lt;/li>
@@ -1538,15 +1538,15 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;ol start="3">
 &lt;li>Fill out all details in the sheet provided, then click &lt;code>Save&lt;/code> when satisfied with the information entered&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="shh-app.png" alt="img">&lt;/p></description></item><item><title>Docs: Trusted Links</title><link>https://trustgrid.github.io/docs/docs/applications/web-app/trusted-links/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/web-app/trusted-links/</guid><description>
+&lt;p>&lt;img src="shh-app.png" alt="img">&lt;/p></description></item><item><title>Docs: Trusted Links</title><link>https://docs.trustgrid.io/docs/applications/web-app/trusted-links/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/web-app/trusted-links/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trusted links allow a user to allow-list only specific URLs when accessed through a ZTNA application. This allows a user to access any URL on the internet through a ZTNA application, but only if the URL is explicitly allowed by the application.&lt;/p>
 &lt;/div>
-&lt;p>This can be used to permit readonly or certain operations remotely, but still require local access for more sensitive operations.&lt;/p></description></item><item><title>Docs: Visibility</title><link>https://trustgrid.github.io/docs/docs/applications/visibility/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/visibility/</guid><description>
+&lt;p>This can be used to permit readonly or certain operations remotely, but still require local access for more sensitive operations.&lt;/p></description></item><item><title>Docs: Visibility</title><link>https://docs.trustgrid.io/docs/applications/visibility/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/visibility/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Visibility groups determine what applications a user can see on their application dashboard. A user must be a member of at least one selected group to see an application.&lt;/p>
 &lt;/div>
-&lt;p>&lt;img src="visibility.png" alt="img">&lt;/p></description></item><item><title>Docs: VNC App</title><link>https://trustgrid.github.io/docs/docs/applications/vnc-app/</link><pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/applications/vnc-app/</guid><description>
+&lt;p>&lt;img src="visibility.png" alt="img">&lt;/p></description></item><item><title>Docs: VNC App</title><link>https://docs.trustgrid.io/docs/applications/vnc-app/</link><pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/vnc-app/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A VNC app is a ZTNA application that allows remote access to an internal VNC server. VNC servers can be hosted internally but exposed to authorized users.&lt;/p>
 &lt;/div>
@@ -1607,7 +1607,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/ul>
 &lt;h4 id="security">Security&lt;/h4>
 &lt;ul>
-&lt;li>Identity Provider - the &lt;a href="https://trustgrid.github.io/docs/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
+&lt;li>Identity Provider - the &lt;a href="https://docs.trustgrid.io/docs/idps/">Identity Provider&lt;/a> to authenticate users&lt;/li>
 &lt;/ul>
 &lt;ol>
 &lt;li>Click &lt;code>Add Application&lt;/code>&lt;/li>
@@ -1620,7 +1620,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;ol start="3">
 &lt;li>Fill out all details in the sheet provided, then click &lt;code>Save&lt;/code> when satisfied with the information entered&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="vnc-app.png" alt="img">&lt;/p></description></item><item><title>Help-Center: Authorization to Request Support</title><link>https://trustgrid.github.io/docs/help-center/request-support/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/request-support/</guid><description>
+&lt;p>&lt;img src="vnc-app.png" alt="img">&lt;/p></description></item><item><title>Help-Center: Authorization to Request Support</title><link>https://docs.trustgrid.io/help-center/request-support/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/request-support/</guid><description>
 &lt;p>To prevent unauthorized users from potentially compromising the control plane, Trustgrid has implemented a policy to approve customers&amp;rsquo; staff for access to technical support services. Trustgrid will not refuse support completely in cases when unauthorized staff request it, but will limit the disclosure of confidential information and will refuse to make configuration changes without approval from an authorized support contact.&lt;/p>
 &lt;ol>
 &lt;li>
@@ -1632,7 +1632,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;p>b. Operator Access: Staff can alert of issues and request remote assistance but only changes limited to the Operator role can be requested.&lt;/p>
 &lt;p>c. Administrator Access: Staff can request any system change.&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Docs: Groups</title><link>https://trustgrid.github.io/docs/docs/user-management/groups/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/user-management/groups/</guid><description>
+&lt;/ol></description></item><item><title>Docs: Groups</title><link>https://docs.trustgrid.io/docs/user-management/groups/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/user-management/groups/</guid><description>
 &lt;p>&lt;img src="group-ss.png" alt="img">&lt;/p>
 &lt;p>User Management Groups defined can be used to make Remote Access applications visible to users.&lt;/p>
 &lt;p>There are two sources for Groups&lt;/p>
@@ -1654,20 +1654,20 @@ Users can be added to the group by:&lt;/p>
 &lt;p>These groups are create based on Identity Provider (IdP) configuration for select IdPs (currently Gsuite and Azure OpenID). The IdP can be configured to sync all or select groups, and the sync process will update the group membership automatically.&lt;/p>
 &lt;blockquote>
 &lt;p>if users are added to an IdP-synced group in the Trustgrid portal they will automatically be removed the next time they sync runs.&lt;/p>
-&lt;/blockquote></description></item><item><title>Getting-Started: Networking</title><link>https://trustgrid.github.io/docs/getting-started/networking/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/getting-started/networking/</guid><description>
+&lt;/blockquote></description></item><item><title>Getting-Started: Networking</title><link>https://docs.trustgrid.io/getting-started/networking/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/getting-started/networking/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Trustgrid delivers a software defined wide area network (SD-WAN) that enables connectivity between cloud environments, data centers, and edge or on-premise hosts. Our robust networking feature set provides layer 3 and layer 4 network overlays with cloud management tools.&lt;/p>
 &lt;/div>
 &lt;h3 id="types-of-connectivity">Types of Connectivity&lt;/h3>
-&lt;p>Trustgrid establishes mutual TLS tunnels between &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> using mutual authentication. These tunnels between edge nodes and gateway nodes constitute the data plane of a Trustgrid network. Over this tunnel two distinct types of connectivity are supported, Layer 3 and Layer 4. Layer 3 supports &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">routed&lt;/a> traffic and Network Address Translation (NAT) to replicate traditional WAN connections. Trustgrid&amp;rsquo;s Layer 4 networking uses reverse proxies to map local IP-port number combinations to remote hosts. Each connectivity type has distinct advantages and may be used for either gateway nodes or edge nodes.&lt;/p>
+&lt;p>Trustgrid establishes mutual TLS tunnels between &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> using mutual authentication. These tunnels between edge nodes and gateway nodes constitute the data plane of a Trustgrid network. Over this tunnel two distinct types of connectivity are supported, Layer 3 and Layer 4. Layer 3 supports &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">routed&lt;/a> traffic and Network Address Translation (NAT) to replicate traditional WAN connections. Trustgrid&amp;rsquo;s Layer 4 networking uses reverse proxies to map local IP-port number combinations to remote hosts. Each connectivity type has distinct advantages and may be used for either gateway nodes or edge nodes.&lt;/p>
 &lt;h3 id="layer-3-overview">Layer 3 Overview&lt;/h3>
-&lt;p>The Trustgrid VPN feature provides the capability to securely route IP packets between networks. In this configuration, Trustgrid &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> can operate as a distributed mesh virtual private network (VPN) that can allow applications to access remote data and services at layer 3 (L3) of the network OSI model. This is done by defining a virtual L3 network (similar to an Amazon VPC) and then selecting how edge node networks are exposed and translated into the the virtual address space.&lt;/p>
-&lt;p>Layer 3 configuration is required for all Trustgrid networking deployments on the Gateway (data center / cloud) side. This allows the use of L3 or Layer 4 configurations for edge node deployments. Layer 3 connectivity enables easy support of many hosts at each side of the connection. This allows the replication of existing &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">routes&lt;/a> and subnets to minimize reconfiguration of any remote or local networks.&lt;/p>
+&lt;p>The Trustgrid VPN feature provides the capability to securely route IP packets between networks. In this configuration, Trustgrid &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> can operate as a distributed mesh virtual private network (VPN) that can allow applications to access remote data and services at layer 3 (L3) of the network OSI model. This is done by defining a virtual L3 network (similar to an Amazon VPC) and then selecting how edge node networks are exposed and translated into the the virtual address space.&lt;/p>
+&lt;p>Layer 3 configuration is required for all Trustgrid networking deployments on the Gateway (data center / cloud) side. This allows the use of L3 or Layer 4 configurations for edge node deployments. Layer 3 connectivity enables easy support of many hosts at each side of the connection. This allows the replication of existing &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">routes&lt;/a> and subnets to minimize reconfiguration of any remote or local networks.&lt;/p>
 &lt;p>Layer 3 edge configuration is ideal in situations where there is an incomplete understanding of all traffic (source and destination hosts/ports) as it supports more permissive ACLs. It is required when using stateful protocols (except FTP) and other protocols such as SIP.&lt;/p>
 &lt;p>All gateway nodes must be deployed using L3 networking in a two interface (management/data NIC) configuration.&lt;/p>
 &lt;h3 id="layer-4-overview">Layer 4 Overview&lt;/h3>
 &lt;p>Trustgrid Layer 4 (L4) is only supported in edge configurations. Layer 4 networking enables a reverse proxy connection between the Gateway Node IP address:port number that maps directly to an on-premise host:port. Specific network plug-ins support stateful features like FTP using L4 connectivity. With Trustgrid&amp;rsquo;s L4 networks there is no concern of overlapping local IP subnets on either end of the tunnel because Trustgrid proxies the traffic. The source of all TCP/UDP traffic is the edge node interface, not the originating host. This is transparent to the hosts on either side.&lt;/p>
-&lt;p>Layer 4 connectivity offers slightly better performance than L3 in specific types of traffic and is ideal when there is a single or few remote/edge hosts that are being accessed with deterministic traffic. Layer 4 edge nodes are usually easier to deploy at an edge site as they can avoid the configuration of a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual network&lt;/a> overlay (NATs, ACLs, &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/routes/">Routes&lt;/a>, etc). Remote sites that desire to view the actual source of traffic should use Layer 3 for edge configurations as the source IP for all traffic in a Layer 4 connection is the edge node&amp;rsquo;s data IP address.&lt;/p></description></item><item><title>Help-Center: Submit a Support Request</title><link>https://trustgrid.github.io/docs/help-center/submit-support-request/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/submit-support-request/</guid><description>
+&lt;p>Layer 4 connectivity offers slightly better performance than L3 in specific types of traffic and is ideal when there is a single or few remote/edge hosts that are being accessed with deterministic traffic. Layer 4 edge nodes are usually easier to deploy at an edge site as they can avoid the configuration of a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">virtual network&lt;/a> overlay (NATs, ACLs, &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">Routes&lt;/a>, etc). Remote sites that desire to view the actual source of traffic should use Layer 3 for edge configurations as the source IP for all traffic in a Layer 4 connection is the edge node&amp;rsquo;s data IP address.&lt;/p></description></item><item><title>Help-Center: Submit a Support Request</title><link>https://docs.trustgrid.io/help-center/submit-support-request/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/submit-support-request/</guid><description>
 &lt;p>Trustgrid support is available 24/7/365 with a commitment to respond to any Emergency Support request within 30 minutes.&lt;/p>
 &lt;h4 id="to-contact-support">To contact support:&lt;/h4>
 &lt;p>Email: &lt;a href="mailto:support@trustgrid.io">support@trustgrid.io&lt;/a>&lt;/p>
@@ -1675,14 +1675,14 @@ Users can be added to the group by:&lt;/p>
 &lt;h4 id="authorized-support">Authorized Support&lt;/h4>
 &lt;p>Trustgrid can only provide support to customers with a Trustgrid Portal account commensurate with the account&amp;rsquo;s permission level in the portal. To receive support the user must be able to respond to an email at the account&amp;rsquo;s email address in the portal.&lt;/p>
 &lt;h4 id="enable-support-for-trustgrid">Enable Support for Trustgrid&lt;/h4>
-&lt;p>Trustgrid customers can prohibit Support access to Nodes in the Portal. It may be required to enable this support to resolve certain issues.&lt;/p></description></item><item><title>Help-Center: View Configuration Changes</title><link>https://trustgrid.github.io/docs/help-center/view-logs/config-changes/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/view-logs/config-changes/</guid><description>
+&lt;p>Trustgrid customers can prohibit Support access to Nodes in the Portal. It may be required to enable this support to resolve certain issues.&lt;/p></description></item><item><title>Help-Center: View Configuration Changes</title><link>https://docs.trustgrid.io/help-center/view-logs/config-changes/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/view-logs/config-changes/</guid><description>
 &lt;ul>
 &lt;li>Changes to the following configurations are audited:
 &lt;ul>
 &lt;li>API&lt;/li>
-&lt;li>&lt;a href="https://trustgrid.github.io/docs/docs/clusters/">Cluster&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://trustgrid.github.io/docs/docs/domain/">Domain&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.trustgrid.io/docs/clusters/">Cluster&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.trustgrid.io/docs/domain/">Domain&lt;/a>&lt;/li>
 &lt;li>Certificate&lt;/li>
 &lt;li>Org&lt;/li>
 &lt;li>Profile&lt;/li>
@@ -1692,13 +1692,13 @@ Users can be added to the group by:&lt;/p>
 &lt;li>Audits record the event type (add/remove/change), the user name, the IP address, and the date of the change&lt;/li>
 &lt;li>Audits are kept for 30 days&lt;/li>
 &lt;li>Audits can be downloaded as CSV on the operations page&lt;/li>
-&lt;/ul></description></item><item><title>Help-Center: View Node Update Events</title><link>https://trustgrid.github.io/docs/help-center/view-logs/node-update-events/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/view-logs/node-update-events/</guid><description>
+&lt;/ul></description></item><item><title>Help-Center: View Node Update Events</title><link>https://docs.trustgrid.io/help-center/view-logs/node-update-events/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/view-logs/node-update-events/</guid><description>
 &lt;ul>
 &lt;li>View node update events on the Operations page&lt;/li>
 &lt;li>Node update events are kept for 30 days&lt;/li>
 &lt;li>You can download a CSV of the node updates from the Operations page&lt;/li>
 &lt;li>All Trustgrid node agent updates and OS package updates are logged&lt;/li>
-&lt;/ul></description></item><item><title>Help-Center: View User Authentication Events</title><link>https://trustgrid.github.io/docs/help-center/view-logs/user-authentication/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/help-center/view-logs/user-authentication/</guid><description>
+&lt;/ul></description></item><item><title>Help-Center: View User Authentication Events</title><link>https://docs.trustgrid.io/help-center/view-logs/user-authentication/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/view-logs/user-authentication/</guid><description>
 &lt;ul>
 &lt;li>For every authentication event, we log:
 &lt;ul>
@@ -1721,11 +1721,11 @@ Users can be added to the group by:&lt;/p>
 &lt;/ul>
 &lt;div class="alert alert-primary" role="alert">
 If your organization is utilizing a third-party identity provider via SAML or OpenID, that provider is responsible for providing and storing authentication log records
-&lt;/div></description></item><item><title>Docs: Access Policy</title><link>https://trustgrid.github.io/docs/docs/domain/virtual-networks/access-policy/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/domain/virtual-networks/access-policy/</guid><description>
+&lt;/div></description></item><item><title>Docs: Access Policy</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/access-policy/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/virtual-networks/access-policy/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>An access policy is a list of rules that each allow, reject, or drop traffic at the VPN level.&lt;/p>
 &lt;/div>
-&lt;p>If no rules are defined, traffic will not pass through the &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/">virtual network&lt;/a>.&lt;/p>
+&lt;p>If no rules are defined, traffic will not pass through the &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">virtual network&lt;/a>.&lt;/p>
 &lt;p>&lt;strong>A rule can match traffic based on the following fields:&lt;/strong>&lt;/p>
 &lt;table>
 &lt;thead>
@@ -1745,11 +1745,11 @@ If your organization is utilizing a third-party identity provider via SAML or Op
 &lt;/tr>
 &lt;tr>
 &lt;th>Source&lt;/th>
-&lt;td>The source of the traffic. You can select a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
+&lt;td>The source of the traffic. You can select a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Destination&lt;/th>
-&lt;td>The destination of the traffic. You can select a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="https://trustgrid.github.io/docs/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
+&lt;td>The destination of the traffic. You can select a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Line Number&lt;/th>
@@ -1762,9 +1762,9 @@ If your organization is utilizing a third-party identity provider via SAML or Op
 &lt;/tbody>
 &lt;/table>
 &lt;p>&lt;img src="access-policy.png" alt="img">&lt;/p>
-&lt;p>&lt;strong>Note that &lt;em>all specified&lt;/em> fields must be matched for the rule to match. (confirm w steven).&lt;/strong>&lt;/p></description></item><item><title>Docs: Alarm Filters</title><link>https://trustgrid.github.io/docs/docs/alarms/alarm-filters/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/alarm-filters/</guid><description>
+&lt;p>&lt;strong>Note that &lt;em>all specified&lt;/em> fields must be matched for the rule to match. (confirm w steven).&lt;/strong>&lt;/p></description></item><item><title>Docs: Alarm Filters</title><link>https://docs.trustgrid.io/docs/alarms/alarm-filters/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/alarms/alarm-filters/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>Alarm Filters are used to determine which &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a> trigger notifications and to define which &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a> should receive those notifications.&lt;/p>
+&lt;p>Alarm Filters are used to determine which &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a> trigger notifications and to define which &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channels&lt;/a> should receive those notifications.&lt;/p>
 &lt;/div>
 &lt;p>Alarm filters have the following fields:&lt;/p>
 &lt;table>
@@ -1785,15 +1785,15 @@ If your organization is utilizing a third-party identity provider via SAML or Op
 &lt;/tr>
 &lt;tr>
 &lt;th>Enabled&lt;/th>
-&lt;td>An alarm filter must be enabled for matching &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> to be sent to the selected &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channel&lt;/a>. Deselecting the check box can be handy if you wish to suppress a specific type of &lt;a href="https://trustgrid.github.io/docs/docs/alarms/">alarm&lt;/a>.&lt;/td>
+&lt;td>An alarm filter must be enabled for matching &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> to be sent to the selected &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channel&lt;/a>. Deselecting the check box can be handy if you wish to suppress a specific type of &lt;a href="https://docs.trustgrid.io/docs/alarms/">alarm&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Channels&lt;/th>
-&lt;td>This section determines which &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a> matching &lt;a href="https://trustgrid.github.io/docs/docs/alarms/">alarms&lt;/a> will be sent to.&lt;/td>
+&lt;td>This section determines which &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channels&lt;/a> matching &lt;a href="https://docs.trustgrid.io/docs/alarms/">alarms&lt;/a> will be sent to.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Criteria&lt;/th>
-&lt;td>&lt;p>The criteria determine which &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a> will match the filter. These conditions can be set as:&lt;/p>
+&lt;td>&lt;p>The criteria determine which &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a> will match the filter. These conditions can be set as:&lt;/p>
 &lt;ul>
 &lt;li>All (default) - All specified criteria must be true to match. Equivalent to a boolean AND condition.&lt;/li>
 &lt;li>Any - Only one criteria must be true to match. Equivalent to a boolean OR condition.&lt;/li>
@@ -1803,21 +1803,21 @@ If your organization is utilizing a third-party identity provider via SAML or Op
 &lt;/tr>
 &lt;tr>
 &lt;th>Node Name&lt;/th>
-&lt;td>The &amp;ldquo;Node Name&amp;rdquo; criteria llows you to select one or more specific &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> names. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> names is associated with the &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a>.&lt;/td>
+&lt;td>The &amp;ldquo;Node Name&amp;rdquo; criteria llows you to select one or more specific &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> names. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> names is associated with the &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Event Type&lt;/th>
-&lt;td>The &lt;a href="https://trustgrid.github.io/docs/docs/alarms/event-types/">&amp;ldquo;Event Type&amp;rdquo;&lt;/a> criteria determines which &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a> will match the filter. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="https://trustgrid.github.io/docs/docs/alarms/event-types/">event types&lt;/a>.&lt;/td>
+&lt;td>The &lt;a href="https://docs.trustgrid.io/docs/alarms/event-types/">&amp;ldquo;Event Type&amp;rdquo;&lt;/a> criteria determines which &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a> will match the filter. Note, even if the filter is set to &lt;code>All&lt;/code>, the filter will match any of the selected &lt;a href="https://docs.trustgrid.io/docs/alarms/event-types/">event types&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Tag Matches&lt;/th>
-&lt;td>&lt;p>The &amp;ldquo;Tag Matches&amp;rdquo; criteria allows you to use &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">tag&lt;/a> name/value pairs to determine if the filter should match &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a>. For examples, you may what production devices to send to a high priority &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channel&lt;/a> such as PagerDuty or OpsGenie. If your &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> have a tag to indicating “prod_status=production”, you can select that name/value pair from the list to properly filter your &lt;a href="https://trustgrid.github.io/docs/docs/alarms/">alarms&lt;/a>.&lt;/p>
+&lt;td>&lt;p>The &amp;ldquo;Tag Matches&amp;rdquo; criteria allows you to use &lt;a href="https://docs.trustgrid.io/docs/nodes/tags/">tag&lt;/a> name/value pairs to determine if the filter should match &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a>. For examples, you may what production devices to send to a high priority &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channel&lt;/a> such as PagerDuty or OpsGenie. If your &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> have a tag to indicating “prod_status=production”, you can select that name/value pair from the list to properly filter your &lt;a href="https://docs.trustgrid.io/docs/alarms/">alarms&lt;/a>.&lt;/p>
 &lt;p>&lt;img src="tag-matches.png" alt="img">&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Severity&lt;/th>
-&lt;td>&lt;p>Each &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> type has a severity level associated with it. This filter will match any &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> with the selected severity type or higher. This is the only mandatory criteria.&lt;/p>
+&lt;td>&lt;p>Each &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> type has a severity level associated with it. This filter will match any &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> with the selected severity type or higher. This is the only mandatory criteria.&lt;/p>
 &lt;p>The severity levels are:&lt;/p>
 &lt;ol>
 &lt;li>INFO&lt;/li>
@@ -1825,18 +1825,18 @@ If your organization is utilizing a third-party identity provider via SAML or Op
 &lt;li>ERROR&lt;/li>
 &lt;li>CRITICAL&lt;/li>
 &lt;/ol>
-&lt;p>For example, if you select the severity level of WARNING the filter will match WARNING, ERROR and CRITICAL &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a>.&lt;/p>
-&lt;p>Some events have a corresponding &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> that will automatically resolve the alert in the portal and in some &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channels&lt;/a> such as PagerDuty. The corresponding event may have a different severity level, so make sure you select the lower severity for the criteria. e.g. &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> Disconnect is a WARNING but &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> Connect which resolves it is only INFO. So you’d need to select both &lt;a href="https://trustgrid.github.io/docs/docs/alarms/event-types/">Event Types&lt;/a> and set the severity to INFO.&lt;/p>
+&lt;p>For example, if you select the severity level of WARNING the filter will match WARNING, ERROR and CRITICAL &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a>.&lt;/p>
+&lt;p>Some events have a corresponding &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> that will automatically resolve the alert in the portal and in some &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channels&lt;/a> such as PagerDuty. The corresponding event may have a different severity level, so make sure you select the lower severity for the criteria. e.g. &lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> Disconnect is a WARNING but &lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> Connect which resolves it is only INFO. So you’d need to select both &lt;a href="https://docs.trustgrid.io/docs/alarms/event-types/">Event Types&lt;/a> and set the severity to INFO.&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Contains Text&lt;/th>
-&lt;td>&lt;p>This field will accept any single string of text to match to the contents of an &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a>. For example, if all your gateways include &lt;code>-gw&lt;/code> in the name you could enter that without quotes in the field and it would match any &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> that includes that text in the event payload. This criteria can also be used if there is another aspect of the node included in the &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> payload that doesn’t match the criteria above. To see the entire payload of an &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> configure a less specific payload and send to an email &lt;a href="https://trustgrid.github.io/docs/docs/alarms/channels/">channel&lt;/a> to see the JSON.&lt;/p>
-&lt;p>The &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> payload includes the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node’s&lt;/a> unique identifier (UID) which is a string of generated text and numbers. If your &amp;ldquo;Contains Text&amp;rdquo; criteria is too short, there is a chance a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> UID will also match unexpectedly.&lt;/p>
+&lt;td>&lt;p>This field will accept any single string of text to match to the contents of an &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a>. For example, if all your gateways include &lt;code>-gw&lt;/code> in the name you could enter that without quotes in the field and it would match any &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> that includes that text in the event payload. This criteria can also be used if there is another aspect of the node included in the &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> payload that doesn’t match the criteria above. To see the entire payload of an &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> configure a less specific payload and send to an email &lt;a href="https://docs.trustgrid.io/docs/alarms/channels/">channel&lt;/a> to see the JSON.&lt;/p>
+&lt;p>The &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> payload includes the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node’s&lt;/a> unique identifier (UID) which is a string of generated text and numbers. If your &amp;ldquo;Contains Text&amp;rdquo; criteria is too short, there is a chance a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> UID will also match unexpectedly.&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Alert Suppression</title><link>https://trustgrid.github.io/docs/docs/alarms/alert-suppression/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/alert-suppression/</guid><description>
+&lt;/table></description></item><item><title>Docs: Alert Suppression</title><link>https://docs.trustgrid.io/docs/alarms/alert-suppression/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/alarms/alert-suppression/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Maintenance and other planned disruptive activity can generate a large amount of alerts and notifications for no value. The Trustgrid system allows you to define alert suppression windows during which no alerts are triggered.&lt;/p>
 &lt;/div>
@@ -1892,7 +1892,7 @@ If your organization is utilizing a third-party identity provider via SAML or Op
 &lt;li>
 &lt;p>Suppression windows apply to all devices across the entire organization.&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Docs: Channels</title><link>https://trustgrid.github.io/docs/docs/alarms/channels/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/channels/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Channels</title><link>https://docs.trustgrid.io/docs/alarms/channels/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/alarms/channels/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A channel defines one or more method of delivering alert notifications to external systems.&lt;/p>
 &lt;/div>
@@ -1909,21 +1909,21 @@ If your organization is utilizing a third-party identity provider via SAML or Op
 &lt;/li>
 &lt;/ul>
 &lt;div class="alert alert-primary" role="alert">
-For both PagerDuty and OpsGenie the integration will automatically resolve issues if an &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> occurs that negates the initial triggering event. For example, if an &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> is triggered by a Node Disconnect and the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> reconnects, the Node Connect &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> will resolve the incident via the API.
+For both PagerDuty and OpsGenie the integration will automatically resolve issues if an &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> occurs that negates the initial triggering event. For example, if an &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> is triggered by a Node Disconnect and the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> reconnects, the Node Connect &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> will resolve the incident via the API.
 &lt;/div>
 &lt;ul>
 &lt;li>
-&lt;p>Slack - Trustgrid can post the &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data to a configured channel via a webhook.&lt;/p>
+&lt;p>Slack - Trustgrid can post the &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> data to a configured channel via a webhook.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Microsoft Teams - Trustgrid can post &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data to a configured Teams channel via an incoming webhook&lt;/p>
+&lt;p>Microsoft Teams - Trustgrid can post &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> data to a configured Teams channel via an incoming webhook&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;div class="alert alert-primary" role="alert">
-Only a single Slack or Teams channel can be targeted by a Trustgrid channel. However, you can create multiple Trustgrid channels if you wish to post the &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data to more than one Slack/Teams channel.
+Only a single Slack or Teams channel can be targeted by a Trustgrid channel. However, you can create multiple Trustgrid channels if you wish to post the &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> data to more than one Slack/Teams channel.
 &lt;/div>
 &lt;h3 id="example-event-data">Example Event Data&lt;/h3>
-&lt;p>The &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> data is delivered in JSON, as shown below, which depending on the integration can allow for additional parsing.&lt;/p>
+&lt;p>The &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> data is delivered in JSON, as shown below, which depending on the integration can allow for additional parsing.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;nodeName&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;edge1&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Name&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">node&lt;/span> &lt;span style="color:#a40000">that&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">relates&lt;/span> &lt;span style="color:#a40000">to&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;expires&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">1604801325&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">Unix&lt;/span> &lt;span style="color:#a40000">epoch&lt;/span> &lt;span style="color:#a40000">timestamp&lt;/span> &lt;span style="color:#a40000">when&lt;/span> &lt;span style="color:#a40000">this&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">will&lt;/span> &lt;span style="color:#a40000">expire&lt;/span> &lt;span style="color:#a40000">and&lt;/span> &lt;span style="color:#a40000">automatically&lt;/span> &lt;span style="color:#a40000">resolve&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
@@ -1951,16 +1951,16 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a40000">/*&lt;/span> &lt;span style="color:#a40000">A&lt;/span> &lt;span style="color:#a40000">list&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">alarm&lt;/span> &lt;span style="color:#a40000">filters&lt;/span> &lt;span style="color:#a40000">that&lt;/span> &lt;span style="color:#a40000">matched&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">event&lt;/span> &lt;span style="color:#a40000">*/&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;be324011-4bea-4392-a06a-541646decd39&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Cluster Site Health State</title><link>https://trustgrid.github.io/docs/docs/clusters/cluster-health/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/clusters/cluster-health/</guid><description>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Cluster Site Health State</title><link>https://docs.trustgrid.io/docs/clusters/cluster-health/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/clusters/cluster-health/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>A healthy &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> should have two online Trustgrid &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> in a healthy state. The Trustgrid control plane can monitor the member &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> and generate &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a> when their state changes such that the health of the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> is impacted.&lt;/p>
+&lt;p>A healthy &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> should have two online Trustgrid &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> in a healthy state. The Trustgrid control plane can monitor the member &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> and generate &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a> when their state changes such that the health of the &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> is impacted.&lt;/p>
 &lt;/div>
 &lt;h3 id="basics">Basics&lt;/h3>
 &lt;div class="alert alert-primary" role="alert">
 &lt;p>These events are based on the information reported by each member node to the control plane. Because of this:&lt;/p>
 &lt;ul>
-&lt;li>There can be a delay between a change and the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">Cluster&lt;/a> Site Health events.&lt;/li>
-&lt;li>If member &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> have issues preventing control plane connections but not impacting data plane or other services the &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">events&lt;/a> may not accurately reflect the state of the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a>.&lt;/li>
+&lt;li>There can be a delay between a change and the &lt;a href="https://docs.trustgrid.io/docs/clusters/">Cluster&lt;/a> Site Health events.&lt;/li>
+&lt;li>If member &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> have issues preventing control plane connections but not impacting data plane or other services the &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a> may not accurately reflect the state of the &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a>.&lt;/li>
 &lt;/ul>
 &lt;/div>
 &lt;h3 id="cluster-health-state">Cluster Health State&lt;/h3>
@@ -1978,21 +1978,21 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;tr>
 &lt;th>Unhealthy&lt;/th>
 &lt;td>
-&lt;p>There is at least one online and healthy member of the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> with the active role AND one or more of these conditions is true:&lt;/p>
+&lt;p>There is at least one online and healthy member of the &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> with the active role AND one or more of these conditions is true:&lt;/p>
 &lt;ul>
-&lt;li>One of the &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> members is offline, unhealthy or disabled&lt;/li>
-&lt;li>There are &lt;strong>two&lt;/strong> &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> members with the active role&lt;/li>
+&lt;li>One of the &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> members is offline, unhealthy or disabled&lt;/li>
+&lt;li>There are &lt;strong>two&lt;/strong> &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> members with the active role&lt;/li>
 &lt;/ul>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Offline&lt;/th>
 &lt;td>
-&lt;p>Both &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> are offline, unhealthy or disabled.&lt;/p>
+&lt;p>Both &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> are offline, unhealthy or disabled.&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Event Types</title><link>https://trustgrid.github.io/docs/docs/alarms/event-types/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/alarms/event-types/</guid><description>
+&lt;/table></description></item><item><title>Docs: Event Types</title><link>https://docs.trustgrid.io/docs/alarms/event-types/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/alarms/event-types/</guid><description>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -2007,13 +2007,13 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;td>All Gateways Disconnected&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>This &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> will be triggered if an edge node loses connectivity to all it’s available gateways.&lt;/td>
+&lt;td>This &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> will be triggered if an edge node loses connectivity to all it’s available gateways.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>All Peers Disconnected&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>This &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> will be triggered if a node is configured as a gateway an it lose connectivity to all it’s configured edge nodes.&lt;/td>
+&lt;td>This &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> will be triggered if a node is configured as a gateway an it lose connectivity to all it’s configured edge nodes.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Certificate Expiring&lt;/td>
@@ -2024,44 +2024,44 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;tr>
 &lt;td>Cluster Failover&lt;/td>
 &lt;td>INFO&lt;/td>
-&lt;td>&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> is the active &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> member&lt;/td>
-&lt;td>Sent by a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> when it claims the active role.&lt;/td>
+&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> is the active &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> member&lt;/td>
+&lt;td>Sent by a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> when it claims the active role.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Cluster Failover&lt;/td>
 &lt;td>Info&lt;/td>
-&lt;td>&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> is no longer the active &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> member&lt;/td>
-&lt;td>Sent by a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> when it releases the active role.&lt;/td>
+&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> is no longer the active &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> member&lt;/td>
+&lt;td>Sent by a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> when it releases the active role.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Connection Flapping&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> disconnects and reconnects 10 times within 5 minutes. A follow up alert will be sent after each subsequent 120 disconnect/reconnects.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> disconnects and reconnects 10 times within 5 minutes. A follow up alert will be sent after each subsequent 120 disconnect/reconnects.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Connection Flapping&lt;/td>
 &lt;td>INFO&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>This alert will be sent when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node’s&lt;/a> &amp;ldquo;Connection Flapping&amp;rdquo; issue has been resolved.&lt;/td>
+&lt;td>This alert will be sent when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node’s&lt;/a> &amp;ldquo;Connection Flapping&amp;rdquo; issue has been resolved.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Connection Timeout&lt;/td>
 &lt;td>ERROR&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> does not reconnect after a profile update has been pushed to the &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a>.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> does not reconnect after a profile update has been pushed to the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Data Plane Disruption&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>This &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a> will be triggered if a data plane tunnel is terminated unexpectedly.&lt;/td>
+&lt;td>This &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> will be triggered if a data plane tunnel is terminated unexpectedly.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Date Plane Disruption&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>Gateway &lt;em>nodename&lt;/em> removed from the domain&lt;/td>
-&lt;td>If a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> acting as a gateway (public, private or hub) is disabled or the gateway service is disabled all other &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> in the domain will log this &lt;a href="https://trustgrid.github.io/docs/docs/alarms/events/">event&lt;/a>.&lt;/td>
+&lt;td>If a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> acting as a gateway (public, private or hub) is disabled or the gateway service is disabled all other &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> in the domain will log this &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Gateway Connectivity Health Check&lt;/td>
@@ -2085,7 +2085,7 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;td>Metric Threshold Violation&lt;/td>
 &lt;td>ERROR&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> cpu, ram, disk, or latency configured metric threshold is violated.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> cpu, ram, disk, or latency configured metric threshold is violated.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Metric Threshold Violation&lt;/td>
@@ -2097,7 +2097,7 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;td>Network Error&lt;/td>
 &lt;td>CRITICAL&lt;/td>
 &lt;td>Stale ARP detected&lt;/td>
-&lt;td>Alerts when a stale ARP entry is detected for a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node’s&lt;/a> &lt;a href="https://trustgrid.github.io/docs/docs/clusters/">cluster&lt;/a> IP.&lt;/td>
+&lt;td>Alerts when a stale ARP entry is detected for a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node’s&lt;/a> &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> IP.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Network Error&lt;/td>
@@ -2106,16 +2106,16 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;td>Alerts if an interface has been detected running at half-duplex. This is almost always a result of a failure to auto-negotiate the speed/duplex and can result in poor performance.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> Connect&lt;/td>
+&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> Connect&lt;/td>
 &lt;td>INFO&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> connects to the control plane.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> connects to the control plane.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="https://trustgrid.github.io/docs/docs/nodes/">Node&lt;/a> Disconnect&lt;/td>
+&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> Disconnect&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&lt;/a> disconnects from the control plane.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> disconnects from the control plane.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Order Created&lt;/td>
@@ -2133,20 +2133,20 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;td>Unauthorized IP&lt;/td>
 &lt;td>WARNING&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">node&amp;rsquo;s&lt;/a> public IP has been locked but the connection to the control plane comes from a different IP.&lt;/td>
+&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&amp;rsquo;s&lt;/a> public IP has been locked but the connection to the control plane comes from a different IP.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;hr></description></item><item><title>Docs: Production Status Tags</title><link>https://trustgrid.github.io/docs/docs/nodes/tags/prod-status-tag/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/nodes/tags/prod-status-tag/</guid><description>
+&lt;hr></description></item><item><title>Docs: Production Status Tags</title><link>https://docs.trustgrid.io/docs/nodes/tags/prod-status-tag/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/tags/prod-status-tag/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Production status tags are used for for organizing large Trustgrid deployments.&lt;/p>
 &lt;/div>
-&lt;p>It is recommended that customers use a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">tag&lt;/a> to indicate if &lt;a href="https://trustgrid.github.io/docs/docs/nodes/">nodes&lt;/a> are currently in production or not. For example, you may wish to have a &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">tag&lt;/a> such as prod_status with possible values like&lt;/p>
+&lt;p>It is recommended that customers use a &lt;a href="https://docs.trustgrid.io/docs/nodes/tags/">tag&lt;/a> to indicate if &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> are currently in production or not. For example, you may wish to have a &lt;a href="https://docs.trustgrid.io/docs/nodes/tags/">tag&lt;/a> such as prod_status with possible values like&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>deploying&lt;/code> for devices still being deployed&lt;/li>
 &lt;li>&lt;code>production&lt;/code> for devices actively in user&lt;/li>
 &lt;li>&lt;code>decommission&lt;/code> for devices that are being removed&lt;/li>
 &lt;/ul>
 &lt;div class="alert alert-primary" role="alert">
-It’s important to have these &lt;a href="https://trustgrid.github.io/docs/docs/nodes/tags/">tag&lt;/a> names and values be consistent within the organization including case. &lt;code>Production&lt;/code> and &lt;code>production&lt;/code> would be viewed as two different values, as an example.
+It’s important to have these &lt;a href="https://docs.trustgrid.io/docs/nodes/tags/">tag&lt;/a> names and values be consistent within the organization including case. &lt;code>Production&lt;/code> and &lt;code>production&lt;/code> would be viewed as two different values, as an example.
 &lt;/div></description></item></channel></rss>

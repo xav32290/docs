@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– idps</title><link>https://trustgrid.github.io/docs/categories/idps/</link><description>Recent content in idps on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://trustgrid.github.io/docs/categories/idps/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Azure AD</title><link>https://trustgrid.github.io/docs/docs/idps/azure-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/idps/azure-idp-fields/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– idps</title><link>https://docs.trustgrid.io/categories/idps/</link><description>Recent content in idps on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.trustgrid.io/categories/idps/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Azure AD</title><link>https://docs.trustgrid.io/docs/idps/azure-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/idps/azure-idp-fields/</guid><description>
 &lt;h4 id="setup">Setup&lt;/h4>
 &lt;p>Setting up the Azure AD integration requires the configuration of an Azure App registration. See &lt;a href="#azure-app-registration-configuration">Azure App registration configuration&lt;/a>.&lt;/p>
 &lt;p>&lt;img src="azure_ad_config.png" alt="img">&lt;/p>
@@ -85,7 +85,7 @@ of the Identity Provider in Trustgrid Portal. It should be something like &lt;a 
 &lt;li>Once you’ve created the client secret, navigate to “Token Configuration” and add the “email” optional claim&lt;/li>
 &lt;/ol>
 &lt;p>&lt;img src="app_token_config.png" alt="img">&lt;/p>
-&lt;hr></description></item><item><title>Docs: G Suite</title><link>https://trustgrid.github.io/docs/docs/idps/gsuite-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://trustgrid.github.io/docs/docs/idps/gsuite-idp-fields/</guid><description>
+&lt;hr></description></item><item><title>Docs: G Suite</title><link>https://docs.trustgrid.io/docs/idps/gsuite-idp-fields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/idps/gsuite-idp-fields/</guid><description>
 &lt;h4 id="setup">Setup&lt;/h4>
 &lt;p>Setting up the G Suite integration requires a G Suite administrator to perform the configuration.&lt;/p>
 &lt;p>&lt;img src="setup_gsuite.png" alt="img">&lt;/p>
