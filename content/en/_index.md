@@ -40,7 +40,7 @@ An explanation of the building blocks and core concepts for building with Trustg
 
 # Tools
 
-- [Swagger API](https://portal.trustgrid.io/api-docs/ui)
+- [Swagger API]({{<ref "/docs/api">}})
 - [Terraform Provider](https://registry.terraform.io/providers/trustgrid/tg/latest)
 - [Status Page](https://status.trustgrid.io/)
 
