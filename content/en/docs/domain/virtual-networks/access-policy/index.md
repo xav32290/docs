@@ -31,7 +31,7 @@ The destination of the traffic. You can select a [network object]({{<ref "docs/d
 {{</field >}}
 
 {{<field "Line Number" >}}
-Rules are evaluated starting with the lowest numbered rule. Once a rule matches, later rules are ignored even if they might also match the traffic. **(confirm w/ Steven)**
+Rules are evaluated starting with the lowest numbered rule. Once a rule matches, later rules are ignored even if they might also match the traffic. 
 {{</field >}}
 
 {{<field "Port Range">}}
@@ -41,4 +41,4 @@ For TCP and UDP traffic, you can specify a port (e.g., 80) or a range (e.g., 800
 
 ![img](access-policy.png)
 
-**Note that _all specified_ fields must be matched for the rule to match. (confirm w steven).**
+**Note that _all specified_ fields must be matched for the rule to match.**
