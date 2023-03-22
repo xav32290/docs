@@ -150,7 +150,7 @@
 &lt;/tr>
 &lt;tr>
 &lt;th>Line Number&lt;/th>
-&lt;td>Rules are evaluated starting with the lowest numbered rule. Once a rule matches, later rules are ignored even if they might also match the traffic. &lt;strong>(confirm w/ Steven)&lt;/strong>&lt;/td>
+&lt;td>Rules are evaluated starting with the lowest numbered rule. Once a rule matches, later rules are ignored even if they might also match the traffic.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;th>Port Range&lt;/th>
@@ -159,7 +159,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;p>&lt;img src="access-policy.png" alt="img">&lt;/p>
-&lt;p>&lt;strong>Note that &lt;em>all specified&lt;/em> fields must be matched for the rule to match. (confirm w steven).&lt;/strong>&lt;/p></description></item><item><title>Docs: Cluster Site Health State</title><link>https://docs.trustgrid.io/docs/clusters/cluster-health/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/clusters/cluster-health/</guid><description>
+&lt;p>&lt;strong>Note that &lt;em>all specified&lt;/em> fields must be matched for the rule to match.&lt;/strong>&lt;/p></description></item><item><title>Docs: Cluster Site Health State</title><link>https://docs.trustgrid.io/docs/clusters/cluster-health/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/clusters/cluster-health/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A healthy &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> should have two online Trustgrid &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> in a healthy state. The Trustgrid control plane can monitor the member &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> and generate &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">events&lt;/a> when their state changes such that the health of the &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> is impacted.&lt;/p>
 &lt;/div>
