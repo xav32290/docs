@@ -58,7 +58,15 @@
 &lt;p>NATs are scoped to an interface. Add an interface from the &lt;code>Actions&lt;/code> menu.&lt;/p>
 &lt;p>&lt;img src="add-interface.png" alt="img">&lt;/p>
 &lt;h2 id="inside-nats">Inside NATs&lt;/h2>
-&lt;p>An inside NAT defines how a local device IP address translates into a virtual network address. For instance, a local device may have a local IP address of 192.168.1.100, but you may want it to appear to other devices or applications on the virtual network as IP address 10.0.20.100. Or you may want an entire block of local IP addresses to show up on the virtual network as a different block. You can do this translation via Inside NATs. Inside NAT&amp;rsquo;s also control what local devices can participate on the virtual network. If a local device does not have an inside NAT configured that includes its IP address, it can&amp;rsquo;t access or be accessed by other devices on the network. Inside NATs require the following information:&lt;/p>
+&lt;p>An inside NAT defines how a local device IP address translates into a virtual network address. For instance, a local device may have a local IP address of 192.168.1.100, but you may want it to appear to other devices or applications on the virtual network as IP address 10.0.20.100. Or you may want an entire block of local IP addresses to show up on the virtual network as a different block. You can do this translation with an inside NATs. Inside NATs also control what local devices can participate on the virtual network. If a local device does not have an inside NAT configured that includes its IP address, it can&amp;rsquo;t access or be accessed by other devices on the network. Inside NATs require the following information:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
 &lt;tr>
 &lt;th>Local CIDR&lt;/th>
 &lt;td>The local IP address or address block that should be mapped into the virtual network. It should be entered in CIDR block format (eg - &lt;code>192.168.100.0/24&lt;/code> or &lt;code>192.168.100.51/32&lt;/code>).&lt;/td>
@@ -67,11 +75,21 @@
 &lt;th>Virtual CIDR&lt;/th>
 &lt;td>The network IP address or addresses that the local IP addresses should be mapped to, also entered in CIDR block format.&lt;/td>
 &lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;div class="alert alert-primary" role="alert">
 Network addresses map 1x1 with local addresses, so the prefix length (the /xx number of the CIDR) should be the same in both the local and network CIDR blocks of the inside NAT entry.
 &lt;/div>
 &lt;h2 id="outside-nats">Outside NATs&lt;/h2>
 &lt;p>By default, when a device on the local network of a node receives traffic from a remote device on the network, the remote device IP address will be the IP address that was entered in the local CIDR block for the remote node&amp;rsquo;s inside NAT entry for the remote device. For instance, if the remote device was mapped to network address 10.0.100.1, then its traffic on the local network will appear to come from IP address 10.0.100.1. However due to the local network configuration, there may be some situations where it is desirable to translate remote network addresses before egressing onto the local network. For instance on a local network of 192.168.0.0/16, a user may want the remote devices virtual network IP of 10.0.100.1 to be translated to 192.168.50.5 so that it fits better into the local network setup. This kind of translation can be achieved by adding outside nats. To add an outside NAT you must enter the following information:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
 &lt;tr>
 &lt;th>Network Group&lt;/th>
 &lt;td>The network IP address or addresses that should be translated before egressing onto the local network. This should be entered in CIDR block format.&lt;/td>
@@ -80,6 +98,8 @@ Network addresses map 1x1 with local addresses, so the prefix length (the /xx nu
 &lt;th>Local CIDR&lt;/th>
 &lt;td>The local IP address or addresses that the network addresses should be mapped to, also entered in CIDR format.&lt;/td>
 &lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;div class="alert alert-primary" role="alert">
 An outside NAT is required for all nodes and clusters using the virtual network
 &lt;/div>
