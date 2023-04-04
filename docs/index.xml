@@ -1321,11 +1321,7 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;em>“WireGuard” is a registered trademark of Jason A. Donenfeld.&lt;/em>&lt;/p></description></item><item><title>Release-Notes: March 2023 Release</title><link>https://docs.trustgrid.io/release-notes/cloud/march-2023/</link><pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/march-2023/</guid><description>
-&lt;ul>
-&lt;li>&lt;/li>
-&lt;/ul>
-&lt;h1 id="march-2023-release-notes">March 2023 Release Notes&lt;/h1></description></item><item><title>Docs: Access Policy</title><link>https://docs.trustgrid.io/docs/applications/access-policy/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/access-policy/</guid><description>
+&lt;p>&lt;em>“WireGuard” is a registered trademark of Jason A. Donenfeld.&lt;/em>&lt;/p></description></item><item><title>Docs: Access Policy</title><link>https://docs.trustgrid.io/docs/applications/access-policy/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/access-policy/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>An Access Policy is comprised of several rules that determine whether a user is permitted to access a ZTNA application. If no rule matches a user&amp;rsquo;s access attempt, the attempt will be denied.&lt;/p>
 &lt;/div>
@@ -2141,4 +2137,16 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;hr></description></item></channel></rss>
+&lt;hr></description></item><item><title>Docs: Production Status Tags</title><link>https://docs.trustgrid.io/docs/nodes/tags/prod-status-tag/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/tags/prod-status-tag/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Production status tags are used for for organizing large Trustgrid deployments.&lt;/p>
+&lt;/div>
+&lt;p>It is recommended that customers use a &lt;a href="https://docs.trustgrid.io/docs/nodes/tags/">tag&lt;/a> to indicate if &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> are currently in production or not. For example, you may wish to have a &lt;a href="https://docs.trustgrid.io/docs/nodes/tags/">tag&lt;/a> such as prod_status with possible values like&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>deploying&lt;/code> for devices still being deployed&lt;/li>
+&lt;li>&lt;code>production&lt;/code> for devices actively in user&lt;/li>
+&lt;li>&lt;code>decommission&lt;/code> for devices that are being removed&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-primary" role="alert">
+It’s important to have these &lt;a href="https://docs.trustgrid.io/docs/nodes/tags/">tag&lt;/a> names and values be consistent within the organization including case. &lt;code>Production&lt;/code> and &lt;code>production&lt;/code> would be viewed as two different values, as an example.
+&lt;/div></description></item></channel></rss>
