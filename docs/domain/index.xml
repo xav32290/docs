@@ -1,75 +1,15 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Domain</title><link>https://docs.trustgrid.io/docs/domain/</link><description>Recent content in Domain on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.trustgrid.io/docs/domain/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Thresholds</title><link>https://docs.trustgrid.io/docs/domain/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/thresholds/</guid><description>
-&lt;div class="pageinfo pageinfo-primary">
-&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the domain level apply to all nodes in the domain, except when overridden. Events will be of type &lt;code>Metric Threshold Violation&lt;/code>.&lt;/p>
-&lt;/div>
-&lt;p>To view thresholds, a user will need &lt;code>domains::read&lt;/code> permissions. To configure them, they will need &lt;code>domains::configure:threshold&lt;/code> permissions.&lt;/p>
-&lt;p>Navigate to your domain, and click &lt;code>Thresholds&lt;/code> on the left.&lt;/p>
-&lt;p>&lt;img src="list.png" alt="img">&lt;/p>
-&lt;h3 id="load-thresholds">Load Thresholds&lt;/h3>
-&lt;p>Load thresholds measure the health of the node itself.&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Field Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;th>Telemetry&lt;/th>
-&lt;td>The metric to monitor. Options are CPU usage (%), memory usage (%), disk usage (%), and embryonic flows (absolute count).&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;th>Threshold&lt;/th>
-&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;th>Duration&lt;/th>
-&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="network-thresholds">Network Thresholds&lt;/h3>
-&lt;p>Network thresholds measure the health of the network from the node&amp;rsquo;s perspective.&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Field Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;th>Telemetry&lt;/th>
-&lt;td>The metric to monitor. Currently only latency (measured in milliseconds) is available.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;th>Threshold&lt;/th>
-&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;th>Duration&lt;/th>
-&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;th>Target&lt;/th>
-&lt;td>The target node to measure the latency to. Each node will measure the latency to the target node.&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Virtual Networks</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/virtual-networks/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Domain</title><link>https://docs.trustgrid.io/docs/domain/</link><description>Recent content in Domain on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.trustgrid.io/docs/domain/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Virtual Networks</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/virtual-networks/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>Virtual networks define an overlay network and routes for layer 3 connectivity. Trustgrid &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> are then assigned to networks. Virtual network overlays work similarly to Amazon&amp;rsquo;s VPCs but can span between clouds, data centers, and the edge.&lt;/p>
 &lt;/div>
-&lt;p>&lt;img src="virtual-networks-page.png" alt="Virtual Networks">&lt;/p>
-&lt;h2 id="overlay-example">Overlay Example&lt;/h2>
+&lt;figure class="centered-image">
+&lt;img src="virtual-networks-page.png" alt="table showing a single virtual network" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+&lt;figcaption style="text-align: center; margin-top: 0.5rem;font-weight:lighter;">
+Virtual Networks
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="concepts">Concepts&lt;/h2>
+&lt;h3 id="overlay-example">Overlay Example&lt;/h3>
 &lt;div style="display: flex; flex-direction: row; justify-content: center; align-items: top">
 &lt;div>
 &lt;p>&lt;img src="simple-host-communication.png" alt="img">&lt;/p>
@@ -112,4 +52,106 @@ challenges like conflicting subnets in large, non-centralized networks.&lt;/p>
 &lt;h3 id="outside-nat">Outside NAT&lt;/h3>
 &lt;p>The use of an outside NAT can eliminate the need to create &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">routes&lt;/a> on internal gateways. Outsides NATs translate address in edge (remote) private networks to a privately addressable local IP. For example a host at 172.16.10.184/32 could be translated to 192.168.1.184/32.&lt;/p>
 &lt;h3 id="routes">Routes&lt;/h3>
-&lt;p>&lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">Routes&lt;/a> are used to specify the network interface to be used when accessing specific subnets.&lt;/p></description></item></channel></rss>
+&lt;p>&lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">Routes&lt;/a> are used to specify the network interface to be used when accessing specific subnets.&lt;/p>
+&lt;h2 id="virtual-network-attributes">Virtual Network Attributes&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr id="name">
+&lt;th>Name&lt;/th>
+&lt;td>A unique name for the network. Can contain letters, numbers and - characters.&lt;/td>
+&lt;/tr>
+&lt;tr id="network-cidr">
+&lt;th>Network CIDR&lt;/th>
+&lt;td>&lt;p>Network CIDR that includes all desired &lt;a href="#virtual-ip-addresses">virtual IP addresses&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/routes/">Virtual network defined routes&lt;/a> can only point to destination CIDRs within this Network CIDR.&lt;/li>
+&lt;li>This restriction can be overridden by defining routes at the node or cluster &lt;a href="https://docs.trustgrid.io/docs/nodes/vpn/static-routing/">VPN &amp;gt; Static routes&lt;/a> level.&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;tr id="description">
+&lt;th>Description&lt;/th>
+&lt;td>A user friendly description of the virtual network&lt;/td>
+&lt;/tr>
+&lt;tr id="no-nat-mode">
+&lt;th>NO-NAT Mode&lt;/th>
+&lt;td>&lt;ul>
+&lt;li>Enabled - Nodes attached to the this virtual network &lt;strong>will not require&lt;/strong> traffic match defined inside and outside NATs to allow traffic to ingress from or egress to the local network.&lt;/li>
+&lt;li>Disabled &lt;em>(default)&lt;/em> - Nodes attached to this virtual network &lt;strong>will require&lt;/strong> traffic match defined inside and outside NATs to allow traffic to ingress from or egress to the local network. Or, will require the &lt;a href="https://docs.trustgrid.io/docs/nodes/vpn/nats/#traffic-matching-mode">traffic matching mode&lt;/a> be set to allow either Inbound or Outbound traffic that does not match.&lt;/li>
+&lt;/ul>
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Thresholds</title><link>https://docs.trustgrid.io/docs/domain/thresholds/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/thresholds/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>Thresholds provide a way to trigger events when different measurements exceed a given value. Thresholds configured at the domain level apply to all nodes in the domain, except when overridden. Events will be of type &lt;code>Metric Threshold Violation&lt;/code>.&lt;/p>
+&lt;/div>
+&lt;p>To view thresholds, a user will need &lt;code>domains::read&lt;/code> permissions. To configure them, they will need &lt;code>domains::configure:threshold&lt;/code> permissions.&lt;/p>
+&lt;p>Navigate to your domain, and click &lt;code>Thresholds&lt;/code> on the left.&lt;/p>
+&lt;p>&lt;img src="list.png" alt="img">&lt;/p>
+&lt;h3 id="load-thresholds">Load Thresholds&lt;/h3>
+&lt;p>Load thresholds measure the health of the node itself.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr id="name">
+&lt;th>Name&lt;/th>
+&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
+&lt;/tr>
+&lt;tr id="telemetry">
+&lt;th>Telemetry&lt;/th>
+&lt;td>The metric to monitor. Options are CPU usage (%), memory usage (%), disk usage (%), and embryonic flows (absolute count).&lt;/td>
+&lt;/tr>
+&lt;tr id="threshold">
+&lt;th>Threshold&lt;/th>
+&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
+&lt;/tr>
+&lt;tr id="duration">
+&lt;th>Duration&lt;/th>
+&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="network-thresholds">Network Thresholds&lt;/h3>
+&lt;p>Network thresholds measure the health of the network from the node&amp;rsquo;s perspective.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr id="name">
+&lt;th>Name&lt;/th>
+&lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
+&lt;/tr>
+&lt;tr id="telemetry">
+&lt;th>Telemetry&lt;/th>
+&lt;td>The metric to monitor. Currently only latency (measured in milliseconds) is available.&lt;/td>
+&lt;/tr>
+&lt;tr id="threshold">
+&lt;th>Threshold&lt;/th>
+&lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
+&lt;/tr>
+&lt;tr id="duration">
+&lt;th>Duration&lt;/th>
+&lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
+&lt;/tr>
+&lt;tr id="target">
+&lt;th>Target&lt;/th>
+&lt;td>The target node to measure the latency to. Each node will measure the latency to the target node.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item></channel></rss>

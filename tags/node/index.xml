@@ -24,8 +24,10 @@ Gateway nodes will list edge nodes in their peers table
 &lt;p>&lt;img src="select-interface.png" alt="Interface Dropdown">&lt;/p>
 &lt;h3 id="eth0---wan-interface">ETH0 - WAN Interface&lt;/h3>
 &lt;p>This interface is always used to build the outbound TLS tunnels for control and data plane connectivity. If the node is deployed in a single interface configuration, this interface will also be used for local network connectivity.&lt;/p>
-&lt;h3 id="eth1---lan-interface">ETH1 - LAN Interface&lt;/h3>
-&lt;p>Used in two-interface configurations for local network connectivity.&lt;/p>
+&lt;h3 id="eth---lan-interface">ETH# - LAN Interface&lt;/h3>
+&lt;p>Used in configurations with more than one interface for local network connectivity.&lt;/p>
+&lt;h4 id="vlan-subinterface">VLAN Subinterface&lt;/h4>
+&lt;p>Virtual under a physical LAN interface that will apply a VLAN tag to traffic&lt;/p>
 &lt;h2 id="configuration">Configuration&lt;/h2>
 &lt;table>
 &lt;thead>
@@ -35,11 +37,19 @@ Gateway nodes will list edge nodes in their peers table
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="hardware-address">
 &lt;th>Hardware Address&lt;/th>
 &lt;td>MAC address of the interface.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="interface-vrf">
+&lt;th>Interface VRF&lt;/th>
+&lt;td>Selects to which &lt;a href="https://docs.trustgrid.io/docs/nodes/vrfs/">VRF&lt;/a> the interface is attached.&lt;/td>
+&lt;/tr>
+&lt;tr id="vlan-id-subinterfaces-only">
+&lt;th>VLAN ID (Subinterfaces Only)&lt;/th>
+&lt;td>Sets the VLAN ID/tag for the subinterface.&lt;/td>
+&lt;/tr>
+&lt;tr id="ip-assignment-eth0-only">
 &lt;th>IP Assignment (ETH0 only)&lt;/th>
 &lt;td>&lt;ul>
 &lt;li>DHCP - requires a DHCP server or relay in the same broadcast domain as the interface connection&lt;/li>
@@ -47,11 +57,11 @@ Gateway nodes will list edge nodes in their peers table
 &lt;/ul>
 &lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="ipv4-address-cidr">
 &lt;th>IPv4 Address CIDR&lt;/th>
 &lt;td>IP address using &lt;a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">classless inter-domain routing (CIDR) notation&lt;/a>.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="gateway-ip">
 &lt;th>Gateway IP&lt;/th>
 &lt;td>&lt;ul>
 &lt;li>ETH0 - The IP address of the default gateway for this device. All traffic not in the same network as an interface IP or with a specified route will use this gateway.&lt;/li>
@@ -59,13 +69,29 @@ Gateway nodes will list edge nodes in their peers table
 &lt;/ul>
 &lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="dns-server-1/2-ip-eth0-only">
 &lt;th>DNS Server 1/2 IP (ETH0 only)&lt;/th>
 &lt;td>Used to resolve DNS names to connect to the Trustgrid control plane.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="cluster-virtual-ip">
 &lt;th>Cluster Virtual IP&lt;/th>
 &lt;td>Used in &lt;a href="https://docs.trustgrid.io/docs/clusters/">clusters&lt;/a>, this IP address is moved between member nodes based on the active cluster member. It can be used to route traffic between the virtual and local networks. This IP address can only be changed within the cluster interfaces page.&lt;/td>
+&lt;/tr>
+&lt;tr id="auto-negotiation">
+&lt;th>Auto-Negotiation&lt;/th>
+&lt;td>Sets if the interface will use auto-negotiation to determine the speed and duplex settings. Values can be AUTO &lt;em>(default)&lt;/em> or MANUAL.&lt;/td>
+&lt;/tr>
+&lt;tr id="duplex">
+&lt;th>Duplex&lt;/th>
+&lt;td>Locked unless Auto-Negotiation set to MANUAL. Sets the interface to either FULL &lt;em>(default)&lt;/em> or HALF duplex&lt;/td>
+&lt;/tr>
+&lt;tr id="speed">
+&lt;th>Speed&lt;/th>
+&lt;td>Locked unless Auto-Negotiation set to MANUAL. Sets the interface to 10, 100, 1000 Mbps.&lt;/td>
+&lt;/tr>
+&lt;tr id="ignore-health-check">
+&lt;th>Ignore Health Check&lt;/th>
+&lt;td>Value can be Disable &lt;em>(default)&lt;/em> or Enable. If set to Enable, the interface&amp;rsquo;s link status will no longer be used by the node to determine its &lt;a href="https://docs.trustgrid.io/docs/clusters/#cluster-member-health-conditions">cluster member health state&lt;/a>. Useful if a single node has a network connection it&amp;rsquo;s peer does not such as an alternate WAN path.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -91,15 +117,15 @@ Gateway nodes will list edge nodes in their peers table
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="destination-cidr">
 &lt;th>Destination CIDR&lt;/th>
 &lt;td>This is the CIDR notation of the network or host that needs to be routed. For a single host, use /32 as the CIDR suffix.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="next-hop">
 &lt;th>Next Hop&lt;/th>
 &lt;td>The IP address to which traffic destined for the above defined network will be sent. No CIDR suffix is needed.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="description">
 &lt;th>Description&lt;/th>
 &lt;td>Optional field to provide additional information about the route.&lt;/td>
 &lt;/tr>
@@ -115,7 +141,28 @@ Gateway nodes will list edge nodes in their peers table
 &lt;li>
 &lt;p>Click the &lt;code>Save&lt;/code> button.&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Docs: Nodes</title><link>https://docs.trustgrid.io/docs/nodes/</link><pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/</guid><description>
+&lt;/ol>
+&lt;h2 id="additional-ips">Additional IPs&lt;/h2>
+&lt;p>IP address entries added to the list below will be bound to the current interface.
+&lt;div class="alert alert-primary" role="alert">
+Only visible on LAN interfaces and Subinterfaces
+&lt;/div>
+&lt;/p>
+&lt;h2 id="advanced-network-settings">Advanced Network Settings&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr id="dark-mode">
+&lt;th>Dark Mode&lt;/th>
+&lt;td>Value can be Disable &lt;em>(default)&lt;/em> or Enable. When set to Enable the node will restrict ICMP responses so that it will not respond to ICMP (Ping) echo requests or respond to failed TCP/UDP connection attempts with reset or ICMP Destination Port Unreachable&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Nodes</title><link>https://docs.trustgrid.io/docs/nodes/</link><pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/nodes/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>A node is an instance of software used for building connections, managing compute resources, and deploying software.&lt;/p>
 &lt;/div>
@@ -182,19 +229,19 @@ Gateway nodes will list edge nodes in their peers table
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="name">
 &lt;th>Name&lt;/th>
 &lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="telemetry">
 &lt;th>Telemetry&lt;/th>
 &lt;td>The metric to monitor. Options are CPU usage (%), memory usage (%), disk usage (%), and embryonic flows (absolute count).&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="threshold">
 &lt;th>Threshold&lt;/th>
 &lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="duration">
 &lt;th>Duration&lt;/th>
 &lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
 &lt;/tr>
@@ -210,23 +257,23 @@ Gateway nodes will list edge nodes in their peers table
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="name">
 &lt;th>Name&lt;/th>
 &lt;td>The name of the threshold. This will be available in generated events.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="telemetry">
 &lt;th>Telemetry&lt;/th>
 &lt;td>The metric to monitor. Options are latency (ms), bandwidth in (Mbps), and bandwidth out (Mbps).&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="threshold">
 &lt;th>Threshold&lt;/th>
 &lt;td>The value that must be exceeded for an event to be generated.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="duration">
 &lt;th>Duration&lt;/th>
 &lt;td>The time period to measure. If the threshold is exceeded for this duration, an event will be generated.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="target">
 &lt;th>Target&lt;/th>
 &lt;td>For latency, target node to measure the latency to. For bandwidth measurements, the interface to measure the bandwidth on.&lt;/td>
 &lt;/tr>
@@ -302,15 +349,15 @@ Gateway nodes will list edge nodes in their peers table
 &lt;/ul>
 &lt;h3 id="determine-connectivity-status-of-the-trustgrid-node">Determine Connectivity Status of the Trustgrid Node&lt;/h3>
 &lt;p>Because Trustgrid provides independent control and data planes, there are a few ways it can manifest as “down”:&lt;/p>
-&lt;tr>
+&lt;tr id="control-plane-down">
 &lt;th>Control Plane Down&lt;/th>
 &lt;td>The &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> appears offline from within the Trustgrid portal. This indicates that the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> shutdown or has not sent a heartbeat notification to Trustgrid within the past 10 minutes.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="data-plane-down">
 &lt;th>Data Plane Down&lt;/th>
 &lt;td>The &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> appears online from within the portal but reports it is unable to connect to one or more gateway nodes. This can be indicated by the Data Plane Status indicator when viewing the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> in the portal, or by receiving a “Gateway Connectivity Health Check” failure &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> notification. Both of these only work if the Control Plane is currently working.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="both-control-and-data-plane-down">
 &lt;th>Both Control and Data Plane Down&lt;/th>
 &lt;td>In this situation the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> appears down in the Trustgrid Portal and users/applications are unable to reach services across the data plane between the Gateway and Edge sites. This is the most common scenario. While the Data Plane is most critical for the services provided across the device, first priority should be restoring the Control Plane connection so that additional troubleshooting tools are available. Often this process also uncovers the reason the data plane is down.&lt;/td>
 &lt;/tr></description></item></channel></rss>

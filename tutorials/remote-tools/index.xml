@@ -90,11 +90,11 @@ The pcap files will include the data payload of any communication captured. If a
 &lt;/li>
 &lt;li>
 &lt;p>Set the appropriate parameters.&lt;br>
-&lt;tr>
+&lt;tr id="iface">
 &lt;th>iface&lt;/th>
 &lt;td>The interface name&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="filter">
 &lt;th>filter&lt;/th>
 &lt;td>The tool utilizes &lt;a href="https://www.tcpdump.org/manpages/pcap-filter.7.html">TCPDump filtering syntax&lt;/a>, which can help isolate interesting traffic. The below filter would show only ICMP and TCP traffic&lt;/td>
 &lt;/tr>

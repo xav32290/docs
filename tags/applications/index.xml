@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– applications</title><link>https://docs.trustgrid.io/tags/applications/</link><description>Recent content in applications on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 11 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.trustgrid.io/tags/applications/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Applications</title><link>https://docs.trustgrid.io/docs/applications/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– applications</title><link>https://docs.trustgrid.io/tags/applications/</link><description>Recent content in applications on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 11 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.trustgrid.io/tags/applications/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Applications</title><link>https://docs.trustgrid.io/docs/applications/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/</guid><description>
 &lt;p>ZTNA Applications are managed by clicking the &lt;code>Applications&lt;/code> link on the left nav bar.&lt;/p>
 &lt;p>&lt;img src="apps1.png" alt="img">
 &lt;img src="apps2.png" alt="img">&lt;/p>
@@ -17,15 +17,15 @@
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="include">
 &lt;th>Include&lt;/th>
 &lt;td>criteria in this section are logically OR&amp;rsquo;d together. For a rule to apply to an access attempt, at least one of the include criteria must match.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="exception">
 &lt;th>Exception&lt;/th>
 &lt;td>criteria in this section are logically NOT&amp;rsquo;d. If any exception criterion matches, the rule will not apply to the access attempt.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="require">
 &lt;th>Require&lt;/th>
 &lt;td>criteria in this section are logically AND&amp;rsquo;d. ALL of the require criteria must match for the rule to apply to the access attempt.&lt;/td>
 &lt;/tr>
@@ -47,27 +47,27 @@
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="emails">
 &lt;th>Emails&lt;/th>
 &lt;td>a list of email addresses, comma separated. Eg, &amp;ldquo;&lt;a href="mailto:user1@company.com">user1@company.com&lt;/a>, &lt;a href="mailto:user2@company.com">user2@company.com&lt;/a>&amp;rdquo;&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="country">
 &lt;th>Country&lt;/th>
 &lt;td>the user&amp;rsquo;s country, determined by their IP address&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="emails-ending-in">
 &lt;th>Emails ending in&lt;/th>
 &lt;td>a required email suffix, like &amp;ldquo;@company.com&amp;rdquo;&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="everyone">
 &lt;th>Everyone&lt;/th>
 &lt;td>this rule always matches&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="idp-groups">
 &lt;th>IDP Groups&lt;/th>
 &lt;td>a list of &lt;a href="https://docs.trustgrid.io/docs/user-management/groups/">groups&lt;/a> that the user must be a member of&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="ip-ranges">
 &lt;th>IP Ranges&lt;/th>
 &lt;td>a list of IP ranges either in CIDR notation or a single IP address, comma separated. Eg, &amp;ldquo;10.10.44, 10.10.8.0/24&amp;rdquo;&lt;/td>
 &lt;/tr>
@@ -86,15 +86,15 @@
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="name">
 &lt;th>Name&lt;/th>
 &lt;td>app name&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="description">
 &lt;th>Description&lt;/th>
 &lt;td>app description&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="icon">
 &lt;th>Icon&lt;/th>
 &lt;td>the application&amp;rsquo;s icon (optional) to show in the application dashboard&lt;/td>
 &lt;/tr>
@@ -160,15 +160,15 @@
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="name">
 &lt;th>Name&lt;/th>
 &lt;td>app name&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="description">
 &lt;th>Description&lt;/th>
 &lt;td>app description&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="icon">
 &lt;th>Icon&lt;/th>
 &lt;td>the application&amp;rsquo;s icon (optional) to show in the application dashboard&lt;/td>
 &lt;/tr>
@@ -242,23 +242,23 @@
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="name">
 &lt;th>Name&lt;/th>
 &lt;td>app name&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="description">
 &lt;th>Description&lt;/th>
 &lt;td>app description&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="hostname">
 &lt;th>Hostname&lt;/th>
 &lt;td>hostname of the internal web application&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="external-address">
 &lt;th>External Address&lt;/th>
 &lt;td>the public URL users will use to access the application&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="icon">
 &lt;th>Icon&lt;/th>
 &lt;td>the application&amp;rsquo;s icon (optional) to show in the application dashboard&lt;/td>
 &lt;/tr>
@@ -323,15 +323,15 @@
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="name">
 &lt;th>Name&lt;/th>
 &lt;td>app name&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="description">
 &lt;th>Description&lt;/th>
 &lt;td>app description&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="icon">
 &lt;th>Icon&lt;/th>
 &lt;td>the application&amp;rsquo;s icon (optional) to show in the application dashboard&lt;/td>
 &lt;/tr>

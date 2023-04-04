@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Virtual Networks</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/</link><description>Recent content in Virtual Networks on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.trustgrid.io/docs/domain/virtual-networks/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Access Policy</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/access-policy/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/virtual-networks/access-policy/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Virtual Networks</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/</link><description>Recent content in Virtual Networks on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.trustgrid.io/docs/domain/virtual-networks/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Access Policy</title><link>https://docs.trustgrid.io/docs/domain/virtual-networks/access-policy/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/domain/virtual-networks/access-policy/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>An access policy is a list of rules that each allow, reject, or drop traffic at the VPN level.&lt;/p>
 &lt;/div>
@@ -12,27 +12,27 @@
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="action">
 &lt;th>Action&lt;/th>
 &lt;td>Whether to ALLOW, DROP, or REJECT the traffic.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="protocol">
 &lt;th>Protocol&lt;/th>
 &lt;td>You can choose ANY, UDP, ICMP, or TCP.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="source">
 &lt;th>Source&lt;/th>
 &lt;td>The source of the traffic. You can select a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="destination">
 &lt;th>Destination&lt;/th>
 &lt;td>The destination of the traffic. You can select a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-objects/">network object&lt;/a>, a &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/network-groups/">network group&lt;/a>, or provide a CIDR.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="line-number">
 &lt;th>Line Number&lt;/th>
 &lt;td>Rules are evaluated starting with the lowest numbered rule. Once a rule matches, later rules are ignored even if they might also match the traffic.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="port-range">
 &lt;th>Port Range&lt;/th>
 &lt;td>For TCP and UDP traffic, you can specify a port (e.g., 80) or a range (e.g., 8000-9000).&lt;/td>
 &lt;/tr>
@@ -59,11 +59,11 @@
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="name">
 &lt;th>Name&lt;/th>
 &lt;td>The label to use when referencing this object.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="cidr">
 &lt;th>CIDR&lt;/th>
 &lt;td>Specifically an IPv4 CIDR.&lt;/td>
 &lt;/tr>
@@ -90,15 +90,15 @@
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
-&lt;tr>
+&lt;tr id="destination">
 &lt;th>Destination&lt;/th>
 &lt;td>This will be the name of the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> or &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> that traffic will be routed to. This list is auto-populated based on the nodes and clusters in the selected &lt;a href="https://docs.trustgrid.io/docs/domain/">domain&lt;/a>.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="destination-cidr">
 &lt;th>Destination CIDR&lt;/th>
 &lt;td>This is the CIDR notation of the &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">virtual network&lt;/a> that should be routed to the above destination &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> or &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a>.&lt;/td>
 &lt;/tr>
-&lt;tr>
+&lt;tr id="metric">
 &lt;th>Metric&lt;/th>
 &lt;td>If there are multiple routes for the same &lt;a href="https://docs.trustgrid.io/docs/domain/virtual-networks/">virtual network&lt;/a> the metric will determine which route will be used. The lowest number is the highest priority. See the &amp;ldquo;Automatic Failover&amp;rdquo; text below.&lt;/td>
 &lt;/tr>

@@ -1,1 +1,75 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Control Plane Release Notes</title><link>https://docs.trustgrid.io/release-notes/cloud/</link><description>Recent content in Control Plane Release Notes on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.trustgrid.io/release-notes/cloud/index.xml" rel="self" type="application/rss+xml"/><item><title>Release-Notes: Cloud Release Archive</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/</link><pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/</guid><description/></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Control Plane Release Notes</title><link>https://docs.trustgrid.io/release-notes/cloud/</link><description>Recent content in Control Plane Release Notes on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 04 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.trustgrid.io/release-notes/cloud/index.xml" rel="self" type="application/rss+xml"/><item><title>Release-Notes: April 2023 Release Notes</title><link>https://docs.trustgrid.io/release-notes/cloud/april-2023/</link><pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/april-2023/</guid><description>
+&lt;ul>
+&lt;li>&lt;/li>
+&lt;/ul>
+&lt;h2 id="documentation">Documentation&lt;/h2>
+&lt;p>Trustgrid is moving away from our documentation previously hosted on Confluence to docs-as-code system at &lt;a href="https://docs.trustgrid.io">https://docs.trustgrid.io&lt;/a>. This should enable us to more tightly integrate the portal UI with related documentation.&lt;/p>
+&lt;p>As a start, we&amp;rsquo;ve created a link called Documentation under the Management section of the main navigation bar that will open the docs in a new tab.&lt;/p>
+&lt;p>Additionally, we&amp;rsquo;ve created a section for release notes that will allow you to monitor release for &lt;a href="https://docs.trustgrid.io/release-notes/cloud/">Control Plane&lt;/a> and &lt;a href="https://docs.trustgrid.io/release-notes/node/">Node&lt;/a> releases via RSS feeds going forward.&lt;/p>
+&lt;h3 id="swagger-api-documentation-move">Swagger API Documentation Move&lt;/h3>
+&lt;p>As part of this change we are moving our API documentation from &lt;a href="https://portal.trustgrid.io/api-docs/">https://portal.trustgrid.io/api-docs/&lt;/a> to &lt;a href="https://docs.trustgrid.io/docs/api/">https://docs.trustgrid.io/docs/api/&lt;/a>. This will allow updating this documentation outside our normal release process.&lt;/p>
+&lt;h2 id="cluster-configuration">Cluster Configuration&lt;/h2>
+&lt;p>Prior to this release it was necessary to navigate to each member node and configure the &lt;a href="https://docs.trustgrid.io/docs/nodes/cluster/#heartbeat">cluster heartbeat&lt;/a> IP and port &lt;strong>after&lt;/strong> it was added to the cluster. In this release a prompt has been added to the &lt;a href="https://docs.trustgrid.io/docs/clusters/manage-members/#add-members">&amp;ldquo;Add Node&amp;rdquo; flow&lt;/a> that will allow you to configure these settings as part of adding the node to the cluster.&lt;/p>
+&lt;h2 id="data-plane-stats">Data Plane Stats&lt;/h2>
+&lt;p>This release further improves on our recent addition of data plane telemetry information.&lt;/p>
+&lt;ul>
+&lt;li>Show data plane telemetry for offline nodes&lt;/li>
+&lt;li>Show data plane telemetry for connections between public and private gateways&lt;/li>
+&lt;/ul>
+&lt;h2 id="virtual-network-route-table">Virtual Network Route Table&lt;/h2>
+&lt;p>Virtual Network Route Tables can now be sorted by Destination, Destination CIDR or Metric. This can make it much easier to view and understand how routes are configured.&lt;/p>
+&lt;figure class="centered-image">
+&lt;img src="sorted-routes.png" alt="Table with multiple routes listing their Destination device, Destination CIDR, Metric and Description. Sorted by the destination device." style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+&lt;figcaption style="text-align: center; margin-top: 0.5rem;font-weight:lighter;">
+Virtual Network Routes sorted by destination
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="container-import">Container Import&lt;/h2>
+&lt;h3 id="disable-imported-containers">Disable Imported Containers&lt;/h3>
+&lt;p>Previously, if you imported a container from another node or cluster it was created in the Enabled state. If the container was configured to run as a service this would cause the container to start immediately. This could create issues if additional changes were desired before the container attempts to start, such as creating volumes or adjusting environment variables. With this release the container is imported in a Disabled state and will need to be enabled once you are ready to use the container.&lt;/p>
+&lt;h3 id="import-container-volumes">Import Container Volumes&lt;/h3>
+&lt;p>There is a new Action available under Container Management &amp;gt; Volumes to Import. This will enable you to import configured volumes configured on another node or cluster. This will simplify configuring containers that require several volumes to be defined.&lt;/p>
+&lt;p>(Note: Just like with container configuration import, the source must match the destination type. A node can import from another node and a cluster can import from another cluster)&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+Just like with container configuration import, the source must match the destination type. A node can import from another node and a cluster can import from another cluster
+&lt;/div>
+&lt;h2 id="flow-logs">Flow Logs&lt;/h2>
+&lt;h3 id="flow-log-ordering">Flow Log Ordering&lt;/h3>
+&lt;p>Our flow logs have historically been searched starting with the oldest in the time range first. This sometimes forced you to load more results multiple times to see the most current information. With this release we now can search either with oldest or newest first. By default the Flow Logs page will now show the last two hours with the most recent first.&lt;/p>
+&lt;p>Additionally, in the Advanced Search there is a new option to select the &lt;code>Flow Log Order&lt;/code> depending on your needs.&lt;/p>
+&lt;figure class="centered-image">
+&lt;img src="FlowLogOrderOption.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+&lt;figcaption style="text-align: center; margin-top: 0.5rem;font-weight:lighter;">
+Flow Log Order selector
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="flow-log-s3-export">Flow Log S3 Export&lt;/h3>
+&lt;p>Previously Trustgrid had a mechanism to export flow logs to an AWS S3 bucket on a nightly basis. This was determined to be insufficient for our customers who wanted closer to real-time access to this data. With this release Trustgrid can configur near real-time S3 to S3 replication with our new &lt;a href="https://docs.trustgrid.io/docs/operations/flow-logs/#flow-log-export">Flow Log Export&lt;/a> system.&lt;/p>
+&lt;h3 id="flow-csv-export-date-format">Flow CSV Export Date Format&lt;/h3>
+&lt;p>Trustgrid has long supported the option to export your current view of the Flow Logs to a CSV file. However, the format of dates was difficult to parse using most spreadsheet applications. With this release both the start time and end time (if available) is reported in a human readable format like &lt;code>dd-mm-yyyy hh:mm:ss.000&lt;/code> and in Unix Timestamp Milliseconds (MS). This should make analysis of the records much easier and more precise.&lt;/p>
+&lt;figure class="centered-image">
+&lt;img src="flow-log-csv-date.png" alt="text CSV export example showing &amp;#39;startTime&amp;#39; and &amp;#39;startTimeMS&amp;#39; fields" style="display: block; margin-left: auto; margin-right: auto; width: 40%;">
+&lt;figcaption style="text-align: center; margin-top: 0.5rem;font-weight:lighter;">
+Example CSV export
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="upgrade-improvements">Upgrade Improvements&lt;/h2>
+&lt;h3 id="multi-node-upgrades">Multi-Node Upgrades&lt;/h3>
+&lt;p>Upgrading multiple nodes used to require navigating to each node one at a time, clicking the upgrade button and then entering the node&amp;rsquo;s name. This prevented accidental upgrades but was difficult for managing large environments. With this release users with the &lt;code>nodes::service:node-upgrade&lt;/code> and &lt;code>nodes::upgrade&lt;/code> permissions will have the ability to select multiple nodes from the Nodes table and then select &amp;ldquo;Upgrade&amp;rdquo; from the &amp;ldquo;Actions&amp;rdquo; menu.
+&lt;figure class="centered-image">
+&lt;img src="multi-node-upgrade.png" alt="Nodes table with two nodes selected, with the Actions dropdown showing the Upgrade option" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
+&lt;figcaption style="text-align: center; margin-top: 0.5rem;font-weight:lighter;">
+Multi-Node Upgrade Action
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;h3 id="upgrade-status">Upgrade Status&lt;/h3>
+&lt;p>Starting with the node release dated &lt;code>1.5.20220412-1238&lt;/code> nodes began reporting their upgrade status (In Process, Complete, Failed) to the Trustgrid cloud. With this release this information and the date of the last change in status is displayed in the Info tab of nodes.
+&lt;figure class="centered-image">
+&lt;img src="upgrade-status.png" alt="Table showing upgrade status of Complete and the completion time" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+&lt;figcaption style="text-align: center; margin-top: 0.5rem;font-weight:lighter;">
+Upgrade Status section
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p></description></item><item><title>Release-Notes: Cloud Release Archive</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/</link><pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/</guid><description/></item></channel></rss>
