@@ -137,7 +137,8 @@ of the Identity Provider in Trustgrid Portal. It should be something like &lt;a 
 &lt;tbody>
 &lt;tr>
 &lt;th>Issuer&lt;/th>
-&lt;td>&lt;p>A URL that will point to the IDP, typically with some identifying information so the IDP can determine the source of the request. This will be provided by your SAML identity provider.&lt;/p>
+&lt;td>A URL that will point to the IDP, typically with some identifying information so the IDP can determine the source of the request. This will be provided by your SAML identity provider.&lt;/td>
+&lt;/tr>
 &lt;tr>
 &lt;th>Login URL&lt;/th>
 &lt;td>A URL that will initiate the login process. This will be provided by your SAML identity provider.&lt;/td>
@@ -145,8 +146,6 @@ of the Identity Provider in Trustgrid Portal. It should be something like &lt;a 
 &lt;tr>
 &lt;th>Identity Provider Signing Certificate&lt;/th>
 &lt;td>A certificate used to authenticate requests between Trustgrid and the SAML IDP. This will be provided by your SAML identity provider.&lt;/td>
-&lt;/tr>
-&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item></channel></rss>
