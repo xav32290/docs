@@ -1328,9 +1328,6 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/tbody>
 &lt;/table>
 &lt;p>&lt;em>“WireGuard” is a registered trademark of Jason A. Donenfeld.&lt;/em>&lt;/p></description></item><item><title>Release-Notes: April 2023 Release Notes</title><link>https://docs.trustgrid.io/release-notes/cloud/april-2023/</link><pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/april-2023/</guid><description>
-&lt;ul>
-&lt;li>&lt;/li>
-&lt;/ul>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;p>Trustgrid is moving away from our documentation previously hosted on Confluence to docs-as-code system at &lt;a href="https://docs.trustgrid.io">https://docs.trustgrid.io&lt;/a>. This should enable us to more tightly integrate the portal UI with related documentation.&lt;/p>
 &lt;p>As a start, we&amp;rsquo;ve created a link called Documentation under the Management section of the main navigation bar that will open the docs in a new tab.&lt;/p>
