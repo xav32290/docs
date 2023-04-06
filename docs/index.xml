@@ -1398,6 +1398,15 @@ Multi-Node Upgrade Action
 Upgrade Status section
 &lt;/figcaption>
 &lt;/figure>
+&lt;/p>
+&lt;h2 id="portal-access-permission">Portal Access Permission&lt;/h2>
+&lt;p>With this release there is a new permission &lt;code>portal::access&lt;/code> that controls if a user is allowed (or denied) to authenticate into the Trustgrid management portal. This permission was automatically added to all &lt;a href="https://docs.trustgrid.io/docs/user-management/policies/#trustgrid-managed-policy-descriptions">built-in Trustgrid Managed policies&lt;/a>, but any custom defined policies that are intended to be used on their own will need to add this permission if management portal access is desired.
+&lt;figure class="centered-image">
+&lt;img src="portal-access.png" alt="Filtered list of permissions showing Portal section with portal::access allowed" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
+&lt;figcaption style="text-align: center; margin-top: 0.5rem;font-weight:lighter;">
+Portal Access Permission
+&lt;/figcaption>
+&lt;/figure>
 &lt;/p></description></item><item><title>Docs: Access Policy</title><link>https://docs.trustgrid.io/docs/applications/access-policy/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/access-policy/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>An Access Policy is comprised of several rules that determine whether a user is permitted to access a ZTNA application. If no rule matches a user&amp;rsquo;s access attempt, the attempt will be denied.&lt;/p>
