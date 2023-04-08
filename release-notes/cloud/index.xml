@@ -78,4 +78,7 @@ Upgrade Status section
 Portal Access Permission
 &lt;/figcaption>
 &lt;/figure>
+&lt;div class="alert alert-warning" role="alert">
+The &lt;code>portal::access&lt;/code> must be applied with Resource scope of &lt;code>*&lt;/code> to be effective. If using &lt;a href="https://docs.trustgrid.io/docs/user-management/policies/#resource-scoped-policies">resource scoped policies&lt;/a> an additional policy will need to be created and attached to users to grant portal access.
+&lt;/div>
 &lt;/p></description></item><item><title>Release-Notes: Cloud Release Archive</title><link>https://docs.trustgrid.io/release-notes/cloud/archive/</link><pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/archive/</guid><description/></item></channel></rss>

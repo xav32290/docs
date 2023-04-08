@@ -1407,6 +1407,9 @@ Upgrade Status section
 Portal Access Permission
 &lt;/figcaption>
 &lt;/figure>
+&lt;div class="alert alert-warning" role="alert">
+The &lt;code>portal::access&lt;/code> must be applied with Resource scope of &lt;code>*&lt;/code> to be effective. If using &lt;a href="https://docs.trustgrid.io/docs/user-management/policies/#resource-scoped-policies">resource scoped policies&lt;/a> an additional policy will need to be created and attached to users to grant portal access.
+&lt;/div>
 &lt;/p></description></item><item><title>Docs: Access Policy</title><link>https://docs.trustgrid.io/docs/applications/access-policy/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/applications/access-policy/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>An Access Policy is comprised of several rules that determine whether a user is permitted to access a ZTNA application. If no rule matches a user&amp;rsquo;s access attempt, the attempt will be denied.&lt;/p>

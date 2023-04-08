@@ -71,6 +71,9 @@ Anything that can be done in the Trustgrid Portal can be done with the API (exce
 &lt;h4 id="resource-scoped-policies">Resource-Scoped Policies&lt;/h4>
 &lt;p>Policies have a Resources section that allow the permissions granted to be limited to specific Trustgrid resources, such as nodes and clusters. This can be used to present a user with an extremely limited view in the portal. For example, an edge site technical contact could be given a login that was only permitted to see the nodes at their site.&lt;/p>
 &lt;p>&lt;img src="resources.png" alt="img">&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+In order to grant users access to the portal a second policy is required granting the &lt;code>portal::access&lt;/code> permission to the &lt;code>*&lt;/code> resource.
+&lt;/div>
 &lt;h4 id="trustgrid-resource-names-or-tgrn">Trustgrid Resource Names or TGRN&lt;/h4>
 &lt;p>Trustgrid has adopted a resource naming convention that follows the basic format: &lt;code>tgrn:tg::&amp;lt;service&amp;gt;:&amp;lt;resource-type&amp;gt;/&amp;lt;resource-id&amp;gt;&lt;/code>&lt;/p>
 &lt;h6 id="wildcard-tgrn">Wildcard TGRN&lt;/h6>
