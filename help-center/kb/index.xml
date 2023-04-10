@@ -5,21 +5,19 @@
 &lt;h3 id="network-requirements-for-all-nodes">Network Requirements for All Nodes&lt;/h3>
 &lt;p>In order to connect to the Trustgrid Control Plane, the following outbound traffic must be allowed from the node’s configured primary interface IP address&lt;/p>
 &lt;ul>
-&lt;li>TCP Port 443 and TCP/UDP 8443 to:&lt;/li>
-&lt;li>
+&lt;li>TCP Port 443 and TCP/UDP 8443 to:
 &lt;ul>
 &lt;li>35.171.100.16/28&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;ul>
 &lt;li>34.223.12.192/28&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>TCP/UDP Port 53 to the configured DNS servers. These DNS servers must be able to resolve DNS requests for the trustgrid.io domain&lt;/li>
+&lt;li>TCP/UDP Port 53 to the configured DNS servers. These DNS servers must be accessible from the WAN/outside interface IP and be able to resolve DNS requests for the trustgrid.io domain&lt;/li>
 &lt;/ul>
+&lt;div class="alert alert-info" role="alert">
+Trustgrid nodes will attempt connect to 169.254.169.254 on port 80. This is a standard instance metadata server in public clouds such as AWS and Azure. This connectivity is not required outside these providers.
+&lt;/div>
 &lt;h3 id="recommendations">Recommendations&lt;/h3>
-&lt;p>At least 10Mbps download speed is recommended for reasonable performance during upgrades. Actual bandwidth requirement will be specific to the workloads running across the device.&lt;/p>
+&lt;p>At least 10 Mbps download speed is recommended for reasonable performance during upgrades. Actual bandwidth requirement will be specific to the workloads running across the device.&lt;/p>
 &lt;p>Hardware devices are recommended to be connected to ports configured for 1000 Mbps and full duplex with auto negotiation on.&lt;/p>
 &lt;h2 id="gateway-node-network-requirements">Gateway Node Network Requirements&lt;/h2>
 &lt;p>In addition to being able to connect to the Control Plane resource outlined above, Gateway Nodes must be allowed to receive inbound traffic on their configured public IP and port (typically TCP/UDP port 8443). Both the advertised public IP and port are configurable when enabling a node as a gateway.&lt;/p></description></item><item><title>Help-Center: Edge Node Behavior When DNS Resolution Fails</title><link>https://docs.trustgrid.io/help-center/kb/dns-failure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/help-center/kb/dns-failure/</guid><description>
@@ -62,19 +60,10 @@
 &lt;h2 id="symptoms">Symptoms&lt;/h2>
 &lt;ul>
 &lt;li>Node will not connect to the portal&lt;/li>
-&lt;li>Packet capture shows the following behavior:&lt;/li>
-&lt;li>
+&lt;li>Packet capture shows the following behavior:
 &lt;ul>
 &lt;li>DNS request and response for gatekeeper.trustgrid.io and zuul.trustgrid.io&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;ul>
 &lt;li>TCP connection attempt to port 8443 on the returned IP address with no response&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;ul>
 &lt;li>A 2 minute delay before the above cycle repeats&lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -130,8 +119,7 @@
 &lt;h2 id="startup-process">Startup Process&lt;/h2>
 &lt;ol>
 &lt;li>ARP for the default gateway&lt;/li>
-&lt;li>DNS request for A record for gatekeeper.trustgrid.io &amp;amp; zuul.trustgrid.io&lt;/li>
-&lt;li>
+&lt;li>DNS request for A record for gatekeeper.trustgrid.io &amp;amp; zuul.trustgrid.io
 &lt;ol>
 &lt;li>The response will be IPs in the Trustgrid AWS networks, &lt;code>35.171.100.16/28&lt;/code> (us-east-1) or &lt;code>34.223.12.192/28&lt;/code> (us-west-2)&lt;/li>
 &lt;/ol>
@@ -141,8 +129,7 @@
 &lt;/ol>
 &lt;h2 id="update-process">Update Process&lt;/h2>
 &lt;ol>
-&lt;li>DNS request for A record of repo.trustgrid.io&lt;/li>
-&lt;li>
+&lt;li>DNS request for A record of repo.trustgrid.io
 &lt;ol>
 &lt;li>The response will be IPs in the Trustgrid AWS networks, &lt;code>35.171.100.16/28&lt;/code> (us-east-1) or &lt;code>34.223.12.192/28&lt;/code> (us-west-2)&lt;/li>
 &lt;/ol>
