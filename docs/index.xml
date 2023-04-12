@@ -1327,7 +1327,13 @@ If the line numbers were reversed the virtual network rule would never be matche
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;em>“WireGuard” is a registered trademark of Jason A. Donenfeld.&lt;/em>&lt;/p></description></item><item><title>Release-Notes: April 2023 Release Notes</title><link>https://docs.trustgrid.io/release-notes/cloud/april-2023/</link><pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/april-2023/</guid><description>
+&lt;p>&lt;em>“WireGuard” is a registered trademark of Jason A. Donenfeld.&lt;/em>&lt;/p></description></item><item><title>Release-Notes: April 2023 Second Release Notes</title><link>https://docs.trustgrid.io/release-notes/cloud/april-2023-2/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/april-2023-2/</guid><description>
+&lt;h2 id="issues-fixed">Issues Fixed&lt;/h2>
+&lt;p>This minor release fixes the following issues:&lt;/p>
+&lt;ul>
+&lt;li>Network Maps displayed peer nodes as disconnected&lt;/li>
+&lt;li>New Orders could not be created if left open too long before the first save&lt;/li>
+&lt;/ul></description></item><item><title>Release-Notes: April 2023 Release Notes</title><link>https://docs.trustgrid.io/release-notes/cloud/april-2023/</link><pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/release-notes/cloud/april-2023/</guid><description>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;p>Trustgrid is moving away from our documentation previously hosted on Confluence to docs-as-code system at &lt;a href="https://docs.trustgrid.io">https://docs.trustgrid.io&lt;/a>. This should enable us to more tightly integrate the portal UI with related documentation.&lt;/p>
 &lt;p>As a start, we&amp;rsquo;ve created a link called Documentation under the Management section of the main navigation bar that will open the docs in a new tab.&lt;/p>
@@ -2081,149 +2087,4 @@ Only a single Slack or Teams channel can be targeted by a Trustgrid channel. How
 &lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Event Types</title><link>https://docs.trustgrid.io/docs/alarms/event-types/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://docs.trustgrid.io/docs/alarms/event-types/</guid><description>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Filter Type Name&lt;/th>
-&lt;th>Severity&lt;/th>
-&lt;th>Message&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>All Gateways Disconnected&lt;/td>
-&lt;td>WARNING&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>This &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> will be triggered if an edge node loses connectivity to all it’s available gateways.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>All Peers Disconnected&lt;/td>
-&lt;td>WARNING&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>This &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> will be triggered if a node is configured as a gateway an it lose connectivity to all it’s configured edge nodes.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Certificate Expiring&lt;/td>
-&lt;td>WARNING&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when a certificate uploaded via Portal → Certificates is about to expire in less than three months.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Cluster Failover&lt;/td>
-&lt;td>INFO&lt;/td>
-&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> is the active &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> member&lt;/td>
-&lt;td>Sent by a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> when it claims the active role.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Cluster Failover&lt;/td>
-&lt;td>Info&lt;/td>
-&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> is no longer the active &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> member&lt;/td>
-&lt;td>Sent by a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> when it releases the active role.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Connection Flapping&lt;/td>
-&lt;td>WARNING&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> disconnects and reconnects 10 times within 5 minutes. A follow up alert will be sent after each subsequent 120 disconnect/reconnects.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Connection Flapping&lt;/td>
-&lt;td>INFO&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>This alert will be sent when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node’s&lt;/a> &amp;ldquo;Connection Flapping&amp;rdquo; issue has been resolved.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Connection Timeout&lt;/td>
-&lt;td>ERROR&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> does not reconnect after a profile update has been pushed to the &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a>.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Data Plane Disruption&lt;/td>
-&lt;td>WARNING&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>This &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a> will be triggered if a data plane tunnel is terminated unexpectedly.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Date Plane Disruption&lt;/td>
-&lt;td>WARNING&lt;/td>
-&lt;td>Gateway &lt;em>nodename&lt;/em> removed from the domain&lt;/td>
-&lt;td>If a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> acting as a gateway (public, private or hub) is disabled or the gateway service is disabled all other &lt;a href="https://docs.trustgrid.io/docs/nodes/">nodes&lt;/a> in the domain will log this &lt;a href="https://docs.trustgrid.io/docs/alarms/events/">event&lt;/a>.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Gateway Connectivity Health Check&lt;/td>
-&lt;td>CRITICAL&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when an edge node is unable to communicate with a gateway node.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Gateway Connectivity Health Check&lt;/td>
-&lt;td>INFO&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when an edge node reestablishes connectivity to a gateway node after a failure is reported.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Gateway Ingress Limit Reached&lt;/td>
-&lt;td>ERROR&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when a gateway node’s ingress limit is above 95 percent utilization for two minutes straight.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Metric Threshold Violation&lt;/td>
-&lt;td>ERROR&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> cpu, ram, disk, or latency configured metric threshold is violated.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Metric Threshold Violation&lt;/td>
-&lt;td>INFO&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when a previously reported threshold violation has been cleared.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Network Error&lt;/td>
-&lt;td>CRITICAL&lt;/td>
-&lt;td>Stale ARP detected&lt;/td>
-&lt;td>Alerts when a stale ARP entry is detected for a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node’s&lt;/a> &lt;a href="https://docs.trustgrid.io/docs/clusters/">cluster&lt;/a> IP.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Network Error&lt;/td>
-&lt;td>WARNING&lt;/td>
-&lt;td>Interface {OS interface name} is running with half-duplex&lt;/td>
-&lt;td>Alerts if an interface has been detected running at half-duplex. This is almost always a result of a failure to auto-negotiate the speed/duplex and can result in poor performance.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> Connect&lt;/td>
-&lt;td>INFO&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> connects to the control plane.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;a href="https://docs.trustgrid.io/docs/nodes/">Node&lt;/a> Disconnect&lt;/td>
-&lt;td>WARNING&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&lt;/a> disconnects from the control plane.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Order Created&lt;/td>
-&lt;td>INFO&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when a new provisioning order has been created.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Order Commented&lt;/td>
-&lt;td>INFO&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when a provisioning order case has been commented.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Unauthorized IP&lt;/td>
-&lt;td>WARNING&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>Alerts when a &lt;a href="https://docs.trustgrid.io/docs/nodes/">node&amp;rsquo;s&lt;/a> public IP has been locked but the connection to the control plane comes from a different IP.&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;hr></description></item></channel></rss>
+&lt;/table></description></item></channel></rss>
