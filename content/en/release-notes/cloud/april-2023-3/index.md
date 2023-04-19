@@ -5,3 +5,7 @@ type: docs
 date: 2023-04-30
 ---
 
+## Change Audit Improvements
+Several improvements where made around our change auditing system including:
+* Tag changes are now Audited
+* Change records can now be replicated into a customer's AWS S3 bucket
