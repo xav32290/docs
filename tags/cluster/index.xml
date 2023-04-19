@@ -67,11 +67,14 @@ Local ACLs allow only the partner cluster member to connect to the listening por
 &lt;p>A node may be designated as the preferred active member by selecting the node and clicking the &amp;ldquo;Set as Master&amp;rdquo; action&lt;/p>
 &lt;p>&lt;img src="set-as-master.png" alt="img">&lt;/p>
 &lt;p>The &lt;code>Configured Master&lt;/code> field will change immediately, but the &lt;code>Current Master&lt;/code> may take a minute to reflect the change as the nodes process the change and notify the control plane.&lt;/p>
-&lt;h3 id="cluster-member-health">Cluster Member Health&lt;/h3>
+&lt;h2 id="cluster-member-health">Cluster Member Health&lt;/h2>
 &lt;p>There may be situations where both cluster members are online and can communicate with each other, but external conditions exist that make a node unsuitable to hold the active role. The Trustgrid node service monitors for such conditions and will make a node as unhealthy if one occurs. The node will release the active role and its standby member will take over if it is online and healthy.&lt;/p>
 &lt;p>When the condition clears the node will declare itself healthy and inform its partner member. Depending on the cluster mode it may reclaim the active role.&lt;/p>
-&lt;h4 id="cluster-member-health-conditions">Cluster Member Health Conditions&lt;/h4>
+&lt;h3 id="cluster-member-health-conditions">Cluster Member Health Conditions&lt;/h3>
 &lt;ul>
+&lt;li>
+&lt;p>Loss of &lt;a href="#cluster-heartbeat-communication">cluster heartbeat&lt;/a> communication - If a node cannot communicate with its partner nodes on the configured IP and port it will declare that partner node unhealthy and claim the active role if it has not already.&lt;/p>
+&lt;/li>
 &lt;li>
 &lt;p>Interface Link (Up/Down) State - Any interface configured with an IP address in the Trustgrid is monitored for a successful connection to another network device&lt;/p>
 &lt;ul>
@@ -84,6 +87,9 @@ Local ACLs allow only the partner cluster member to connect to the listening por
 &lt;ul>
 &lt;li>Example: If an upstream internet provider or device experiences failure the node will not be able to provide any services.&lt;/li>
 &lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>WAN Interface DHCP failure - If the WAN interface is configured to use DHCP and it does not receive a DHCP lease it will mark itself unhealthy.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Layer 4 (L4 Proxy) Service Health Check - TCP L4 Proxy Services can be configured to regularly perform health checks to confirm a successful connection can be made. If these checks fail 5 times in a row the service will mark the cluster member as unhealthy.&lt;/p>
