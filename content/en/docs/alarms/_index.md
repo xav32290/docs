@@ -15,4 +15,4 @@ Trustgrid’s Alarms system notifies users of [events]({{<ref "event-types" >}})
 
 1. If an event matches the criteria of an alarm filter, then an **alert** is generated and notifications are broadcast to the configured [channels]({{<ref "docs/alarms/channels" >}}).
 
-1. Testing adding new line in alarm section!!!!
+1. Testing adding new line in alarm section?!?!?
